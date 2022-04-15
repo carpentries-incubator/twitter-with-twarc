@@ -1,9 +1,9 @@
-# FIXME Lesson title
+# Twitter with Twarc
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
-**Thanks for contributing to The Carpentries Incubator!**
-This repository provides a blank starting point for lessons to be developed here.
+**This lesson is headed towards The Carpentries Incubator!**
+Initial runs of this lesson will happen at UCSB in May 2022.
 
 A member of the [Carpentries Curriculum Team](https://carpentries.org/team/)
 will work with you to get your lesson listed on the
@@ -15,18 +15,18 @@ and make sure you have everything you need to begin developing your new lesson.
 Before you begin developing your new lesson,
 here are a few things we recommend you do:
 
-* [ ] Decide on a title for your new lesson!
+* [* ] Decide on a title for your new lesson!
   Once you've chosen a new title, you can set the value for `lesson_title`
   in [`_config.yml`](_config.yml)
-* [ ] Add the URL to your built lesson pages to the repository description\*
+* [*] Add the URL to your built lesson pages to the repository description\*
 * [ ] [Add relevant topic tags to your lesson repository][cdh-topic-tags].
 * [ ] Fill in the fields marked `FIXME` in:
   * this README
   * [`_config.yml`](_config.yml)
-* [ ] If you're going to be developing lesson material for the first time
+* [*] If you're going to be developing lesson material for the first time
   according to our design principles,
   consider reading the [Carpentries Curriculum Development Handbook][cdh]
-* [ ] Consult the [Lesson Example][lesson-example] website to find out more about
+* [*] Consult the [Lesson Example][lesson-example] website to find out more about
   working with the lesson template
 * [ ] If you are planning to write your lesson in RMarkdown,
   [create a `main` branch and set this as the default branch in your repository settings][change-default-branch]
