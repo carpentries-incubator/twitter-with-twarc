@@ -3,11 +3,17 @@ title: "Anatomy of a tweet: structure of a tweet as JSON"
 teaching: 0
 exercises: 0
 questions:
-- "Key question (FIXME)"
+- What does twarc data look like?
+- What are some ways of looking at JSON data?
+- Which pieces of a tweet should I pay attention to?
+
 objectives:
-- "Tweets arrive as JSON, a super common format."
+- Getting acquainted with a dataset
+
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- Tweets arrive as JSON, a super common format.
+- We can use any old xml viewer to look at JSON
+- Tweets come with a TON of associated data
 ---
 
 # Examining a twarc JSON file
