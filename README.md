@@ -12,34 +12,24 @@ and make sure you have everything you need to begin developing your new lesson.
 
 ## What to do next
 
-- ** UCSB team: ** Continue to flesh out [this gDoc outline]
-(https://docs.google.com/document/d/1Xz6qFmgZOjjzqWy_YsWvxRfuKxbd3V2aLElS4m1ZIcU/edit?usp=sharing)
+- ** UCSB team: ** Continue to flesh out [this gDoc outline](https://docs.google.com/document/d/1Xz6qFmgZOjjzqWy_YsWvxRfuKxbd3V2aLElS4m1ZIcU/edit?usp=sharing)
 - Claim an episode Jira ticket if you feel a lesson is ready to be moved over and 
 outlined directly in this repo.
 
-Before you begin developing your new lesson,
-here are a few things we recommend you do:
-
-
+There's still a little Carpentry advice:
 * [ ] [Add relevant topic tags to your lesson repository][cdh-topic-tags].
 * [ ] Fill in the fields marked `FIXME` in:
   * this README
   * [`_config.yml`](_config.yml)
 * [*] Consult the [Lesson Example][lesson-example] website to find out more about
   working with the lesson template
-
 * [ ] Update this README with relevant information about your lesson
   and delete this section
 
 
 ## Contributing
 
-We welcome all contributions to improve the lesson! Maintainers will do their best to help you if you have any
-questions, concerns, or experience any difficulties along the way.
-
-We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md) and have a look at
-the [more detailed guidelines][lesson-example] on proper formatting, ways to render the lesson locally, and even
-how to write new episodes.
+We welcome all contributions to improve the lesson!
 
 Please see the current list of [issues][FIXME] for ideas for contributing to this
 repository. For making your contribution, we use the GitHub flow, which is
@@ -52,7 +42,7 @@ Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%
 
 Current maintainers of this lesson are
 
-* FIXME
+* Jon Jablonski (not officially a Carpentry Maintainter)
 * FIXME
 * FIXME
 
