@@ -14,7 +14,7 @@ keypoints:
 # Learning to Speak Twitter
 
 If you've never used Twitter before, the language used, in addition to 
-being NSFW, can be totally cryptic. Beyong "atting people" and 
+being NSFW, can be totally cryptic. Beyond "@ing people" and 
 "hashtags", the users themselves have created Twitter-wide standards, and
 Twitter is also filled with subcommunities who use their own 
 lingo.
