@@ -26,6 +26,32 @@ Let's look at our `taxday.jsn` file again. Remember that our JSON files are line
 ie: one tweet per line. Let's use `head -n 1 taxday.jsn > 1-tweet.json` to create a file
 with just our first three tweets.
 
+If we use `cat` to output that file to the screen, we see a real mess. Let's
+open the file with a graphical text editor instead. 
+
+> ## Why jump out of BASH?
+>
+> We should be using nano instead, but we don't have access to nano
+> in our little shell window. 
+> {: .source}
+{: .callout}
+
+In Sublime Text, it's still difficult to tell what's going on. But because line numbering is
+turned on, we can see that this whole screen is still the first Tweet. Are these all a whole
+bunch of named-value pairs? ie:
+
+~~~
+"name": "Joe Gaucho",
+"address": "123 Del Playa",
+"age": 23,
+fav_foods: "Field tortillas",
+~~~
+
+Is that what Tweets look like? If we unwrap the text, indeed: each line of JSON is a Tweet,
+and JSON is a series of comma-separated name-value pairs. 
+
+### link to a page with a good view of tweets
+
 {% include links.md %}
 
 > ## Challenge Title
