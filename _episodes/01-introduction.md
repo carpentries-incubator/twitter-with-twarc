@@ -21,7 +21,7 @@ lingo.
 
 Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide</a>
 
-## Challenge
+> ## Challenge
 Throw a few terms into the etherpad
 
 This is a not too awful guide:
