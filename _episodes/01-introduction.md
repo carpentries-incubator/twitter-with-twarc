@@ -48,13 +48,15 @@ Here are the key players in our analogy:
 
 You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/what-is-an-api)">here</a>.
 
-## APIs are not Webscraping
-**APIs shouldn't be confused with webscraping.**
+> ## APIs are not Webscraping
+The biggest difference between APIs and Webscraping is the retrieval method. With APIs you are using a system preset by the website you are trying to access the data from (Twitter, YouTube, Spotify, ...). 
 
 
 # Twarcing
 
-You may be asking, "What is twarc?" or, "Why do all things involving Twitter have to start with a 'tw'?". 
+You may be asking, "What is twarc?" or, "Why do all things involving Twitter have to start with a 'tw'?".
+
+Twarc is one of the APIs used to retrieve data from Twitter.
 
 
 
