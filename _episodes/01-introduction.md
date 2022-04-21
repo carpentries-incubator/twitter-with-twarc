@@ -34,7 +34,7 @@ https://www.lifewire.com/twitter-slang-and-key-terms-explained-2655399
 
 API is an abbreviation that stands or Application Programming Interface. It allows computers or applications to communicate with one another without requiring users to code operations from scratch. APIs allow you to use abstraction, because similar to how you don't need to know the engineering behind your shower in order to use it, you don't need to understand the code behind APIs in order to fetch data. 
 
-Formally defined, an API is a set of commands, functions, protocols, and objects used by programemrs to create software or to interact with external system.
+Formally defined, an API is a set of commands, functions, protocols, and objects used by programmers to create software or to interact with external system.
 
 ## Common Analogy
 
