@@ -38,7 +38,7 @@ Formally defined, an API is a set of commands, functions, protocols, and objects
 
 ## Common Analogy
 
-Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you order from a set list of items on the menu. The waiter then takes your order to the chef/kitchen crew who put together different meals and drinks for your table. The waiter then takes your completed *this word is wrong here* food to your table. 
+Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you order from a set list of items on the menu. The waiter then takes your order to the chef/kitchen crew who put together different meals and drinks for your table. The waiter then takes your order to your table. 
 
 Here are the key players in our analogy:
 1. Customer - you as the user
