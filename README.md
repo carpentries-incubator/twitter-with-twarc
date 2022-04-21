@@ -12,6 +12,11 @@ and make sure you have everything you need to begin developing your new lesson.
 
 ## What to do next
 
+- ** UCSB team: ** Continue to flesh out [this gDoc outline]
+(https://docs.google.com/document/d/1Xz6qFmgZOjjzqWy_YsWvxRfuKxbd3V2aLElS4m1ZIcU/edit?usp=sharing)
+- Claim an episode Jira ticket if you feel a lesson is ready to be moved over and 
+outlined directly in this repo.
+
 Before you begin developing your new lesson,
 here are a few things we recommend you do:
 
