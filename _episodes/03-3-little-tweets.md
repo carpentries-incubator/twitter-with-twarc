@@ -51,6 +51,8 @@ Is that what Tweets look like? If we unwrap the text, indeed: each line of JSON 
 and JSON is a series of comma-separated name-value pairs. 
 
 ### link to a page with a good view of tweets
+This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-copy.pdf
+
 
 {% include links.md %}
 
@@ -63,7 +65,8 @@ and JSON is a series of comma-separated name-value pairs.
 > 
 
 > ~~~
-> it may include some code
+> head -n 2 > 4tweets.jsonl
+> tail -n 2 >> 4tweets.jsonl
 > ~~~
 > {: .source}
 >
