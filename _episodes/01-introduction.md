@@ -46,7 +46,7 @@ Here are the key players in our analogy:
 3. Waiter - the API that delivers your information request to the system, and then your resulting dataset to you 
 4. Chef/Kitchen crew - the external program or webserver that has the information you seek
 
-You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/what-is-an-api) ">here</a>.
+You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/what-is-an-api)">here</a>.
 
 ## Take Note
 **APIs shouldn't be confused with webscraping.**
