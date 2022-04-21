@@ -48,7 +48,7 @@ Here are the key players in our analogy:
 
 You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/what-is-an-api)">here</a>.
 
-## Take Note
+## Callout
 **APIs shouldn't be confused with webscraping.**
 
 
