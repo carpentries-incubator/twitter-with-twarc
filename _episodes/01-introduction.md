@@ -19,7 +19,7 @@ being NSFW, can be totally cryptic. Beyond "@ing people" and
 Twitter is also filled with subcommunities who use their own 
 lingo.
 
-Twitter has its own getting [started guide](https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help)
+Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide</a>
 
 ## Challenge
 Throw a few terms into the etherpad
@@ -46,7 +46,7 @@ Here are the key players in our analogy:
 3. Waiter - the API that delivers your information request to the system, and then your resulting dataset to you 
 4. Chef/Kitchen crew - the external program or webserver that has the information you seek
 
-You can visualize this anaolgy [here](https://www.mulesoft.com/resources/api/what-is-an-api).
+You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/what-is-an-api) ">here</a>.
 
 ## Take Note
 **APIs shouldn't be confused with webscraping.**
