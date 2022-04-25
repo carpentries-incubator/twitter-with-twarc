@@ -6,8 +6,9 @@ title: Setup
 {: .prereq}
 
 > ## You Will Need
-> 1. Twitter Account
-> <li>Email and cell phone number must be added to set up developer account
+> <ol>
+> 1.Twitter Account:
+> Email and cell phone number must be added to set up developer account
 > 2. Twitter Developer Account
 {: .prereq}
 
