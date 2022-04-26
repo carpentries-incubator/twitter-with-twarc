@@ -14,7 +14,10 @@ You will need:
 * Twitter Account: Valid email account and cell phone number
 * Developer Account: You must create the twitter account to link to the Developer account first. 
   You can create a developer account [here](developer.twitter.com/en)
-  - The developer is particular about having a valid phone number, add one to your Twitter account if you haven't yet
+  The developer is particular about having a valid phone number, add one to your Twitter account if you haven't yet
   - Fill out the Application questions as listed: 
-	- 
+	- What County are you based in? 
+	- What's your use case? Doing academic research (recommended)
+	- Will you make Twitter content or derived information available to a government entity or a government affiliated entity? No (recommended)
+	- Click through the user agreement and verify your email. 
 {% include links.md %}
