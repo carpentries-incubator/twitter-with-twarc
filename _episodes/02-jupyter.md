@@ -65,7 +65,7 @@ Please enter your Bearer Token (leave blank to skip to API key configuration):
 ~~~
 {: .output}
 
-We will be entering in all of our keys and tokens and should not have to leave any of the prompts blank. You may copy/ paste your saves keys and tokens. At this step, please enter your bearer token.
+We will be entering in all of our keys and tokens and should not have to leave any of the prompts blank. You may copy/ paste the keys and tokens you were asked to save. At this step, please enter your bearer token.
 
 > ## Copy and Paste keyboard shortcuts
 >
@@ -83,7 +83,7 @@ Please enter your Bearer Token (leave blank to skip to API key configuration): x
 ~~~
 {: .output}
 
-After you enter your bearer token, please enter `y` for the following question because we want to add the API key and API secret.
+After you enter your bearer token, please enter `y` for the following question. This is so we can add the API key and API secret.
 
 ~~~
 (Optional) Add API keys and secrets for user mode authentication [y or no]? y
@@ -105,17 +105,48 @@ Enter your Access Token Secret: xxxxxxxxxxxxxxxxxxxxxxxxx
 After you have entered your Access Token Secret, you will see the following message.
 
 ~~~
-Your keys have been written to /home/../.config/twarc/config
+Your keys have been written to /home/xxxx/.config/twarc/config
 
 ✨ ✨ ✨  Happy twarcing! ✨ ✨ ✨
 ~~~
 {: .output}
 
+> ## Bash Error Messages
+>
+> If you try to run a twarc command without configuring twarc, you may see this message:
+>
+> ~~~
+> Incomplete credentials provided.
+>
+> Please run the command "twarc2 configure" to get started.
+> ~~~
+> {: .output}
+>
+> A file is made of your configuration. Next time you start up twarc on this JupyterLab, you will not need to configure twarc.
+>
+{: .callout}
+
+# Test for Twarc configuration
+
+We should confirm that Twarc was configured correctly and that you are good to continue using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter account. Please Open a new launcher (select the blue rectangular button with the plus sign) and open a Python 3 Notebook (do not open a Python 3 Console). You will see the following window open:
+
+There is a separate toolbar for this jupyter notebook.
+
+> ## Twarc Commands in JupyterLab
+>
+> Twarc tools are ran as bash commands. Since we will be using JupyterLab to run bash commands, we need to add an exclamation point (!) beforehand.
+> For example: if a Twarc command is `twarc2 search`, then the line to run the twarc command in JupyterLab is:
+>
+> ~~~
+> !twarc2 search
+> ~~~
+> {: .language-python}
+>
+{: .callout}
+
+# Configuring Twarc
+
 ## Reading the Help
-
-## Putting Our Credentials In
-
-This is a one time operation. You should have already done this.
 
 ## A little bit more about where twarc came from
 
