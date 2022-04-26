@@ -1,18 +1,18 @@
 ---
 title: "Anatomy of a tweet: structure of a tweet as JSON"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 10
 questions:
-- What does twarc data look like?
-- What are some ways of looking at JSON data?
+- What does Twitter data look like?
+- What are some ways of looking at Twitter JSONL data?
 - Which pieces of a tweet should I pay attention to?
 
 objectives:
 - Getting acquainted with a dataset
 
 keypoints:
-- Tweets arrive as JSON, a super common format.
-- We can use any old xml viewer to look at JSON
+- Tweets arrive as JSONL, a super common format.
+- We can use online viewers for a human-readable look at JSONL
 - Tweets come with a TON of associated data
 ---
 
@@ -32,7 +32,7 @@ open the file with a graphical text editor instead.
 > ## Why jump out of BASH?
 >
 > We should be using nano instead, but we don't have access to nano
-> in our little shell window. 
+> in our little shell window yet. 
 > {: .source}
 {: .callout}
 
@@ -49,6 +49,23 @@ fav_foods: "Field tortillas",
 
 Is that what Tweets look like? If we unwrap the text, indeed: each line of JSON is a Tweet,
 and JSON is a series of comma-separated name-value pairs. 
+
+There are many, many values attached to each Tweet. You will probably never use
+most of them. 
+
+Some key pieces of a Tweet are:
+- created_at
+- id
+- entities
+  -- any hashtags that are used
+  -- any users who are @'ed
+- user
+  -- id
+  -- name
+  -- screen name (twitter handle)
+  -- followers_count
+  
+(need to write a bit more about the first tweet)
 
 ### link to a page with a good view of tweets
 This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-copy.pdf
@@ -72,10 +89,14 @@ This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-co
 >
 > > ## Solution
 > >
-> > 1 Answer
-> > 2 Answer
+> > 1 First Tweet in the file arrived Mon Apr 18 21:59:14, Final Tweet at Mon Apr 18 18:15:33. So these 
+> > are Tweets span about 4 hours.
+> > 2 Answer: They arrive in reverse-chronological, with the most recent Tweets are on top, oldest at the bottom.
 > > ~~~
-> > it may also include some code
+> > {"created_at": "Mon Apr 18 21:59:14 +0000 2022", "id": 1516174539742494723, ...
+> > {"created_at": "Mon Apr 18 21:59:12 +0000 2022", "id": 1516174533732016132, ...
+> > {"created_at": "Mon Apr 18 18:15:33 +0000 2022", "id": 1516118249443844102, ...
+> > {"created_at": "Mon Apr 18 18:15:33 +0000 2022", "id": 1516118248110100483, ...
 > > ~~~
 > > {: .output}
 > {: .solution}
