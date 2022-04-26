@@ -42,4 +42,28 @@ You will need to keep a total of 5 items listed above.
 > and Access Token Secret. If you want to use twarc on another computer, generate new keys and tokens
 {: .prereq}
 
+
+### User Authentication Settings 
+
+After generating your tokens and keys, you need to authenticate to use the API. This can be found under Projects & Apps > Project > App.
+Navigate to the User Authentication set up in the Settings Page and complete the following: 
+- Turn on OAuth 2.0
+- Type of App: Single Page App
+- Callback URL/Redirect URL: https://127.0.01/
+- Website URL: https://ucsbcarpentry.github.io/
+
+- insert figure here kristi
+
+Save OAuth 2.0 Client ID and Client Secret 
+
+> ## How is the user supposed to test that they have done this correctly?
+> Success is when you have the following Keys and Tokens: 
+> - Bearer Token
+> - API Key
+> - API Key Secret 
+> - Access Token
+> - Access Token Secret 
+> - OAuth 2.0 turned on
+{: .prereq}
+
 {% include links.md %}
