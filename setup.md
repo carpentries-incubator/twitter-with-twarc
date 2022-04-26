@@ -11,8 +11,9 @@ Generally, we would call this 'getting your API key', but like many API's the pr
 become a complicated process. 
 
 You will need: 
-<ol> 1. Twitter Account
-	<ol> Email 
+* Twitter Account: Valid email account and cell phone number
+* Developer Account: You must create the twitter account to link to the Developer account first. 
+  You can create a developer account [here](developer.twitter.com/en)
 
 
 {% include links.md %}
