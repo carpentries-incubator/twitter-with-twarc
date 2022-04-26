@@ -28,7 +28,7 @@ Right after verifying your email, you wil be taken to your Developer Portal Dash
 Every instance of Twarc is a *Twitter App* and *Twitter Apps* live inside of *Projects*. After selecting 'Exploring the API' as your use case, 
 you will be given "Essential Access". Essential Access allows you to have one project with one App inside of it. 
 
-![what-you-api](/fig/what-you-api.PNG | width=400)
+<img src = "/fig/what-you-api.PNG" width="400">
 
 ![project-description](/fig/project-description.PNG | width=400) 
 
