@@ -28,7 +28,9 @@ Right after verifying your email, you wil be taken to your Developer Portal Dash
 Every instance of Twarc is a *Twitter App* and *Twitter Apps* live inside of *Projects*. After selecting 'Exploring the API' as your use case, 
 you will be given "Essential Access". Essential Access allows you to have one project with one App inside of it. 
 
-- insert figures here kristi 
+<img src="../fig/what-you-api.png">
+
+![project-description](../fig/project-description.png) 
 
 Note the given keys down in an accessible place like a password manager. You will not see these keys again, so this is essential. You should have:
 * Consumer Key: API Key and Secret 
