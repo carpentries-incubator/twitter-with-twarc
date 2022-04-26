@@ -37,8 +37,9 @@ Note the given keys down in an accessible place like a password manager. You wil
 
 You will need to keep a total of 5 items listed above. 
 
-#### Obtain Access Token and Secret 
-
-
+> ## Obtain Access Token and Secret 
+> On the App Page (twarc-app in the example) go to 'Keys and Tokens'. Generate 'Access Token and Secret Token'. Note down both Access Token
+> and Access Token Secret. If you want to use twarc on another computer, generate new keys and tokens
+{: .prereq}
 
 {% include links.md %}
