@@ -3,11 +3,17 @@ title: "Getting familiar with JupyterLab"
 teaching: 0
 exercises: 0
 questions:
-- "What's a JypyterLab"
+- "What's JypyterLab?"
+- "How do I move around in JupyterLab?"
+- "How can I set up twarc on JupyterLab?"
+- "What’s a good way of running Twarc in our Jupyter environment?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Become acquainted with the Jupyter Lab tools"
+- "Set up directory and data folder"
+- "Set up Twarc with your keys and tokens"
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "Navigating a virtual Python environment / JupyterLab"
+- "Configuring an application to work with an API"
 ---
 
 # Brief Intro to JupyterLab
@@ -31,7 +37,7 @@ When you first open JupyterLab, you will find a file browser tab on the far left
 
 ![first look at the jupyter lab interface](../fig/first-look-jupyter.png)
 
-To start off, we need to create the directory that we will be working in. Open the file browser and create a folder to store your workshop files in. To create a folder, select the icon that is highlighted in the above image. We have chosen to name the folder "twarc-run" in the example images. This folder will be your working directory. Next, open your working directory (you may do this by selecting the folder) and create another folder called "data". This folder is where you will be storing your data files. Please open the data folder and upload the `taxday.jsonl` data file. If you have not downloaded the data, please complete the Setup Page instructions. Once the data file is uploaded, navigate back to your working directory (exit the data folder). Once you are done, your file organization should look like the below image.
+To start off, we need to create the directory that we will be working in. Open the file browser and create a folder to store your workshop files in. To create a folder, select the icon that is highlighted in the above image. We have chosen to name the folder "twarc-run" in the example images. This folder will be your working directory. Next, open your working directory (you may do this by selecting the folder) and create another folder called "data". This folder is where you will be storing your data files. Please open the data folder and upload the `taxday.jsonl` data file. If you have not downloaded the data, please complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) instructions. Once the data file is uploaded, navigate back to your working directory (exit the data folder). Once you are done, your file organization should look like the below image.
 
 ![file organization for jupyterlab](../fig/dir-data.png)
 
@@ -39,7 +45,7 @@ Now, let's start up the terminal. In your Launcher tab, select the Terminal icon
 
 # Configuring Twarc
 
-In the terminal window, we will configure Twarc so that it is connected to your Twitter developer account and to your app. If you do not have a twitter developer account, please complete the Setup Page instructions. Please take a moment to gather the following keys and tokens:
+In the terminal window, we will configure Twarc so that it is connected to your Twitter developer account and to your app. If you do not have a twitter developer account, please complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) instructions. Please take a moment to gather the following keys and tokens:
 
 - Bearer Token
 - API Key
@@ -111,26 +117,24 @@ Your keys have been written to /home/xxxx/.config/twarc/config
 ~~~
 {: .output}
 
-> ## Bash Error Messages
->
-> If you try to run a twarc command without configuring twarc, you may see this message:
->
-> ~~~
-> Incomplete credentials provided.
->
-> Please run the command "twarc2 configure" to get started.
-> ~~~
-> {: .output}
->
-> A file is made of your configuration. Next time you start up twarc on this JupyterLab, you will not need to configure twarc.
->
-{: .callout}
+After inputting the keys and tokens, a file is made of your configuration. Next time you start up twarc on this JupyterLab, you will not need to configure twarc.
+
+If you try to run a twarc command without configuring twarc, you may see this message:
+
+~~~
+Incomplete credentials provided.
+
+Please run the command "twarc2 configure" to get started.
+~~~
+{: .output}
 
 # Test for Twarc configuration
 
 We should confirm that Twarc was configured correctly and that you are good to continue using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter account. Please Open a new launcher (select the blue rectangular button with the plus sign) and open a Python 3 Notebook (do not open a Python 3 Console). You will see the following window open:
 
-There is a separate toolbar for this jupyter notebook.
+![interface of jupyterLab notbook](../fig/first-look-jupyter-notebook.png)
+
+Notice that there is a separate toolbar for using python notebook.
 
 > ## Twarc Commands in JupyterLab
 >
@@ -144,11 +148,25 @@ There is a separate toolbar for this jupyter notebook.
 >
 {: .callout}
 
-# Configuring Twarc
+The twitter account that we will collect tweets from is Bergis Jules, a archivist and scholar working in digital humanities. He is Community Lead for [Documenting the Now (DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve Jules' recent tweets, please run the following command in a Python Notebook:
+
+~~~
+!twarc2 timeline BergisJules > bjules.jsonl
+~~~
+{: .language-python}
+
+It will take a few minutes to fire up your virtual machines. If the twarc configuration was successful, you will see a loading bar at the bottom of the cell. After the cell has completed running the line, there will be a file called "bjules.jsonl" in your file browser. This file contains the data of tweets under the username "BergisJules".
+
+> ## Challenges
+>
+> How many tweets did you get from Bergis?
+> Can you find the file called "bjules.jsonl"?
+> Download a timeline for a person of your choice. How many tweets did you get? What’s the oldest one?
+>
+{: .challenge}
 
 ## Reading the Help
 
 ## A little bit more about where twarc came from
-
 
 {% include links.md %}
