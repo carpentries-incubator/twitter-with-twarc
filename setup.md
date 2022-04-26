@@ -30,7 +30,7 @@ you will be given "Essential Access". Essential Access allows you to have one pr
 
 ![what-you-api](../fig/what-you-api.PNG)
 
-<img src="../fig/project-description.PNG" width="700"> 
+![project-description](../fig/project-description.PNG) 
 
 Note the given keys down in an accessible place like a password manager. You will not see these keys again, so this is essential. You should have:
 * Consumer Key: API Key and Secret 
