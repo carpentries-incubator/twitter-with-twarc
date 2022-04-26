@@ -16,8 +16,29 @@ You will need:
   You can create a developer account [here](developer.twitter.com/en)
   The developer is particular about having a valid phone number, add one to your Twitter account if you haven't yet
   - Fill out the Application questions as listed: 
+  - insert figure here kristi
 	- What County are you based in? 
 	- What's your use case? Doing academic research (recommended)
 	- Will you make Twitter content or derived information available to a government entity or a government affiliated entity? No (recommended)
 	- Click through the user agreement and verify your email. 
+
+### Making your Project and App
+
+Right after verifying your email, you wil be taken to your Developer Portal Dashboard and prompted to create a new *Project*.
+Every instance of Twarc is a *Twitter App* and *Twitter Apps* live inside of *Projects*. After selecting 'Exploring the API' as your use case, 
+you will be given "Essential Access". Essential Access allows you to have one project with one App inside of it. 
+
+- insert figures here kristi 
+
+Note the given keys down in an accessible place like a password manager. You will not see these keys again, so this is essential. You should have:
+* Consumer Key: API Key and Secret 
+* Authentication Bearer Token
+* Access Token and Secret 
+
+You will need to keep a total of 5 items listed above. 
+
+#### Obtain Access Token and Secret 
+
+
+
 {% include links.md %}
