@@ -13,15 +13,16 @@ credentials.
 
 To get started, you will need: 
 * #### [A Twitter Account](twitter.com):
-Valid email account and cell phone number necessary. 
+Valid email account and cell phone number to receive texts are necessary. 
 * #### [Developer Account](developer.twitter.com/en): 
 You must create the twitter account to link to the Developer account first. 
-Getting developer access really does require to validate yourself as a human, so the
+Getting developer access really does require you to validate yourself as a human, so the
 form is particular about having a valid phone number and email address added to your Twitter account.
 
-Fill out the Application questions as listed: 
+Fill out the application questions as listed here: 
   - someone insert figure here
   - What Country are you based in? 
+    -- We're really not sure what would happen if you put in a country where Twitter is banned.
   - What's your use case? Choose `Doing academic research` (recommended)
   - Will you make Twitter content or derived information available to a government entity or a government affiliated entity? `No` (recommended)
   - Click through the user agreement and verify your email. 
@@ -29,7 +30,7 @@ Fill out the Application questions as listed:
 ### Making your Project and App
 
 Right after verifying your email, you wil be taken to your Developer Portal Dashboard and prompted to create a new *Project*.
-Every instance of Twarc is a *Twitter App* and *Twitter Apps* live inside of *Projects*. After selecting 'Exploring the API' as your use case, 
+Every instance of Twarc is a *Twitter App* and Twitter Apps live inside of *Projects*. After selecting 'Exploring the API' as your use case, 
 you will be given "Essential Access". Essential Access allows you to have one project with one App inside of it. 
 
 <img src="fig/dashboard.PNG" width="500">
