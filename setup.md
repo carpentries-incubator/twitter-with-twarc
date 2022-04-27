@@ -5,11 +5,10 @@ title: Setup
 > Coming soon...
 {: .prereq}
 
-### Getting the Necessary Credentials
+### Getting the Necessary Privileges
 
 Generally, we would call this 'getting your API key', but like many API's, the process of getting access to the guts of Twitter has 
-become a complicated process. For this workshop, these instructions should get a brand new account what Twitter calls *Essential Access*
-credentials.
+become a complicated process. These instructions should create a new developer account with *Essential Access* privileges.
 
 To get started, you will need: 
 * #### [A Twitter Account](twitter.com):
