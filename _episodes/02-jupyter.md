@@ -159,14 +159,74 @@ It will take a few minutes to fire up your virtual machines. If the twarc config
 
 > ## Challenges
 >
-> How many tweets did you get from Bergis?
-> Can you find the file called "bjules.jsonl"?
-> Download a timeline for a person of your choice. How many tweets did you get? What’s the oldest one?
+> * How many tweets did you get from Bergis?
+> * Can you find the file called "bjules.jsonl"?
+> * Download a timeline for a person of your choice. How many tweets did you get? What’s the oldest one?
 >
 {: .challenge}
 
+## Twarc: twitter and archiving
+
+>> "Documenting the Now develops open source tools and community-centered practices that support the ethical collection, use, and
+>>  preservation of publicly available content shared on web and social media. Documenting the Now responds to the public's use of social
+>> media for chronicling historically significant events as well as demand from scholars, students, and archivists, among others, seeking a
+>> user-friendly means of collecting and preserving this type of digital content."
+
+- [Documenting the Now](https://www.docnow.io/)
+
+Documenting the Now Project started in 2014, during the aftermath of the killing of Michael Brown Jr. in St. Louis, Missouri (U.S.). A group of archivists got together, recognizing that protest and activism surrounding this had initially happened on twitter and other social media. There was also a consideration of how this content would be recorded as a part of history, starting with this idea of how these events would be remembered as they transpired on social media. Bergis Jules and Ed Summers collected tweets that contained the key word 'ferguson' (the suburb of St. Louis where Brown was killed), collecting 13 million tweets. In the process of doing so, they developed a utility named twarc, short for twitter and archiving.
+
+A large part to DocNow is commitment to ethical social media collection. Activists and protesters had not consented to be part of an archive, with their content that were on twitter and other places online. They never were consulted on if they wanted their content to be remembered long from now. A large part of the DocNow was how to build an archive of social media content for the long term, with consent from the content creators. For us in the workshop, we will be discussing practices for ethical twitter harvesting before going over instruction on using twarc.
+
 ## Reading the Help
 
-## A little bit more about where twarc came from
+By using the help command below, you may pull up syntax guidance and available tools with twarc. You may find this useful as you go through the lessons to learn how to use different tools, or at the end of the workshop as a summary of the tools you have learned.
+
+~~~
+!twarc2 --help
+~~~
+{: .language-python}
+
+~~~
+Usage: twarc2 [OPTIONS] COMMAND [ARGS]...
+
+  Collect data from the Twitter V2 API.
+
+Options:
+  --consumer-key TEXT         Twitter app consumer key (aka "App Key")
+  ...
+  --help                      Show this message and exit.
+
+Commands:
+  compliance-job  Create, retrieve and list batch compliance jobs for...
+  configure       Set up your Twitter app keys.
+  conversation    Retrieve a conversation thread using the tweet id.
+  conversations   Fetch the full conversation threads that the input...
+  counts          Return counts of tweets matching a query.
+  dehydrate       Extract tweet or user IDs from a dataset.
+  flatten         "Flatten" tweets, or move expansions inline with tweet...
+  followers       Get the followers for a given user.
+  following       Get the users that a given user is following.
+  hydrate         Hydrate tweet ids.
+  liked-tweets    Get the tweets liked by a specific user_id.
+  liking-users    Get the users that liked a specific tweet.
+  lists           Lists API support.
+  mentions        Retrieve max of 800 of the most recent tweets...
+  places          Search for places by place name, geo coordinates or ip...
+  quotes          Get the tweets that quote tweet the given tweet.
+  retweeted-by    Get the users that retweeted a specific tweet.
+  sample          Fetch tweets from the sample stream.
+  search          Search for tweets.
+  searches        Execute each search in the input file, one at a time.
+  stream          Fetch tweets from the live stream.
+  stream-rules    List, add and delete rules for your stream.
+  timeline        Retrieve recent tweets for the given user.
+  timelines       Fetch the timelines of every user in an input source of...
+  tweet           Look up a tweet using its tweet id or URL.
+  user            Get the profile data for a single user by either...
+  users           Get data for user ids or usernames.
+  version         Return the version of twarc that is installed.
+~~~
+{: .output}
 
 {% include links.md %}
