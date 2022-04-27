@@ -3,10 +3,12 @@ title: "Ethics & Twitter"
 teaching: 0
 exercises: 0
 questions:
-- "Key question (FIXME)"
+- "Can I avoid seeing hate speech and unsettling imagery and still analyze twitter?"
+- "What are some INappropriate things to do with twarc?"
 objectives:
 - "Discuss the privacy or ethical concerns surrounding tweet harvesting. (FIXME)"
 keypoints:
+- "'Distance reading' is analyzing big full-text data without a human consuming the words"
 - "Robot detection, archives, deleted accounts (FIXME)"
 ---
 
