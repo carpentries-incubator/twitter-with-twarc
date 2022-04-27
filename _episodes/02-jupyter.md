@@ -33,6 +33,8 @@ Outside of the workshop, you may use your local Python to use Twarc. The documen
 
 # Navigating the JuptyerLab interface
 
+It will take a few minutes to fire up your virtual machines. 
+
 When you first open JupyterLab, you will find a file browser tab on the far left side of the screen. This is where we can manage our files and navigate directories. The tab that is labeled "Launcher" contains options for what to start up. For this workshop, we will be using Python 3 Notebook and Terminal. The last JupyterLab interface thing to note is the toolbar found at the top on the screen. There, you will find options that are needed to run and save programs you write.
 
 ![first look at the jupyter lab interface](../fig/first-look-jupyter.png)
@@ -160,7 +162,13 @@ The twitter account that we will collect tweets from is Bergis Jules, a archivis
 ~~~
 {: .language-python}
 
-It will take a few minutes to fire up your virtual machines. If the twarc configuration was successful, you will see a loading bar at the bottom of the cell. After the cell has completed running the line, there will be a file called "bjules.jsonl" in your file browser. This file contains the data of tweets under the username "BergisJules".
+If the 
+twarc configuration was successful, you will see a loading bar at the 
+bottom of the cell. 
+
+After the cell has completed running the line, there 
+will be a file called "bjules.jsonl" in your file browser. This file 
+contains the data of tweets under the username "BergisJules".
 
 > ## Challenges
 >
