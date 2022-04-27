@@ -29,8 +29,8 @@ Right after verifying your email, you wil be taken to your Developer Portal Dash
 Every instance of Twarc is a *Twitter App* and *Twitter Apps* live inside of *Projects*. After selecting 'Exploring the API' as your use case, 
 you will be given "Essential Access". Essential Access allows you to have one project with one App inside of it. 
 
-<img src="fig/what-you-api.PNG" width="400">
-<img src="fig/project-description.PNG" width="400">
+<img src="fig/what-you-api.PNG" width="500">
+<img src="fig/project-description.PNG" width="500">
 
 
 Note the given keys down in an accessible place like a password manager. You will not see these keys again, so this is essential. You should have:
@@ -55,9 +55,10 @@ Navigate to the User Authentication set up in the Settings Page and complete the
 - Callback URL/Redirect URL: https://127.0.01/
 - Website URL: https://ucsbcarpentry.github.io/
 
-- insert figure here kristi
+Save OAuth 2.0 Client ID and Client Secret
 
-Save OAuth 2.0 Client ID and Client Secret 
+<img src="fig/dev-keys-tokens.png" width="500">
+
 
 > ## How is the user supposed to test that they have done this correctly?
 > Success is when you have the following Keys and Tokens: 
