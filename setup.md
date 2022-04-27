@@ -7,7 +7,7 @@ title: Setup
 
 ### Getting the Necessary Privileges
 
-Generally, we would call this 'getting your API key', but like many API's, the process of getting access to the guts of Twitter has 
+Generally, we would call this 'getting your API key', but like many API's, the process of getting access to Twitter's has 
 become a complicated process. These instructions should create a new developer account with *Essential Access* privileges.
 
 To get started, you will need: 
@@ -15,8 +15,7 @@ To get started, you will need:
 Valid email account and cell phone number necessary. 
 * #### [Developer Account](developer.twitter.com/en): 
 You must create the twitter account to link to the Developer account first. 
-Getting developer access really does require to validate yourself as a human, so the
-form is particular about having a valid phone number and email address added to your Twitter account.
+Getting developer access requires a valid phone number added to your Twitter account. This is so twitter can authenticate a user. 
 
 Fill out the Application questions as listed: 
   - someone insert figure here
