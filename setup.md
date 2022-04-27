@@ -65,13 +65,13 @@ Save OAuth 2.0 Client ID and Client Secret
 
 <img src="fig/Oauth-2.jpg" width="500">
 
-> ## You will know you have succeeded when you have the following set of Keys and Tokens: 
-> - Bearer Token
-> - API Key
-> - API Key Secret 
-> - Access Token
-> - Access Token Secret 
-> - OAuth 2.0 turned on
+> [x] ## You will know you have succeeded when you have the following set of Keys and Tokens: 
+> - [ ] Bearer Token
+> - [ ] API Key
+> - [ ] API Key Secret 
+> - [ ] Access Token
+> - [ ] Access Token Secret 
+> - [ ] OAuth 2.0 turned on
 {: .prereq}
 
 {% include links.md %}
