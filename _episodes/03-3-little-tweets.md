@@ -75,13 +75,14 @@ This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-co
 
 {% include links.md %}
 
-> ## Challenge Title
+> ## First and last Tweets.
 >
-> Using the shell, output the first 2 and last 2 tweets in `taxday.jsn`.
+> Using the terminal, use the commands `head` and `tail` to 
+> save the first 2 and last 2 tweets in `taxday.jsn`.
 > Download the file and view it in your web browser. 
 > 1 How long is the time difference between the first and the last tweets?
 > 2 Judging by these 4 tweets, do they arrive in chronological order?
-> 
+> 3 Can you think of a more rigorous way to check?
 
 > ~~~
 > head -n 2 > 4tweets.jsonl
@@ -100,6 +101,9 @@ This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-co
 > > {"created_at": "Mon Apr 18 18:15:33 +0000 2022", "id": 1516118249443844102, ...
 > > {"created_at": "Mon Apr 18 18:15:33 +0000 2022", "id": 1516118248110100483, ...
 > > ~~~
+> > Well?
+> > Can we scroll through and examine it?
+> > Is there the equivelent of a 'diff' command in Bash?
 > > {: .output}
 > {: .solution}
 {: .challenge}
