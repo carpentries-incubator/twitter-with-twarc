@@ -5,11 +5,11 @@ exercises: 0
 questions:
 - "What is a tweet?"
 - "What is TWARC?"
-- "kristi comment; What about what is an API?" 
+- "What is an API and how can I get started?" 
 objectives:
 - "First learning objective. (FIXME)"
 - "How is a tweet considered to be data?"
-- "Why use twarc? Why not another API?"
+- "How to access the twitter API"
 keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
