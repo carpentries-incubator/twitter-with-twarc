@@ -63,6 +63,7 @@ Navigate to the User Authentication set up in the Settings Page and complete the
 
 Save OAuth 2.0 Client ID and Client Secret
 
+<img src="fig/Oauth-2.jpg" width="500">
 
 > ## You will know you have succeeded when you have the following set of Keys and Tokens: 
 > - Bearer Token
