@@ -32,20 +32,26 @@ Right after verifying your email, you wil be taken to your Developer Portal Dash
 Every instance of Twarc is a *Twitter App* and *Twitter Apps* live inside of *Projects*. After selecting 'Exploring the API' as your use case, 
 you will be given "Essential Access". Essential Access allows you to have one project with one App inside of it. 
 
+<img src="fig/dashboard.png" width="500">
+
+<!---
 <img src="fig/what-you-api.PNG" width="500">
 <img src="fig/project-description.PNG" width="500">
+--->
 
 *SAVE* these keys in an accessible place like a password manager. You will not see these keys again, so this is essential. You should have:
 * Consumer Key: API Key and Secret 
 * Authentication Bearer Token
 * Access Token and Secret 
 
+<img src="fig/dev-keys-tokens.png" width="500">
+
+
 > ## Obtain Access Token and Secret 
 > On the App Page (twarc-app in the example) go to 'Keys and Tokens'. Generate 'Access Token and Secret Token'. Note down both Access Token
 > and Access Token Secret. If you want to use twarc on another computer, generate new keys and tokens
 {: .prereq}
 
-There are a total of 5 of these super-long numbers to keep track of. 
 
 
 ### User Authentication Settings 
@@ -58,8 +64,6 @@ Navigate to the User Authentication set up in the Settings Page and complete the
 - Website URL: https://ucsbcarpentry.github.io/
 
 Save OAuth 2.0 Client ID and Client Secret
-
-<img src="fig/dev-keys-tokens.png" width="500">
 
 
 > ## You will know you have succeeded when you have the following set of Keys and Tokens: 
