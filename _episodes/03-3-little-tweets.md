@@ -18,9 +18,11 @@ keypoints:
 
 # Examining a twarc JSON file
 
-JSON is a flavor of xml and is frequently used as a data interchange
-format. It has become super common in the data science field, and you will 
-encounter it frequently. 
+JSONL, Line-oriented JavaScript Object Notation, is frequently used as a 
+data interchange format. It has become super common in the data science 
+field, and you will encounter it frequently. On April 15th, 2022, we 
+used twarc to search for all mentions of the hashtag `#taxday` (April 15th is
+the deadline for Americans to file their annual income report).
 
 Let's look at our `taxday.jsonl` file again. Remember that our JSON files are line-oriented,
 ie: one tweet per line. Let's use `head -n 1 taxday.jsonl > 1-tweet.jsonl` to create a file
