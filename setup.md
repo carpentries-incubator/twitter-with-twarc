@@ -43,11 +43,9 @@ you will be given "Essential Access". Essential Access allows you to have one pr
 > ## Obtain Access Token and Secret 
 > On the App Page (twarc-app in the example) go to 'Keys and Tokens'. Generate 'Access Token and Secret Token'. Note down both Access Token
 > and Access Token Secret. If you want to use twarc on another computer, generate new keys and tokens
+{: .prereq}
 
 There are a total of 5 of these super-long numbers to keep track of. 
-
-
-{: .prereq}
 
 
 ### User Authentication Settings 
