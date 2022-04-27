@@ -26,7 +26,9 @@ keypoints:
 > This kaggle user, in the public interest, stored the full content of
 > these Tweets as a .csv. The best practice would be to save only a 
 > dehydrated set of tweets. However, in this instance, we can use this 
-> person's conscientious objection to the rules to be a public good.
+> person's conscientious objection to social norms and Twitter's
+> Terms-of-Service to ask whether or not any of this is in the
+> public good or an acceptable topic of research.
 >
 > Using the file "dehydrated_Capitol_Rioters.txt", determine how many
 > Tweets were in the archive, and how many remain on Mr. Musk's new
