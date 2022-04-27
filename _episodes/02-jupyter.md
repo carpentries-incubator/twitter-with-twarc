@@ -138,8 +138,13 @@ Notice that there is a separate toolbar for using python notebook.
 
 > ## Twarc Commands in JupyterLab
 >
-> Twarc tools are ran as bash commands. Since we will be using JupyterLab to run bash commands, we need to add an exclamation point (!) beforehand.
-> For example: if a Twarc command is `twarc2 search`, then the line to run the twarc command in JupyterLab is:
+> We can run Twarc from the terminal window in JupyterLab, or we can send 
+> commands from a Jupyter Notebook. 
+>
+> Let's use JupyterLab to run bash commands. To do so we need to add an 
+> exclamation point (!) at the beginning of the notebook cell. For example: if a Twarc command is 
+> `twarc2 search`, then the line to run the twarc command in JupyterLab 
+> is:
 >
 > ~~~
 > !twarc2 search
