@@ -62,8 +62,7 @@ Save OAuth 2.0 Client ID and Client Secret
 <img src="fig/dev-keys-tokens.png" width="500">
 
 
-> ## You will know you have succeeded when you have 
-> the following set of Keys and Tokens: 
+> ## You will know you have succeeded when you have the following set of Keys and Tokens: 
 > - Bearer Token
 > - API Key
 > - API Key Secret 
