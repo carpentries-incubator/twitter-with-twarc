@@ -3,9 +3,13 @@ title: "Introduction"
 teaching: 0
 exercises: 0
 questions:
-- "Key question (FIXME)"
+- "What is a tweet?"
+- "What is TWARC?"
+- "kristi comment; What about what is an API?" 
 objectives:
 - "First learning objective. (FIXME)"
+- "How is a tweet considered to be data?"
+- "Why use twarc? Why not another API?"
 keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
