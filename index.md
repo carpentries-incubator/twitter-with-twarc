@@ -10,6 +10,8 @@ by [Document the Now](https://docnow.io), which itself was born during the civil
 Missouri after [the shooting and killing of Michael
 Brown, Jr.](https://en.wikipedia.org/wiki/Shooting_of_Michael_Brown) by a police officer.
 
+twarc is used to harvest Twitter data.
+
 <!-- this is an html comment -->
 
 {% comment %} This is a comment in Liquid {% endcomment %}
