@@ -12,6 +12,11 @@ Brown, Jr.](https://en.wikipedia.org/wiki/Shooting_of_Michael_Brown) by a police
 
 twarc is used to harvest Twitter data.
 
+### This lesson is being prepared for UCSB Carpentries
+After an initial run-through, we will submit this lesson to the
+Carpentries Incubator. We Carpentry practice what we Carpentry
+preach. Feel free to jump in.
+
 <!-- this is an html comment -->
 
 {% comment %} This is a comment in Liquid {% endcomment %}
