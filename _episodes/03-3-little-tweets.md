@@ -78,7 +78,7 @@ This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-co
 > ## First and last Tweets.
 >
 > Using the terminal, use the commands `head` and `tail` to 
-> save the first 2 and last 2 tweets in `taxday.jsn`.
+> save the first 2 and last 2 tweets in `taxday.jsonl`.
 > Download the file and view it in your web browser. 
 > 1 How long is the time difference between the first and the last tweets?
 > 2 Judging by these 4 tweets, do they arrive in chronological order?
