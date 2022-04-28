@@ -4,7 +4,7 @@ root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
 
-## Harvesting Twitter Data with twarc
+## twarc
 ### Black Lives Matter
 This lesson will introduce you to a Python application called twarc. twarc was created 
 by [Document the Now](https://docnow.io), which itself was born during the civil unrest in Ferguson, 
