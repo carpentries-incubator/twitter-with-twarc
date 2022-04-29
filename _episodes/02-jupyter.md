@@ -1,7 +1,7 @@
 ---
 title: "Getting familiar with JupyterLab"
-teaching: 0
-exercises: 0
+teaching: 20
+exercises: 5
 questions:
 - "What's JypyterLab?"
 - "How do I move around in JupyterLab?"
