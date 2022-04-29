@@ -16,7 +16,7 @@ keypoints:
 
 # Learning to Speak Twitter
 
-<img src="../figs/twitter.png" alt="Twitter Explore Page" width="200"/>
+<img src="../fig/twitter.png" alt="Twitter Explore Page"/>
 
 ^ html
 
