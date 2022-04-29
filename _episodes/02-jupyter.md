@@ -98,7 +98,7 @@ Remember: you can only type where the cursor is blinking. And you can't move the
 with your mouse. Fingers on the keyboard!
 
 
-# Configuring warc
+# Configuring twarc
 
 In the terminal window, we will configure Twarc so that it is connected to your Twitter 
 developer account and to your app. If you do not have a twitter developer account, please 
