@@ -55,6 +55,13 @@ you will be given "Essential Access". Essential Access allows you to have one pr
 > ## Obtain Access Token and Secret
 > On the App Page (twarc-app in the example) go to 'Keys and Tokens'. Generate 'Access Token and Secret Token'. Note down both Access Token
 > and Access Token Secret. If you want to use twarc on another computer, generate new keys and tokens
+>
+> You will know you have succeeded when you have the following set of Keys and Tokens:
+> - Bearer Token
+> - API Key
+> - API Key Secret
+> - Access Token
+> - Access Token Secret
 {: .prereq}
 
 <!--
@@ -73,13 +80,5 @@ Save OAuth 2.0 Client ID and Client Secret
 <img src="fig/Oauth-2.jpg" width="500">
 
 -->
-
-> ## You will know you have succeeded when you have the following set of Keys and Tokens: 
-> - Bearer Token
-> - API Key
-> - API Key Secret
-> - Access Token
-> - Access Token Secret
-{: .prereq}
 
 {% include links.md %}
