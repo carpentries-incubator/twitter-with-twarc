@@ -16,7 +16,7 @@ keypoints:
 
 # Learning to Speak Twitter
 
-Twitter is a social media platform where users post short messages, pictures, news stories, and other content to be viewed by others. It allows people from all over the world to interact with each other almost instantaneously. 
+Twitter is a social media platform where users post short messages, pictures, news stories, and other content referred to as "tweets", to be viewed by others. It allows people from all over the world to interact with each other almost instantaneously. 
 
 <img src="../fig/twitter.png" alt="Twitter Explore Page" width = "600" height = "700"/>
 
@@ -25,13 +25,26 @@ If you've never used Twitter before, the language used, in addition to being NSF
 Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide.</a>
 
 > ## Challenge
-Throw a few terms into the etherpad
+> Throw a few terms into the etherpad
+{: .challenge}
 
 This is a not too awful guide:
 https://www.lifewire.com/twitter-slang-and-key-terms-explained-2655399
 
-
 {% include links.md %}
+
+# Why Should You Care About Twitter?
+
+Every user, tweet, video, and emoji on Twitter is data that can be collected and analyzed. In recent years Twitter analysis has become increasingly popular and has played a hand in predicting topics from natural disasters to Election outcomes. 
+
+The millions of tweets sent out each day, and the range of content within those tweets amounts to Twitter being a source for a large amount of data. 
+
+> ## Big Data
+>  Based on these guidelines, some refer to Twitter data as Big Data, but some distinguish Big Data as 'so much data that it because unmanagable and therefore unable
+>  to be analyzed.
+{: .callout}
+
+In order to analyze Twitter data, we must first retrieve it which we will be doing using a tool called an API. 
 
 # API: A Complicated Topic and a (mostly) Easy Tool
 
@@ -52,7 +65,9 @@ Here are the key players in our analogy:
 You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/what-is-an-api)">here</a>.
 
 > ## APIs are not Webscraping
-The biggest difference between APIs and Webscraping is the retrieval method. With APIs you are using a system preset by the website you are trying to access the data from (Twitter, YouTube, Spotify, ...). 
+> The biggest difference between APIs and Webscraping is the retrieval method. With APIs you are using a system preset by the website you are trying to access the data
+> from (Twitter, YouTube, Spotify, ...). 
+{: .callout}
 
 
 # Twarcing
