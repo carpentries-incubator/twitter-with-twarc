@@ -26,7 +26,7 @@ Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide
 
 > ## Challenge
 > Throw a few terms into the etherpad
-{: .callout}
+{: .challenge}
 
 This is a not too awful guide:
 https://www.lifewire.com/twitter-slang-and-key-terms-explained-2655399
@@ -39,9 +39,9 @@ Every user, tweet, video, and emoji on Twitter is data that can be collected and
 
 The millions of tweets sent out each day, and the range of content within those tweets amounts to Twitter being a source for a large amount of data. 
 
-> ## Note
+> ## Big Data
 >  Based on these guidelines, some refer to Twitter data as Big Data, but some distinguish Big Data as 'so much data that it because unmanagable and therefore unable
->  to be analyzed.* 
+>  to be analyzed.
 {: .callout}
 
 In order to analyze Twitter data, we must first retrieve it which we will be doing using a tool called an API. 
