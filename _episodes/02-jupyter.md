@@ -72,17 +72,36 @@ and upload all of the datafiles:
 
 If you have not downloaded the data, please 
 complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) 
-instructions. Once the data file is uploaded, navigate back to your working directory 
-(exit the data folder). Once you are done, your file organization should look like the 
+instructions. Once the data file is uploaded, navigate back to your up to our project
+directory `twarc-run`. Once you are done, your file organization should look like the 
 below image.
 
 ![file organization for jupyterlab](../fig/dir-data.png)
 
-Now, let's start up the terminal. In your Launcher tab, select the Terminal icon under "Other". We will be using the terminal to sign into your twitter developer account. You will see that the launcher screen is replaced by the terminal window. You may open the launcher tab by selecting the large rectangular button with the plus (+) sign. When you open the launcher in this way, the terminal window will not close.
+Now, let's start up the terminal. In your Launcher tab, select the Terminal icon under 
+"Other". We will be using the terminal to sign into your twitter developer account. You 
+will see that the launcher screen is replaced by the terminal window. You may open the 
+launcher tab by selecting the large rectangular button with the plus (+) sign. When you 
+open the launcher in this way, the terminal window will not close.
 
-# Configuring Twarc
+The terminal window is all about the keyboard--you cannot mouse around in there. The terminal
+window is running a lightweight verion of BASH, so you can use all of the common Linux/Unix
+file system commands. Let's look at the directories we have created:
 
-In the terminal window, we will configure Twarc so that it is connected to your Twitter developer account and to your app. If you do not have a twitter developer account, please complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) instructions. Please take a moment to gather the following keys and tokens:
+- `pwd`
+- `cd`
+- `ls`
+
+Remember: you can only type where the cursor is blinking. And you can't move the cursor
+with your mouse. Fingers on the keyboard!
+
+
+# Configuring warc
+
+In the terminal window, we will configure Twarc so that it is connected to your Twitter 
+developer account and to your app. If you do not have a twitter developer account, please 
+complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) 
+instructions. Please take a moment to gather the following keys and tokens:
 
 - Bearer Token
 - API Key
@@ -90,7 +109,7 @@ In the terminal window, we will configure Twarc so that it is connected to your 
 - Access Token
 - Access Token Secret
 
-The terminal window is all about the keyboard--you cannot mouse around in there. Let's start
+Let's start
 configuring twarc by sending typing in `twarc2 configure`. You should get the output below:
 
 ~~~
@@ -159,7 +178,8 @@ Your keys have been written to /home/xxxx/.config/twarc/config
 ~~~
 {: .output}
 
-After inputting the keys and tokens, a file is made of your configuration. Next time you start up twarc on this JupyterLab, you will not need to configure twarc.
+All of the information you just entered is saved in a configuration file. Next time you 
+start up twarc on this JupyterLab, you will not need to configure twarc.
 
 If you try to run a twarc command without configuring twarc, you may see this message:
 
@@ -172,11 +192,27 @@ Please run the command "twarc2 configure" to get started.
 
 # Test for Twarc configuration
 
-We should confirm that Twarc was configured correctly and that you are good to continue using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter account. Please Open a new launcher (select the blue rectangular button with the plus sign) and open a Python 3 Notebook (do not open a Python 3 Console). You will see the following window open:
+We should confirm that Twarc was configured correctly and that you are good to continue 
+using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter 
+account. At the same time, we will learn how to send Python commands from a Jupyter
+Notebook. 
+
+Please Open 
+a new launcher (select the blue rectangular button with the plus sign) and open a Python 
+3 Notebook (do not open a Python 3 Console). You will see the following window open:
 
 ![interface of jupyterLab notbook](../fig/first-look-jupyter-notebook.png)
 
-Notice that there is a separate toolbar for using python notebook.
+At the top of the Notebook tab, notice that there is a new toolbar. Each of the buttons
+has a shortcut key. We will mostly use `b` to add a cell, `ctrl` + `enter` to execute 
+whatever code is inside the current cell. 
+the se  for using python 
+notebook.
+
+We are using this notebook so that we can save our work along the way. At the end of the day, 
+you can save your notebook file and try to run it later on your own installation of twarc.
+
+For now, let's send a command to twarc from inside of our notebook:
 
 > ## Twarc Commands in JupyterLab
 >
@@ -233,7 +269,12 @@ A large part to DocNow is commitment to ethical social media collection. Activis
 
 ## Reading the Help
 
-By using the help command below, you may pull up syntax guidance and available tools with twarc. You may find this useful as you go through the lessons to learn how to use different tools, or at the end of the workshop as a summary of the tools you have learned.
+By using the --help command, you may pull up syntax guidance and available tools with 
+twarc. You may find this useful as you go through the lessons to learn how to use 
+different tools, or at the end of the workshop as a summary of the tools you have 
+learned. Let's run it from our notebook so that we can view it at our convenience.
+
+twarc2 is a program, not a line of code, so we start the line with a bang `!`
 
 ~~~
 !twarc2 --help
@@ -281,5 +322,9 @@ Commands:
   version         Return the version of twarc that is installed.
 ~~~
 {: .output}
+
+These are all of the commands that you can send via twarc2. You can also view all the 
+help for twarc 1.0!
+
 
 {% include links.md %}
