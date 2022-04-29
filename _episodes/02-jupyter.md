@@ -18,28 +18,63 @@ keypoints:
 
 # Brief Intro to JupyterLab
 
-If this is not the first time you are using JupyterLab, then note that we will be using an instance of Jupyterlab that is not locally hosted.
-For new users, JupyterLab is an integrated development environment (IDE) that enables us to write and run programs. JupyterLab runs in one tab on your browser, and you will eventually find that you can also navigate files and open other windows on the JupyterLab page.
+JupyterLab is a web interface for creating Python scripts with Jupyter Notebooks. For 
+this workshop, we will be using a hosted instance of JupyterLab pre-configured with
+all of the Python tools you will need to follow along with the lesson.
+
+JupyterLab is an 
+integrated development environment (IDE) that enables us to write and run programs. 
+JupyterLab runs in one tab on your browser. In this episode, we will learn to 
+upload and download files from your computer to your storage space on JupyterLab,
+create and navigate the directory structure, and use the built-in BASH terminal.
 
 > ## Thanks
 >
-> For this workshop, we will be using JupyterLab with twarc already loaded in.
-> The reason we are able to use JupyterLab without needing to download any software is because our
-> JupyterLab server is hosted by UCSB Letters & Sciences IT.
-> Thank you to Letters & Sciences IT for setting up our JupyterLab server :)
+> For this workshop, we will be using JupyterLab with twarc already loaded in. The reason 
+> we are able to use JupyterLab without needing to download any software is because our 
+> JupyterLab server is hosted by UCSB Letters & Sciences IT. Thank you to Letters & 
+> Sciences IT for setting up our JupyterLab server :)
 {: .callout}
 
-Outside of the workshop, you may use your local Python to use Twarc. The documentation for installing Twarc is found at [this repository](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics.html).
+If you have a fully configured version of Python, you can also install and run twarc on 
+your own computer. The documentation for installing Twarc is found at [this 
+repository](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics.html). For 
+this workshop, follow along in the virtual environment.
+
 
 # Navigating the JuptyerLab interface
 
+Open our [LSIT JupyterLab](https://test.lsit.ucsb.edu) in a fresh web browser window.
 It will take a few minutes to fire up your virtual machines. 
 
-When you first open JupyterLab, you will find a file browser tab on the far left side of the screen. This is where we can manage our files and navigate directories. The tab that is labeled "Launcher" contains options for what to start up. For this workshop, we will be using Python 3 Notebook and Terminal. The last JupyterLab interface thing to note is the toolbar found at the top on the screen. There, you will find options that are needed to run and save programs you write.
+When you first open JupyterLab, you will find a file browser tab on the far left side of 
+the screen. This is where we can manage our files and navigate directories. The tab that 
+is labeled "Launcher" contains options for what to start up. For this workshop, we will 
+be using Python 3 Notebook and Terminal. The last JupyterLab interface thing to note is 
+the toolbar found at the top on the screen. There, you will find options that are needed 
+to run and save programs you write.
 
 ![first look at the jupyter lab interface](../fig/first-look-jupyter.png)
 
-To start off, we need to create the directory that we will be working in. Open the file browser and create a folder to store your workshop files in. To create a folder, select the icon that is highlighted in the above image. We have chosen to name the folder "twarc-run" in the example images. This folder will be your working directory. Next, open your working directory (you may do this by selecting the folder) and create another folder called "data". This folder is where you will be storing your data files. Please open the data folder and upload the `taxday.jsonl` data file. If you have not downloaded the data, please complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) instructions. Once the data file is uploaded, navigate back to your working directory (exit the data folder). Once you are done, your file organization should look like the below image.
+To start off, we need to create the directory that we will be working in. Open the file 
+browser and create a folder to store your workshop files in. To create a folder, select 
+the icon that is highlighted in the above image. We have chosen to name the folder 
+`twarc-run`. We will organize all of our work in this folder. Inside of `twarc-run`,
+make another folder called `data`. 
+
+This folder is where we will store our original data files. Please open the data folder 
+and upload all of the datafiles:
+
+- `taxday.jsonl` 
+- dong
+- dong
+
+
+If you have not downloaded the data, please 
+complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) 
+instructions. Once the data file is uploaded, navigate back to your working directory 
+(exit the data folder). Once you are done, your file organization should look like the 
+below image.
 
 ![file organization for jupyterlab](../fig/dir-data.png)
 
@@ -54,6 +89,9 @@ In the terminal window, we will configure Twarc so that it is connected to your 
 - API Key Secret
 - Access Token
 - Access Token Secret
+
+The terminal window is all about the keyboard--you cannot mouse around in there. Let's start
+configuring twarc by sending typing in `twarc2 configure`. You should get the output below:
 
 ~~~
 twarc2 configure
@@ -73,7 +111,9 @@ Please enter your Bearer Token (leave blank to skip to API key configuration):
 ~~~
 {: .output}
 
-We will be entering in all of our keys and tokens and should not have to leave any of the prompts blank. You may copy/ paste the keys and tokens you were asked to save. At this step, please enter your bearer token.
+We will be entering in all of our keys and tokens and should not have to leave any of the 
+prompts blank. You may copy/ paste the keys and tokens you were asked to save. At this 
+step, please enter your bearer token.
 
 > ## Copy and Paste keyboard shortcuts
 >
