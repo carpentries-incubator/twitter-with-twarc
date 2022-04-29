@@ -47,7 +47,7 @@ this workshop, follow along in the virtual environment.
 Open our [LSIT JupyterLab](https://test.lsit.ucsb.edu) in a fresh web browser window.
 Select 'Carpentry Workshop' under the server options. It will take a few minutes to fire up your virtual machines. 
 
-![server-options](/fig/server-options.png)
+![server-options](/fig/server-options.PNG)
 
 When you first open JupyterLab, you will find a file browser tab on the far left side of 
 the screen. This is where we can manage our files and navigate directories. The tab that 
