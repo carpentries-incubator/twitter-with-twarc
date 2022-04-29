@@ -16,17 +16,13 @@ keypoints:
 
 # Learning to Speak Twitter
 
+Twitter is a social media platform where users post short messages, pictures, news stories, and other content to be viewed by others. It allows people from all over the world to interact with each other almost instantaneously. 
+
 <img src="../fig/twitter.png" alt="Twitter Explore Page" width = "300" height = "400"/>
 
-Twitter is ...
+If you've never used Twitter before, the language used, in addition to being NSFW, can be totally cryptic. Beyond "@ing people" and "hashtags", the users themselves have created Twitter-wide standards, and Twitter is also filled with subcommunities who use their own lingo.
 
-If you've never used Twitter before, the language used, in addition to 
-being NSFW, can be totally cryptic. Beyond "@ing people" and 
-"hashtags", the users themselves have created Twitter-wide standards, and
-Twitter is also filled with subcommunities who use their own 
-lingo.
-
-Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide</a>
+Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide.</a>
 
 > ## Challenge
 Throw a few terms into the etherpad
