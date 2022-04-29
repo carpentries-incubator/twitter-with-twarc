@@ -4,7 +4,8 @@ root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
 
-## Black Lives Matter
+## twarc
+### Black Lives Matter
 This lesson will introduce you to a Python application called twarc. twarc was created 
 by [Document the Now](https://docnow.io), which itself was born during the civil unrest in Ferguson, 
 Missouri after [the shooting and killing of Michael
