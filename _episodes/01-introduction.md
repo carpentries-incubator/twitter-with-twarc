@@ -18,6 +18,8 @@ keypoints:
 
 <img src="../figs/twitter.png" alt="Twitter Explore Page" width="200"/>
 
+^ html
+
 ![Twitter Explore Page](../fig/twitter.png)
 
 Twitter is ...
