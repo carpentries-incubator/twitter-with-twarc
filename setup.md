@@ -57,7 +57,7 @@ you will be given "Essential Access". Essential Access allows you to have one pr
 > and Access Token Secret. If you want to use twarc on another computer, generate new keys and tokens
 {: .prereq}
 
-
+<!--
 
 ### User Authentication Settings
 
@@ -72,7 +72,9 @@ Save OAuth 2.0 Client ID and Client Secret
 
 <img src="fig/Oauth-2.jpg" width="500">
 
-> ## You will know you have succeeded when you have OAuth 2.0 turned on, *and* the following set of Keys and Tokens: 
+-->
+
+> ## You will know you have succeeded when you have the following set of Keys and Tokens: 
 > - Bearer Token
 > - API Key
 > - API Key Secret
