@@ -25,7 +25,8 @@ If you've never used Twitter before, the language used, in addition to being NSF
 Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide.</a>
 
 > ## Challenge
-Throw a few terms into the etherpad
+> Throw a few terms into the etherpad
+{: .callout}
 
 This is a not too awful guide:
 https://www.lifewire.com/twitter-slang-and-key-terms-explained-2655399
@@ -39,8 +40,9 @@ Every user, tweet, video, and emoji on Twitter is data that can be collected and
 The millions of tweets sent out each day, and the range of content within those tweets amounts to Twitter being a source for a large amount of data. 
 
 > ## Note
->  Based on these guidelines, some refer to Twitter data as Big Data, but some distinguish Big Data as 'so much data that it because unmanagable and therefore unable to be analyzed.* 
->  
+>  Based on these guidelines, some refer to Twitter data as Big Data, but some distinguish Big Data as 'so much data that it because unmanagable and therefore unable
+>  to be analyzed.* 
+{: .callout}
 
 In order to analyze Twitter data, we must first retrieve it which we will be doing using a tool called an API. 
 
@@ -63,7 +65,9 @@ Here are the key players in our analogy:
 You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/what-is-an-api)">here</a>.
 
 > ## APIs are not Webscraping
-> The biggest difference between APIs and Webscraping is the retrieval method. With APIs you are using a system preset by the website you are trying to access the data from (Twitter, YouTube, Spotify, ...). 
+> The biggest difference between APIs and Webscraping is the retrieval method. With APIs you are using a system preset by the website you are trying to access the data
+> from (Twitter, YouTube, Spotify, ...). 
+{: .callout}
 
 
 # Twarcing
