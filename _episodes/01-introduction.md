@@ -14,8 +14,11 @@ keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
 
-
 # Learning to Speak Twitter
+
+<img src="fig/twitter.png" alt="Twitter Explore Page" width="500" height="600">
+
+Twitter is ...
 
 If you've never used Twitter before, the language used, in addition to 
 being NSFW, can be totally cryptic. Beyond "@ing people" and 
