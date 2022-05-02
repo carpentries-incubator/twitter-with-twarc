@@ -85,8 +85,8 @@ This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-co
 > 3 Can you think of a more rigorous way to check?
 >
 > ~~~
-> head -n 2 > 4tweets.jsonl
-> tail -n 2 >> 4tweets.jsonl
+> head -n 2 taxday.jsonl >  4tweets.jsonl
+> tail -n 2 taxday.jsonl >> 4tweets.jsonl
 > ~~~
 > {: .source}
 >
