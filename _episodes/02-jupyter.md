@@ -107,12 +107,16 @@ In the terminal window, we will configure Twarc so that it is connected to your 
 developer account and to your app. If you do not have a twitter developer account, please 
 complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) 
 instructions. Please take a moment to gather the following keys and tokens:
+> ## Tokens and Keys
+>
+>- Bearer Token
+>- API Key
+>- API Key Secret
+>- Access Token
+>- Access Token Secret
+>
+{: .checklist}
 
-- Bearer Token
-- API Key
-- API Key Secret
-- Access Token
-- Access Token Secret
 
 Let's start
 configuring twarc by sending typing in `twarc2 configure`. You should get the output below:
@@ -261,12 +265,13 @@ contains the data of tweets under the username "BergisJules".
 
 ## Twarc: twitter and archiving
 
->> "Documenting the Now develops open source tools and community-centered practices that support the ethical collection, use, and
->>  preservation of publicly available content shared on web and social media. Documenting the Now responds to the public's use of social
->> media for chronicling historically significant events as well as demand from scholars, students, and archivists, among others, seeking a
->> user-friendly means of collecting and preserving this type of digital content."
-
-- [Documenting the Now](https://www.docnow.io/)
+> ## [Documenting the Now](https://www.docnow.io/)
+>
+> "Documenting the Now develops open source tools and community-centered practices that support the ethical collection, use, and
+> preservation of publicly available content shared on web and social media. Documenting the Now responds to the public's use of social
+> media for chronicling historically significant events as well as demand from scholars, students, and archivists, among others, seeking a
+> user-friendly means of collecting and preserving this type of digital content."
+{: .callout}
 
 Documenting the Now Project started in 2014, during the aftermath of the killing of Michael Brown Jr. in St. Louis, Missouri (U.S.). A group of archivists got together, recognizing that protest and activism surrounding this had initially happened on twitter and other social media. There was also a consideration of how this content would be recorded as a part of history, starting with this idea of how these events would be remembered as they transpired on social media. Bergis Jules and Ed Summers collected tweets that contained the key word 'ferguson' (the suburb of St. Louis where Brown was killed), collecting 13 million tweets. In the process of doing so, they developed a utility named twarc, short for twitter and archiving.
 
