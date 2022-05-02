@@ -18,95 +18,100 @@ keypoints:
 
 # Brief Intro to JupyterLab
 
-JupyterLab is a web interface for creating Python scripts with Jupyter Notebooks. For 
+JupyterLab is a web interface for creating Python scripts with Jupyter Notebooks. For
 this workshop, we will be using a hosted instance of JupyterLab pre-configured with
 all of the Python tools you will need to follow along with the lesson.
 
-JupyterLab is an 
-integrated development environment (IDE) that enables us to write and run programs. 
-JupyterLab runs in one tab on your browser. In this episode, we will learn to 
+JupyterLab is an
+integrated development environment (IDE) that enables us to write and run programs.
+JupyterLab runs in one tab on your browser. In this episode, we will learn to
 upload and download files from your computer to your storage space on JupyterLab,
 create and navigate the directory structure, and use the built-in BASH terminal.
 
 > ## Thanks
 >
-> For this workshop, we will be using JupyterLab with twarc already loaded in. The reason 
-> we are able to use JupyterLab without needing to download any software is because our 
-> JupyterLab server is hosted by UCSB Letters & Sciences IT. Thank you to Letters & 
+> For this workshop, we will be using JupyterLab with twarc already loaded in. The reason
+> we are able to use JupyterLab without needing to download any software is because our
+> JupyterLab server is hosted by UCSB Letters & Sciences IT. Thank you to Letters &
 > Sciences IT for setting up our JupyterLab server :)
 {: .callout}
 
-If you have a fully configured version of Python, you can also install and run twarc on 
-your own computer. The documentation for installing Twarc is found at [this 
-repository](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics.html). For 
+If you have a fully configured version of Python, you can also install and run twarc on
+your own computer. The documentation for installing Twarc is found at [this
+repository](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics.html). For
 this workshop, follow along in the virtual environment.
 
 
 # Navigating the JuptyerLab interface
 
 Open our [LSIT JupyterLab](https://test.lsit.ucsb.edu) in a fresh web browser window.
-Select 'Carpentry Workshop' under the server options. It will take a few minutes to fire up your virtual machines. 
+Select 'Carpentry Workshop' under the server options. It will take a few minutes to fire up your virtual machines.
 
-![server-options](/../fig/server-options.PNG)
+When you first open JupyterLab, you will find a file browser tab on the far left side of
+the screen. This is where we can manage our files and navigate in-and-out of directories. The window that
+is labeled "Launcher" contains options for what to start up. For this workshop, we will
+be using Python 3 Notebook and Terminal.
 
-When you first open JupyterLab, you will find a file browser tab on the far left side of 
-the screen. This is where we can manage our files and navigate directories. The tab that 
-is labeled "Launcher" contains options for what to start up. For this workshop, we will 
-be using Python 3 Notebook and Terminal. The last JupyterLab interface thing to note is 
-the toolbar found at the top on the screen. There, you will find options that are needed 
+Lastly, note the toolbar found at the top on the screen.
+There, you will find options that are needed
 to run and save programs you write.
 
 ![first look at the jupyter lab interface](../fig/first-look-jupyter.png)
 
-To start off, we need to create the directory that we will be working in. Open the file 
-browser and create a folder to store your workshop files in. To create a folder, select 
-the icon that is highlighted in the above image. We have chosen to name the folder 
-`twarc-run`. We will organize all of our work in this folder. Inside of `twarc-run`,
-make another folder called `data`. 
+To start off, we need to create the directory that we will be working in. Open the file
+browser and create a folder to store all of your workshop files in (e.g. data, python notebooks). To create a folder, select
+the icon that is highlighted in the above image. We have chosen to name the folder
+`twarc-run`. We will organize all of our work in this folder, and this folder will be our home directory.
 
-This folder is where we will store our original data files. Please open the data folder 
+
+Inside of `twarc-run`, let's make two more folders. Please create one folder that is named `source-data`, and create a second folder named `output-data`. Source-data is where we will store twitter data we collect during the workshop. The output-data folder for is where we will store twitter data we process. `output-data` should not be inside of `source-data`, and vice versa. Instead, both folders should be inside of `twarc-run`.
+
+Since `source-data` is where we will store our original data files, please open this data folder
 and upload all of the datafiles:
 
-- `taxday.jsonl` 
+- `taxday.jsonl`
 - dong
 - dong
 
 
-If you have not downloaded the data, please 
-complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) 
+If you have not downloaded the data, please
+complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
 instructions. Once the data file is uploaded, navigate back to your up to our project
-directory `twarc-run`. Once you are done, your file organization should look like the 
+directory `twarc-run`. Once you are done, your file organization should look like the
 below image.
 
 ![file organization for jupyterlab](../fig/dir-data.png)
 
-Now, let's start up the terminal. In your Launcher tab, select the Terminal icon under 
-"Other". We will be using the terminal to sign into your twitter developer account. You 
-will see that the launcher screen is replaced by the terminal window. You may open the 
-launcher tab by selecting the large rectangular button with the plus (+) sign. When you 
+Now, let's start up the terminal. In your Launcher tab, select the Terminal icon under
+"Other". We will be using the terminal to sign into your twitter developer account. You
+will see that the launcher screen is replaced by the terminal window. You may open the
+launcher tab by selecting the large rectangular button with the plus (+) sign. When you
 open the launcher in this way, the terminal window will not close.
 
 The terminal window is all about the keyboard--you cannot mouse around in there. The terminal
 window is running a lightweight verion of BASH, so you can use all of the common Linux/Unix
-file system commands. Let's look at the directories we have created:
+file system commands such as:
 
 - `pwd`
 - `cd`
 - `ls`
 
+Print your working directory and make sure you are in the directory `twarc-run`. If you are not in the proper directory, please change directories to move inside `twarc-run`.
+
 > ## Remember:
 >
 > You can only type where the cursor is blinking. And you can't move the cursor
-> with your mouse. Fingers on the keyboard!
+> with your mouse.
 >
 {: .callout}
 
 # Configuring twarc
 
-In the terminal window, we will configure Twarc so that it is connected to your Twitter 
-developer account and to your app. If you do not have a twitter developer account, please 
-complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html) 
+Continuing in the terminal window, we will configure Twarc so that it is connected to your Twitter
+developer account and to your app. If you do not have a twitter developer account, please
+complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
 instructions. Please take a moment to gather the following keys and tokens:
+
 > ## Tokens and Keys
 >
 >- Bearer Token
@@ -139,8 +144,8 @@ Please enter your Bearer Token (leave blank to skip to API key configuration):
 ~~~
 {: .output}
 
-We will be entering in all of our keys and tokens and should not have to leave any of the 
-prompts blank. You may copy/ paste the keys and tokens you were asked to save. At this 
+We will be entering in all of our keys and tokens and should not have to leave any of the
+prompts blank. You may copy/ paste the keys and tokens you were asked to save. At this
 step, please enter your bearer token.
 
 > ## Copy and Paste keyboard shortcuts
@@ -181,13 +186,13 @@ Enter your Access Token Secret: xxxxxxxxxxxxxxxxxxxxxxxxx
 After you have entered your Access Token Secret, you will see the following message.
 
 ~~~
-Your keys have been written to /home/xxxx/.config/twarc/config
+Your keys have been written to /home/xxxx/.config/twarc-run/config
 
 ✨ ✨ ✨  Happy twarcing! ✨ ✨ ✨
 ~~~
 {: .output}
 
-All of the information you just entered is saved in a configuration file. Next time you 
+All of the information you just entered is saved in a configuration file. Next time you
 start up twarc on this JupyterLab, you will not need to configure twarc.
 
 If you try to run a twarc command without configuring twarc, you may see this message:
@@ -201,36 +206,36 @@ Please run the command "twarc2 configure" to get started.
 
 # Test for Twarc configuration
 
-We should confirm that Twarc was configured correctly and that you are ready to continue 
-using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter 
+We should confirm that Twarc was configured correctly and that you are ready to continue
+using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter
 account. At the same time, we will learn how to send Python commands from a Jupyter
-Notebook. 
+Notebook.
 
-Please Open 
-a new launcher (select the blue rectangular button with the plus sign) and open a Python 
+Please Open
+a new launcher (select the blue rectangular button with the plus sign) and open a Python
 3 Notebook (do not open a Python 3 Console). You will see the following window open:
 
 ![interface of jupyterLab notbook](../fig/first-look-jupyter-notebook.png)
 
 At the top of the Notebook tab, notice that there is a new toolbar. Each of the buttons
-has a shortcut key. We will mostly use `b` to add a cell, `ctrl` + `enter` to execute 
-whatever code is inside the current cell. 
-the se  for using python 
+has a shortcut key. We will mostly use `b` to add a cell, `ctrl` + `enter` to execute
+whatever code is inside the current cell.
+the se  for using python
 notebook.
 
-We are using this notebook so that we can save our work along the way. At the end of the day, 
+We are using this notebook so that we can save our work along the way. At the end of the day,
 you can save your notebook file and try to run it later on your own installation of twarc.
 
 For now, let's send a command to twarc from inside of our notebook:
 
 > ## Twarc Commands in JupyterLab
 >
-> We can run Twarc from the terminal window in JupyterLab, or we can send 
-> commands from a Jupyter Notebook. 
+> We can run Twarc from the terminal window in JupyterLab, or we can send
+> commands from a Jupyter Notebook.
 >
-> Let's use JupyterLab to run bash commands. To do so we need to add an 
-> exclamation point (!) at the beginning of the notebook cell. For example: if a Twarc command is 
-> `twarc2 search`, then the line to run the twarc command in JupyterLab 
+> Let's use JupyterLab to run bash commands. To do so we need to add an
+> exclamation point (!) at the beginning of the notebook cell. For example: if a Twarc command is
+> `twarc2 search`, then the line to run the twarc command in JupyterLab
 > is:
 >
 > ~~~
@@ -243,16 +248,16 @@ For now, let's send a command to twarc from inside of our notebook:
 The twitter account that we will collect tweets from is Bergis Jules, an archivist and scholar working in digital humanities. He is the Community Lead for [Documenting the Now (DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve Jules' recent tweets, please run the following command in a Python Notebook:
 
 ~~~
-!twarc2 timeline BergisJules > bjules.jsonl
+!twarc2 timeline BergisJules > 'source-data/bjules.jsonl'
 ~~~
 {: .language-python}
 
-If the 
-twarc configuration was successful, you will see a loading bar at the 
-bottom of the cell. 
+If the
+twarc configuration was successful, you will see a loading bar at the
+bottom of the cell.
 
-After the cell has completed running the line, there 
-will be a file called "bjules.jsonl" in your file browser. This file 
+After the cell has completed running the line, there
+will be a file called "bjules.jsonl" inside of `source-data` on your file browser. This file
 contains the data of tweets under the username "BergisJules".
 
 > ## Challenges
@@ -275,23 +280,23 @@ contains the data of tweets under the username "BergisJules".
 
 
 
-The Documenting the Now Project started in 2014, during the aftermath of the killing of Michael Brown Jr. in St. Louis, Missouri (U.S.). 
-A group of archivists got together, recognizing that protest and activism surrounding this had initially happened on twitter and other social media. 
-There was also a consideration of how this content would be recorded as a part of history, starting with this idea of how these events would be remembered as they transpired on social media. 
-Bergis Jules and Ed Summers collected tweets that contained the key word 'ferguson' (the suburb of St. Louis where Brown was killed), collecting 13 million tweets. 
+The Documenting the Now Project started in 2014, during the aftermath of the killing of Michael Brown Jr. in St. Louis, Missouri (U.S.).
+A group of archivists got together, recognizing that protest and activism surrounding this had initially happened on twitter and other social media.
+There was also a consideration of how this content would be recorded as a part of history, starting with this idea of how these events would be remembered as they transpired on social media.
+Bergis Jules and Ed Summers collected tweets that contained the key word 'ferguson' (the suburb of St. Louis where Brown was killed), collecting 13 million tweets.
 In the process of doing so, they developed a utility named twarc, short for twitter and archiving.
 
-A large part to DocNow is commitment to ethical social media collection. 
-Activists and protesters had not consented to be part of an archive, with their content that were on twitter and other places online. 
-They were never consulted on if they wanted their content to be remembered long from now. 
-A large part of the DocNow was how to build an archive of social media content for the long term, with consent from the content creators. 
+A large part to DocNow is commitment to ethical social media collection.
+Activists and protesters had not consented to be part of an archive, with their content that were on twitter and other places online.
+They were never consulted on if they wanted their content to be remembered long from now.
+A large part of the DocNow was how to build an archive of social media content for the long term, with consent from the content creators.
 For us in the workshop, we will be discussing practices for ethical twitter harvesting before going over instruction on using twarc.
 
 ## Using the Help
 
-By using the --help command, you can pull up the syntax guidance and available tools with 
-twarc. You may find this useful as you go through the lessons to learn how to use 
-different tools, or at the end of the workshop as a summary of the tools you have 
+By using the --help command, you can pull up the syntax guidance and available tools with
+twarc. You may find this useful as you go through the lessons to learn how to use
+different tools, or at the end of the workshop as a summary of the tools you have
 learned. Let's run it from our notebook so that we can view it at our convenience.
 
 twarc2 is a program, not a line of code, so we start the line with a bang `!`
@@ -343,7 +348,7 @@ Commands:
 ~~~
 {: .output}
 
-These are all of the commands that you can send via twarc2. You can also view all the 
+These are all of the commands that you can send via twarc2. You can also view all the
 help for twarc 1.0!
 
 
