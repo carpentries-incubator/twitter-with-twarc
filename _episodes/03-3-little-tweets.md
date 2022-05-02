@@ -26,21 +26,22 @@ the deadline for Americans to file their annual income report).
 
 Let's look at our `taxday.jsonl` file again. Remember that our JSON files are line-oriented,
 ie: one tweet per line. Let's use `head -n 1 taxday.jsonl > 1-tweet.jsonl` to create a file
-with just our first three tweets.
+with just one tweet.
 
 If we use `cat` to output that file to the screen, we see a real mess. Let's
-open the file with a graphical text editor instead. 
+open the Jupyter graphical file viewer instead. 
 
 > ## Why jump out of BASH?
 >
-> We should be using nano instead, but we don't have access to nano
-> in our little shell window yet. 
+> We can use nano instead, and stay in our little shell window 
+> with our hands on our keyboards.  
 > {: .source}
 {: .callout}
 
-In Sublime Text, it's still difficult to tell what's going on. But because line numbering is
-turned on, we can see that this whole screen is still the first Tweet. Are these all a whole
-bunch of named-value pairs? ie:
+Using either method, it's still difficult to tell what's going on. Can we even tell that
+this is only one tweet?
+numbering is turned on, we can see that this whole screen is still the first Tweet. Are 
+these all a whole bunch of named-value pairs? ie:
 
 ~~~
 "name": "Joe Gaucho",
@@ -73,7 +74,6 @@ Some key pieces of a Tweet are:
 This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-copy.pdf
 
 
-{% include links.md %}
 
 > ## First and last Tweets.
 >
@@ -83,7 +83,7 @@ This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-co
 > 1 How long is the time difference between the first and the last tweets?
 > 2 Judging by these 4 tweets, do they arrive in chronological order?
 > 3 Can you think of a more rigorous way to check?
-
+>
 > ~~~
 > head -n 2 > 4tweets.jsonl
 > tail -n 2 >> 4tweets.jsonl
@@ -107,3 +107,5 @@ This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-co
 > > {: .output}
 > {: .solution}
 {: .challenge}
+
+{% include links.md %}
