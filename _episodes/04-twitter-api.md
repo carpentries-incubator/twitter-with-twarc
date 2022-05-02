@@ -54,12 +54,12 @@ If you want to go back as far in time as the Twitter API allows (6 days typicall
 you can simultaneously tighten up your search parameters (using all of Twitter's 
 [advanced search syntax]() and keep your --limit low. 
 
-`twarc2 search -- limit 500 "catsofinstagram AND cute"`
+`twarc2 search --limit 500 "catsofinstagram AND cute"`
 
 That got me back 5 out of six days. So asking for 800 Tweets should get me all six days' worth
 of results
 
-`twarc2 search -- limit 800 "catsofinstagram AND cute"`
+`twarc2 search --limit 800 "catsofinstagram AND cute"`
 
 In this way we can 'sip' at our quota and make sure we can work all month.
 
