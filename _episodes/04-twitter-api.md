@@ -40,6 +40,12 @@ twarc2 search --limit 500 "#catsofinstagram" hasgtag_cats.jsonl
 
 ![image "the output from two twarc searches"](../fig/cats.png){: .image-with-shadow}
 
+twarc tells me that I hit my limit of 500 after looking back in time only a few hours. Even 
+a limit of 5,000 Tweets, get the job done?
+
+We can use the visual indicator for this. Or open the file and see if we have something 
+less than 5000 or 6 days.
+
 As before, let's flatten our dataset (or convert it to a csv), and figure out if we 
 got our full 500 Tweets. Check the first and last Tweet to determine the timespan?
 
@@ -57,11 +63,8 @@ of results
 
 In this way we can 'sip' at our quota and make sure we can work all month.
 
-
-
-In
-that case, we can take a sample of the 'firehose' to make sure that we go back in time
-as far back as the Twitter API allows: 
+We can also take a completely random sample of the 'firehose' to make sure that we go 
+back in time as far back as the Twitter API allows:
 
 ~~~
 twarc2 sample 
