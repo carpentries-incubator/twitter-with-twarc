@@ -273,7 +273,8 @@ contains the data of tweets under the username "BergisJules".
 > user-friendly means of collecting and preserving this type of digital content."
 {: .callout}
 
-</br>
+
+
 The Documenting the Now Project started in 2014, during the aftermath of the killing of Michael Brown Jr. in St. Louis, Missouri (U.S.). 
 A group of archivists got together, recognizing that protest and activism surrounding this had initially happened on twitter and other social media. 
 There was also a consideration of how this content would be recorded as a part of history, starting with this idea of how these events would be remembered as they transpired on social media. 
