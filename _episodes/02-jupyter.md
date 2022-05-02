@@ -47,7 +47,7 @@ this workshop, follow along in the virtual environment.
 Open our [LSIT JupyterLab](https://test.lsit.ucsb.edu) in a fresh web browser window.
 Select 'Carpentry Workshop' under the server options. It will take a few minutes to fire up your virtual machines. 
 
-![server-options](/fig/server-options.PNG)
+![server-options](/../fig/server-options.PNG)
 
 When you first open JupyterLab, you will find a file browser tab on the far left side of 
 the screen. This is where we can manage our files and navigate directories. The tab that 
@@ -94,9 +94,12 @@ file system commands. Let's look at the directories we have created:
 - `cd`
 - `ls`
 
-Remember: you can only type where the cursor is blinking. And you can't move the cursor
-with your mouse. Fingers on the keyboard!
-
+> ## Remember:
+>
+> You can only type where the cursor is blinking. And you can't move the cursor
+> with your mouse. Fingers on the keyboard!
+>
+{: .callout}
 
 # Configuring twarc
 
@@ -115,7 +118,7 @@ Let's start
 configuring twarc by sending typing in `twarc2 configure`. You should get the output below:
 
 ~~~
-twarc2 configure
+!twarc2 configure
 ~~~
 {: .language-bash}
 
@@ -194,7 +197,7 @@ Please run the command "twarc2 configure" to get started.
 
 # Test for Twarc configuration
 
-We should confirm that Twarc was configured correctly and that you are good to continue 
+We should confirm that Twarc was configured correctly and that you are ready to continue 
 using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter 
 account. At the same time, we will learn how to send Python commands from a Jupyter
 Notebook. 
@@ -233,7 +236,7 @@ For now, let's send a command to twarc from inside of our notebook:
 >
 {: .callout}
 
-The twitter account that we will collect tweets from is Bergis Jules, a archivist and scholar working in digital humanities. He is Community Lead for [Documenting the Now (DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve Jules' recent tweets, please run the following command in a Python Notebook:
+The twitter account that we will collect tweets from is Bergis Jules, an archivist and scholar working in digital humanities. He is the Community Lead for [Documenting the Now (DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve Jules' recent tweets, please run the following command in a Python Notebook:
 
 ~~~
 !twarc2 timeline BergisJules > bjules.jsonl
