@@ -29,17 +29,39 @@ That last one is something we should highlight. The level of API access you have
 to 500,000 Tweets per month. For that reason, while we Search or Stream Tweets during this 
 workshop, let's get in the habit of limiting ourselves to 500 Tweets.
 
+You can always check to see how much of your quota you have used by visiting dong, dong, 
+dong...
+
 Let's make a new cell in our Notebook and send a search:
 ~~~
 twarc2 search --limit 500 "#catsofinstagram" hasgtag_cats.jsonl
 ~~~
 {: .source}
-~~~
-can I put an image here?
-![image "the output from two twarc searches"](../fig/cats.png){: .image-with-shadow}
-~~~
-{: .output}
 
- 
-As before, flatten your dataset, and figure out if we got our full 500 Tweets. What's the 
-timespan?
+![image "the output from two twarc searches"](../fig/cats.png){: .image-with-shadow}
+
+As before, let's flatten our dataset (or convert it to a csv), and figure out if we 
+got our full 500 Tweets. Check the first and last Tweet to determine the timespan?
+
+
+If you want to go back as far in time as the Twitter API allows (6 days typically),
+you can simultaneously tighten up your search parameters (using all of Twitter's 
+[advanced search syntax]() and keep your --limit low. 
+
+`twarc2 search -- limit 500 "catsofinstagram AND cute"`
+
+That got me back 5 out of six days. So asking for 800 Tweets should get me all six days' worth
+of results
+
+`twarc2 search -- limit 800 "catsofinstagram AND cute"`
+
+In this way we can 'sip' at our quota and make sure we can work all month.
+
+
+
+In
+that case, we can take a sample of the 'firehose' to make sure that we go back in time
+as far back as the Twitter API allows: 
+
+~~~
+twarc2 sample 
