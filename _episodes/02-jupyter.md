@@ -287,9 +287,9 @@ They were never consulted on if they wanted their content to be remembered long 
 A large part of the DocNow was how to build an archive of social media content for the long term, with consent from the content creators. 
 For us in the workshop, we will be discussing practices for ethical twitter harvesting before going over instruction on using twarc.
 
-## Reading the Help
+## Using the Help
 
-By using the --help command, you may pull up syntax guidance and available tools with 
+By using the --help command, you can pull up the syntax guidance and available tools with 
 twarc. You may find this useful as you go through the lessons to learn how to use 
 different tools, or at the end of the workshop as a summary of the tools you have 
 learned. Let's run it from our notebook so that we can view it at our convenience.
