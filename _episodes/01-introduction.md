@@ -18,7 +18,7 @@ keypoints:
 
 Twitter is a social media platform where users post short messages, pictures, news stories, and other content to be viewed by others. These postings are referred to as "tweets". Twitter users curate their social media by subscribing to (or following) other twitter accounts. It allows people from all over the world to interact with each other almost instantaneously.
 
-<img src="../fig/twitter.png" alt="Twitter Explore Page" width = "600" height = "700"/>
+<img src="../fig/twitter.png" alt="Twitter Explore Page" width = "700" height = "700"/>
 
 If you've never used Twitter before, the terms used there can be cryptic (and NSFW). Beyond "@ing people" and "hashtags", the users themselves have created Twitter-wide standards. Twitter is also filled with subcommunities who use their own lingo.
 
