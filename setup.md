@@ -4,7 +4,7 @@ title: Setup
 > ## Data
 >
 > The data we will be using in the workshop is to practice hydrating twitter data. Please down the data file `taxday.json` and keep it in an accessible place (such as your desktop).
-> [taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/tree/gh-pages/data/taxday.jsonl.jsn)
+> [taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/tree/gh-pages/data/taxday.jsonl)
 >
 {: .prereq}
 
@@ -17,12 +17,14 @@ To get started, you will need:
 * #### [A Twitter Account](twitter.com):
 Valid email account and cell phone number to receive texts are necessary.
 * #### [Developer Account](developer.twitter.com/en):
-You must create the twitter account to link to the Developer account first.
+You must create the Twitter account first, in order to link to the Developer account.
 
 Getting developer access really does require you to validate yourself as a human, so the
 form is particular about having a valid phone number and email address added to your Twitter account.
 Getting developer access requires a valid phone number added to your Twitter account. This is so twitter can authenticate a user.
 
+Once you are logged on to Twitter, go to 
+the [Developer Portal sign-up page](https://developer.twitter.com/en/portal/petition/use-case)
 
 Fill out the application questions as listed here:
   - someone insert figure here
@@ -33,9 +35,11 @@ Fill out the application questions as listed here:
 
 ### Making your Project and App
 
-Right after verifying your email, you wil be taken to your Developer Portal Dashboard and prompted to create a new *Project*.
-Every instance of Twarc is a *Twitter App* and Twitter Apps live inside of *Projects*. After selecting 'Exploring the API' as your use case,
-you will be given "Essential Access". Essential Access allows you to have one project with one App inside of it.
+Right after verifying your email, you wil be taken to your Developer Portal Dashboard and 
+prompted to create a new *Project*. Every instance of Twarc is a *Twitter App* and 
+Twitter Apps live inside of *Projects*. After selecting 'Exploring the API' as your use 
+case, you will be given "Essential Access". Essential Access allows you to have one 
+project with one App inside of it.
 
 <img src="fig/dashboard.PNG" width="500">
 
@@ -44,15 +48,18 @@ you will be given "Essential Access". Essential Access allows you to have one pr
 <img src="fig/project-description.PNG" width="500">
 --->
 
-*SAVE* these keys in an accessible place like a password manager. You will not see these keys again, so this is essential. You should have:
-* Consumer Keys: API Key and Secret
-* Authentication Bearer Token
+*SAVE* these keys in an accessible place like a password manager. You will not see these 
+keys again, so this is essential. You should have: 
+
+* API Key 
+* API Secret 
+* Authentication Bearer Token 
 * Access Token and Secret
 
 <img src="fig/dev-keys-tokens.png" width="500">
 
 
-> ## Obtain Access Token and Secret
+> ## Obtain Access Token and Secret)
 > On the App Page (twarc-app in the example) go to 'Keys and Tokens'. Generate 'Access Token and Secret Token'. Note down both Access Token
 > and Access Token Secret. If you want to use twarc on another computer, generate new keys and tokens
 >
