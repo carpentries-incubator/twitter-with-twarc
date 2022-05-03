@@ -34,7 +34,7 @@ keypoints:
 > Tweets were in the archive, and how many remain on Mr. Musk's new
 > acquisition. 
 >
-> ```
+> 
 >
 > > ## Solution
 > > On first run through, only 10 of the first 999 tweets remain.
@@ -42,6 +42,6 @@ keypoints:
 > > This indicates that a huge proportion of this dataset has
 > > been deleted or restricted by Twitter.
 > >
-> > ```
+> 
 > {: .solution}
 {: .challenge}
