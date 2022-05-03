@@ -4,7 +4,7 @@ title: Setup
 > ## Data
 >
 > The data we will be using in the workshop is to practice hydrating twitter data. Please down the data file `taxday.json` and keep it in an accessible place (such as your desktop).
-> [taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/tree/gh-pages/data/taxday.jsonl)
+> [taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/raw/gh-pages/data/taxday.jsonl)
 >
 {: .prereq}
 
