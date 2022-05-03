@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - "What is a tweet?"
 - "What is TWARC?"
-- "What is an API and how can I get started?" 
+- "What is an API and how can I get started?"
 objectives:
 - "First learning objective. (FIXME)"
 - "How is a tweet considered to be data?"
@@ -16,16 +16,17 @@ keypoints:
 
 # Learning to Speak Twitter
 
-Twitter is a social media platform where users post short messages, pictures, news stories, and other content referred to as "tweets", to be viewed by others. It allows people from all over the world to interact with each other almost instantaneously. 
+Twitter is a social media platform where users post short messages, pictures, news stories, and other content to be viewed by others. These postings are referred to as "tweets". Twitter users curate their social media by subscribing to (or following) other twitter accounts. It allows people from all over the world to interact with each other almost instantaneously.
 
 <img src="../fig/twitter.png" alt="Twitter Explore Page" width = "600" height = "700"/>
 
-If you've never used Twitter before, the language used, in addition to being NSFW, can be totally cryptic. Beyond "@ing people" and "hashtags", the users themselves have created Twitter-wide standards, and Twitter is also filled with subcommunities who use their own lingo.
+If you've never used Twitter before, the terms used there can be cryptic (and NSFW). Beyond "@ing people" and "hashtags", the users themselves have created Twitter-wide standards. Twitter is also filled with subcommunities who use their own lingo.
 
 Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide.</a>
 
-> ## Challenge
-> Throw a few terms into the etherpad
+> ## Your Twitter Experience
+> If you are a twitter user, what popular terms have you encountered?
+> Alternatively, why are you interested in data from Twitter?
 {: .challenge}
 
 This is a not too awful guide:
@@ -35,38 +36,38 @@ https://www.lifewire.com/twitter-slang-and-key-terms-explained-2655399
 
 # Why Should You Care About Twitter?
 
-Every user, tweet, video, and emoji on Twitter is data that can be collected and analyzed. In recent years Twitter analysis has become increasingly popular and has played a hand in predicting topics from natural disasters to Election outcomes. 
+Every user, tweet, video, and emoji on Twitter is data that can be collected and analyzed. In recent years Twitter analysis has become increasingly popular and has played a hand in predicting topics from natural disasters to Election outcomes.
 
-The millions of tweets sent out each day, and the range of content within those tweets amounts to Twitter being a source for a large amount of data. 
+The millions of tweets sent out each day, and the range of content within those tweets amounts to Twitter being a source for a large amount of data.
 
 > ## Big Data
 >  Based on these guidelines, some refer to Twitter data as Big Data, but some distinguish Big Data as 'so much data that it because unmanagable and therefore unable
 >  to be analyzed.
 {: .callout}
 
-In order to analyze Twitter data, we must first retrieve it which we will be doing using a tool called an API. 
+In order to analyze Twitter data, we must first retrieve it which we will be doing using a tool called an API.
 
 # API: A Complicated Topic and a (mostly) Easy Tool
 
-API is an abbreviation that stands or Application Programming Interface. It allows computers or applications to communicate with one another without requiring users to code operations from scratch. APIs allow you to use abstraction, because similar to how you don't need to know the engineering behind your shower in order to use it, you don't need to understand the code behind APIs in order to fetch data. 
+API is an abbreviation that stands or Application Programming Interface. It allows computers or applications to communicate with one another without requiring users to code operations from scratch. APIs allow you to use abstraction, because similar to how you don't need to know the engineering behind your shower in order to use it, you don't need to understand the code behind APIs in order to fetch data.
 
 Formally defined, an API is a set of commands, functions, protocols, and objects used by programmers to create software or to interact with external system.
 
 ## Common Analogy
 
-Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you order from a set list of items on the menu. The waiter then takes your order to the chef/kitchen crew who put together different meals and drinks for your table. The waiter then takes your order to your table. 
+Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you order from a set list of items on the menu. The waiter then takes your order to the chef/kitchen crew who put together different meals and drinks for your table. The waiter then takes your order to your table.
 
 Here are the key players in our analogy:
 1. Customer - you as the user
 2. Menu items - the commands and operations you can pass to an API in order to retrieve information
-3. Waiter - the API that delivers your information request to the system, and then your resulting dataset to you 
+3. Waiter - the API that delivers your information request to the system, and then your resulting dataset to you
 4. Chef/Kitchen crew - the external program or webserver that has the information you seek
 
 You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/what-is-an-api)">here</a>.
 
 > ## APIs are not Webscraping
 > The biggest difference between APIs and Webscraping is the retrieval method. With APIs you are using a system preset by the website you are trying to access the data
-> from (Twitter, YouTube, Spotify, ...). 
+> from (Twitter, YouTube, Spotify, ...).
 {: .callout}
 
 
@@ -75,6 +76,3 @@ You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/
 You may be asking, "What is twarc?" or, "Why do all things involving Twitter have to start with a 'tw'?".
 
 Twarc is one of the APIs used to retrieve data from Twitter.
-
-
-
