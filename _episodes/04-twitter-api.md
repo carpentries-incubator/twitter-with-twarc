@@ -15,23 +15,22 @@ keypoints:
 
 ---
 
-# What is an API?
-
-API is an acronym for Application Programming Interface.
-
-
 # The Twitter v.2 API
+
+Recall that API is an acronym for Application Programming Interface. The Twitter API can be used to retrieve Twitter data for analysis. Compared to v1, the most recent version of the Twitter API (v2) includes additional levels of access, more features, and faster onboarding for developers and academic researchers.
 
 The Twitter API comes along with all sorts of rules and regulations: how to submit requests,
 how many requests you can make in an hour, how many Tweets you can download in a month.
 
-That last one is something we should highlight. The level of API access you have is limited
-to 500,000 Tweets per month. For that reason, while we Search or Stream Tweets during this
+That last regulation is something we should highlight. The level of API access you have is limited
+to 500,000 Tweets per month. For that reason, while we collect Tweets during this
 workshop, let's get in the habit of limiting ourselves to 500 Tweets.
 
 You can always check to see how much of your quota you have used by visiting your [twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard)
 
-Let's make a new cell in our Notebook and send a search:
+## First look at the search command
+Let's make a new cell in our Notebook and run a search command:
+
 ~~~
 !twarc2 search --limit 500 "#catsofinstagram" hasgtag_cats.jsonl
 ~~~
@@ -39,18 +38,12 @@ Let's make a new cell in our Notebook and send a search:
 
 ![image "the output from two twarc searches"](../fig/cats.png){: .image-with-shadow}
 
-twarc tells me that I hit my limit of 500 after checking back in after a few hours.
+This command will search for any recent tweets that contain #catsofinstagram. Twarc tells me that I hit my limit of 500 after checking back in after a few hours.
 
-We can use the visual indicator for this. Or open the file and see if we have something
-less than 5000 or 6 days.
-
-As before, let's flatten our dataset (or convert it to a csv), and figure out if we
-got our full 500 Tweets. Check the first and last Tweet to determine the timespan?
-
+We can use the visual indicator to confirm the limit of our second search. We may also open the file and see if we have something less than 5000 tweets or 6 days worth.
 
 If you want to go back as far in time as the Twitter API allows (6 days typically),
-you can simultaneously tighten up your search parameters (using all of Twitter's
-[advanced search syntax]() and keep your --limit low.
+you can simultaneously tighten up your search parameters and keep your `--limit` value low.
 
 `twarc2 search --limit 500 "catsofinstagram AND cute"`
 
@@ -59,10 +52,50 @@ of results
 
 `twarc2 search --limit 800 "catsofinstagram AND cute"`
 
-In this way we can 'sip' at our quota and make sure we can work all month.
+In this way we can 'sip' at our quota and make sure we can work all month. Later on in the workshop, we will be going over to set more search parameters with this command.
 
-We can also take a completely random sample of the 'firehose' to make sure that we go
-back in time as far back as the Twitter API allows:
+> ## Academic access
+> Academic access comes with 3 projects and 10 million tweets per month.
+>
+{: .callout}
+
+## First look at the stream command
+
+You may also collect tweets as they are posted, and establish rules to what tweets will be collected (as you did for setting search parameters). To start with a stream, let's set some search rules:
 
 ~~~
-twarc2 sample
+!twarc2 stream-rules add #catsofinstagram
+~~~
+{: .language-python}
+
+~~~
+!twarc2 stream-rules add #catsoftwitter
+~~~
+{: .language-python}
+
+To see what your current stream rules are, you may list them:
+
+~~~
+!twarc2 stream-rules list
+~~~
+{: .language-python}
+
+When you start collecting tweets with the rules you have set in place, you must create the file that the data will be stored in:
+
+~~~
+!twarc2 stream > 'source_data/streamed_tweets.jsonl'
+~~~
+{: .language-python}
+
+Once this command is ran, you will collect tweets that match the rules set in place. This collection will be ongoing unless you explicitly shut down the stream with `ctrl + c`. While this stops the stream collection, it does not remove the stream-rules. In order to remove the rules you had set in place, you must use delete:
+
+~~~
+!twarc2 stream-rules delete #catsofinstagram
+!twarc2 stream-rules delete #catsoftwitter
+~~~
+{: .language-python}
+
+> ## Discuss: Search vs Stream
+> We had an introductory look at the use of the search command and the stream command.
+> Please brainstorm what the difference(s) are between searching tweets and streaming tweets.
+{: .discussion}
