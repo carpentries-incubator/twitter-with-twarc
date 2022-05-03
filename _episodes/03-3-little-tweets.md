@@ -139,4 +139,11 @@ harvested in Episode 2.
 > {: .solution}
 {: .challenge}
 
+## Load our tweets into a pandas dataframe
+https://www.kdnuggets.com/2017/03/beginners-guide-tweet-analytics-pandas.html
+Are we ever going to use this dataframe? If not, then don’t do this.
+If so, put in some foreshadowing here.
+
+
+
 {% include links.md %}
