@@ -39,12 +39,12 @@ create and navigate the directory structure, and use the built-in BASH terminal.
 If you have a fully configured version of Python, you can also install and run twarc on
 your own computer. The documentation for installing Twarc is found at [this
 repository](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics.html). For
-this workshop, follow along in the virtual environment.
+this workshop, follow along in the provided environment.
 
 
 # Navigating the JuptyerLab interface
 
-Open our [LSIT JupyterLab](https://test.lsit.ucsb.edu) in a fresh web browser window.
+Open our LSIT JupyterLab in a fresh web browser window.
 Select 'Carpentry Workshop' under the server options. It will take a few minutes to fire up your virtual machines.
 
 When you first open JupyterLab, you will find a file browser tab on the far left side of
@@ -61,7 +61,7 @@ to run and save programs you write.
 To start off, we need to create the directory that we will be working in. Open the file
 browser and create a folder to store all of your workshop files in (e.g. data, python notebooks). To create a folder, select
 the icon that is highlighted in the above image. We have chosen to name the folder
-`twarc-run`. We will organize all of our work in this folder, and this folder will be our home directory.
+`twarc-run`. <strong>We will organize all of our work in this folder, and this folder will be our home directory.</strong>
 
 
 Inside of `twarc-run`, let's make two more folders. Please create one folder that is named `source-data`, and create a second folder named `output-data`. Source-data is where we will store twitter data we collect during the workshop. The output-data folder for is where we will store twitter data we process. `output-data` should not be inside of `source-data`, and vice versa. Instead, both folders should be inside of `twarc-run`.
@@ -105,7 +105,7 @@ Print your working directory and make sure you are in the directory `twarc-run`.
 >
 {: .callout}
 
-# Configuring twarc
+# Configuring twarc in the Terminal
 
 Continuing in the terminal window, we will configure Twarc so that it is connected to your Twitter
 developer account and to your app. If you do not have a twitter developer account, please
@@ -204,7 +204,7 @@ Please run the command "twarc2 configure" to get started.
 ~~~
 {: .output}
 
-# Test for Twarc configuration
+# Test for Twarc configuration in the Notebook
 
 We should confirm that Twarc was configured correctly and that you are ready to continue
 using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter
@@ -258,13 +258,17 @@ bottom of the cell.
 
 After the cell has completed running the line, there
 will be a file called "bjules.jsonl" inside of `source-data` on your file browser. This file
-contains the data of tweets under the username "BergisJules".
+contains the data of tweets under the username "@BergisJules".
 
 > ## Challenges
 >
-> * How many tweets did you get from Bergis?
 > * Can you find the file called "bjules.jsonl"?
-> * Download a timeline for a person of your choice. How many tweets did you get? What’s the oldest one?
+> * Download a timeline for one of the twitter accounts from this list:
+>
+> NCEAS "@ucsb_nceas", EcoDataScience "@ecodatasci", R-Ladies Santa Barbara "@RLadiesSB",
+> spatial@ucsb "@spatialUCSB", UCSB Collaboratory "@libratorybot"
+>
+> * What do you notice about the file that was created from using the timeline command?
 >
 {: .challenge}
 
@@ -299,7 +303,7 @@ twarc. You may find this useful as you go through the lessons to learn how to us
 different tools, or at the end of the workshop as a summary of the tools you have
 learned. Let's run it from our notebook so that we can view it at our convenience.
 
-twarc2 is a program, not a line of code, so we start the line with a bang `!`
+twarc2 is a program, not a line of code, so we start the line with an exclamation point `!`.
 
 ~~~
 !twarc2 --help
