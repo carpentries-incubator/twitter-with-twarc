@@ -33,17 +33,12 @@ keypoints:
 > Using the file "dehydrated_Capitol_Rioters.txt", determine how many
 > Tweets were in the archive, and how many remain on Mr. Musk's new
 > acquisition. 
->
-> ```
-> 
+> {: .source}
 >
 > > ## Solution
 > > On first run through, only 10 of the first 999 tweets remain.
-> >
 > > This indicates that a huge proportion of this dataset has
 > > been deleted or restricted by Twitter.
-> >
-> > ```
-> 
+> > {: .output}
 > {: .solution}
 {: .challenge}
