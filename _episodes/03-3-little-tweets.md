@@ -25,23 +25,27 @@ used twarc to search for all mentions of the hashtag `#taxday` (April 15th is
 the deadline for Americans to file their annual income report).
 
 Let's look at our `taxday.jsonl` file again. Remember that our JSON files are line-oriented,
-ie: one tweet per line. Let's use `head -n 1 taxday.jsonl > 1-tweet.jsonl` to create a file
+ie: one tweet per line. Let's use 
+`head -n 1 source_data/taxday.jsonl > output_data/1-tweet.jsonl` to create a file
 with just one tweet.
 
-If we use `cat` to output that file to the screen, we see a real mess. Let's
+If we use `!cat` to output that file to a Notebook cell, we see a real mess. Let's
 open the Jupyter graphical file viewer instead. 
 
 > ## Why jump out of BASH?
 >
-> We can use nano instead, and stay in our little shell window 
-> with our hands on our keyboards.  
+> We could use nano instead, and stay in our little shell window 
+> with our hands on our keyboards.  There is an advantage to looking at the
+> file with nano.
 > {: .source}
 {: .callout}
 
 Using either method, it's still difficult to tell what's going on. Can we even tell that
 this is only one tweet?
-numbering is turned on, we can see that this whole screen is still the first Tweet. Are 
-these all a whole bunch of named-value pairs? ie:
+
+The Jupyter viewer has numbering, so we can see that this whole screen is one line, ie: 
+still the first Tweet. It appears that a Tweet is all a whole bunch of named-value pairs? 
+ie:
 
 ~~~
 "name": "Joe Gaucho",
@@ -68,11 +72,38 @@ Some key pieces of a Tweet are:
   -- screen name (twitter handle)
   -- followers_count
   
+These become visible if we download our tweet and open it up with pass it over to an
+online JSONL viewer. 
+
 (need to write a bit more about the first tweet)
 
 ### link to a page with a good view of tweets
+Amanda's image
 This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-copy.pdf
 
+Our most basic analysis can be done with a BASH command:
+Demo `wc` for counting lines / tweets 
+
+We can do this with our timeline file as well, but we need to `Flatten` it first.
+
+By flattening Bergis' timeline and then looking at the file with `wc`, you can see
+that he has Tweeted 3171 times. 
+
+We can use `tail -n 2 sourcedata/ > output_data/bergistale.jsons` to see that
+we have retrieved texts of his back to 2018.
+
+Other things we can do: sentiment analysis (FORESHADOWING). See when he joined 
+Twitter (hint: way before 2018)
+
+
+How are the flattened and unflattened versions different?
+I’m thinking timeline jsonl looks a tiny bit different from searched/filtered tweets as jsonl.
+I can’t confirm yet.
+Timeline doesn’t really give a line-oriented set of tweets. <<< this is why we need flatten or csv
+
+# Another Challenge
+Use wc and head and tail to figure out how many Tweets you received from the account you 
+harvested in Episode 2.
 
 
 > ## First and last Tweets.
