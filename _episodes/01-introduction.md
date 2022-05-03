@@ -25,8 +25,8 @@ If you've never used Twitter before, the terms used there can be cryptic (and NS
 Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide.</a>
 
 > ## Your Twitter Experience
-> If you are a twitter user, what popular terms have you encountered?
-> Alternatively, why are you interested in data from Twitter?
+> If you are a twitter user, what terms have you encountered in your use?
+> Alternatively, what do you know from Twitter as a non-twitter user?
 {: .challenge}
 
 This is a not too awful guide:
@@ -36,12 +36,12 @@ https://www.lifewire.com/twitter-slang-and-key-terms-explained-2655399
 
 # Why Should You Care About Twitter?
 
-Every user, tweet, video, and emoji on Twitter is data that can be collected and analyzed. In recent years Twitter analysis has become increasingly popular and has played a hand in predicting topics from natural disasters to Election outcomes.
+Every user, tweet, video, and emoji on Twitter is data that can be collected and analyzed. In recent years Twitter analysis has become increasingly popular and has played a hand in predicting events, from natural disasters to Election outcomes.
 
-The millions of tweets sent out each day, and the range of content within those tweets amounts to Twitter being a source for a large amount of data.
+With millions of tweets sent out each day, and the range of content within those tweets means that Twitter is a source for a large amount of data.
 
 > ## Big Data
->  Based on these guidelines, some refer to Twitter data as Big Data, but some distinguish Big Data as 'so much data that it because unmanagable and therefore unable
+>  Based on these guidelines, some refer to Twitter data as Big Data. Big Data as been distinguished as so much data that it is unmanageable, and therefore unable
 >  to be analyzed.
 {: .callout}
 
@@ -55,15 +55,15 @@ Formally defined, an API is a set of commands, functions, protocols, and objects
 
 ## Common Analogy
 
-Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you order from a set list of items on the menu. The waiter then takes your order to the chef/kitchen crew who put together different meals and drinks for your table. The waiter then takes your order to your table.
+Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you may choose from a set list of items on the menu. The waiter then takes your order to the cooks who put together different meals and drinks for your table. The waiter then takes your order to your table.
 
 Here are the key players in our analogy:
 1. Customer - you as the user
 2. Menu items - the commands and operations you can pass to an API in order to retrieve information
 3. Waiter - the API that delivers your information request to the system, and then your resulting dataset to you
-4. Chef/Kitchen crew - the external program or webserver that has the information you seek
+4. Cooks - the external program or webserver that has the information you seek
 
-You can visualize this anaolgy <a href="(https://www.mulesoft.com/resources/api/what-is-an-api)">here</a>.
+You can see a visualize of this analogy <a href="https://www.mulesoft.com/resources/api/what-is-an-api">in this video</a>.
 
 > ## APIs are not Webscraping
 > The biggest difference between APIs and Webscraping is the retrieval method. With APIs you are using a system preset by the website you are trying to access the data
