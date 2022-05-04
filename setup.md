@@ -50,31 +50,26 @@ project with one App inside of it.
 ### Acquiring Keys and Tokens
 
 After you have completed setting up your project, you will see the App details below. You can edit the name and app icon if you'd like to personalize it.
+
+<img src="fig/twarc-app.png" width="500">
+
 Under the project name, you will see *Settings* and *Keys and Tokens* tab. You will need to navigate to *Keys and Tokens* to generate your 5 keys and tokens. You will need to click the _regenerate_ button to get each of your keys and tokens. They are not automatically made for you. 
-
-
-*SAVE* these keys in an accessible place like a password manager. You will not see these 
-keys again, so this is essential. You should have: 
-
-* API Key 
-* API Secret 
-* Authentication Bearer Token 
-* Access Token
-* Access Token Secret 
 
 <img src="fig/dev-keys-tokens.png" width="500">
 
 
-> ## Obtain Access Token and Secret)
-> On the App Page (twarc-app in the example) go to 'Keys and Tokens'. Generate 'Access Token and Secret Token'. Note down both Access Token
-> and Access Token Secret. If you want to use twarc on another computer, generate new keys and tokens
+> ## Necessary Keys and Tokens
 >
-> You will know you have succeeded when you have the following set of Keys and Tokens:
-> - Bearer Token
-> - API Key
-> - API Key Secret
-> - Access Token
-> - Access Token Secret
+> _*SAVE*_ these keys in an accessible place like a password manager or in a document. You will not see these 
+> keys again, so this is essential. You should have: 
+>
+> * API Key 
+> * API Secret 
+> * Authentication Bearer Token 
+> * Access Token
+> * Access Token Secret
+>
+> You will have succeeded when you have these 5 keys and tokens
 {: .prereq}
 
 <!--
