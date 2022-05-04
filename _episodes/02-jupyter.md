@@ -14,6 +14,7 @@ objectives:
 keypoints:
 - "Navigating a virtual Python environment / JupyterLab"
 - "Configuring an application to work with an API"
+- "Arranging a directory structure and loading libraries"
 ---
 
 # Brief Intro to JupyterLab
@@ -213,22 +214,30 @@ using Twarc. To test the Twarc configuration, we will harvest tweets from a twit
 account. At the same time, we will learn how to send Python commands from a Jupyter
 Notebook.
 
-Please Open
-a new launcher (select the blue rectangular button with the plus sign) and open a Python
-3 Notebook (do not open a Python 3 Console). You will see the following window open:
+Please Open a new launcher (select the blue rectangular button with the 
+plus sign) and open a Python 3 Notebook (do not open a Python 3 
+Console). You will see the following window open:
 
 ![interface of jupyterLab notbook](../fig/first-look-jupyter-notebook.png)
 
 At the top of the Notebook tab, notice that there is a new toolbar. Each of the buttons
 has a shortcut key. We will mostly use `b` to add a cell, `ctrl` + `enter` to execute
 whatever code is inside the current cell.
-the se  for using python
-notebook.
 
+You can type either Python code or Markdown into a cell. We will be doing both.
 We are using this notebook so that we can save our work along the way. At the end of the day,
 you can save your notebook file and try to run it later on your own installation of twarc.
 
-For now, let's send a command to twarc from inside of our notebook:
+Let's put some effort into formatting it nicely by putting Markdown
+at the top: 
+
+` # Twitter with twarc Workshop notebook `
+` This notebook contains all of the code used to `
+` harvest and analyze Tweets`
+
+
+Now, let's send a command to twarc from inside of our notebook:
+
 
 > ## Twarc Commands in JupyterLab
 >
@@ -261,6 +270,7 @@ bottom of the cell.
 After the cell has completed running the line, there
 will be a file called "bjules.jsonl" inside of `source-data` on your file browser. This file
 contains the data of tweets under the username "@BergisJules".
+
 
 > ## Challenges
 >
@@ -356,6 +366,7 @@ Commands:
 
 These are all of the commands that you can send via twarc2. You can also view all the
 help for twarc 1.0!
+
 
 
 {% include links.md %}
