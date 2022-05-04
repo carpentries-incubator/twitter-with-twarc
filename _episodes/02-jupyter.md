@@ -392,6 +392,9 @@ So far we have sent BASH commands and typed Markdown in our Notebooks. But the
 main reason to use Jupyter Notebooks is to write code. Let's load the Python libraries
 we will be using today, and then load our Tax Day data into a Pandas dataframe:
 
+`import pandas`
+`import twarc_csv`
+
 *** convert to csv and then dataframe goes here. ***
 This will be our introduction to writing Python in notebooks.
 Will reinforce running lines, clearing output. 
@@ -399,5 +402,6 @@ Timeline data needs to be 'flattened' before we use it.
 csv's are conventient for reading.
 dataframes are the main tool for pandas.
 We can cut this down to just loading the libraries if we this this is too long.
+CSV is currently in episode 4, but you CAN do it here.
 
 {% include links.md %}
