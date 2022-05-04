@@ -36,7 +36,11 @@ But here are a few you will hear throughout the workshop and might see as fields
 | Verified  | a verified Twitter account receives a blue check icon to indicate that the creator of these tweets is a legitimate source, such as a public figure |
      | 
 
-(FIXME) *add in picture of actual tweet. Jon said to make it obscure.*
+### Tweet
+
+This is an example of what a tweet looks like on the brower.
+
+<img src="../fig/obscure-tweet.png" alt="Obscure tweet from an obscure twitter account" width = "700" height = "400"/>
 
 > ## Your Twitter Experience
 > If you are a twitter user, what terms have you encountered in your use?
