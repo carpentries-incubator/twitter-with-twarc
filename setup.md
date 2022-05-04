@@ -3,7 +3,8 @@ title: Setup
 ---
 > ## Data
 >
-> The data we will be using in the workshop is to practice hydrating twitter data. Please down the data file `taxday.json` and keep it in an accessible place (such as your desktop).
+> The data we will be using in the workshop is to practice hydrating twitter data. Please down the data file `taxday.jsonl` and keep it in an accessible place (such as your desktop).
+> On April 15, 2022, we used twarc to search for all mentions of the hashtag `#taxday` and created this file (April 15th is the deadline for Americans to file their annual income report).
 > [taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/raw/gh-pages/data/taxday.jsonl)
 >
 {: .prereq}
@@ -50,31 +51,29 @@ project with one App inside of it.
 ### Acquiring Keys and Tokens
 
 After you have completed setting up your project, you will see the App details below. You can edit the name and app icon if you'd like to personalize it.
-Under the project name, you will see *Settings* and *Keys and Tokens* tab. You will need to navigate to *Keys and Tokens* to generate your 5 keys and tokens. You will need to click the _regenerate_ button to get each of your keys and tokens. They are not automatically made for you. 
 
+<img src="fig/twarc-app.png" width="500">
 
-*SAVE* these keys in an accessible place like a password manager. You will not see these 
-keys again, so this is essential. You should have: 
+Under the project name, you will see *Settings* and *Keys and Tokens* tab. You will need to navigate to *Keys and Tokens* to generate your 5 keys and tokens. 
+You will need to click the _generate_ button to get each of your keys and tokens. They are not automatically made for you so you must generate them the first time.
 
-* API Key 
-* API Secret 
-* Authentication Bearer Token 
-* Access Token
-* Access Token Secret 
+If you forget to save, or lose your tokens, you can click _regenerate_ to regenerate your keys and tokens, a new set is made for you.
 
 <img src="fig/dev-keys-tokens.png" width="500">
 
 
-> ## Obtain Access Token and Secret)
-> On the App Page (twarc-app in the example) go to 'Keys and Tokens'. Generate 'Access Token and Secret Token'. Note down both Access Token
-> and Access Token Secret. If you want to use twarc on another computer, generate new keys and tokens
+> ## Necessary Keys and Tokens
 >
-> You will know you have succeeded when you have the following set of Keys and Tokens:
-> - Bearer Token
-> - API Key
-> - API Key Secret
-> - Access Token
-> - Access Token Secret
+> ***SAVE*** these keys in an accessible place like a password manager or in a document. You will not see these 
+> keys again, so this is essential. You should have: 
+>
+> * API Key 
+> * API Secret 
+> * Authentication Bearer Token 
+> * Access Token
+> * Access Token Secret
+>
+> You will have succeeded when you have these 5 keys and tokens
 {: .prereq}
 
 <!--
