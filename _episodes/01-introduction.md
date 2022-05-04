@@ -18,7 +18,7 @@ keypoints:
 
 Twitter is a social media platform where users post short messages, pictures, news stories, and other content to be viewed by others. These postings are referred to as "tweets". Twitter users curate their social media by subscribing to (or following) other twitter accounts. It allows people from all over the world to interact with each other almost instantaneously.
 
-<img src="../fig/twitter.png" alt="Twitter Explore Page" width = "700" height = "700"/>
+<img src="../fig/twitter.png" alt="Twitter Explore Page" width = "800" height = "800"/>
 
 If you've never used Twitter before, the terms used there can be cryptic (and NSFW). Beyond "@ing people" and "hashtags", the users themselves have created Twitter-wide standards. Twitter is also filled with subcommunities who use their own lingo.
 
@@ -83,9 +83,8 @@ You can see a visualize of this analogy <a href="https://www.mulesoft.com/resour
 > from (Twitter, YouTube, Spotify, ...).
 {: .callout}
 
-
 # Twarcing
 
 You may be asking, "What is twarc?" or, "Why do all things involving Twitter have to start with a 'tw'?".
 
-Twarc is one of the APIs used to retrieve data from Twitter.
+Twarc is a command line tool and Python library that is used to collect and archive Tweets through the Twitter API. The great thing about twarc is that it's accessible, well-documented, free, and fairly easy to use once you get the hang of it. It's also an active open-source project so, if you run into any errors, the people who built twarc respond quite quickly (and they're very friendly).
