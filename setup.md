@@ -53,7 +53,10 @@ After you have completed setting up your project, you will see the App details b
 
 <img src="fig/twarc-app.png" width="500">
 
-Under the project name, you will see *Settings* and *Keys and Tokens* tab. You will need to navigate to *Keys and Tokens* to generate your 5 keys and tokens. You will need to click the _regenerate_ button to get each of your keys and tokens. They are not automatically made for you. 
+Under the project name, you will see *Settings* and *Keys and Tokens* tab. You will need to navigate to *Keys and Tokens* to generate your 5 keys and tokens. 
+You will need to click the _generate_ button to get each of your keys and tokens. They are not automatically made for you so you must generate them the first time.
+
+If you forget to save, or lose your tokens, you can click _regenerate_ to regenerate your keys and tokens, a new set is made for you.
 
 <img src="fig/dev-keys-tokens.png" width="500">
 
