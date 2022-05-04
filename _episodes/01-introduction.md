@@ -22,7 +22,20 @@ Twitter is a social media platform where users post short messages, pictures, ne
 
 If you've never used Twitter before, the terms used there can be cryptic (and NSFW). Beyond "@ing people" and "hashtags", the users themselves have created Twitter-wide standards. Twitter is also filled with subcommunities who use their own lingo.
 
-Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide.</a>
+Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide.</a> 
+But here are a few you will hear throughout the workshop and might see as fields in your data.  
+
+| Twit-term | Definition |
+|-----------|------------|
+| Tweet     | Can be a noun or a verb. Tweets are messages posted to twitter that are make to be shared and interacted with |
+| Hashtag   | A keyword or phrase (no spaces) with the `#` before it. You can use hashtags to see other tweets with the same tag |
+| Retweet   | A shared tweet |
+| @-        | Usernames begin with a `@` symbol and are used as a unique identifier for a twitter profile. |
+| Following | subscribing to a twitter account. You can see an account's tweets as soon as they post something new|
+| Mention   | By including the @ sign followed by a username, you can mention other accounts. This refers to usernames included in a tweet |
+| Verified  | a verified Twitter account receives a blue check icon to indicate that the creator of these tweets is a legitimate source, such as a public figure |
+     | 
+
 
 > ## Your Twitter Experience
 > If you are a twitter user, what terms have you encountered in your use?
