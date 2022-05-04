@@ -115,3 +115,12 @@ Functions / extensions: can be pip installed --and these installs stick in our L
 have permission to install things on top of twarc)
 
 Our twitter guide gives advice about how to follow a real-time event, like pending #scotus decisions.
+
+## Convert to csv
+While JSON is common, it's not super human-readable, and it would be a bear to convert to a 
+dataframe. So twarc2 convert to csv functions that we can use.
+
+twarc2 csv kittens.jsonl output_data/kittens.csv
+
+and we can load that into a pandas dataframe:
+
