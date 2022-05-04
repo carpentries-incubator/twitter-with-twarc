@@ -28,11 +28,17 @@ workshop, let's get in the habit of limiting ourselves to 500 Tweets.
 
 You can always check to see how much of your quota you have used by visiting your [twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard)
 
+Remember: timeline captures tweets of 1 person: this harvests up to some arbitrary limit below 3200
+You can request a specific time period for a person’s timeline:
+Dong dong dong
+
+
 ## First look at the search command
-Let's make a new cell in our Notebook and run a search command:
+Let's make a new cell in our Notebook and run a search command. Remember that
+we need to specify an output file. `>` optional
 
 ~~~
-!twarc2 search --limit 500 "#catsofinstagram" hasgtag_cats.jsonl
+!twarc2 search --limit 500 "#catsofinstagram" hashtag_cats.jsonl
 ~~~
 {: .source}
 
@@ -87,7 +93,7 @@ When you start collecting tweets with the rules you have set in place, you must 
 ~~~
 {: .language-python}
 
-Once this command is ran, you will collect tweets that match the rules set in place. This collection will be ongoing unless you explicitly shut down the stream with `ctrl + c`. While this stops the stream collection, it does not remove the stream-rules. In order to remove the rules you had set in place, you must use delete:
+Once this command is run, you will collect tweets that match the rules set in place. This collection will be ongoing unless you explicitly shut down the stream with `ctrl + c`. While this stops the stream collection, it does not remove the stream-rules. In order to remove the rules you had set in place, you must use delete:
 
 ~~~
 !twarc2 stream-rules delete #catsofinstagram
@@ -98,4 +104,14 @@ Once this command is ran, you will collect tweets that match the rules set in pl
 > ## Discuss: Search vs Stream
 > We had an introductory look at the use of the search command and the stream command.
 > Please brainstorm what the difference(s) are between searching tweets and streaming tweets.
+> When might you choose stream over search? How can you use them together?
 {: .discussion}
+
+## Twarc let’s you interact via the v1 api and v2 api.
+We already did twarc2 timeline. Twarc1 timeline gives slightly different results (We need to confirm and figure out how they are different?). How are they different?
+
+Functions and utilities: refer to our guide and readthedocs.docnow. There will be more detail in episode 6.
+Functions / extensions: can be pip installed --and these installs stick in our Labs environment (because we
+have permission to install things on top of twarc)
+
+Our twitter guide gives advice about how to follow a real-time event, like pending #scotus decisions.
