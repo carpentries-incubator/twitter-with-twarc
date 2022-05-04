@@ -30,7 +30,10 @@ Use csv or xxx to make a browsable / human readable look at the tweets
 
 This will be a fun experiment. who tweets a LOT?
 
-When we have thousands of tweets: we need analysis tools:
+## When we have thousands of tweets: we need analysis tools
+Looking at our csv, there's a LOT of retweets here (a tweet
+that starts with a RT). We can run a 
+
 Tweets vs. retweets
 
 Lab Tasks
