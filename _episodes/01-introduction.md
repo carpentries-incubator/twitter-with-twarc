@@ -106,6 +106,7 @@ twarc is a command line tool and Python library that is used to collect and arch
 > Navigate to the ['Issues'](https://github.com/DocNow/twarc/issues) page on their repository and open a new issue. You also view pre-existing issues (open or closed) to see if someone has already answered a question like yours.
 {: .callout}
 
-(FIXME) *... add in something about getting a unique dataset and utilities foreshadowing ...*
+
+Twarc allows you to request specific data based on keywords, hashtags, events, and other areas of interest. Once you have your dataset, twarc has what the developers refer to as 'utilities'. These as python programs that can be run on the command line to explore and visualize your data. An is is the utility 'wordcloud.py' which creates a wordcloud of the text from the tweets you've collected. We'll see these capabilities put into practice in later episodes. 
 
 
