@@ -73,3 +73,55 @@ For this lesson, we will be covering some of your endpoint options that are avai
 The data that is saved using Twarc is just what Twitter reads from a tweet as data and provides as data. So, keeping the data authentic for analysis is a design of Twarc. Twarc is also traceable, so people can see a log of how and when the data was collected.
 
 In the v2 redesign, Twarc was also designed to be easily part of a pipline of commands. Users can connect their data collecting to other pieces of their software that expect to get tweets as inputs. When you install Twarc, you will get two clients, twarc & twarc2. Twarc was designed with the v1 Twitter API in mind, and Twarc2 was designed as a response to Twitter implementing their v2 API.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Convert to csv
+While JSON is common, it's not super human-readable, and it would be a bear to convert to a
+dataframe. So twarc2 convert to csv functions that we can use.
+
+twarc2 csv kittens.jsonl output_data/kittens.csv
+
+and we can load that into a pandas dataframe:
+
+0 comments on commit 17d

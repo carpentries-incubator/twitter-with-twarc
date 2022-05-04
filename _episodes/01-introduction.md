@@ -18,7 +18,7 @@ keypoints:
 
 Twitter is a social media platform where users post short messages, pictures, news stories, and other content to be viewed by others. These postings are referred to as "tweets". Twitter users curate their social media by subscribing to (or following) other twitter accounts. It allows people from all over the world to interact with each other almost instantaneously.
 
-<img src="../fig/twitter.png" alt="Twitter Explore Page" width = "800" height = "800"/>
+<img src="../fig/twitter.png" alt="Twitter Explore Page" width = "900" height = "900"/>
 
 If you've never used Twitter before, the terms used there can be cryptic (and NSFW). Beyond "@ing people" and "hashtags", the users themselves have created Twitter-wide standards. Twitter is also filled with subcommunities who use their own lingo.
 
@@ -36,6 +36,11 @@ But here are a few you will hear throughout the workshop and might see as fields
 | Verified  | a verified Twitter account receives a blue check icon to indicate that the creator of these tweets is a legitimate source, such as a public figure |
      | 
 
+### Tweet
+
+This is an example of what a tweet looks like on the brower.
+
+<img src="../fig/obscure-tweet.png" alt="Obscure tweet from an obscure twitter account" width = "700" height = "400"/>
 
 > ## Your Twitter Experience
 > If you are a twitter user, what terms have you encountered in your use?
@@ -55,7 +60,7 @@ With millions of tweets sent out each day, and the range of content within those
 
 > ## Big Data
 >  Based on these guidelines, some refer to Twitter data as Big Data. Big Data as been distinguished as so much data that it is unmanageable, and therefore unable
->  to be analyzed.
+>  to be analyzed. We won't be handling Big Data during this lesson. 
 {: .callout}
 
 In order to analyze Twitter data, we must first retrieve it which we will be doing using a tool called an API.
@@ -68,6 +73,10 @@ Formally defined, an API is a set of commands, functions, protocols, and objects
 
 ## Common Analogy
 
+<p><a href="https://www.uplevel.work/blog/feature-how-we-created-an-events-aggregator-using-python">
+<img src="../fig/api-analogy.png" alt="API Analogy" width = "800" height = "500"/>
+</a></p>
+
 Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you may choose from a set list of items on the menu. The waiter then takes your order to the cooks who put together different meals and drinks for your table. The waiter then takes your order to your table.
 
 Here are the key players in our analogy:
@@ -79,12 +88,25 @@ Here are the key players in our analogy:
 You can see a visualize of this analogy <a href="https://www.mulesoft.com/resources/api/what-is-an-api">in this video</a>.
 
 > ## APIs are not Webscraping
-> The biggest difference between APIs and Webscraping is the retrieval method. With APIs you are using a system preset by the website you are trying to access the data
-> from (Twitter, YouTube, Spotify, ...).
+> The biggest difference between APIs and Webscraping is the retrieval method. With **APIs** you are using a system preset by the website you are trying to access the data from (Twitter, YouTube, Spotify, etc.). 
+> There are often requirements about what you can and cannot retrieve from the site and what you can do once you have the data, but it is generally very efficient and doesn't require too much from the user. 
+> **Webscraping** is a tool used to extract specific information from a website(s). 
+> Typically, webscraping is best for extracting data from multiple sites at once, when there is no API available, or when the amount of data you want to extract exceeds the limits you're given.
+> If you're interested in learning more about webscraping, you can check out our ['Introduction to Webscraping'](https://ucsbcarpentry.github.io/2022-05-12-ucsb-webscraping/01-introduction/) workshop. 
 {: .callout}
 
-# Twarcing
+# twarcing
 
 You may be asking, "What is twarc?" or, "Why do all things involving Twitter have to start with a 'tw'?".
 
-Twarc is a command line tool and Python library that is used to collect and archive Tweets through the Twitter API. The great thing about twarc is that it's accessible, well-documented, free, and fairly easy to use once you get the hang of it. It's also an active open-source project so, if you run into any errors, the people who built twarc respond quite quickly (and they're very friendly).
+twarc is a command line tool and Python library that is used to collect and archive Tweets through the Twitter API. The great thing about twarc is that it's accessible, free, and fairly easy to use once you get the hang of it. It's also an active open-source project (that means it is essentially open to collaboration and use by anyone) and is well-documented on [Github](https://twarc-project.readthedocs.io/en/latest/) by an organization referred to as [Documenting the Now](https://www.docnow.io/). 
+
+> ## Issues
+> If you run into any errors, the people who built twarc respond quite quickly (and they're very friendly). 
+> Navigate to the ['Issues'](https://github.com/DocNow/twarc/issues) page on their repository and open a new issue. You also view pre-existing issues (open or closed) to see if someone has already answered a question like yours.
+{: .callout}
+
+
+Twarc allows you to request specific data based on keywords, hashtags, events, and other areas of interest. Once you have your dataset, twarc has what the developers refer to as 'utilities'. These as python programs that can be run on the command line to explore and visualize your data. An is is the utility 'wordcloud.py' which creates a wordcloud of the text from the tweets you've collected. We'll see these capabilities put into practice in later episodes. 
+
+
