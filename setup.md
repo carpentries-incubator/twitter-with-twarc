@@ -4,8 +4,11 @@ title: Setup
 > ## Data
 >
 > The data we will be using in the workshop is to practice hydrating twitter data. Please down the data file `taxday.jsonl` and keep it in an accessible place (such as your desktop).
-> On April 15, 2022, we used twarc to search for all mentions of the hashtag `#taxday` and created this file (April 15th is the deadline for Americans to file their annual income report).
+> We used twarc to search for all mentions of the hashtag `#taxday` and created this file (April 15th is the deadline for Americans to file their annual income report).
 > [taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/raw/gh-pages/data/taxday.jsonl)
+>
+> Make sure you save the `taxday.jsonl` as a .jsonl file and not a .txt file. You can do this by right clicking in the browser, choose `save as` then choosing 'all file types'
+> and remove the .txt ending and change it to .jsonl.
 >
 {: .prereq}
 
@@ -28,7 +31,7 @@ the [Developer Portal sign-up page](https://developer.twitter.com/en/portal/peti
 
 Fill out the application questions as listed here:
   
-  - What Country are you based in?
+  - What country are you based in?
   - What's your use case? Choose `Doing academic research` (recommended)
   - Will you make Twitter content or derived information available to a government entity or a government affiliated entity? `No` (recommended)
   - Click through the user agreement and verify your email.
@@ -57,7 +60,8 @@ After you have completed setting up your project, you will see the App details b
 Under the project name, you will see *Settings* and *Keys and Tokens* tab. You will need to navigate to *Keys and Tokens* to generate your 5 keys and tokens. 
 You will need to click the _generate_ button to get each of your keys and tokens. They are not automatically made for you so you must generate them the first time.
 
-If you forget to save, or lose your tokens, you can click _regenerate_ to regenerate your keys and tokens, a new set is made for you.
+If you forget to save, or lose your tokens, you can click _regenerate_ to regenerate your keys and tokens, and a new set is made for you. 
+However, if you do regenerate any keys and tokens, you'll need to reenter them when you try to access the API again.  
 
 <img src="fig/dev-keys-tokens.png" width="500">
 
