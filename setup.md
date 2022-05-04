@@ -47,8 +47,10 @@ project with one App inside of it.
 <img src="fig/project-description.PNG" width="500">
 --->
 
+### Acquiring Keys and Tokens
+
 After you have completed setting up your project, you will see the App details below. You can edit the name and app icon if you'd like to personalize it.
-Under the project name, you will see *Settings* and *Keys and Tokens* tab. You will need to navigate to *Keys and Tokens* to generate your 5 keys and tokens.  
+Under the project name, you will see *Settings* and *Keys and Tokens* tab. You will need to navigate to *Keys and Tokens* to generate your 5 keys and tokens. You will need to click the _regenerate_ button to get each of your keys and tokens. They are not automatically made for you. 
 
 
 *SAVE* these keys in an accessible place like a password manager. You will not see these 
