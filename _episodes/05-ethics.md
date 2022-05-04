@@ -4,7 +4,7 @@ teaching: 0
 exercises: 0
 questions:
 - "Can I avoid seeing hate speech and unsettling imagery and still analyze twitter?"
-- "What are some INappropriate things to do with twarc?"
+- "What are some inappropriate things to do with twarc?"
 objectives:
 - "Discuss the privacy or ethical concerns surrounding tweet harvesting. (FIXME)"
 keypoints:
@@ -13,7 +13,6 @@ keypoints:
 ---
 
 # Let's Get Ethical
-
 
 
 
