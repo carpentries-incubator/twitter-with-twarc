@@ -70,7 +70,7 @@ Formally defined, an API is a set of commands, functions, protocols, and objects
 ## Common Analogy
 
 <p><a href="https://www.uplevel.work/blog/feature-how-we-created-an-events-aggregator-using-python">
-<img src="../fig/api-analogy.png" alt="API Analogy" width = "300" height = "150"/>
+<img src="../fig/api-analogy.png" alt="API Analogy" width = "800" height = "500"/>
 </a></p>
 
 Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you may choose from a set list of items on the menu. The waiter then takes your order to the cooks who put together different meals and drinks for your table. The waiter then takes your order to your table.
