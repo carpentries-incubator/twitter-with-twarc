@@ -64,7 +64,7 @@ If you forget to save, or lose your tokens, you can click _regenerate_ to regene
 
 > ## Necessary Keys and Tokens
 >
-> *_SAVE_* these keys in an accessible place like a password manager or in a document. You will not see these 
+> ***SAVE*** these keys in an accessible place like a password manager or in a document. You will not see these 
 > keys again, so this is essential. You should have: 
 >
 > * API Key 
