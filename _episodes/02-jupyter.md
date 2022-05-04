@@ -44,7 +44,7 @@ this workshop, follow along in the provided environment.
 
 
 ## Starting up JupyterLab
-Open our [LSIT JupyterLab](what's the final URL?) in a fresh web browser window.
+Open our [LSIT JupyterLab](https://test.lsit.ucsb.edu/) in a fresh web browser window.
 
 Select 'Carpentry Workshop' under the server options. It will take a few minutes to fire up your virtual machines.
 
