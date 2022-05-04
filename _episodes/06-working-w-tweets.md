@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - "Why do we use jsonl, other than it being standard and popular?" 
 - "Is there a more human-easy way to look at our data?"
-- "Why json? ()
+- "Why json? ()"
 - "How can I separate original content from retweets/replies?"
 - "What are we using to view our data? "
 
@@ -14,7 +14,7 @@ objectives:
 keypoints:
 - "We can use nano or the built-in Jupyter file viewer to examine our data"
 - "CSV’s are way more readable."
-- "Converting to csv will often be your move, so you can visually inspect your data.
+- "Converting to csv will often be your move, so you can visually inspect your data."
 
 ---
 
