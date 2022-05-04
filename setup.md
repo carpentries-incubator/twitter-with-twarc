@@ -3,7 +3,8 @@ title: Setup
 ---
 > ## Data
 >
-> The data we will be using in the workshop is to practice hydrating twitter data. Please down the data file `taxday.json` and keep it in an accessible place (such as your desktop).
+> The data we will be using in the workshop is to practice hydrating twitter data. Please down the data file `taxday.jsonl` and keep it in an accessible place (such as your desktop).
+> On April 15, 2022, we used twarc to search for all mentions of the hashtag `#taxday` and created this file (April 15th is the deadline for Americans to file their annual income report).
 > [taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/raw/gh-pages/data/taxday.jsonl)
 >
 {: .prereq}
