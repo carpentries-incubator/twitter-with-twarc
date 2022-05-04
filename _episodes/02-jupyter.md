@@ -66,20 +66,20 @@ browser and create a folder to store all of your workshop files in (e.g. data, p
 the icon that is highlighted in the above image. We have chosen to name the folder
 `twarc-run`. <strong>We will organize all of our work in this folder, and this folder will be our home directory.</strong>
 
-
 Inside of `twarc-run`, let's make two more folders. Please create one folder that is named `source-data`, and create a second folder named `output-data`. Source-data is where we will store twitter data we collect during the workshop. The output-data folder for is where we will store twitter data we process. `output-data` should not be inside of `source-data`, and vice versa. Instead, both folders should be inside of `twarc-run`.
 
 Since `source-data` is where we will store our original data files, please open this data folder
 and upload all of the datafiles:
 
 - `taxday.jsonl`
-- dong
-- dong
+- `one_tweet.jsonl`
+- `utils.zip`
+- dong, dong, dong
 
 
 If you have not downloaded the data, please
-complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
-instructions. Once the data file is uploaded, navigate back to your up to our project
+do so now from the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
+instructions. Once the data files are uploaded, navigate back to your up to our project
 directory `twarc-run`. Once you are done, your file organization should look like the
 below image.
 
@@ -231,21 +231,27 @@ you can save your notebook file and try to run it later on your own installation
 Let's put some effort into formatting it nicely by putting Markdown
 at the top: 
 
-` # Twitter with twarc Workshop notebook `
-` This notebook contains all of the code used to `
-` harvest and analyze Tweets`
+`# Twitter with twarc Workshop notebook ` 
+` This notebook contains all of the code used to ` 
+` harvest and analyze Tweets` 
 
+If you run that line, Jupyter will render that markdown into something that looks
+like this:
 
-Now, let's send a command to twarc from inside of our notebook:
+(insert screenshot)
+
+Now, let's call twarc2 from inside of our notebook
 
 
 > ## Twarc Commands in JupyterLab
 >
 > We can run Twarc from the terminal window in JupyterLab, or we can send
-> commands from a Jupyter Notebook.
+> commands from out Jupyter Notebook.
 >
-> Let's use JupyterLab to run bash commands. To do so we need to add an
-> exclamation point (!) at the beginning of the notebook cell. For example: if a Twarc command is
+> Because we will be using a mix of Python code and BASH commands, it's important
+> to keep in mind which is which. 
+> When we use JupyterLab to run BASH commands, we need to start each line with an
+> exclamation point (! often pronounced "bang" by nerds). For example: if a Twarc command is
 > `twarc2 search`, then the line to run the twarc command in JupyterLab
 > is:
 >
@@ -256,7 +262,10 @@ Now, let's send a command to twarc from inside of our notebook:
 >
 {: .callout}
 
-The twitter account that we will collect tweets from is Bergis Jules, an archivist and scholar working in digital humanities. He is the Community Lead for [Documenting the Now (DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve Jules' recent tweets, please run the following command in a Python Notebook:
+The twitter account that we will collect tweets from is Bergis Jules, an archivist and 
+scholar working in digital humanities. He is the Community Lead for [Documenting the Now 
+(DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve 
+Jules' recent tweets, please run the following command in a Python Notebook:
 
 ~~~
 !twarc2 timeline BergisJules > 'source-data/bjules.jsonl'
@@ -367,6 +376,12 @@ Commands:
 These are all of the commands that you can send via twarc2. You can also view all the
 help for twarc 1.0!
 
+## Writing Python code in your Notebook
+So far we have sent BASH commands and typed Markdown in our Notebooks. But the 
+main reason to use Jupyter Notebooks is to write code. Let's load the Python libraries
+we will be using today, and load our Tax Day data into a Pandas dataframe:
+
+*** convert to csv and then dataframe goes here. ***
 
 
 {% include links.md %}
