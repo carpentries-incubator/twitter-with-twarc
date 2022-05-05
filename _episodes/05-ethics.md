@@ -8,13 +8,10 @@ questions:
 - "How much personal information can we actually gather about a user given our twarc scrape?"
 - "What are some inappropriate use cases for twarc?"
 objectives:
-- "Become acquainted with the Jupyter Lab tools"
-- "Set up directory and data folder"
-- "Set up Twarc with your keys and tokens"
+- "Discuss the privacy of ethical concerns surrounding tweet harvesting. (FIXME)"
 keypoints:
-- "Navigating a virtual Python environment / JupyterLab"
-- "Configuring an application to work with an API"
-- "Arranging a directory structure and loading libraries"
+- "'Distance Reading' is analyzing big full-text data without a human consuming the words"
+- "Robot detection, archives, and deleted accounts"
 ---
 
 
