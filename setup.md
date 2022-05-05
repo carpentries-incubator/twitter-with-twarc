@@ -6,13 +6,28 @@ title: Setup
 > The data we will be using in the workshop is to practice working with twitter data. Please download the data files `taxday.jsonl` and `Capitol Riot Tweets.txt` and keep it in an accessible place (such as your desktop).
 > We used twarc to search for all mentions of the hashtag `#taxday` and created this file (April 15th is the deadline for Americans to file their annual income report).
 > The Capitol riot tweets is a dataset from Kaggle. 
-> [taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/raw/gh-pages/data/taxday.jsonl)
+> <br/>
+> [Taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/blob/gh-pages/data/taxday.jsonl)
+> <br/>
 > [Capitol Riot Tweets download link](https://github.com/UCSBCarpentry/twitter-with-twarc/blob/gh-pages/data/dehydratedCapitolRiotTweets.txt)
 >
 > Make sure you save the `taxday.jsonl` as a .jsonl file and not a .txt file. You can do this by right clicking in the browser, choose `save as` then choosing 'all file types'
 > and remove the .txt ending and change it to .jsonl.
 >
 {: .prereq}
+
+
+> ## Additional Utilities
+> 
+> We will also be using an extended set of utilities that will help explore the data collected through twarc.
+> <br/>
+> [twarc utilities download link](https://github.com/UCSBCarpentry/twitter-with-twarc/blob/gh-pages/files/utils.zip)
+>
+> Make sure you download and unzip this folder onto your desktop. Later in the workshop, we will upload this set of tools to our JupyterHub. 
+>
+{: .prereq}
+
+
 
 ### Getting the Necessary Privileges
 
@@ -81,6 +96,10 @@ However, if you do regenerate any keys and tokens, you'll need to reenter them w
 >
 > You will have succeeded when you have these 5 keys and tokens
 {: .prereq}
+
+
+
+
 
 <!--
 
