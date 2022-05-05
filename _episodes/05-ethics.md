@@ -1,5 +1,5 @@
 ---
-title: "Ethics & Twitter"
+title:"Ethics and Twitter"
 teaching: 0
 exercises: 0
 questions:
