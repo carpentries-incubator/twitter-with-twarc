@@ -47,6 +47,9 @@ Once you are logged on to Twitter, go to
 the [Developer Portal sign-up page](https://developer.twitter.com/en/portal/petition/use-case){:target="_blank" rel="noopener"}
 
 Fill out the application questions as listed here:
+
+<img src="fig/setting-up-dev.PNG" width="500">
+
   
   - What country are you based in?
   - What's your use case? Choose `Doing academic research` (recommended)
