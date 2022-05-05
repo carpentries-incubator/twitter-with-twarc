@@ -22,20 +22,19 @@ Twitter is a social media platform where users post short messages, pictures, ne
 
 If you've never used Twitter before, the terms used there can be cryptic (and NSFW). Beyond "@ing people" and "hashtags", the users themselves have created Twitter-wide standards. Twitter is also filled with subcommunities who use their own lingo.
 
-Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide.</a> 
-But here are a few you will hear throughout the workshop and might see as fields in your data.  
+Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide,</a> but here are a few terms you will hear throughout the workshop and might see as fields in your data.  
 
 | Twit-term | Definition |
 |-----------|------------|
-| Tweet     | Can be a noun or a verb. Tweets are messages posted to twitter that are make to be shared and interacted with |
-| Hashtag   | A keyword or phrase (no spaces) with the `#` before it. You can use hashtags to see other tweets with the same tag |
+| Tweet     | Can be a noun or a verb. Tweets are messages posted to twitter that are made to be shared and interacted with |
+| Hashtag   | A keyword or phrase (no spaces) with the `#` before it. You can use hashtags to see other tweets with the same tag or topic |
 | Retweet   | A shared tweet |
 | @-        | Usernames begin with a `@` symbol and are used as a unique identifier for a twitter profile. |
-| Following | subscribing to a twitter account. You can see an account's tweets as soon as they post something new|
+| Following | Subscribing to a twitter account. You can see an account's tweets as soon as they post something new|
 | Mention   | By including the @ sign followed by a username, you can mention other accounts. This refers to usernames included in a tweet |
-| Verified  | a verified Twitter account receives a blue check icon to indicate that the creator of these tweets is a legitimate source, such as a public figure |
+| Verified  | A verified Twitter account receives a blue check icon to indicate that the creator of these tweets is a legitimate source, such as a public figure |
      | 
-
+     
 ### Tweet
 
 This is an example of what a tweet looks like on the brower.
@@ -47,14 +46,14 @@ This is an example of what a tweet looks like on the brower.
 > Alternatively, what do you know from Twitter as a non-twitter user?
 {: .challenge}
 
-This is a not too awful guide:
-https://www.lifewire.com/twitter-slang-and-key-terms-explained-2655399
+Check out this article on [Twitter Language or Slang](https://www.lifewire.com/twitter-slang-and-key-terms-explained-2655399).
+
 
 {% include links.md %}
 
 # Why Should You Care About Twitter?
 
-Every user, tweet, video, and emoji on Twitter is data that can be collected and analyzed. In recent years Twitter analysis has become increasingly popular and has played a hand in predicting events, from natural disasters to Election outcomes.
+Every user, tweet, video, and emoji on Twitter is data that can be collected and analyzed. In recent years Twitter analysis has become increasingly popular and has played a hand in predicting events from natural disasters to Election outcomes.
 
 With millions of tweets sent out each day, and the range of content within those tweets means that Twitter is a source for a large amount of data.
 
@@ -107,6 +106,6 @@ twarc is a command line tool and Python library that is used to collect and arch
 {: .callout}
 
 
-Twarc allows you to request specific data based on keywords, hashtags, events, and other areas of interest. Once you have your dataset, twarc has what the developers refer to as 'utilities'. These as python programs that can be run on the command line to explore and visualize your data. An is is the utility 'wordcloud.py' which creates a wordcloud of the text from the tweets you've collected. We'll see these capabilities put into practice in later episodes. 
+twarc allows you to request specific data based on keywords, hashtags, events, and other areas of interest. Once you have your dataset, twarc has what the developers refer to as 'utilities'. These as python programs that can be run on the command line to explore and visualize your data. An is is the utility 'wordcloud.py' which creates a wordcloud of the text from the tweets you've collected. We'll see these capabilities put into practice in later episodes. 
 
 
