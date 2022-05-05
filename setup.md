@@ -52,7 +52,7 @@ Fill out the application questions as listed here:
 
   
   - What country are you based in?
-  - What's your use case? Choose `Doing academic research` (recommended)
+  - What's your use case? Choose `Doing academic research`
   - Will you make Twitter content or derived information available to a government entity or a government affiliated entity? `No` (recommended)
   - Click through the user agreement and verify your email.
 
@@ -66,10 +66,9 @@ project with one App inside of it.
 
 <img src="fig/dashboard.PNG" width="500">
 
-<!---
 <img src="fig/what-you-api.PNG" width="500">
+
 <img src="fig/project-description.PNG" width="500">
---->
 
 ### Acquiring Keys and Tokens
 
