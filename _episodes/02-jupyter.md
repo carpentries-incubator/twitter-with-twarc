@@ -80,7 +80,7 @@ and upload all of the datafiles:
 
 - `taxday.jsonl` tweets from American tax day, 2022
 - `one_tweet.jsonl` a single tweet to look at
-- dong, dong, dong
+- (FIXME)
 
 And create another folder to contain all the `.py` files in:
 - `utils.zip` don't upload the zip file. unzip it and upload the individual `.py` files.
