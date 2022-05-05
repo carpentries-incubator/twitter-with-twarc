@@ -44,7 +44,7 @@ Getting developer access requires you to validate yourself as a human, so the
 form is particular about having a valid phone number and email address added to your Twitter account. This is so Twitter can authenticate a user.
 
 Once you are logged on to Twitter, sign into  
-the [Developer Portal sign-up page](https://developer.twitter.com/en){:target="_blank" rel="noopener"}
+the [Developer Portal](https://developer.twitter.com/en){:target="_blank" rel="noopener"}
 
 Fill out the application questions as listed here:
 
@@ -52,7 +52,7 @@ Fill out the application questions as listed here:
 
   
   - What country are you based in?
-  - What's your use case? Choose `Doing academic research`
+  - What's your use case? Choose `Teacher`
   - Will you make Twitter content or derived information available to a government entity or a government affiliated entity? `No` (recommended)
   - Click through the user agreement and verify your email.
 
@@ -66,7 +66,7 @@ project with one App inside of it.
 
 <img src="fig/dashboard.PNG" width="500">
 
-<img src="fig/what-you-api.PNG">
+<img src="fig/what-you-api.PNG" width="550">
 
 <img src="fig/project-description.PNG" width="500">
 
