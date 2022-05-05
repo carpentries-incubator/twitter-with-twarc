@@ -34,9 +34,9 @@ open the Jupyter graphical file viewer instead.
 
 > ## Why jump out of BASH?
 >
-> We could use nano instead, and stay in our little shell window 
+> We could use nano (WHAT IS NANO?) instead, and stay in our little shell window 
 > with our hands on our keyboards.  There is an advantage to looking at the
-> file with nano.
+> file with nano. (INSERT PIC OF NANO?)
 > {: .source}
 {: .callout}
 

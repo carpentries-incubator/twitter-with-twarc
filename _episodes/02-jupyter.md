@@ -3,7 +3,7 @@ title: "Getting familiar with JupyterLab"
 teaching: 20
 exercises: 5
 questions:
-- "What's JypyterLab?"
+- "What is JupyterLab?"
 - "How do I move around in JupyterLab?"
 - "How can I set up twarc on JupyterLab?"
 - "What’s a good way of running Twarc in our Jupyter environment?"
@@ -14,6 +14,7 @@ objectives:
 keypoints:
 - "Navigating a virtual Python environment / JupyterLab"
 - "Configuring an application to work with an API"
+- "Arranging a directory structure and loading libraries"
 ---
 
 # Brief Intro to JupyterLab
@@ -42,41 +43,52 @@ repository](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics.ht
 this workshop, follow along in the provided environment.
 
 
-# Navigating the JuptyerLab interface
+## Starting up JupyterLab
+Open our [LSIT JupyterLab](https://test.lsit.ucsb.edu/) in a fresh web browser window.
 
-Open our LSIT JupyterLab in a fresh web browser window.
 Select 'Carpentry Workshop' under the server options. It will take a few minutes to fire up your virtual machines.
+
+![server options](../fig/server-options.PNG)
+
+
+## Navigating the JuptyerLab interface
 
 When you first open JupyterLab, you will find a file browser tab on the far left side of
 the screen. This is where we can manage our files and navigate in-and-out of directories. The window that
 is labeled "Launcher" contains options for what to start up. For this workshop, we will
 be using Python 3 Notebook and Terminal.
 
-Lastly, note the toolbar found at the top on the screen.
+Next, note the toolbar found at the top on the screen.
 There, you will find options that are needed
 to run and save programs you write.
 
 ![first look at the jupyter lab interface](../fig/first-look-jupyter.png)
 
-To start off, we need to create the directory that we will be working in. Open the file
+To start off, we need to create some directories that we will be working in. Open the file
 browser and create a folder to store all of your workshop files in (e.g. data, python notebooks). To create a folder, select
 the icon that is highlighted in the above image. We have chosen to name the folder
 `twarc-run`. <strong>We will organize all of our work in this folder, and this folder will be our home directory.</strong>
 
-
-Inside of `twarc-run`, let's make two more folders. Please create one folder that is named `source-data`, and create a second folder named `output-data`. Source-data is where we will store twitter data we collect during the workshop. The output-data folder for is where we will store twitter data we process. `output-data` should not be inside of `source-data`, and vice versa. Instead, both folders should be inside of `twarc-run`.
+Inside of `twarc-run`, let's make two more folders. Please create one folder that is 
+named `source-data`, and create a second folder named `output-data`. Source-data is 
+where we will store twitter data we collect during the workshop. The output-data folder 
+for is where we will store twitter data we process. `output-data` should not be inside 
+of `source-data`, and vice versa. Instead, both folders should be inside of `twarc-run`.
 
 Since `source-data` is where we will store our original data files, please open this data folder
 and upload all of the datafiles:
 
-- `taxday.jsonl`
-- dong
-- dong
+- `taxday.jsonl` tweets from American tax day, 2022
+- `one_tweet.jsonl` a single tweet to look at
+- dong, dong, dong
+
+And create another folder to contain all the `.py` files in:
+- `utils.zip` don't upload the zip file. unzip it and upload the individual `.py` files.
 
 
 If you have not downloaded the data, please
-complete the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
-instructions. Once the data file is uploaded, navigate back to your up to our project
+do so now from the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
+instructions. Once the data files are uploaded, navigate back to your up to our project
 directory `twarc-run`. Once you are done, your file organization should look like the
 below image.
 
@@ -96,7 +108,9 @@ file system commands such as:
 - `cd`
 - `ls`
 
-Print your working directory and make sure you are in the directory `twarc-run`. If you are not in the proper directory, please change directories to move inside `twarc-run`.
+Print your working directory and make sure you are in the directory `twarc-run`. If you 
+are not in the proper directory, please change directories to move inside `twarc-run`. Moving
+around in your directories is pretty easy using this interface.
 
 > ## Remember:
 >
@@ -211,41 +225,58 @@ using Twarc. To test the Twarc configuration, we will harvest tweets from a twit
 account. At the same time, we will learn how to send Python commands from a Jupyter
 Notebook.
 
-Please Open
-a new launcher (select the blue rectangular button with the plus sign) and open a Python
-3 Notebook (do not open a Python 3 Console). You will see the following window open:
+Please Open a new launcher (select the blue rectangular button with the 
+plus sign) and open a Python 3 Notebook (do not open a Python 3 
+Console). You will see the following window open:
 
 ![interface of jupyterLab notbook](../fig/first-look-jupyter-notebook.png)
 
 At the top of the Notebook tab, notice that there is a new toolbar. Each of the buttons
 has a shortcut key. We will mostly use `b` to add a cell, `ctrl` + `enter` to execute
 whatever code is inside the current cell.
-the se  for using python
-notebook.
 
+You can type either Python code or Markdown into a cell. We will be doing both.
 We are using this notebook so that we can save our work along the way. At the end of the day,
 you can save your notebook file and try to run it later on your own installation of twarc.
 
-For now, let's send a command to twarc from inside of our notebook:
+Let's put some effort into formatting it nicely by putting Markdown
+at the top: 
+
+`# Twitter with twarc Workshop notebook` 
+`This notebook contains all of the code used to` 
+`harvest and analyze Tweets` 
+
+If you run that line, Jupyter will render that markdown into something that looks
+like this:
+
+### (insert screenshot)
+
+Now, let's call twarc2 from inside of our notebook
+
 
 > ## Twarc Commands in JupyterLab
 >
 > We can run Twarc from the terminal window in JupyterLab, or we can send
-> commands from a Jupyter Notebook.
+> commands from out Jupyter Notebook.
 >
-> Let's use JupyterLab to run bash commands. To do so we need to add an
-> exclamation point (!) at the beginning of the notebook cell. For example: if a Twarc command is
+> Because we will be using a mix of Python code and BASH commands, it's important
+> to keep in mind which is which. 
+> When we use JupyterLab to run BASH commands, we need to start each line with an
+> exclamation point (! often pronounced "bang" by nerds). For example: if a Twarc command is
 > `twarc2 search`, then the line to run the twarc command in JupyterLab
 > is:
 >
 > ~~~
 > !twarc2 search
 > ~~~
-> {: .language-python}
+> {: .language-bash}
 >
 {: .callout}
 
-The twitter account that we will collect tweets from is Bergis Jules, an archivist and scholar working in digital humanities. He is the Community Lead for [Documenting the Now (DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve Jules' recent tweets, please run the following command in a Python Notebook:
+The twitter account that we will collect tweets from is Bergis Jules, an archivist and 
+scholar working in digital humanities. He is the Community Lead for [Documenting the Now 
+(DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve 
+Jules' recent tweets, please run the following command in a Python Notebook:
 
 ~~~
 !twarc2 timeline BergisJules > 'source-data/bjules.jsonl'
@@ -259,6 +290,7 @@ bottom of the cell.
 After the cell has completed running the line, there
 will be a file called "bjules.jsonl" inside of `source-data` on your file browser. This file
 contains the data of tweets under the username "@BergisJules".
+
 
 > ## Challenges
 >
@@ -355,5 +387,21 @@ Commands:
 These are all of the commands that you can send via twarc2. You can also view all the
 help for twarc 1.0!
 
+## Writing Python code in your Notebook
+So far we have sent BASH commands and typed Markdown in our Notebooks. But the 
+main reason to use Jupyter Notebooks is to write code. Let's load the Python libraries
+we will be using today, and then load our Tax Day data into a Pandas dataframe:
+
+`import pandas`
+`import twarc_csv`
+
+*** convert to csv and then dataframe goes here. ***
+This will be our introduction to writing Python in notebooks.
+Will reinforce running lines, clearing output. 
+Timeline data needs to be 'flattened' before we use it.
+csv's are conventient for reading.
+dataframes are the main tool for pandas.
+We can cut this down to just loading the libraries if we this this is too long.
+CSV is currently in episode 4, but you CAN do it here.
 
 {% include links.md %}

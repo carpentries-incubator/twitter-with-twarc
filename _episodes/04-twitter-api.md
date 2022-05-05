@@ -4,65 +4,124 @@ teaching: 0
 exercises: 0
 questions:
 - "How exactly are we using the Twitter API?"
-- "What are some other ways of getting at Tweets?"
-- "Show us more features of twarc"
+- "What endpoints are available to me?"
+- "Working within our limits"
 objectives:
-- "Defining API, and what makes the Twitter API special. Search vs Filter"
+- "Defining API, and what makes the Twitter API special"
+- "Demonstrating other features of twarc in the context of endpoints"
 keypoints:
 - "A simpler example: URL parameter API’s"
 - "There are many online sources of Twitter data"
-- "Twarc has .py utilities that you can upload to your notebook."
-
 ---
 
-# What is an API?
+## The Twitter v.2 API
 
-API is an acronym for Application Programming Interface.
+If we are to retreive data, Twitter does not give us a huge data load of csv's or other giant files of data (we would not want that anyways). Instead Twitter makes data access available to researchers that apply for the twitter api. The Twitter Api allows applicants to collect tweets. This is also so Twitter can keep track of who is getting this data, and monitor data use.
 
-
-# The Twitter v.2 API
+Recall that API is an acronym for Application Programming Interface. Compared to v1, the most recent version of the Twitter API (v2) includes additional levels of access, more features, and faster onboarding for developers and academic researchers.
 
 The Twitter API comes along with all sorts of rules and regulations: how to submit requests,
 how many requests you can make in an hour, how many Tweets you can download in a month.
 
-That last one is something we should highlight. The level of API access you have is limited
-to 500,000 Tweets per month. For that reason, while we Search or Stream Tweets during this
+That last regulation is something we should highlight. The level of API access you have is limited
+to 500,000 Tweets per month. For that reason, while we collect Tweets during this
 workshop, let's get in the habit of limiting ourselves to 500 Tweets.
 
-You can always check to see how much of your quota you have used by visiting your [twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard)
-
-Let's make a new cell in our Notebook and send a search:
 ~~~
-!twarc2 search --limit 500 "#catsofinstagram" hasgtag_cats.jsonl
+!twarc2 timeline --limit 500 UCSBLibrary > 'source-data/ucsblib.jsonl'
 ~~~
-{: .source}
-
-![image "the output from two twarc searches"](../fig/cats.png){: .image-with-shadow}
-
-twarc tells me that I hit my limit of 500 after checking back in after a few hours.
-
-We can use the visual indicator for this. Or open the file and see if we have something
-less than 5000 or 6 days.
-
-As before, let's flatten our dataset (or convert it to a csv), and figure out if we
-got our full 500 Tweets. Check the first and last Tweet to determine the timespan?
-
-
-If you want to go back as far in time as the Twitter API allows (6 days typically),
-you can simultaneously tighten up your search parameters (using all of Twitter's
-[advanced search syntax]() and keep your --limit low.
-
-`twarc2 search --limit 500 "catsofinstagram AND cute"`
-
-That got me back 5 out of six days. So asking for 800 Tweets should get me all six days' worth
-of results
-
-`twarc2 search --limit 800 "catsofinstagram AND cute"`
-
-In this way we can 'sip' at our quota and make sure we can work all month.
-
-We can also take a completely random sample of the 'firehose' to make sure that we go
-back in time as far back as the Twitter API allows:
+{. :language-python}
 
 ~~~
-twarc2 sample
+Set --limit of 500 reached:  15%|█▋         | 500/3271 [00:04<00:24, 113.41it/s]
+~~~
+{. :output}
+
+You can always check to see how much of your quota you have used by visiting your [Twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard)
+
+> ## Academic access
+> Academic access comes with 3 projects and 10 million tweets per month.
+>
+{: .callout}
+
+## Twarc let’s you interact via the v1 api and v2 api.
+We already did twarc2 timeline. Twarc1 timeline gives slightly different results (We need to confirm and figure out how they are different?). How are they different?
+
+Remember: timeline captures tweets of 1 person: this harvests up to some arbitrary limit below 3200
+You can request a specific time period for a person’s timeline:
+Dong dong dong
+
+## Endpoints
+
+The Twitter API (similarly to other API's) make requests for data and deliver data to you by calling an endpoint. An endpoint is a unique address that corresponds to specific types of information, and marks the limit (or endpoint) that an API may retrieve data from Twitter. The Twitter API include a range of endpoints, and they are categorized as:
+
+* Accounts and users
+* Tweets and replies
+* Direct Messages
+* Publisher tools and Software Development Kits
+
+For this lesson, we will be covering some of your endpoint options that are available for to you as a user of the public Twitter v.2 API.  All these endpoints apply to the Tweets and Replies that satisfy a set of parameters you have set (e.g. Tweets from a certain account, Tweets containing a certain hashtag, etc). These endpoints indicate  *how* we may retrieve Twitter data, and you will find that Twarc makes these options available as commands.
+
+| Endpoint            | Description |
+|---------------------|-------------|
+| Recent Search       | Access to public Tweets posted in the last 7 days. |
+| Recent Tweet counts | Retrieve the count of Tweets posted in the last 7 days. |
+| Filtered Stream     | Collect Tweets as they are posted in real-time. |
+
+## Twarc's Data Collection
+
+The data that is saved using Twarc is just what Twitter reads from a tweet as data and provides as data. So, keeping the data authentic for analysis is a design of Twarc. Twarc is also traceable, so people can see a log of how and when the data was collected.
+
+In the v2 redesign, Twarc was also designed to be easily part of a pipline of commands. Users can connect their data collecting to other pieces of their software that expect to get tweets as inputs. When you install Twarc, you will get two clients, twarc & twarc2. Twarc was designed with the v1 Twitter API in mind, and Twarc2 was designed as a response to Twitter implementing their v2 API.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Convert to csv
+While JSON is common, it's not super human-readable, and it would be a bear to convert to a
+dataframe. So twarc2 convert to csv functions that we can use.
+
+twarc2 csv kittens.jsonl output_data/kittens.csv
+
+and we can load that into a pandas dataframe:
+
+0 comments on commit 17d
