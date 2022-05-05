@@ -3,7 +3,7 @@ title: "Ethics and Twitter"
 teaching: 0
 exercises: 0
 questions: 
-- "Can I avoid seeing hate speech and unsettling imagery and still analyze twitter?"
+- "Can I avoid seeing hate speech and unsettling imagery and still analyze twitter?"  <- ???? jongraffiti
 - "What are some privacy or other ethical issues that you need to keep in mind when harvesting tweets with twarc?"
 - "How much personal information can we actually gather about a user given our twarc scrape?"
 - "What are some inappropriate use cases for twarc?"
