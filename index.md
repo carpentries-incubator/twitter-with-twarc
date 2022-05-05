@@ -5,10 +5,15 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 ---
 
 ## twarc
+
+twarc is a command line tool and Python library that is used to collect and archive Tweets through the Twitter API. 
+The great thing about twarc is that it’s accessible, free, and fairly easy to use once you get the hang of it. 
+It’s also an active open-source project (that means it is essentially open to collaboration and use by anyone) and is well-documented on Github by an organization referred to as Documenting the Now.
+
 ### Black Lives Matter
 This lesson will introduce you to a Python application called twarc. twarc was created 
-by [Document the Now](https://docnow.io), which itself was born during the civil unrest in Ferguson, 
-Missouri after [the shooting and killing of Michael
+by [Document the Now](https://docnow.io) during the civil unrest in Ferguson, 
+Missouri following [the shooting and killing of Michael
 Brown, Jr.](https://en.wikipedia.org/wiki/Shooting_of_Michael_Brown) by a police officer.
 
 twarc is used to harvest Twitter data.

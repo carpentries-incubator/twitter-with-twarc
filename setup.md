@@ -97,9 +97,11 @@ However, if you do regenerate any keys and tokens, you'll need to reenter them w
 > * Access Token Secret
 >
 > You will have succeeded when you have these 5 keys and tokens
+>
+> ***If you are having problems generating the 5 tokens please [email us](mailto:collaboratory@library.ucsb.edu) immediately or else you will not be able to follow along
+> with the lessons***
+> 
 {: .prereq}
-
-
 
 
 
