@@ -29,7 +29,7 @@ keypoints:
 > Terms-of-Service to ask whether or not any of this is in the
 > public good or an acceptable topic of research.
 >
-> Using the file "dehydrated_Capitol_Rioters.txt", determine how many
+> Using the file [dehydrated_Capitol_Rioters.txt](../data/dehydratedCapitolRiotTweets.txt), determine how many
 > Tweets were in the archive, and how many remain on Mr. Musk's new
 > acquisition. 
 > {: .source}
