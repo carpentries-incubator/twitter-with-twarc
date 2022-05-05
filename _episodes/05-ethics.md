@@ -2,11 +2,7 @@
 title: "Getting familiar with JupyterLab"
 teaching: 20
 exercises: 5
-questions:
-- "What is JupyterLab?"
-- "How do I move around in JupyterLab?"
-- "How can I set up twarc on JupyterLab?"
-- "What’s a good way of running Twarc in our Jupyter environment?"
+questions: 
 objectives:
 - "Become acquainted with the Jupyter Lab tools"
 - "Set up directory and data folder"
