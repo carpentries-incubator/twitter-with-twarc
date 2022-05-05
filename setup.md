@@ -43,8 +43,8 @@ You must create the Twitter account first, in order to link to the Developer acc
 Getting developer access requires you to validate yourself as a human, so the
 form is particular about having a valid phone number and email address added to your Twitter account. This is so Twitter can authenticate a user.
 
-Once you are logged on to Twitter, go to 
-the [Developer Portal sign-up page](https://developer.twitter.com/en/portal/petition/use-case){:target="_blank" rel="noopener"}
+Once you are logged on to Twitter, sign into  
+the [Developer Portal sign-up page](https://developer.twitter.com/en){:target="_blank" rel="noopener"}
 
 Fill out the application questions as listed here:
 
