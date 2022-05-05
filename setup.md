@@ -35,16 +35,16 @@ Generally, we would call this 'getting your API key', but like many API's, the p
 become a complicated process. These instructions should create a new developer account with *Essential Access* privileges.
 
 To get started, you will need:
-* #### [A Twitter Account](https://twitter.com/):
+* #### [A Twitter Account](https://twitter.com/){:target="_blank" rel="noopener"}:
 Valid email account and cell phone number to receive texts are necessary.
-* #### [Developer Account](https://developer.twitter.com/en):
+* #### [Developer Account](https://developer.twitter.com/en){:target="_blank" rel="noopener"}:
 You must create the Twitter account first, in order to link to the Developer account.
 
 Getting developer access requires you to validate yourself as a human, so the
 form is particular about having a valid phone number and email address added to your Twitter account. This is so Twitter can authenticate a user.
 
 Once you are logged on to Twitter, go to 
-the [Developer Portal sign-up page](https://developer.twitter.com/en/portal/petition/use-case)
+the [Developer Portal sign-up page](https://developer.twitter.com/en/portal/petition/use-case){:target="_blank" rel="noopener"}
 
 Fill out the application questions as listed here:
   
