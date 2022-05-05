@@ -1,18 +1,22 @@
 ---
-title: "Ethics and Twitter"
-teaching: 0
-exercises: 0
+title: "Getting familiar with JupyterLab"
+teaching: 20
+exercises: 5
 questions:
-- "Can I avoid seeing hate speech and unsettling imagery and still analyze twitter?"
-- "What are some privacy or other ethical issues that you need to keep in mind when harvesting tweets with twarc?"
-- "How much personal information can we actually gather about a user given our twarc scrape?"
-- "What are some inappropriate things to do with twarc?" <- ???? 
+- "What is JupyterLab?"
+- "How do I move around in JupyterLab?"
+- "How can I set up twarc on JupyterLab?"
+- "What’s a good way of running Twarc in our Jupyter environment?"
 objectives:
-- "Discuss the privacy or ethical concerns surrounding tweet harvesting. (FIXME)"
+- "Become acquainted with the Jupyter Lab tools"
+- "Set up directory and data folder"
+- "Set up Twarc with your keys and tokens"
 keypoints:
-- "'Distance reading' is analyzing big full-text data without a human consuming the words"
-- "Robot detection, archives, deleted accounts"
+- "Navigating a virtual Python environment / JupyterLab"
+- "Configuring an application to work with an API"
+- "Arranging a directory structure and loading libraries"
 ---
+
 
 # Let's Get Ethical
 
