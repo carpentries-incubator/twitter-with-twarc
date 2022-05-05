@@ -4,17 +4,24 @@ teaching: 0
 exercises: 0
 questions:
 - "Can I avoid seeing hate speech and unsettling imagery and still analyze twitter?"
-- "What are some inappropriate things to do with twarc?"
+- "What are some privacy or other ethical issues that you need to keep in mind when harvesting tweets with twarc?"
+- "How much personal information can we actually gather about a user given our twarc scrape?"
+- "What are some inappropriate things to do with twarc?" <- ???? 
 objectives:
 - "Discuss the privacy or ethical concerns surrounding tweet harvesting. (FIXME)"
 keypoints:
 - "'Distance reading' is analyzing big full-text data without a human consuming the words"
-- "Robot detection, archives, deleted accounts (FIXME)"
+- "Robot detection, archives, deleted accounts"
 ---
 
 # Let's Get Ethical
 
 
+
+## Misinformation
+
+Something about social media as a tool for people with certain motives. 
+I wonder if theres a Parler Dataset on Kaggle? Or do you think that might violate the Carpentries code of conduct (too risky?)? 
 
 > ## Challenge: January 6 Insurrectionists
 >
@@ -41,3 +48,8 @@ keypoints:
 > > {: .output}
 > {: .solution}
 {: .challenge}
+
+
+## GDPR 
+
+Something about GDPR. 
