@@ -66,7 +66,7 @@ project with one App inside of it.
 
 <img src="fig/dashboard.PNG" width="500">
 
-<img src="fig/what-you-api.PNG" width="550">
+<img src="fig/what-you-api.PNG" width="600">
 
 <img src="fig/project-description.PNG" width="500">
 
