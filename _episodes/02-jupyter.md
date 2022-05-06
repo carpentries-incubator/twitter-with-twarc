@@ -82,8 +82,9 @@ and upload all of the datafiles:
 - `one_tweet.jsonl` a single tweet to look at
 - (FIXME)
 
-And create another folder to contain all the `.py` files in:
-- `utils.zip` don't upload the zip file. unzip it and upload the individual `.py` files.
+And create another folder to contain all the `.py` files that are inside of
+`utils.zip`.
+- don't upload the zip file. Unzip it and upload the individual `.py` files.
 
 
 If you have not downloaded the data, please
@@ -107,6 +108,8 @@ file system commands such as:
 - `pwd`
 - `cd`
 - `ls`
+
+Let's move around our directories in the Terminal to get comfortable.
 
 Print your working directory and make sure you are in the directory `twarc-run`. If you 
 are not in the proper directory, please change directories to move inside `twarc-run`. Moving
@@ -141,7 +144,7 @@ Let's start
 configuring twarc by sending typing in `twarc2 configure`. You should get the output below:
 
 ~~~
-!twarc2 configure
+twarc2 configure
 ~~~
 {: .language-bash}
 
@@ -218,7 +221,7 @@ Please run the command "twarc2 configure" to get started.
 ~~~
 {: .output}
 
-# Test for Twarc configuration in the Notebook
+# Test our Twarc configuration from the Notebook
 
 We should confirm that Twarc was configured correctly and that you are ready to continue
 using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter
@@ -243,8 +246,8 @@ Let's put some effort into formatting it nicely by putting Markdown
 at the top: 
 
 `# Twitter with twarc Workshop notebook` 
-`This notebook contains all of the code used to` 
-`harvest and analyze Tweets` 
+
+`This notebook contains all of the code used to harvest and analyze Tweets` 
 
 If you run that line, Jupyter will render that markdown into something that looks
 like this:
@@ -254,10 +257,10 @@ like this:
 Now, let's call twarc2 from inside of our notebook
 
 
-> ## Twarc Commands in JupyterLab
+> ## BASH Commands in JupyterLab
 >
 > We can run Twarc from the terminal window in JupyterLab, or we can send
-> commands from out Jupyter Notebook.
+> BASH commands from our Jupyter Notebook.
 >
 > Because we will be using a mix of Python code and BASH commands, it's important
 > to keep in mind which is which. 
@@ -296,7 +299,6 @@ contains the data of tweets under the username "@BergisJules".
 >
 > * Can you find the file called "bjules.jsonl"?
 > * Download a timeline for one of the twitter accounts from this list:
->
 > NCEAS "@ucsb_nceas", EcoDataScience "@ecodatasci", R-Ladies Santa Barbara "@RLadiesSB",
 > spatial@ucsb "@spatialUCSB", UCSB Collaboratory "@libratorybot"
 >
@@ -393,7 +395,14 @@ main reason to use Jupyter Notebooks is to write code. Let's load the Python lib
 we will be using today, and then load our Tax Day data into a Pandas dataframe:
 
 `import pandas`
+
 `import twarc_csv`
+
+Because these are python commands, no need to !bang! But you might need
+to `pip install twarc_csv`
+
+We will almost always convert our files to .csv format, so we may as well
+start doing that now.
 
 *** convert to csv and then dataframe goes here. ***
 This will be our introduction to writing Python in notebooks.
