@@ -1,7 +1,7 @@
 ---
 title: "Getting familiar with JupyterLab"
 teaching: 20
-exercises: 5
+exercises: 10
 questions:
 - "What is JupyterLab?"
 - "How do I move around in JupyterLab?"
@@ -412,10 +412,29 @@ start doing that now.
 *** convert to csv and then dataframe goes here. ***
 This will be our introduction to writing Python in notebooks.
 Will reinforce running lines, clearing output. 
-Timeline data needs to be 'flattened' before we use it.
-csv's are conventient for reading.
-dataframes are the main tool for pandas.
-We can cut this down to just loading the libraries if we this this is too long.
-CSV is currently in episode 4, but you CAN do it here.
+
+Twitter Timelines, and other files we harvest using twarc, needs to be 
+'flattened' before we use it. This will ensure that each line of jsonl
+is one tweet:
+
+
+!twarc2 flatten raw_data/bjules.jsonl output_data/bjules_flattened.jsonl
+
+csv's are even conventient for reading, and are useful as a data format
+later on for analyzing tweets outside of twarc. 
+
+# convert
+!twarc2 csv raw_data/bjules.jsonl output_data/bjules.csv
+
+We will also get in the habit of making dataframes 
+out of our csv's, because they are the main tool for 
+manipulating data in Pandas. 
+
+Now that we have flatenned our data and made a csv, we can see how
+many tweets we harvested from Jules's timeline using `wc`.
+
+We can cut this down to just 
+loading the libraries if we this this is too long. CSV is currently in 
+episode 4, but you CAN do it here.
 
 {% include links.md %}

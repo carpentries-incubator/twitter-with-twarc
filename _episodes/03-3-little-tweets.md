@@ -26,8 +26,8 @@ the deadline for Americans to file their annual income report).
 
 Let's look at our `taxday.jsonl` file again. Remember that our JSON files are line-oriented,
 ie: one tweet per line. Let's use 
-`head -n 1 source_data/taxday.jsonl > output_data/1-tweet.jsonl` to create a file
-with just one tweet.
+`head -n 2 source_data/taxday.jsonl > output_data/1-tweet.jsonl` to create a file
+with just two tweets.
 
 If we use `!cat` to output that file to a Notebook cell, we see a real mess. Let's
 open the Jupyter graphical file viewer instead. 
@@ -84,10 +84,14 @@ This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-co
 Our most basic analysis can be done with a BASH command:
 Demo `wc` for counting lines / tweets 
 
+
+
 We can do this with our timeline file as well, but we need to `Flatten` it first.
 
 By flattening Bergis' timeline and then looking at the file with `wc`, you can see
-that he has Tweeted 3171 times. 
+that we retrieved 3171 of his. 
+
+head: we can see those are super recent.
 
 We can use `tail -n 2 sourcedata/ > output_data/bergistale.jsons` to see that
 we have retrieved texts of his back to 2018.
