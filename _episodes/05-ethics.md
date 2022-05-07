@@ -7,7 +7,7 @@ questions:
 - "What are some privacy or other ethical issues that you need to keep in mind when harvesting tweets with twarc?"
 - "How much personal information can we actually gather about a user given our twarc scrape?"
 - "What are some inappropriate use cases for twarc?"
-objectives:
+key points:
 - "Discuss the privacy of ethical concerns surrounding tweet harvesting. (FIXME)"
 keypoints:
 - "'Distance Reading' is analyzing big full-text data without a human consuming the words"
