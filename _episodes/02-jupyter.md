@@ -115,6 +115,11 @@ Print your working directory and make sure you are in the directory `twarc-run`.
 are not in the proper directory, please change directories to move inside `twarc-run`. Moving
 around in your directories is pretty easy using this interface.
 
+Needed data file: a single tweet
+`cat` out the file. 
+use python viewer
+nano the file
+
 > ## Remember:
 >
 > You can only type where the cursor is blinking. And you can't move the cursor

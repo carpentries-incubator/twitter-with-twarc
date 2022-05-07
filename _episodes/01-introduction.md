@@ -96,9 +96,20 @@ You can see a visualize of this analogy <a href="https://www.mulesoft.com/resour
 
 # twarcing
 
-You may be asking, "What is twarc?" or, "Why do all things involving Twitter have to start with a 'tw'?".
+You may be asking, "What is twarc?" or, "Why do all things involving 
+Twitter have to start with a 'tw'?".
 
-twarc is a command line tool and Python library that is used to collect and archive Tweets through the Twitter API. The great thing about twarc is that it's accessible, free, and fairly easy to use once you get the hang of it. It's also an active open-source project (that means it is essentially open to collaboration and use by anyone) and is well-documented on [Github](https://twarc-project.readthedocs.io/en/latest/) by an organization referred to as [Documenting the Now](https://www.docnow.io/). 
+twarc is a command line tool and Python library that is used to collect 
+and archive Tweets through the Twitter API. The great thing about twarc 
+is that it's accessible, free, and fairly easy to use once you get the 
+hang of it. It's also an active open-source project (that means it is 
+essentially open to collaboration and use by anyone) and is 
+well-documented on 
+[Github](https://twarc-project.readthedocs.io/en/latest/) by an 
+organization referred to as [Documenting the 
+Now](https://www.docnow.io/).
+
+twarc is also a good example of community built, FOSS.
 
 > ## Issues
 > If you run into any errors, the people who built twarc respond quite quickly (and they're very friendly). 
@@ -108,4 +119,19 @@ twarc is a command line tool and Python library that is used to collect and arch
 
 twarc allows you to request specific data based on keywords, hashtags, events, and other areas of interest. Once you have your dataset, twarc has what the developers refer to as 'utilities'. These as python programs that can be run on the command line to explore and visualize your data. An is is the utility 'wordcloud.py' which creates a wordcloud of the text from the tweets you've collected. We'll see these capabilities put into practice in later episodes. 
 
+A good definition for API? https://www.ibm.com/cloud/learn/api#:~:text=An%20API%20is%20a%20set,processes%20data%20transfer%20between%20systems. 
+
+Socio-cultural phenomenon.
+Look at a very obscrurely worded tweet and explain it.
+
+How is a tweet daya?
+Look at a captured tweet using a web viewer
+https://codebeautify.org/jsonviewer
+*Needed data file: a single tweet*
+Look at a tweet using chrome / your browser
+
+
+Pushpin aside: list of other file formats that twarc can export / convert to, ie: csv. More in ‘Data Management’ episode
+Foreshadowing: Talk about geotagging and images – 
+Where are they? Metadata?
 
