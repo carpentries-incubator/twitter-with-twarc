@@ -95,19 +95,27 @@ below image.
 
 ![file organization for jupyterlab](../fig/dir-data.png)
 
+## Using the Terminal and Nano Editor in Jupyterlab
+
 Now, let's start up the terminal. In your Launcher tab, select the Terminal icon under
 "Other". We will be using the terminal to sign into your twitter developer account. You
 will see that the launcher screen is replaced by the terminal window. You may open the
 launcher tab by selecting the large rectangular button with the plus (+) sign. When you
 open the launcher in this way, the terminal window will not close.
 
+The shell or terminal, is a program where users can type in commands. 
 The terminal window is all about the keyboard--you cannot mouse around in there. The terminal
 window is running a lightweight verion of BASH, so you can use all of the common Linux/Unix
 file system commands such as:
 
-- `pwd`
-- `cd`
-- `ls`
+| git command | what the command does |
+|`pwd`| print working directory |
+| `cd`| change directory |
+| `ls`| list contents of a directory |
+| `mkdir`| make new directory, a folder |
+
+In our Jupyterhub environment, we have pre-installed the nano editor. Nano is a text editor and can only work with plain character data. We are using it in this workshop
+because it is one of the least complex text editor. There are many editors such as Notepad++ or VIM, which you can configure to use on your own devices in the command-line. 
 
 Let's move around our directories in the Terminal to get comfortable.
 
