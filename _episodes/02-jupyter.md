@@ -119,8 +119,8 @@ because it is one of the least complex text editor. There are many editors such 
 
 Let's move around our directories in the Terminal to get comfortable.
 
-Print your working directory and make sure you are in the directory `twarc-run`. If you 
-are not in the proper directory, please change directories to move inside `twarc-run`. Moving
+Print your working directory using `pwd` and make sure you are in the directory `twarc-run`. If you 
+are not in the proper directory, please change directories using `cd` to move to `twarc-run` and set it as your directory. Moving
 around in your directories is pretty easy using this interface.
 
 Needed data file: a single tweet
@@ -425,14 +425,20 @@ Twitter Timelines, and other files we harvest using twarc, needs to be
 'flattened' before we use it. This will ensure that each line of jsonl
 is one tweet:
 
-
+~~~
 !twarc2 flatten raw_data/bjules.jsonl output_data/bjules_flattened.jsonl
+~~~
+{: .language-python}
 
 csv's are even conventient for reading, and are useful as a data format
 later on for analyzing tweets outside of twarc. 
 
 # convert
+
+~~~
 !twarc2 csv raw_data/bjules.jsonl output_data/bjules.csv
+~~~
+{: .language-python}
 
 We will also get in the habit of making dataframes 
 out of our csv's, because they are the main tool for 
