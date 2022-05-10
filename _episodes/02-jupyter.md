@@ -433,7 +433,7 @@ is one tweet:
 csv's are even conventient for reading, and are useful as a data format
 later on for analyzing tweets outside of twarc. 
 
-# convert
+# Converting between file types: jsonl to csv
 
 ~~~
 !twarc2 csv raw_data/bjules.jsonl output_data/bjules.csv
