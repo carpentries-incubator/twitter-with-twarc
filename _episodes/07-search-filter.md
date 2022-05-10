@@ -1,13 +1,15 @@
 ---
-title: "Search and Filter"
+title: "Search and Stream"
 teaching: 0
 exercises: 0
 questions:
-- "Key question (FIXME)"
+- "How can we specify what Tweets are being collected?"
+- "How can we collect Tweets as they are posted?"
 objectives:
-- "Search vs Filter"
+- "Search vs Stream"
 keypoints:
-- "Search:, Filter: (FIXME)"
+- "Search: collect pre-existing tweets that satisfy parameters"
+- "Stream: collect Tweets that satisfy parameters, as they are posted"
 ---
 
 # Twarc Search Command
@@ -49,7 +51,7 @@ In this way we can 'sip' at our quota and make sure we can work within the 500,0
 
 The Twarc search command uses the same search syntax as the search bar on your [Twitter home page](https://twitter.com/home)
 
-![top of the twitter home page](../fig/twitter-search.png)
+![top of the twitter home page](../fig/twitter_search.png)
 
 We will demonstrate some options you may use when searching tweets in both the Twitter search bar and through the Twarc search command. First, you may search tweets for content that contains certain words. In the example image below, we search for tweets that contain both the words "archive" and "data" by separating these words with a capitalized `AND`.
 
@@ -75,7 +77,7 @@ twarc2 search "(to:ucsblibrary)"
 
 As we have seen before, we may also search tweets that contain hastags. In the example below, notice that the resulting tweet also contains other hashtags that we did not explicitly search for.
 
-![search tweets that has the hashtag ecodatasci](../fig/twitter-search-hashtag.png)
+![search tweets that has the hashtag ecodatasci](../fig/twitter-search-hashtags.png)
 
 ~~~
 twarc2 search "(#ecodatasci)"
