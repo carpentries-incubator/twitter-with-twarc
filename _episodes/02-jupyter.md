@@ -29,7 +29,7 @@ JupyterLab runs in one tab on your browser. In this episode, we will learn to
 upload and download files from your computer to your storage space on JupyterLab,
 create and navigate the directory structure, and use the built-in BASH terminal.
 
-> ## Thanks
+> ## Thank you LSIT
 >
 > For this workshop, we will be using JupyterLab with twarc already loaded in. The reason
 > we are able to use JupyterLab without needing to download any software is because our
@@ -115,7 +115,7 @@ file system commands such as:
 | `mkdir`| make new directory, a folder |
 
 In our Jupyterhub environment, we have pre-installed the nano editor. Nano is a text editor and can only work with plain character data. We are using it in this workshop
-because it is one of the least complex text editor. There are many editors such as Notepad++ or VIM, which you can configure to use on your own devices in the command-line. 
+because it is one of the least complex text editors. There are many editors such as Notepad++ or VIM, which you can configure to use on your own devices in the command-line. 
 
 Let's move around our directories in the Terminal to get comfortable.
 
@@ -421,7 +421,7 @@ start doing that now.
 This will be our introduction to writing Python in notebooks.
 Will reinforce running lines, clearing output. 
 
-Twitter Timelines, and other files we harvest using twarc, needs to be 
+Twitter Timelines, and other files we harvest using twarc, need to be 
 'flattened' before we use it. This will ensure that each line of jsonl
 is one tweet:
 
@@ -444,7 +444,7 @@ We will also get in the habit of making dataframes
 out of our csv's, because they are the main tool for 
 manipulating data in Pandas. 
 
-Now that we have flatenned our data and made a csv, we can see how
+Now that we have flattened our data and made a csv, we can see how
 many tweets we harvested from Jules's timeline using `wc`.
 
 We can cut this down to just 
