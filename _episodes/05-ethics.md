@@ -2,7 +2,7 @@
 title: "Ethics and Twitter"
 teaching: 0
 exercises: 0
-questions: 
+questions:
 - "Can I avoid seeing hate speech and unsettling imagery and still analyze twitter?"
 - "What are some privacy or other ethical issues that you need to keep in mind when harvesting tweets with twarc?"
 - "How much personal information can we actually gather about a user given our twarc scrape?"
@@ -17,29 +17,29 @@ keypoints:
 
 # Let's Get Ethical
 
-
+There are multiple ethical fields to consider when using and presenting Twitter data. In this lesson, we will be focusing on two issues: consent, misinformation, and core legal practices as it relates to archiving data.
 
 ## Misinformation
 
-Something about social media as a tool for people with certain motives. 
-I wonder if theres a Parler Dataset on Kaggle? Or do you think that might violate the Carpentries code of conduct (too risky?)? 
+Something about social media as a tool for people with certain motives.
+I wonder if theres a Parler Dataset on Kaggle? Or do you think that might violate the Carpentries code of conduct (too risky?)?
 
 > ## Challenge: January 6 Insurrectionists
 >
 > After the US Capitol riot, a user on kaggle captured 80,000
 > Tweets from people associated with that day's events, concentrating
 > on accounts from those protesting / rioting.
-> 
+>
 > This kaggle user, in the public interest, stored the full content of
-> these Tweets as a .csv. The best practice would be to save only a 
-> dehydrated set of tweets. However, in this instance, we can use this 
+> these Tweets as a .csv. The best practice would be to save only a
+> dehydrated set of tweets. However, in this instance, we can use this
 > person's conscientious objection to social norms and Twitter's
 > Terms-of-Service to ask whether or not any of this is in the
 > public good or an acceptable topic of research.
 >
 > Using the file [dehydrated_Capitol_Rioters.txt](../data/dehydratedCapitolRiotTweets.txt), determine how many
 > Tweets were in the archive, and how many remain on Mr. Musk's new
-> acquisition. 
+> acquisition.
 > {: .source}
 >
 > > ## Solution
@@ -50,7 +50,30 @@ I wonder if theres a Parler Dataset on Kaggle? Or do you think that might violat
 > {: .solution}
 {: .challenge}
 
+## User Content and Consent
 
-## GDPR 
+Twitter users have various options of privacy over their content and profile. Some of these options include that their profiles do not show up in web searches and that their content is hidden only to followers. While these options are available to users, it does not have any retroactive effect on what has already been collected. That is, if a user's tweets are collected and the user deletes their Twitter account, their content is still in someone else's database for use. When creating an archive of data, we must understand that the creators behind these tweets have not consented to their content being kept for years from now.
 
-Something about GDPR. 
+Furthermore, Twitter users who do not put a restriction on what content may be viewed may also not be aware of who has access to data collection; and what they may do with it.
+A study from Cardiff University found an association between concern for anonymity and sexual orientation, ethnicity and gender. Twitter data may contain identifying demographic information, identifying associations or membership, and expression of a very personal nature. These are items that users may want to protect. A basis for ethical consideration is not only to conduct good and upholding science, but also to minimize risk or harm during any of the study's data collection and publication.
+
+## GDPR and Personal Data
+
+Something about GDPR.
+
+GDPR defines Peronal data:
+
+> ...Personal data are any information which are related to an identified or identifiable natural person.
+>
+> The data subjects are identifiable if they can be directly or indirectly identified, especially by reference to an identifier such as a name, an
+> identification number, location data, an online identifier or one of several special characteristics, which expresses the physical, physiological,
+> genetic, mental, commercial, cultural or social identity of these natural persons...
+
+> ## Discussion: Personal Data
+>
+> Do you think that Twitter data should be treated as personal data?
+> What did you consider when making this judgment?
+>
+{: .discussion}
+
+## Citations
