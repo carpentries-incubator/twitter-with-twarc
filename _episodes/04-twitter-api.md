@@ -146,6 +146,24 @@ code
 
 and see the column headers here as a list.
 
+Easy 'analyses' using our dataframe:
+- most retweeted
+- most quoted
+- tweeter with the most number of followers
+
+
 ~~~
 list(kittens_df.columns)
-0 comments on commit 17d
+
+# final challenge: cats of instagram
+
+Let's make a bigger datafile. Harvest 5000 tweets that use the hashtag "catsofinstagram"
+and put the dataset through the pipeline to answer the following questions:
+
+1. Did you get exactly 5000?
+1. How far back in time did you get?
+1. What is the most re-tweeted recent tweet on #catsofinstagram?
+1. Which person has the most number of followers in your dataset? 
+1. Is it really a person?
+
+
