@@ -15,14 +15,57 @@ keypoints:
 ---
 
 
+# Kittens and Elephants
+Maybe you think we have being coy, but here is where we acknowledge the 800-pound
+elephant in the room. Twitter is not all kittens and rainbows. As we all know, 
+hashtag-#rainbow will lead us into LGBTQ-issues. We've already told you that twarc
+was born of the Black Lives Matter movement. 
+
+Both of these issues, 
+
 # Let's Get Ethical
 
-There are multiple ethical fields to consider when using and presenting Twitter data. In this lesson, we will be focusing on two issues: consent, misinformation, and core legal practices as it relates to archiving data.
+There are multiple ethical fields to consider when using and presenting Twitter 
+data. In this lesson, we will be focusing on two issues: consent, misinformation, 
+and core legal practices as it relates to archiving data.
 
 ## Misinformation
 
-Something about social media as a tool for people with certain motives.
-I wonder if theres a Parler Dataset on Kaggle? Or do you think that might violate the Carpentries code of conduct (too risky?)?
+Something about social media as a tool for people with certain motives. I wonder 
+if theres a Parler Dataset on Kaggle? Or do you think that might violate the 
+Carpentries code of conduct (too risky?)?
+
+## Avoiding the ickiness
+What is distance reading and how does it relate to social media research?
+
+
+Rehydrate: get an archive from the Jan. 6 
+archive? 
+← -1 from Amanda: may contain inappropriate content for a carpentry 
+workshop Analyze to see how much got deleted as Twitter expunged extremists? 
+Are 
+the archives dehydrated? Can you get the fulltext from twitter? 
+If not, from 
+where? 
+Kaggle has full text csvs One with a cc license. One with a copyright. 
+Tweetsets GWU: https://tweetsets.library.gwu.edu/ Who got deleted? Are they real 
+people? 
+
+Is the data really deleted? 
+https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png 
+Challenge: Boolean and: how to feed search multiple ID’s? This is a challenge 
+about using twitter advanced search syntax. Can we distinguish between AND’s and 
+OR’s? 
+
+Challenge: Where does Jules B. live? Zoom poll? 
+which of the following 
+would be inappropriate uses of twitter data? Use Rehydration to find deleted 
+accounts (violators, robots, etc.) 
+
+Search for individual tweeterIDs? Find one that definitely has been 
+deleted? There is only a tiny little fraction of the content still available from 
+twitter. (peg the number for the script?)
+
 
 > ## Challenge: January 6 Insurrectionists
 >
@@ -50,12 +93,20 @@ I wonder if theres a Parler Dataset on Kaggle? Or do you think that might violat
 > {: .solution}
 {: .challenge}
 
-## User Content and Consent
 
-Twitter users have various options of privacy over their content and profile. Some of these options include that their profiles do not show up in web searches and that their content is hidden only to followers. While these options are available to users, it does not have any retroactive effect on what has already been collected. That is, if a user's tweets are collected and the user deletes their Twitter account, their content is still in someone else's database for use. When creating an archive of data, we must understand that the creators behind these tweets have not consented to their content being kept for years from now.
 
-Furthermore, Twitter users who do not put a restriction on what content may be viewed may also not be aware of who has access to data collection; and what they may do with it.
-A study from Cardiff University found an association between concern for anonymity and sexual orientation, ethnicity and gender. Twitter data may contain identifying demographic information, identifying associations or membership, and expression of a very personal nature. These are items that users may want to protect. A basis for ethical consideration is not only to conduct good and upholding science, but also to minimize risk or harm during any of the study's data collection and publication.
+## Personally identifable information
+We get a lot of personal information when we gather tweets. Enough to create 
+personalized ads, right? 
+
+We can determine a users’ approximate location, what 
+they like, their beliefs, etc. 
+
+Yes What is distance reading and how does it 
+relate to social media research? 
+One benefit of distance reading is that it prevents us 
+from seeing unwanted images and language that we might see when simply doom 
+scrolling twitter on our phones. 
 
 ## GDPR and Personal Data
 
@@ -75,5 +126,27 @@ GDPR defines Peronal data:
 > What did you consider when making this judgment?
 >
 {: .discussion}
+
+## User Content, Re-use, and Consent
+
+Twitter users have various options of privacy over their content and profile. 
+Some of these options include that their profiles do not show up in web searches 
+and that their content is hidden only to followers. While these options are 
+available to users, it does not have any retroactive effect on what has already 
+been collected. That is, if a user's tweets are collected and the user deletes 
+their Twitter account, their content is still in someone else's database for use. 
+When creating an archive of data, we must understand that the creators behind 
+these tweets have not consented to their content being kept for years from now.
+
+Furthermore, Twitter users who do not put a restriction on what content may be 
+viewed may also not be aware of who has access to data collection; and what they 
+may do with it. A study from Cardiff University found an association between 
+concern for anonymity and sexual orientation, ethnicity and gender. Twitter data 
+may contain identifying demographic information, identifying associations or 
+membership, and expression of a very personal nature. These are items that users 
+may want to protect. A basis for ethical consideration is not only to conduct 
+good and upholding science, but also to minimize risk or harm during any of the 
+study's data collection and publication.
+
 
 ## Citations
