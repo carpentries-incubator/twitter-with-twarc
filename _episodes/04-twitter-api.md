@@ -46,7 +46,7 @@ to 500 Tweets.
 ~~~
 Set --limit of 500 reached:  15%|█▋         | 500/3271 [00:04<00:24, 113.41it/s]
 ~~~
-{. :output}
+{: .output}
 
 So the above gives us, at most, 500 tweets from the UCSBLibrary Twitter 
 account's feed.
@@ -117,12 +117,11 @@ Fishing around to estimate traffic without spending your quota
 ~~~
 !twarc2 counts --text "kittens"
 ~~~
-{: code}
+{: .language-python}
 
 Output: screenshot of the bottom of the output showing there were 
 95,767 mentions of kittens on twitter in the 7 days before the command
-was run. Try counting mentions of cats, ukraine, china, baseball, and biden.
-
+was run. Try counting mentions of "big data", "archives", "research", or "interdiciplinary".
 
 
 ## Filtered Stream
@@ -169,6 +168,7 @@ and we can load that into a pandas dataframe:
 ~~~
 code
 ~~~
+{: .language-python}
 
 and see the column headers here as a list.
 
@@ -180,16 +180,18 @@ Easy 'analyses' using our dataframe:
 
 ~~~
 list(kittens_df.columns)
+~~~
+{: .language-python}
 
-# final challenge: cats of instagram
+# Final challenge: Cats of instagram
 
-Let's make a bigger datafile. Harvest 5000 tweets that use the hashtag "catsofinstagram"
-and put the dataset through the pipeline to answer the following questions:
-
-1. Did you get exactly 5000?
-1. How far back in time did you get?
-1. What is the most re-tweeted recent tweet on #catsofinstagram?
-1. Which person has the most number of followers in your dataset? 
-1. Is it really a person?
-
+> Let's make a bigger datafile. Harvest 5000 tweets that use the hashtag "catsofinstagram"
+> and put the dataset through the pipeline to answer the following questions:
+> 
+> 1. Did you get exactly 5000?
+> 1. How far back in time did you get?
+> 1. What is the most re-tweeted recent tweet on #catsofinstagram?
+> 1. Which person has the most number of followers in your dataset? 
+> 1. Is it really a person?
+{. :challenge}
 
