@@ -107,7 +107,22 @@ software that expect to get tweets as inputs. When you install Twarc, you will
 get two clients, twarc & twarc2. Twarc was designed with the v1 Twitter API in 
 mind, and Twarc2 was designed as a response to Twitter implementing their v2 API.
 
+## Tweet counts
+Fishing around to estimate traffic without spending your quota
 
+~~~
+!twarc2 counts --text "ukraine"
+~~~
+{: code}
+
+
+
+## Filtered Stream
+Collecting tweets in realtime
+We will do in episode 7: collecting tweets in 
+## Recent Search
+talk-and-type mentions of UCSB Library the text string and hashtag.
+ie: collect 2 more datasets
 
 ## Pipeline: jsonl > csv > wc
 Just like we should keep track of how many tweets we download at any given time,
@@ -123,8 +138,9 @@ rest of this workshop, we will follow this workflow:
 -1 use external utiities for further analysis
 
 While JSON is common, it's not super human-readable, and it can be difficult to 
-convert to a dataframe. So twarc2 has an extension to turn our harvested jsonl
-to csv. 
+convert to a dataframe (which most of us will want to do anyway). So twarc2 
+has an extension to turn our harvested jsonl
+to csv. csv's are always easily convertable into Pandas dataframes.
 
 Timelines need to be flattened. XXX What else needs to be flattened? XXX That's
 the next step in our workflow
