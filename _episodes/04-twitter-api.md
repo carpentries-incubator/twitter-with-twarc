@@ -46,6 +46,9 @@ Set --limit of 500 reached:  15%|█▋         | 500/3271 [00:04<00:24, 113.41i
 ~~~
 {. :output}
 
+So the above gives us, at most, 500 tweets from the UCSBLibrary Twitter 
+account's feed.
+
 You can always check to see how much of your quota you have used by visiting your 
 [Twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard)
 
@@ -59,20 +62,29 @@ We already did twarc2 timeline. Twarc1 timeline gives slightly different results
 (We need to confirm and figure out how they are different?). How are they 
 different?
 
-Remember: timeline captures tweets of 1 person: this harvests up to some arbitrary limit below 3200
-You can request a specific time period for a person’s timeline:
-Dong dong dong
+Remember: timeline captures tweets of 1 person: this harvests up to some 
+arbitrary limit below 3200 You can request a specific time period for a person’s 
+timeline: Dong dong dong
 
 ## Endpoints
 
-The Twitter API (similarly to other API's) make requests for data and deliver data to you by calling an endpoint. An endpoint is a unique address that corresponds to specific types of information, and marks the limit (or endpoint) that an API may retrieve data from Twitter. The Twitter API include a range of endpoints, and they are categorized as:
+The Twitter API (similarly to other API's) make requests for data and deliver 
+data to you by calling an endpoint. An endpoint is a unique address that 
+corresponds to specific types of information, and marks the limit (or endpoint) 
+that an API may retrieve data from Twitter. The Twitter API include a range of 
+endpoints, and they are categorized as:
 
 * Accounts and users
 * Tweets and replies
 * Direct Messages
 * Publisher tools and Software Development Kits
 
-For this lesson, we will be covering some of your endpoint options that are available for to you as a user of the public Twitter v.2 API.  All these endpoints apply to the Tweets and Replies that satisfy a set of parameters you have set (e.g. Tweets from a certain account, Tweets containing a certain hashtag, etc). These endpoints indicate  *how* we may retrieve Twitter data, and you will find that Twarc makes these options available as commands.
+For this lesson, we will be covering some of your endpoint options that are 
+available for to you as a user of the public Twitter v.2 API.  All these 
+endpoints apply to the Tweets and Replies that satisfy a set of parameters you 
+have set (e.g. Tweets from a certain account, Tweets containing a certain 
+hashtag, etc). These endpoints indicate *how* we may retrieve Twitter data, and 
+you will find that Twarc makes these options available as commands.
 
 | Endpoint            | Description |
 |---------------------|-------------|
@@ -105,14 +117,35 @@ rest of this workshop, we will follow this workflow:
 -1 convert to csv
 -1 use wc to make you received as much as you expected
 -1 use twarc utilities and twarc2 plug-ins
+-1 create a Pandas dataframe
 -1 use external utiities for further analysis
 
 While JSON is common, it's not super human-readable, and it can be difficult to 
 convert to a dataframe. So twarc2 has an extension to turn our harvested jsonl
-to csv. functions that we can use.
+to csv. 
 
-twarc2 csv kittens.jsonl output_data/kittens.csv
+Timelines need to be flattened. XXX What else needs to be flattened? XXX That's
+the next step in our workflow
+
+XXX flatten the UCSBLibrary timeline XXX
+
+Convert to CSV:
+Here is where we can see the headers.
+
+Use wc: is it a reasonable amount? 
+
+functions that we can use.
+
+!twarc2 csv output-data/ucsblib_timeline_flattened.jsonl output-data/ucsblib_timeline.csv
 
 and we can load that into a pandas dataframe:
 
+~~~
+code
+~~~
+
+and see the column headers here as a list.
+
+~~~
+list(kittens_df.columns)
 0 comments on commit 17d
