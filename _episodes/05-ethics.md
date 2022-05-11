@@ -108,11 +108,30 @@ One benefit of distance reading is that it prevents us
 from seeing unwanted images and language that we might see when simply doom 
 scrolling twitter on our phones. 
 
-## GDPR and Personal Data
+## Authorship, the GDPR, and the Right to be Forgotten
+
+Twitter is an unusual social media platform for a number of reasons, not the
+least interesting of which is that you, the user, maintain ownership of your
+tweets. You are the author, and as an author you have both copyrights and
+moral rights coming to you.
+
+Copyrights prevent some horrible troll from compiling your tweets together into a 
+publication and monetarily profiting from them. That said, some authors do not 
+have any copyrights. For example, POTUS is an American government employee, 
+therefore the property is in the Public Domain. 
+
+Laws vary greatly by country, so don't get American librarians started on 
+the Queen's copyrights over Canadian government data.
+
+Moral rights are more complicated. Laws vary greatly by country--even moreso than 
+copyright. In the European Union, authorship includes the right to un-publish,
+in other words, the right to be forgotten. Twitter, very cleverly, preserves this
+right by letting us delete our tweets.
+
 
 Something about GDPR.
 
-GDPR defines Peronal data:
+GDPR defines Personal data as:
 
 > ...Personal data are any information which are related to an identified or identifiable natural person.
 >
