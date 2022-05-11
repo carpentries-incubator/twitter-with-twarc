@@ -112,7 +112,7 @@ get two clients, twarc & twarc2. Twarc was designed with the v1 Twitter API in
 mind, and Twarc2 was designed as a response to Twitter implementing their v2 API.
 
 ## Tweet counts
-Fishing around to estimate traffic without spending your quota
+Allows you to fish around to estimate traffic without spending your quota
 
 ~~~
 !twarc2 counts --text "kittens"
@@ -120,32 +120,64 @@ Fishing around to estimate traffic without spending your quota
 {: .bash}
 
 Output: screenshot of the bottom of the output showing there were 95,767 mentions 
-of kittens on twitter in the 7 days before the command was run. Try counting 
-mentions of "big data", "archives", "research", or "interdisciplinary".
+of kittens on twitter in the 7 days before the command was run. 
 
-### Alternate:
-#### What's a lot?
-Getting a sense of the scale of the conversation on Twitter is important. 
-When you are starting out, you won't have much idea about how many tweets a 
-search will return. With a monthly limit of 500,000 tweets, it's good to use
-the Recent Tweet Counts endpoint to do some exploratory searching.
-
-We got almost 100,000 kitten tweets. That's a healthy amount of data to analyze.
-Take a look at the counts for 'Biden', 'Baseball', 'Beyonce', and 'Ukraine'.
-We will aggregate by day and run everything from one cell.
-
-Judging by the results, can we perhaps judge that politics Twitter is larger or
-smaller than sports twitter?  
-
-`!twarc2 counts --text "(Ukraine OR ukraine)" --granularity "day"`
+Try counting 
+mentions of the words poker, golf, basketball, baseball, and football. Aggregate
+then counts together by day. Can we use these results to imagine what sports are
+most popular on Sports Twitter? Discuss.
 
 
 ## Filtered Stream
 Collecting tweets in realtime
 We will do in episode 7: collecting tweets in 
+
 ## Recent Search
-talk-and-type mentions of UCSB Library the text string and hashtag.
-ie: collect 2 more datasets
+This endpoint gathers the most recent 6 days of a search string that
+you pass to the API via twarc. Let's gather all the recent mentions of 
+the UCSB Library. 
+
+Both filter and search use Twitter's advanced search
+syntax. We can use a little Boolean logic to make sure we cast 
+a wide net, ie: that we search a variety of text strings and hashtags.
+
+`!twarc2 counts --granularity "day" 
+        --text "(#UCSBLibrary OR UCSBLibrary OR 
+                 ucsblibrary OR #ucsblibrary OR 
+                 davidsonlibrary OR #davidsonlibrary)"`
+
+Is it worth doing the OR's? For sure. Twitter is case sensitive, and we really
+are string searching, so the hashtag counts.
+
+`!twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary)"`
+
+## Big Data
+### What's a lot?
+Getting a sense of the scale of the conversation on Twitter is important. 
+When you are starting out, you won't have much idea about how many tweets a 
+search will return. With a monthly limit of 500,000 tweets, it's good to use
+the Recent Tweet Counts endpoint to do some exploratory searching.
+
+We got almost 100,000 kitten tweets. That's a healthy amount of data to analyze. We
+also compared the numbers on Sports Twitter--second in size perhaps only to 
+Politics Twitter. 
+
+But just how big is Twitter? Try running these counts:
+
+## What's a lot?
+!twarc2 counts --text "dog" --granularity "day"
+!twarc2 counts --text "cat" --granularity "day"
+!twarc2 counts --text "amazon" --granularity "day"
+!twarc2 counts --text "right" --granularity "day"
+!twarc2 counts --text "good" --granularity "day"
+
+It looks like any English word that is used on Twitter more than 10 million
+times a week on Twitter is a fairly non-specific search.
+
+That should give us a pretty good idea that for research use, 500,000 tweets
+is plenty to handle. And again: if you need more, there is a elevated level of
+access for more high-powered academics.
+
 
 ## Pipeline: jsonl > csv > wc
 Just like we should keep track of how many tweets we download at any given time,
