@@ -85,14 +85,18 @@ For this lesson, we will be covering some of your endpoint options that are
 available for to you as a user of the public Twitter v.2 API.  All these 
 endpoints apply to the Tweets and Replies that satisfy a set of parameters you 
 have set (e.g. Tweets from a certain account, Tweets containing a certain 
-hashtag, etc). These endpoints indicate *how* we may retrieve Twitter data, and 
-you will find that Twarc makes these options available as commands.
+hashtag, etc). These endpoints indicate *how* we may retrieve Twitter data. 
+Twarc2 give us easy access to these endpoints as commands.
 
 | Endpoint            | Description |
 |---------------------|-------------|
-| Recent Search       | Access to public Tweets posted in the last 7 days. |
 | Recent Tweet counts | Retrieve the count of Tweets posted in the last 7 days. |
+| Recent Search       | Access to public Tweets posted in the last 7 days. |
 | Filtered Stream     | Collect Tweets as they are posted in real-time. |
+
+When you are doing exploratory searching, these are the order you want to do 
+things in so that you don't waste your quota.
+
 
 ## Twarc's Data Collection
 
@@ -101,7 +105,7 @@ data and provides as data. So, keeping the data authentic for analysis is a
 design of Twarc. Twarc is also traceable, so people can see a log of how and when 
 the data was collected.
 
-In the v2 redesign, Twarc was also designed to be easily part of a pipline of 
+In the v2 redesign, Twarc was also designed to be easily part of a pipeline of 
 commands. Users can connect their data collecting to other pieces of their 
 software that expect to get tweets as inputs. When you install Twarc, you will 
 get two clients, twarc & twarc2. Twarc was designed with the v1 Twitter API in 
@@ -111,9 +115,13 @@ mind, and Twarc2 was designed as a response to Twitter implementing their v2 API
 Fishing around to estimate traffic without spending your quota
 
 ~~~
-!twarc2 counts --text "ukraine"
+!twarc2 counts --text "kittens"
 ~~~
 {: code}
+
+Output: screenshot of the bottom of the output showing there were 
+95,767 mentions of kittens on twitter in the 7 days before the command
+was run. Try counting mentions of cats, ukraine, china, baseball, and biden.
 
 
 
