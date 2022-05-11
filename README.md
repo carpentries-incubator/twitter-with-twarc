@@ -43,7 +43,7 @@ Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%
 Current maintainers of this lesson are
 
 * Jon Jablonski (not officially a Carpentry Maintainter)
-* FIXME
+* Amanda Ho
 * FIXME
 
 
