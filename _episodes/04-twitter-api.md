@@ -95,49 +95,21 @@ mind, and Twarc2 was designed as a response to Twitter implementing their v2 API
 
 
 
+## Pipeline: jsonl > csv > wc
+Just like we should keep track of how many tweets we download at any given time,
+we should implement a standard workflow when gathering tweets. Generally for the
+rest of this workshop, we will follow this workflow:
 
+-1 harvest json
+-1 flatten if necessary (when using timeline, etc.)
+-1 convert to csv
+-1 use wc to make you received as much as you expected
+-1 use twarc utilities and twarc2 plug-ins
+-1 use external utiities for further analysis
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Convert to csv
-While JSON is common, it's not super human-readable, and it would be a bear to convert to a
-dataframe. So twarc2 convert to csv functions that we can use.
+While JSON is common, it's not super human-readable, and it can be difficult to 
+convert to a dataframe. So twarc2 has an extension to turn our harvested jsonl
+to csv. functions that we can use.
 
 twarc2 csv kittens.jsonl output_data/kittens.csv
 
