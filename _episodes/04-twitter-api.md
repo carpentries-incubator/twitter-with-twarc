@@ -5,13 +5,15 @@ exercises: 0
 questions:
 - "How exactly are we using the Twitter API?"
 - "What endpoints are available to me?"
-- "What are the limitations of our accounts"
+- "What are the limitations of our accounts?"
+- "How can I standardize my workflow?"
 objectives:
 - "Defining API, and what makes the Twitter API special"
 - "Demonstrating other features of twarc in the context of endpoints"
 keypoints:
 - "There are many online sources of Twitter data"
 - "Utilities and plugins come with twarc to help us out"
+- "A consistant 'harvest > convert > examine' pipeline will help us work with our data"
 ---
 
 ## The Twitter v.2 API
