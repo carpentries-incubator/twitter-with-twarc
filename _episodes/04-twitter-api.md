@@ -117,11 +117,27 @@ Fishing around to estimate traffic without spending your quota
 ~~~
 !twarc2 counts --text "kittens"
 ~~~
-{: .language-python}
+{: .bash}
 
-Output: screenshot of the bottom of the output showing there were 
-95,767 mentions of kittens on twitter in the 7 days before the command
-was run. Try counting mentions of "big data", "archives", "research", or "interdiciplinary".
+Output: screenshot of the bottom of the output showing there were 95,767 mentions 
+of kittens on twitter in the 7 days before the command was run. Try counting 
+mentions of "big data", "archives", "research", or "interdisciplinary".
+
+### Alternate:
+#### What's a lot?
+Getting a sense of the scale of the conversation on Twitter is important. 
+When you are starting out, you won't have much idea about how many tweets a 
+search will return. With a monthly limit of 500,000 tweets, it's good to use
+the Recent Tweet Counts endpoint to do some exploratory searching.
+
+We got almost 100,000 kitten tweets. That's a healthy amount of data to analyze.
+Take a look at the counts for 'Biden', 'Baseball', 'Beyonce', and 'Ukraine'.
+We will aggregate by day and run everything from one cell.
+
+Judging by the results, can we perhaps judge that politics Twitter is larger or
+smaller than sports twitter?  
+
+`!twarc2 counts --text "(Ukraine OR ukraine)" --granularity "day"`
 
 
 ## Filtered Stream
