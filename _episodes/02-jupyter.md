@@ -94,6 +94,7 @@ instructions. Once the data files are uploaded, navigate back to your up to our 
 directory `twarc_run`. Once you are done, your file organization should look like the
 below image.
 
+(FIX SCREENSHOT:NEW FOLDERS/WRONG NAMES)
 ![file organization for jupyterlab](../fig/dir-data.png)
 
 ## Using the Terminal and Nano Editor in Jupyterlab
