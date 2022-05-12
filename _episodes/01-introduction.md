@@ -11,7 +11,7 @@ objectives:
 - "How to access the twitter API"
 - "How Twarc works with the API"
 keypoints:
-- "Twitter is a microblogging platform where "tweets" (text, image, and/or video postings) are created and shared."
+- "Twitter is a microblogging platform where 'tweets' (text, image, and/or video postings) are created and shared."
 - "Twarc is a command line tool and Python library that allows users to programmatically collect and archive Tweets."
 ---
 
