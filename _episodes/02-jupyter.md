@@ -62,7 +62,7 @@ Next, note the toolbar found at the top on the screen.
 There, you will find options that are needed
 to run and save programs you write.
 
-![first look at the jupyter lab interface](../fig/jupyter-launch.PNG)
+<img src ="/fig/jupyter-launch.PNG" width="800">
 
 To start off, we need to create some directories that we will be working in. Open the file
 browser and create a folder to store all of your workshop files in (e.g. data, python notebooks). To create a folder, select
