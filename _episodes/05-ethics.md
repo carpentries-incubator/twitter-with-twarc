@@ -6,7 +6,7 @@ questions:
 - "Can I avoid seeing hate speech and unsettling imagery and still analyze twitter?"
 - "What are some privacy or other ethical issues that you need to keep in mind when harvesting tweets with twarc?"
 - "How much personal information can we actually gather about a user given our twarc scrape?"
-- "What are some inappropriate use cases for twarc?"
+- "What are some use cases that might be inappropriate?" 
 
 key points:
 - "Discuss the privacy of ethical concerns surrounding tweet harvesting."
@@ -18,13 +18,23 @@ key points:
 # Kittens and Elephants
 Maybe you think we have being coy, but here is where we acknowledge the 800-pound
 elephant in the room. Twitter is not all kittens and rainbows. As we all know, 
-hashtag-#rainbow will lead us into LGBTQ-issues. We've already told you that twarc
+hashtag- #rainbow will lead us into LGBTQ-issues. We've already told you that twarc
 was born of the Black Lives Matter movement. 
 
-Both of these issues, 
+Researching either of those issues, and many others, will expose you to hate speech,
+and possibly disturbing imagery. Fortunately, when we are working with thousands
+of tweets we can partially shield ourselves. You're not going to read 10,000 
+tweets, you are going to 'reading them from a distance' using analytical
+tools. 
+
+## examples
+comparing url's of images instead of the images
+wall without images?
+
+XXX concordance! textblob word count goes here. xxx
 
 # Let's Get Ethical
-
+Whe
 There are multiple ethical fields to consider when using and presenting Twitter 
 data. In this lesson, we will be focusing on two issues: consent, misinformation, 
 and core legal practices as it relates to archiving data.
@@ -146,6 +156,15 @@ GDPR defines Personal data as:
 >
 {: .discussion}
 
+
+
+# robots
+We can apply DocTheNow’s SH-A labels to individual Tweets to identify bots, 
+trolls, and malicious actors.
+
+
+
+# move to lesson 9?
 ## User Content, Re-use, and Consent
 
 Twitter users have various options of privacy over their content and profile. 
