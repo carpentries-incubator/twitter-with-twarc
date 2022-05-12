@@ -403,41 +403,36 @@ Commands:
 These are all of the commands that you can send via twarc2. You can also view all the
 help for Twarc 1.0!
 
-## Writing Python code in your Notebook
-So far we have sent BASH commands and typed Markdown in our Notebooks. But the
-main reason to use Jupyter Notebooks is to write code. Let's load the Python libraries
-we will be using today, and then load our Tax Day data into a Pandas dataframe:
-
-~~~
-<<<<<<< HEAD
-twarc2 flatten raw_data/bjules.jsonl output_data/bjules_flattened.jsonl
-=======
-import pandas as pd
-
-import twarc_csv
->>>>>>> d5b4d4082daeae641bd137c2b7a869533953e8b3
-~~~
-{: .language-Terminal}
-
-Because these are python commands, you do not need to add the exclamation point. You might need
-to `pip install twarc_csv`.
-
-We will almost always convert our files to .csv format:
-
 # Writing Code and Sending BASH Commands from your Notebook
 So far we have sent BASH commands and typed Markdown in our Notebooks. But the 
 main reason to use Jupyter Notebooks is to write code and leave ourselves notes
 in Markdown. 
-
-# Converting between file types: jsonl to csv
-csv's are convenient for reading, and are useful as a data format
-later on for analyzing tweets outside of twarc. 
 
 Because twarc-csv is a plugin, we need to install it each time
 our JupyterLab server restarts. So go ahead and put that in a 
 cell at the top of your notebook:
 
 `!pip install twarc_csv` 
+
+We run the command inside the cell by pressing `ctrl` + `Enter`
+
+Make a new cell (b on the keyboard) and let's load the Python libraries
+we will be using today, and then load our Tax Day data into a Pandas dataframe:
+
+~~~
+import pandas as pd
+import twarc_csv
+~~~
+{: .language-Terminal}
+
+Because these are python commands, you do not need to add the exclamation 
+point. 
+
+## Converting between file types: jsonl to csv
+csv's are convenient for reading, and are useful as a data format
+later on for analyzing tweets outside of twarc. 
+
+We will almost always convert our files to .csv format:
 
 This will be our introduction to writing Python in notebooks.
 Will reinforce running lines, clearing output.
@@ -456,7 +451,6 @@ later on for analyzing tweets outside of Twarc.
 
 Now we are ready to create our CSV. Check the file browser to make sure
 your file was created where you expected it to be.
-# Converting between file types: jsonl to csv
 
 
 ~~~
@@ -471,31 +465,20 @@ manipulating data in Pandas.
 Now that we have flattened our data and made a csv, we can see how
 many tweets we harvested from Jules's timeline using `wc` in the terminal.
 
-<<<<<<< HEAD
 How many Tweets did we get from Bergis?
 
 
-Let's load the Python libraries
-we will be using today, and then load our Tax Day data into a Pandas dataframe:
+You can even create your dataframe and run 
+the BASH commands from inside of one cell.
 
-`import pandas`
-
-`import twarc_csv`
-
-Because these are python commands, no need to !bang! 
-
-We will almost always convert our files to .csv format, so we may as well
-start doing that now.
-
-`!twarc2 csv raw_data/ecodatasci.jsonl > output_data/ecodatasci.csv`
-
-This didn't work, because we didn't flatten it. Timelines need to be 
-flattened, because they are more than just a list of tweets.
+If you harvested the @ecodatasci tweets in the challenge, that would look like
+this:
 
 If we get it right, we can run both transforms from the same cell:
 
 `!twarc2 flatten raw_data/ecodatasci.jsonl > output_data/ecodatasci_flattened.jsonl`
 `!twarc2 csv raw_data/ecodatasci_flattened.jsonl > output_data/ecodatasci.csv`
+`ecodatasci_df = pandas.read_csv("output_data/ecodatasci.df")`
 
 Remember, if you get an error, you can correct it in the cell, and then
 run the cell again by pressing `ctrl` + `Enter`
