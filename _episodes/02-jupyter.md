@@ -404,25 +404,6 @@ Commands:
 These are all of the commands that you can send via twarc2. You can also view all the
 help for twarc 1.0!
 
-## Writing Python code in your Notebook
-So far we have sent BASH commands and typed Markdown in our Notebooks. But the 
-main reason to use Jupyter Notebooks is to write code. Let's load the Python libraries
-we will be using today, and then load our Tax Day data into a Pandas dataframe:
-
-`import pandas`
-
-`import twarc_csv`
-
-Because these are python commands, no need to !bang! But you might need
-to `pip install twarc_csv`
-
-We will almost always convert our files to .csv format, so we may as well
-start doing that now.
-
-*** convert to csv and then dataframe goes here. ***
-This will be our introduction to writing Python in notebooks.
-Will reinforce running lines, clearing output. 
-
 Twitter Timelines, and other files we harvest using twarc, need to be 
 'flattened' before we use it. This will ensure that each line of jsonl
 is one tweet:
@@ -448,6 +429,37 @@ manipulating data in Pandas.
 
 Now that we have flattened our data and made a csv, we can see how
 many tweets we harvested from Jules's timeline using `wc`.
+
+
+
+## Writing Python code in your Notebook
+So far we have sent BASH commands and typed Markdown in our Notebooks. But the 
+main reason to use Jupyter Notebooks is to write code. Let's load the Python libraries
+we will be using today, and then load our Tax Day data into a Pandas dataframe:
+
+`import pandas`
+
+`import twarc_csv`
+
+Because these are python commands, no need to !bang! But you might need
+to `pip install twarc_csv` (either out in the Terminal or with a !bang)
+
+We will almost always convert our files to .csv format, so we may as well
+start doing that now.
+
+`!twarc2 csv raw_data/ecodatasci.jsonl > output_data/ecodatasci.csv`
+
+This didn't work, because we didn't flatten it. Timelines need to be 
+flattened, because they are more than just a list of tweets.
+
+If we get it right, we can run both transforms from the same cell:
+
+`!twarc2 flatten raw_data/ecodatasci.jsonl > output_data/ecodatasci_flattened.jsonl`
+`!twarc2 csv raw_data/ecodatasci_flattened.jsonl > output_data/ecodatasci.csv`
+
+Remember, if you get an error, you can correct it in the cell, and then
+run the cell again by pressing `ctrl` + `Enter`
+
 
 We can cut this down to just 
 loading the libraries if we this this is too long. CSV is currently in 
