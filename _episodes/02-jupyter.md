@@ -69,7 +69,7 @@ browser and create a folder to store all of your workshop files in (e.g. data, p
 the icon that is highlighted in the above image. We have chosen to name the folder
 `twarc_run`. <strong>We will organize all of our work in this folder, and this folder will be our home directory.</strong>
 
-Inside of `twarc_run`, let's make two more folders. Please create one folder that is 
+Inside of `twarc_run`, let's make three more folders. Please create one folder that is 
 named `raw_data`, and create a second folder named `output_data`. Raw_data is 
 where we will store twitter data we collect during the workshop. The output_data folder 
 for is where we will store twitter data we process. `output_data` should not be inside 
