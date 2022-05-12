@@ -5,7 +5,7 @@ exercises: 10
 questions:
 - "What is JupyterLab?"
 - "How do I move around in JupyterLab?"
-- "How can I set up twarc on JupyterLab?"
+- "How can I set up Twarc on JupyterLab?"
 - "What’s a good way of running Twarc in our Jupyter environment?"
 objectives:
 - "Become acquainted with the Jupyter Lab tools"
@@ -31,13 +31,13 @@ create and navigate the directory structure, and use the built-in BASH terminal.
 
 > ## Thank you LSIT
 >
-> For this workshop, we will be using JupyterLab with twarc already loaded in. The reason
+> For this workshop, we will be using JupyterLab with Twarc already loaded in. The reason
 > we are able to use JupyterLab without needing to download any software is because our
 > JupyterLab server is hosted by UCSB Letters & Sciences IT. Thank you to Letters &
 > Sciences IT for setting up our JupyterLab server :)
 {: .callout}
 
-If you have a fully configured version of Python, you can also install and run twarc on
+If you have a fully configured version of Python, you can also install and run Twarc on
 your own computer. The documentation for installing Twarc is found at [this
 repository](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics.html). For
 this workshop, follow along in the provided environment.
@@ -69,10 +69,10 @@ browser and create a folder to store all of your workshop files in (e.g. data, p
 the icon that is highlighted in the above image. We have chosen to name the folder
 `twarc_run`. <strong>We will organize all of our work in this folder, and this folder will be our home directory.</strong>
 
-Inside of `twarc_run`, let's make three more folders. Please create one folder that is 
-named `raw_data`, and create a second folder named `output_data`. Raw_data is 
-where we will store twitter data we collect during the workshop. The output_data folder 
-for is where we will store twitter data we process. `output_data` should not be inside 
+Inside of `twarc_run`, let's make three more folders. Please create one folder that is
+named `raw_data`, and create a second folder named `output_data`. Raw_data is
+where we will store twitter data we collect during the workshop. The output_data folder
+for is where we will store twitter data we process. `output_data` should not be inside
 of `raw_data`, and vice versa. Instead, both folders should be inside of `twarc_run`.
 
 Since `raw_data` is where we will store our original data files, please open this data folder
@@ -94,7 +94,6 @@ instructions. Once the data files are uploaded, navigate back to your up to our 
 directory `twarc_run`. Once you are done, your file organization should look like the
 below image.
 
-(FIX SCREENSHOT:NEW FOLDERS/WRONG NAMES)
 ![file organization for jupyterlab](../fig/dir-data.png)
 
 ## Using the Terminal and Nano Editor in Jupyterlab
@@ -105,9 +104,9 @@ will see that the launcher screen is replaced by the terminal window. You may op
 launcher tab by selecting the large rectangular button with the plus (+) sign. When you
 open the launcher in this way, the terminal window will not close.
 
-The shell or terminal, is a program where users can type in commands. 
+The shell or terminal, is a program where users can type in commands.
 The terminal window is all about the keyboard--you cannot mouse around in there. The terminal
-window is running a lightweight verion of BASH, so you can use all of the common Linux/Unix
+window is running a lightweight version of BASH, so you can use all of the common Linux/Unix
 file system commands such as:
 
 | git command | what the command does |
@@ -117,16 +116,15 @@ file system commands such as:
 | `mkdir`| make new directory, a folder |
 
 In our Jupyterhub environment, we have pre-installed the nano editor. Nano is a text editor and can only work with plain character data. We are using it in this workshop
-because it is one of the least complex text editors. There are many editors such as Notepad++ or VIM, which you can configure to use on your own devices in the command-line. 
+because it is one of the least complex text editors. There are many editors such as Notepad++ or VIM, which you can configure to use on your own devices in the command-line.
 
 Let's move around our directories in the Terminal to get comfortable.
 
-Print your working directory using `pwd` and make sure you are in the directory `twarc_run`. If you 
-are not in the proper directory, please change directories using `cd` to move to `twarc_run` and set it as your directory. Moving
-around in your directories is pretty easy using this interface.
+Print your working directory using `pwd` and make sure you are in the directory `twarc_run`. If you
+are not in the proper directory, please change directories using `cd` to move into `twarc_run` and set it as your directory.
 
 Needed data file: a single tweet
-`cat` out the file. 
+`cat` out the file.
 use python viewer
 nano the file
 
@@ -137,7 +135,7 @@ nano the file
 >
 {: .callout}
 
-# Configuring twarc in the Terminal
+# Configuring Twarc in the Terminal
 
 Continuing in the terminal window, we will configure Twarc so that it is connected to your Twitter
 developer account and to your app. If you do not have a twitter developer account, please
@@ -156,7 +154,7 @@ instructions. Please take a moment to gather the following keys and tokens:
 
 
 Let's start
-configuring twarc by sending typing in `twarc2 configure`. You should get the output below:
+configuring Twarc by sending typing in the comman `twarc2 configure`. You should get the output below:
 
 ~~~
 twarc2 configure
@@ -206,7 +204,7 @@ How would you like twarc to obtain your user keys?
 ~~~
 {: .output}
 
-At this step, please select the option to manually input your user keys.
+At this step, please select the option to manually input your user tokens.
 
 ~~~
 Please enter your choice [1 or 2] 2
@@ -225,9 +223,9 @@ Your keys have been written to /home/xxxx/.config/twarc-run/config
 {: .output}
 
 All of the information you just entered is saved in a configuration file. Next time you
-start up twarc on this JupyterLab, you will not need to configure twarc.
+start up Twarc on this JupyterLab, you will not need to configure Twarc.
 
-If you try to run a twarc command without configuring twarc, you may see this message:
+If you try to run a Twarc command without configuring Twarc, you may see this message:
 
 ~~~
 Incomplete credentials provided.
@@ -240,36 +238,39 @@ Please run the command "twarc2 configure" to get started.
 
 We should confirm that Twarc was configured correctly and that you are ready to continue
 using Twarc. To test the Twarc configuration, we will harvest tweets from a twitter
-account. At the same time, we will learn how to send Python commands from a Jupyter
+account. At the same time, we will learn how to send bash commands from a Jupyter
 Notebook.
 
-Please Open a new launcher (select the blue rectangular button with the 
-plus sign) and open a Python 3 Notebook (do not open a Python 3 
+Please Open a new launcher (select the blue rectangular button with the
+plus sign) and open a Python 3 Notebook (do not open a Python 3
 Console). You will see the following window open:
 
 ![interface of jupyterLab notbook](../fig/first-look-jupyter-notebook.png)
 
 At the top of the Notebook tab, notice that there is a new toolbar. Each of the buttons
-has a shortcut key. We will mostly use `b` to add a cell, `ctrl` + `enter` to execute
+has a shortcut key. We will mostly use `b` to add a cell, `shift` + `enter` to execute
 whatever code is inside the current cell.
 
 You can type either Python code or Markdown into a cell. We will be doing both.
 We are using this notebook so that we can save our work along the way. At the end of the day,
-you can save your notebook file and try to run it later on your own installation of twarc.
+you can save your notebook file and try to run it later on your own installation of Twarc.
 
 Let's put some effort into formatting it nicely by putting Markdown
-at the top: 
+at the top:
 
-`# Twitter with twarc Workshop notebook` 
+~~~
+# Twitter with Twarc Workshop notebook
 
-`This notebook contains all of the code used to harvest and analyze Tweets` 
+This notebook contains all of the code used to harvest and analyze data from Twitter.
+~~~
+{: .language-markdown}
 
 If you run that line, Jupyter will render that markdown into something that looks
 like this:
 
-### (insert screenshot)
+![markdown cell in jupyter notebook](../fig/markdown-cell.png)
 
-Now, let's call twarc2 from inside of our notebook
+Now, let's call Twarc2 from inside of our notebook
 
 
 > ## BASH Commands in JupyterLab
@@ -278,22 +279,22 @@ Now, let's call twarc2 from inside of our notebook
 > BASH commands from our Jupyter Notebook.
 >
 > Because we will be using a mix of Python code and BASH commands, it's important
-> to keep in mind which is which. 
+> to keep in mind which is which.
 > When we use JupyterLab to run BASH commands, we need to start each line with an
-> exclamation point (! often pronounced "bang" by nerds). For example: if a Twarc command is
-> `twarc2 search`, then the line to run the twarc command in JupyterLab
+> exclamation point (!). For example: if a Twarc command is
+> `twarc2 timeline`, then the line to run the Twarc command in JupyterLab
 > is:
 >
 > ~~~
-> !twarc2 search
+> !twarc2 timeline
 > ~~~
 > {: .language-bash}
 >
 {: .callout}
 
-The twitter account that we will collect tweets from is Bergis Jules, an archivist and 
-scholar working in digital humanities. He is the Community Lead for [Documenting the Now 
-(DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve 
+The twitter account that we will collect tweets from is Bergis Jules, an archivist and
+scholar working in digital humanities. He is the Community Lead for [Documenting the Now
+(DocNow)](https://www.docnow.io/), the project behind Twarc's development. To retrieve
 Jules' recent tweets, please run the following command in a Python Notebook:
 
 ~~~
@@ -302,7 +303,7 @@ Jules' recent tweets, please run the following command in a Python Notebook:
 {: .language-python}
 
 If the
-twarc configuration was successful, you will see a loading bar at the
+Twarc configuration was successful, you will see a loading bar at the
 bottom of the cell.
 
 After the cell has completed running the line, there
@@ -323,36 +324,34 @@ contains the data of tweets under the username "@BergisJules".
 
 ## Twarc: twitter and archiving
 
-> ## [Documenting the Now](https://www.docnow.io/)
->
+#### [Documenting the Now](https://www.docnow.io/)
+
 > "Documenting the Now develops open source tools and community-centered practices that support the ethical collection, use, and
 > preservation of publicly available content shared on web and social media. Documenting the Now responds to the public's use of social
 > media for chronicling historically significant events as well as demand from scholars, students, and archivists, among others, seeking a
 > user-friendly means of collecting and preserving this type of digital content."
-{: .callout}
 
 
-
-The Documenting the Now Project started in 2014, during the aftermath of the killing of Michael Brown Jr. in St. Louis, Missouri (U.S.).
+The Documenting the Now Project started in 2014, in the aftermath of the killing of Michael Brown Jr. in St. Louis, Missouri (U.S.).
 A group of archivists got together, recognizing that protest and activism surrounding this had initially happened on twitter and other social media.
 There was also a consideration of how this content would be recorded as a part of history, starting with this idea of how these events would be remembered as they transpired on social media.
 Bergis Jules and Ed Summers collected tweets that contained the key word 'ferguson' (the suburb of St. Louis where Brown was killed), collecting 13 million tweets.
-In the process of doing so, they developed a utility named twarc, short for twitter and archiving.
+In the process of doing so, they developed a utility named Twarc, short for twitter and archiving.
 
 A large part to DocNow is commitment to ethical social media collection.
 Activists and protesters had not consented to be part of an archive, with their content that were on twitter and other places online.
 They were never consulted on if they wanted their content to be remembered long from now.
 A large part of the DocNow was how to build an archive of social media content for the long term, with consent from the content creators.
-For us in the workshop, we will be discussing practices for ethical twitter harvesting before going over instruction on using twarc.
+For us in the workshop, we will be discussing practices for ethical twitter harvesting before going over instruction on using Twarc.
 
 ## Using the Help
 
 By using the --help command, you can pull up the syntax guidance and available tools with
-twarc. You may find this useful as you go through the lessons to learn how to use
+Twarc. You may find this useful as you go through the lessons to learn how to use
 different tools, or at the end of the workshop as a summary of the tools you have
 learned. Let's run it from our notebook so that we can view it at our convenience.
 
-twarc2 is a program, not a line of code, so we start the line with an exclamation point `!`.
+Twarc2 is a program, not a line of code. To run the Twarc bash command, we start the line with an exclamation point `!`.
 
 ~~~
 !twarc2 --help
@@ -402,10 +401,30 @@ Commands:
 {: .output}
 
 These are all of the commands that you can send via twarc2. You can also view all the
-help for twarc 1.0!
+help for Twarc 1.0!
 
-## 'Flattening' Twitter Data
-Twitter Timelines, and other files we harvest using twarc, need to be 
+## Writing Python code in your Notebook
+So far we have sent BASH commands and typed Markdown in our Notebooks. But the
+main reason to use Jupyter Notebooks is to write code. Let's load the Python libraries
+we will be using today, and then load our Tax Day data into a Pandas dataframe:
+
+~~~
+import pandas as pd
+
+import twarc_csv
+~~~
+{: .language-python}
+
+Because these are python commands, you do not need to add the exclamation point. You might need
+to `pip install twarc_csv`.
+
+We will almost always convert our files to .csv format:
+
+*** convert to csv and then dataframe goes here. ***
+This will be our introduction to writing Python in notebooks.
+Will reinforce running lines, clearing output.
+
+Twitter Timelines, and other files we harvest using Twarc, need to be
 'flattened' before we use it. This will ensure that each line of jsonl
 is one tweet:
 
@@ -414,65 +433,25 @@ is one tweet:
 ~~~
 {: .language-python}
 
-We can't really easily examine the data before we convert it to 
-a csv, so you can do that using the twarc csv plugin.
-
+csv's are even conventient for reading, and are useful as a data format
+later on for analyzing tweets outside of Twarc.
 
 # Converting between file types: jsonl to csv
-csv's are convenient for reading, and are useful as a data format
-later on for analyzing tweets outside of twarc. 
-
-Because twarc-csv is a plugin, we need to install it each time
-our JupyterLab server restarts. So go ahead and put that at 
-the top of your notebook:
-`!pip install twarc_csv` 
-
-You can also do this out in the Terminal without the !bang
-
 
 ~~~
 !twarc2 csv raw_data/bjules.jsonl output_data/bjules.csv
 ~~~
 {: .language-python}
 
-We will also get in the habit of making dataframes 
-out of our csv's, because they are the main tool for 
-manipulating data in Pandas. 
+We will also get in the habit of making dataframes
+out of our csv's, because they are the main tool for
+manipulating data in Pandas.
 
 Now that we have flattened our data and made a csv, we can see how
 many tweets we harvested from Jules's timeline using `wc`.
 
-
-## Writing Python code in your Notebook
-So far we have sent BASH commands and typed Markdown in our Notebooks. But the 
-main reason to use Jupyter Notebooks is to write code. Let's load the Python libraries
-we will be using today, and then load our Tax Day data into a Pandas dataframe:
-
-`import pandas`
-
-`import twarc_csv`
-
-Because these are python commands, no need to !bang! 
-
-We will almost always convert our files to .csv format, so we may as well
-start doing that now.
-
-`!twarc2 csv raw_data/ecodatasci.jsonl > output_data/ecodatasci.csv`
-
-This didn't work, because we didn't flatten it. Timelines need to be 
-flattened, because they are more than just a list of tweets.
-
-If we get it right, we can run both transforms from the same cell:
-
-`!twarc2 flatten raw_data/ecodatasci.jsonl > output_data/ecodatasci_flattened.jsonl`
-`!twarc2 csv raw_data/ecodatasci_flattened.jsonl > output_data/ecodatasci.csv`
-
-Remember, if you get an error, you can correct it in the cell, and then
-run the cell again by pressing `ctrl` + `Enter`
-
-
-We can cut this down to just 
-loading the libraries if we this this is too long. CSV is currently in 
+We can cut this down to just
+loading the libraries if we this this is too long. CSV is currently in
 episode 4, but you CAN do it here.
 
 {% include links.md %}
