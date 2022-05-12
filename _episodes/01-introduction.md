@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 5
 questions:
 - "What is a tweet?"
 - "What is an API and how can I get started?"
