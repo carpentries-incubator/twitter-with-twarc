@@ -404,6 +404,7 @@ Commands:
 These are all of the commands that you can send via twarc2. You can also view all the
 help for twarc 1.0!
 
+## 'Flattening' Twitter Data
 Twitter Timelines, and other files we harvest using twarc, need to be 
 'flattened' before we use it. This will ensure that each line of jsonl
 is one tweet:
@@ -413,10 +414,21 @@ is one tweet:
 ~~~
 {: .language-python}
 
-csv's are even conventient for reading, and are useful as a data format
-later on for analyzing tweets outside of twarc. 
+We can't really easily examine the data before we convert it to 
+a csv, so you can do that using the twarc csv plugin.
+
 
 # Converting between file types: jsonl to csv
+csv's are convenient for reading, and are useful as a data format
+later on for analyzing tweets outside of twarc. 
+
+Because twarc-csv is a plugin, we need to install it each time
+our JupyterLab server restarts. So go ahead and put that at 
+the top of your notebook:
+`!pip install twarc_csv` 
+
+You can also do this out in the Terminal without the !bang
+
 
 ~~~
 !twarc2 csv raw_data/bjules.jsonl output_data/bjules.csv
@@ -431,7 +443,6 @@ Now that we have flattened our data and made a csv, we can see how
 many tweets we harvested from Jules's timeline using `wc`.
 
 
-
 ## Writing Python code in your Notebook
 So far we have sent BASH commands and typed Markdown in our Notebooks. But the 
 main reason to use Jupyter Notebooks is to write code. Let's load the Python libraries
@@ -441,8 +452,7 @@ we will be using today, and then load our Tax Day data into a Pandas dataframe:
 
 `import twarc_csv`
 
-Because these are python commands, no need to !bang! But you might need
-to `pip install twarc_csv` (either out in the Terminal or with a !bang)
+Because these are python commands, no need to !bang! 
 
 We will almost always convert our files to .csv format, so we may as well
 start doing that now.
