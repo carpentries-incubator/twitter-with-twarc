@@ -62,7 +62,7 @@ Next, note the toolbar found at the top on the screen.
 There, you will find options that are needed
 to run and save programs you write.
 
-<img src ="/fig/jupyter-launch.PNG" width="800">
+<img src ="fig/jupyter-launch.PNG" width="800">
 
 To start off, we need to create some directories that we will be working in. Open the file
 browser and create a folder to store all of your workshop files in (e.g. data, python notebooks). To create a folder, select
@@ -82,10 +82,11 @@ and upload all of the datafiles:
 - `one_tweet.jsonl` a single tweet to look at
 - (FIXME)
 
-And create another folder to contain all the `.py` files that are inside of
+And create another folder called `utils` to contain all the `.py` files that are inside of
 `utils.zip`.
 - don't upload the zip file. Unzip it and upload the individual `.py` files.
 
+In total you should now have three folders within twarc_run: `raw_data`, `output_data`, and `utils`
 
 If you have not downloaded the data, please
 do so now from the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
