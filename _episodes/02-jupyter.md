@@ -62,20 +62,20 @@ Next, note the toolbar found at the top on the screen.
 There, you will find options that are needed
 to run and save programs you write.
 
-![first look at the jupyter lab interface](../fig/first-look-jupyter.png)
+![first look at the jupyter lab interface](../fig/jupyter-launch.PNG)
 
 To start off, we need to create some directories that we will be working in. Open the file
 browser and create a folder to store all of your workshop files in (e.g. data, python notebooks). To create a folder, select
 the icon that is highlighted in the above image. We have chosen to name the folder
-`twarc-run`. <strong>We will organize all of our work in this folder, and this folder will be our home directory.</strong>
+`twarc_run`. <strong>We will organize all of our work in this folder, and this folder will be our home directory.</strong>
 
-Inside of `twarc-run`, let's make two more folders. Please create one folder that is 
-named `source-data`, and create a second folder named `output-data`. Source-data is 
-where we will store twitter data we collect during the workshop. The output-data folder 
-for is where we will store twitter data we process. `output-data` should not be inside 
-of `source-data`, and vice versa. Instead, both folders should be inside of `twarc-run`.
+Inside of `twarc_run`, let's make two more folders. Please create one folder that is 
+named `raw_data`, and create a second folder named `output_data`. Raw_data is 
+where we will store twitter data we collect during the workshop. The output_data folder 
+for is where we will store twitter data we process. `output_data` should not be inside 
+of `raw_data`, and vice versa. Instead, both folders should be inside of `twarc_run`.
 
-Since `source-data` is where we will store our original data files, please open this data folder
+Since `raw_data` is where we will store our original data files, please open this data folder
 and upload all of the datafiles:
 
 - `taxday.jsonl` tweets from American tax day, 2022
@@ -90,7 +90,7 @@ And create another folder to contain all the `.py` files that are inside of
 If you have not downloaded the data, please
 do so now from the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
 instructions. Once the data files are uploaded, navigate back to your up to our project
-directory `twarc-run`. Once you are done, your file organization should look like the
+directory `twarc_run`. Once you are done, your file organization should look like the
 below image.
 
 ![file organization for jupyterlab](../fig/dir-data.png)
@@ -119,8 +119,8 @@ because it is one of the least complex text editors. There are many editors such
 
 Let's move around our directories in the Terminal to get comfortable.
 
-Print your working directory using `pwd` and make sure you are in the directory `twarc-run`. If you 
-are not in the proper directory, please change directories using `cd` to move to `twarc-run` and set it as your directory. Moving
+Print your working directory using `pwd` and make sure you are in the directory `twarc_run`. If you 
+are not in the proper directory, please change directories using `cd` to move to `twarc_run` and set it as your directory. Moving
 around in your directories is pretty easy using this interface.
 
 Needed data file: a single tweet
@@ -295,7 +295,7 @@ scholar working in digital humanities. He is the Community Lead for [Documenting
 Jules' recent tweets, please run the following command in a Python Notebook:
 
 ~~~
-!twarc2 timeline BergisJules > 'source-data/bjules.jsonl'
+!twarc2 timeline BergisJules > 'raw_data/bjules.jsonl'
 ~~~
 {: .language-python}
 
@@ -304,7 +304,7 @@ twarc configuration was successful, you will see a loading bar at the
 bottom of the cell.
 
 After the cell has completed running the line, there
-will be a file called "bjules.jsonl" inside of `source-data` on your file browser. This file
+will be a file called "bjules.jsonl" inside of `raw_data` on your file browser. This file
 contains the data of tweets under the username "@BergisJules".
 
 
