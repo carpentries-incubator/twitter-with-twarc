@@ -40,10 +40,14 @@ data. In this lesson, we will be focusing on two issues: consent, misinformation
 and core legal practices as it relates to archiving data.
 
 ## Misinformation
+Nature disinformation cloud 
+https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png
 
 Something about social media as a tool for people with certain motives. I wonder 
 if theres a Parler Dataset on Kaggle? Or do you think that might violate the 
 Carpentries code of conduct (too risky?)?
+
+DocTheNow's personas
 
 ## Avoiding the ickiness
 What is distance reading and how does it relate to social media research?
@@ -106,6 +110,9 @@ twitter. (peg the number for the script?)
 
 
 ## Personally identifable information
+The first 90 seconds(?) of this video:
+https://www.youtube.com/watch?v=1qqo6z_aBzU
+
 We get a lot of personal information when we gather tweets. Enough to create 
 personalized ads, right? 
 
@@ -153,6 +160,8 @@ GDPR defines Personal data as:
 >
 > Do you think that Twitter data should be treated as personal data?
 > What did you consider when making this judgment?
+> Are robots people?
+> Do the blue checkmark people deserve privacy?
 >
 {: .discussion}
 
@@ -186,5 +195,7 @@ may want to protect. A basis for ethical consideration is not only to conduct
 good and upholding science, but also to minimize risk or harm during any of the 
 study's data collection and publication.
 
-
 ## Citations
+
+# more?
+What should be said about human subjects?
