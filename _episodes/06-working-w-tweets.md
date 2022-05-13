@@ -20,20 +20,30 @@ keypoints:
 
 # Why is JSON data useful?
 
-JSON has become an increasingly popular way to store and transfer data (especially data that is retrieved through APIs). It has a relatively concise and flexible data format that can be used with ease by many programming languages. In comparison to other data formats, such as XML, it's cleaner and responds faster to browser requests. 
+JSON has become an increasingly popular way to store and transfer data 
+(especially data that is retrieved through APIs). It is a relatively concise 
+and flexible data format that can be used with ease by many programming 
+languages. In comparison to other data formats, such as XML, it's cleaner and 
+responds faster to browser requests.
 
-The unfortunate thing about JSONs is that they are not structured in a way that humans are used to seeing data: in columns and rows or tables. 
+The unfortunate thing about JSON is that it is not structured in a way that 
+humans are used to seeing data: in columns and rows or tables.
 
-Jupyter has its own built-in text viewer. (INSERT PICTURE AND NAVIGATE TO JUPYTER)
-- Maybe insert a challenge right here where we can ask them to find something with in the data: text, number of retweets, username,...
+Jupyter has its own built-in text viewer. (INSERT PICTURE AND NAVIGATE TO 
+JUPYTER) - 
 
-Nano is also a good way to view JSON files because... It's already been installed for us. 
+Maybe insert a challenge right here where we can ask them to find 
+something with in the data: text, number of retweets, username,...
 
-If you're finding it hard to process the information in these JSON files, don't worry! We're going to convert our data from a JSON to a CSV. (Write code up for process of conversion and take pictures. Before (JSON) and after (CSV). 
+Nano is also a good way to view JSON files because... It's already been 
+installed for us.
 
-*I don't think we want them to put it in a different format than those.*
+If you're finding it hard to process the information in these JSON files, don't 
+worry! That's why we have our jsonl > csv > dataframe pipeline.
 
-Should we add another challenge here to have them look for the emojis section? Or another portion of the csv to make sure they know how to navigate?
+
+Should we add another challenge here to have them look for the emojis section? 
+Or another portion of the csv to make sure they know how to navigate?
 
 
 ## Can we find a spambot and follow it with:
@@ -43,21 +53,29 @@ This will be a fun experiment. who tweets a LOT?
 
 ## When we have thousands of tweets: we need analysis tools
 
-Back in Episode 1, we mentioned something referred to as 'utilities'. Now, we'll take a closer look at what those utilities are, how you use them, and why they are important to our Twitter data analysis and exploration. 
+Back in Episode 1, we mentioned something referred to as 'utilities'. Now, 
+we'll take a closer look at what those utilities are, how you use them, and why 
+they are important to our Twitter data analysis and exploration.
 
-*Callout*
-It's important to note that there are two sets of utilities: those used with twarc 1 and those used with twarc 2.
-Also, add in link to guide Jon and I made in case they want example and explanations of twarc utilities. 
 
-and you transferred the folder 'utils' that contains them into your Jupyter environment.
-Looking at our csv, there's a LOT of retweets here (a tweet
-that starts with a RT). We can run a Tweets vs. retweets (as a graph?)
+
+
+*Callout* It's important to note that there are two sets of utilities: those 
+used with twarc 1 and those used with twarc 2. 
+
+The twarc1 utilities are python files that we uploaded as part of setup. twarc2 
+plug-ins, like twarc-csv come along with the twarc installation, but need
+to be installed separately (that's why we did `!pip install twarc-csv` earlier)
+
+link to github guide 
+Jon 
+and I made in case they want example and explanations of twarc utilities.
+
+Looking at our csv, there's a LOT of retweets here (a tweet that 
+starts with a RT). We can run a Tweets vs. retweets (as a graph?)
 
 Lab Tasks
 _ View JSONL in https://codebeautify.org/jsonviewer again
-- Twarc1 vs twarc2 utilities
-  - You can pip install twarc2 utilities
-  - Upload twarc1 utilities from our setup or github
 
 - Start running utils:
   - Tweets vs. retweets
