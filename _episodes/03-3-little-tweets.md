@@ -144,9 +144,11 @@ harvested in Episode 2.
 {: .challenge}
 
 ## Load our tweets into a pandas dataframe
+As before, we are going to put out taxday tweets into a Pandas
+dataframe for more analysis later. 
+
+Here's a nice Pandas guide:
 https://www.kdnuggets.com/2017/03/beginners-guide-tweet-analytics-pandas.html
-Are we ever going to use this dataframe? If not, then don’t do this.
-If so, put in some foreshadowing here.
 
 
 
