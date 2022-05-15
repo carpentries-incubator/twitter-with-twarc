@@ -20,32 +20,36 @@ keypoints:
 
 JSONL, Line-oriented JavaScript Object Notation, is frequently used as a 
 data interchange format. It has become super common in the data science 
-field, and you will encounter it frequently. On April 15th, 2022, we 
+field, and you will encounter it frequently. On April 18th, 2022, we 
 used twarc to search for all mentions of the hashtag `#taxday` (April 15th is
-the deadline for Americans to file their annual income report).
+the typical deadline for Americans to file their annual income report,
+but in 2022, it was April 18).
 
-Let's look at our `taxday.jsonl` file again. Remember that our JSON files are line-oriented,
-ie: one tweet per line. Let's use 
-`head -n 2 source_data/taxday.jsonl > output_data/1-tweet.jsonl` to create a file
+Let's look at our `taxday.jsonl` file again. Remember that after we
+flatten them, our JSON 
+files are line-oriented, ie: one tweet per line. Let's use `head -n 2 
+source_data/taxday.jsonl > output_data/2-tweets.jsonl` to create a file 
 with just two tweets.
 
-If we use `!cat` to output that file to a Notebook cell, we see a real mess. Let's
-open the Jupyter graphical file viewer instead. 
+If we use `!cat` to output that file to a Notebook cell, we see a real 
+mess. Let's open the Jupyter graphical file viewer instead.
 
-> ## Why jump out of BASH?
+> ## Why not use BASH?
 >
 > We could use nano instead, and stay in our little shell window 
-> with our hands on our keyboards.  There is an advantage to looking at the
-> file with nano or another editor. 
+> with our hands on our keyboards.  However, we are going to spend
+> our workshop in Jupyter to make our work more reproducible.
+> 
+> If you want to keep using nano, feel free.
 > {: .source}
 {: .callout}
 
-Using either method, it's still difficult to tell what's going on. Can we even tell that
-this is only one tweet?
+Using either method, it's still difficult to tell what's going on. Can 
+we even tell where one tweet ends, and the second begings?
 
-The Jupyter viewer has numbering, so we can see that this whole screen is one line, ie: 
-still the first Tweet. It appears that a Tweet is all a whole bunch of named-value pairs? 
-ie:
+The Jupyter viewer has numbering, so we can see that this whole screen 
+is one line, ie: still the first Tweet. It appears that a Tweet is all a 
+whole bunch of named-value pairs? ie:
 
 ~~~
 "name": "Joe Gaucho",
