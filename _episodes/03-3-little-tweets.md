@@ -76,24 +76,27 @@ Some key pieces of a Tweet are:
   -- screen name (twitter handle)
   -- followers_count
   
-These become visible if we download our tweet and open it up with pass it over to an
-online JSONL viewer. 
+All of these elements become much more visible if we download our tweet 
+and open it up with an online JSONL viewer like:
+
+https://codebeautify.org/jsonviewer 
 
 (need to write a bit more about the first tweet)
 
 ### link to a page with a good view of tweets
-Amanda's image
-This pdf is old: http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-copy.pdf
+Amanda's image This pdf is old: 
+http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-copy.pdf
 
 Our most basic analysis can be done with a BASH command:
 Demo `wc` for counting lines / tweets 
 
 
 
-We can do this with our timeline file as well, but we need to `Flatten` it first.
+We can do this with our timeline file as well, but we need to `Flatten` 
+it first.
 
-By flattening Bergis' timeline and then looking at the file with `wc`, you can see
-that we retrieved 3171 of his. 
+By flattening Bergis' timeline and then looking at the file with `wc`, 
+you can see that we retrieved 3171 of his tweets.
 
 head: we can see those are super recent.
 
@@ -104,14 +107,14 @@ Other things we can do: sentiment analysis (FORESHADOWING). See when he joined
 Twitter (hint: way before 2018)
 
 
-How are the flattened and unflattened versions different?
-I’m thinking timeline jsonl looks a tiny bit different from searched/filtered tweets as jsonl.
-I can’t confirm yet.
-Timeline doesn’t really give a line-oriented set of tweets. <<< this is why we need flatten or csv
+How are the flattened and unflattened versions different? I’m thinking 
+timeline jsonl looks a tiny bit different from searched/filtered tweets 
+as jsonl. I can’t confirm yet. Timeline doesn’t really give a 
+line-oriented set of tweets. <<< this is why we need flatten or csv
 
 # Another Challenge
-Use wc and head and tail to figure out how many Tweets you received from the account you 
-harvested in Episode 2.
+Use wc and head and tail to figure out how many Tweets you received from 
+the account you harvested in Episode 2.
 
 
 > ## First and last Tweets.
