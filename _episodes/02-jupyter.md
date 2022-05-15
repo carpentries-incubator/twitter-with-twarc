@@ -80,6 +80,7 @@ and upload all of the datafiles:
 
 - `taxday.jsonl` tweets from American tax day, 2022
 - `one_tweet.jsonl` a single tweet to look at
+- `dehydratedCapitolRiotTweets.txt` TweetIDs from the January 6 insurrection.
 - (FIXME)
 
 And create another folder called `utils` to contain all the `.py` files that are inside of
@@ -120,18 +121,34 @@ because it is one of the least complex text editors. There are many editors such
 
 Let's move around our directories in the Terminal to get comfortable.
 
-Print your working directory using `pwd` and make sure you are in the directory `twarc_run`. If you
-are not in the proper directory, please change directories using `cd` to move into `twarc_run` and set it as your directory.
+Print your working directory using `pwd` and make sure you are in the 
+directory `twarc_run`. If you are not in the proper directory, please 
+change directories using `cd` to move into `twarc_run`. Your current working
+directory in BASH is separate from the current working directory of you
+Jupyter notebook. Make sure BOTH are `twarc_run`.
 
-Needed data file: a single tweet
-`cat` out the file.
-use python viewer
-nano the file
+While we are in BASH, let's look an individual Tweet. We can use `cat` to
+print it to the screen:
+
+cat raw_data/one_tweet.jsonl
+
+What a bunch of garbage! Let's open it in nano so we can scroll up and down:
+
+nano raw_data/one_tweet.jsonl
+
+^J wraps the text, but this a Tweet is so long that it's
+kind of unreadable. Let's crawl along and see the  beginning of the tweet. 
+We see that JSON
+is a series of comma-separated key-value pairs. By inserting carriage returns
+we can see that the tweet itself is the 4th piece of data in the tweet,
+after the author's ID, the language, and the time stamp. The fifth
+element tells us that this tweet is in reply to another tweet.
+
 
 > ## Remember:
 >
-> You can only type where the cursor is blinking. And you can't move the cursor
-> with your mouse.
+> You can only type where the cursor is blinking. And you can't move the 
+> cursor with your mouse.
 >
 {: .callout}
 
