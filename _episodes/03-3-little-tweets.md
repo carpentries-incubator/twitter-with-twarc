@@ -27,6 +27,8 @@ but in 2022, it was April 18).
 
 Let's look at that individual tweet again.
 
+### Insert Jupyter screenshot
+
 The Jupyter viewer has numbering, so we can see that this whole screen 
 is one line. Where the content starts, it becomes obvious that JSON is a 
 whole bunch of named-value pairs? ie:
@@ -38,15 +40,17 @@ whole bunch of named-value pairs? ie:
 fav_foods: "Field tortillas",
 ~~~
 
-In nano, we can start to format this a bit with returns and indents. You can see that 
-the key is in quotes, then there's a colon, then the value. If the value is text,
-that's going to be in quotes too.
+In nano, or in the Jupyter editor, we can start to format this a bit with 
+returns and indents. You can see that the key is in quotes, then there's a 
+colon, then the value. If the value is text, that's going to be in quotes too.
 
 Let's crawl along until we find the tweet text itself.
 
-We can see that the tweet itself is the 4th piece of data in the tweet,
+We can see that it is the 4th piece of data in the tweet,
 after the author's ID, the language, and the time stamp. The fifth
 element tells us that this tweet is in reply to another tweet.
+
+### one_tweet_formated.png
 
 There are many, many elements attached to each Tweet. You will probably never use
 most of them. 
@@ -64,23 +68,17 @@ Some key pieces of a Tweet are:
   -- followers_count
   
 All of these elements become much more visible if we download our tweet 
-and open it up with (an online JSONL viewer)[https://codebeautify.org/jsonviewer] 
+and open it up with [an online JSONL viewer](https://codebeautify.org/jsonviewer)
 
-* screenshot goes here *
+### screenshot goes here
 
 (need to write a bit more about the first tweet)
 
-### link to a page with a good view of tweets
-Amanda's image This pdf is old: 
-http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-copy.pdf
+Let's look at our `taxday.jsonl` file again. 
 
-
-
-Let's look at our `taxday.jsonl` file again. Remember that after we
-flatten them, our JSON 
-files are line-oriented, ie: one tweet per line. Let's use `head -n 2 
-source_data/taxday.jsonl > output_data/2-tweets.jsonl` to create a file 
-with just two tweets.
+Remember our JSONL files are line-oriented, ie: one tweet per line. Let's use 
+`head -n 2 source_data/taxday.jsonl > output_data/2-tweets.jsonl` to create a 
+file with just two tweets.
 
 If we use `!cat` to output that file to a Notebook cell, we see a real 
 mess. Let's open the Jupyter graphical file viewer instead.
@@ -96,36 +94,59 @@ mess. Let's open the Jupyter graphical file viewer instead.
 {: .callout}
 
 Using either method, it's still difficult to tell what's going on. Can 
-we even tell where one tweet ends, and the second begings?
+we even tell where one tweet ends, and the second begins?
+
+# A Very Basic Analysis
+
+When we harvest tweets, it is a very good idea to do a little exploratory 
+analysis to make sure you got what you expected. As we did in the previous 
+episode, We can use 
+the bash command `wc` (word count) to see how many lines of JSON we retrieved, 
+hence how many tweets we got:
+
+`! wc raw_data/taxday.jsonl`
+
+We can then look at the timestamps of the first and last tweets to determine
+the date range of our tweets by using the `head` and `tail` commands to
+get the first line and last line of the file:
+
+`! head -n 1 raw_data/taxday.jsonl`
+
+`! tail -n 1 raw_data/taxday.jsonl`
+
+We can do this with our timeline files as well, but remember, we need to `Flatten` 
+them first. Let's do this basic analysis for each of our 3 files, one notebook
+cell per file. This time we will save the results in new files:
+
+`! head -n 1 raw_data/taxday.jsonl > output_data/taxday_range.jsonl`
+`! tail -n 1 raw_data/taxday.jsonl >> output_data/taxday_range.jsonl`
+`! wc taxday.jsonl`
+
+`! head -n 1 raw_data/bergis.jsonl > output_data/bergis_range.jsonl`
+`! tail -n 1 raw_data/bergis.jsonl >> output_data/bergis_range.jsonl`
+`! wc bergis.jsonl`
+
+`! head -n 1 raw_data/ecodatasci.jsonl > output_data/ecodatasci_range.jsonl`
+`! tail -n 1 raw_data/ecodatasci.jsonl >> output_data/ecodatasci_range.jsonl`
+`! wc bergis.jsonl`
 
 
+We can see that we retrieved Bergis' texts back to 2018.
 
-# wc
-
-Our most basic analysis can be done with a BASH command:
-Demo `wc` for counting lines / tweets 
-
-
-
-We can do this with our timeline file as well, but we need to `Flatten` 
-it first.
-
-By flattening Bergis' timeline and then looking at the file with `wc`, 
-you can see that we retrieved 3171 of his tweets.
-
-head: we can see those are super recent.
-
-We can use `tail -n 2 sourcedata/ > output_data/bergistale.jsons` to see that
-we have retrieved texts of his back to 2018.
 
 Other things we can do: sentiment analysis (FORESHADOWING). See when he joined 
 Twitter (hint: way before 2018)
-
 
 How are the flattened and unflattened versions different? I’m thinking 
 timeline jsonl looks a tiny bit different from searched/filtered tweets 
 as jsonl. I can’t confirm yet. Timeline doesn’t really give a 
 line-oriented set of tweets. <<< this is why we need flatten or csv
+
+### a good view of tweets
+Amanda's image 
+
+
+
 
 # Another Challenge
 Use wc and head and tail to figure out how many Tweets you received from 
@@ -134,16 +155,16 @@ the account you harvested in Episode 2.
 
 > ## First and last Tweets.
 >
-> Using the terminal, use the commands `head` and `tail` to 
-> save the first 2 and last 2 tweets in `taxday.jsonl`.
-> Download the file and view it in your web browser. 
+> Using the terminal or Jupyter, use the commands `head` and `tail` to 
+> save more than just the first 2 and last 2 tweets in `taxday.jsonl`.
+> View the file and determine: 
 > 1 How long is the time difference between the first and the last tweets?
 > 2 Judging by these 4 tweets, do they arrive in chronological order?
 > 3 Can you think of a more rigorous way to check?
 >
 > ~~~
-> head -n 2 taxday.jsonl >  4tweets.jsonl
-> tail -n 2 taxday.jsonl >> 4tweets.jsonl
+> head -n 10 taxday.jsonl >  20tweets.jsonl
+> tail -n 10 taxday.jsonl >> 20tweets.jsonl
 > ~~~
 > {: .source}
 >
@@ -160,17 +181,9 @@ the account you harvested in Episode 2.
 > > ~~~
 > > Well?
 > > Can we scroll through and examine it?
-> > Is there the equivelent of a 'diff' command in Bash?
 > > {: .output}
 > {: .solution}
 {: .challenge}
-
-## Load our tweets into a pandas dataframe
-As before, we are going to put out taxday tweets into a Pandas
-dataframe for more analysis later. 
-
-Here's a nice Pandas guide:
-https://www.kdnuggets.com/2017/03/beginners-guide-tweet-analytics-pandas.html
 
 
 
