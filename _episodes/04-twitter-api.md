@@ -1,7 +1,7 @@
 ---
 title: "The Twitter Public API"
-teaching: 0
-exercises: 0
+teaching: 40
+exercises: 15
 questions:
 - "How exactly are we using the Twitter API?"
 - "What endpoints are available to me?"

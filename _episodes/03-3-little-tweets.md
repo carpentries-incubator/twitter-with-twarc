@@ -1,6 +1,6 @@
 ---
 title: "Anatomy of a tweet: structure of a tweet as JSON"
-teaching: 10
+teaching: 20
 exercises: 10
 questions:
 - What does Twitter data look like?

@@ -1,7 +1,7 @@
 ---
 title: "Ethics and Twitter"
-teaching: 0
-exercises: 0
+teaching: 30
+exercises: 20
 questions:
 - "Can I avoid seeing hate speech and unsettling imagery and still analyze twitter?"
 - "What are some privacy or other ethical issues that you need to keep in mind when harvesting tweets with twarc?"
