@@ -164,8 +164,8 @@ a wide net, ie: that we search a variety of text strings and hashtags.
 ~~~
 {: .source}
 
-Is it worth doing the OR's? For sure. Twitter is case sensitive, and we really
-are string searching, so the hashtag counts.
+Is it worth doing the OR's? For sure. 
+Twitter is NOT case sensitive.
 
 ~~~
 !twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary)"`
