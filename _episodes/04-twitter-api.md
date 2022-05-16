@@ -133,16 +133,19 @@ most popular on Sports Twitter? Discuss.
 
 
 ## Filtered Stream
-Collecting tweets in realtime
-We will do in episode 7: collecting tweets in 
+Filtering collects tweets as they happen in realtime. We will do a filtered
+search later on. It's important to estimate how many tweets you
+might get via a filtered stream before you start, so that you know
+how long to run it.
 
 ## Recent Search
 This endpoint gathers the most recent 6 days of a search string that
 you pass to the API via twarc. Let's gather all the recent mentions of 
 the UCSB Library. 
 
-Both filter and search use Twitter's advanced search
-syntax. We can use a little Boolean logic to make sure we cast 
+Both filter and search use (Twitter's advanced search
+syntax)[https://twitter.com/search-advanced?lang=en]. 
+We can use a little Boolean logic to make sure we cast 
 a wide net, ie: that we search a variety of text strings and hashtags.
 
 `!twarc2 counts --granularity "day" 
