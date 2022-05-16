@@ -16,7 +16,7 @@ key points:
 
 
 # Kittens and Elephants
-Maybe you think we have being coy, but here is where we acknowledge the 800-pound
+Maybe you think we have been being coy, but here is where we acknowledge the 800-pound
 elephant in the room. Twitter is not all kittens and rainbows. As we all know, 
 hashtag- #rainbow will lead us into LGBTQ-issues. We've already told you that twarc
 was born of the Black Lives Matter movement. 
@@ -36,31 +36,38 @@ A complete list of words would be a concordance. We just want to see the
 most commonly used words to get a sense of what we are dealing with. 
 
 ### textblobs
- word count goes here. xxx
+We will use the TextBlob package for our textual analyses. You may already have
+other Python packages you prefer, and certainly later on you will learn about
+more.
 
-
-#### code block
+```{python}
 # our first full-text analysis
-# a list of words with TextBlob
 
-# first we need to pull just the text. remember from:
+# remember from:
 # list(library_df.columns)
 # the tweet is library_df['text']
 
-
-# break tweets test column into a list, 
+# first we need to pull just the text column
+# into a list. 
 # then .join into one long string 
+
 library_string = ' '.join(library_df['text'].tolist())
 
+# TextBlob has its own data format, so we need an object 
+# of that type:
 
-# TextBlob has its own data format.
 library_blob = TextBlob(library_string)
 
+# Now that we have our TextBlob, 
+# we can count and sort it:
 
-# we can count and sort that:
+library_freq = library_blob.word_counts
+library_sorted_freq = sorted(library_freq.items(), 
+	key = lambda kv: kv[1], reverse = True)
+print(library_sorted_freq)
 
-library_count = library_blob.words.count
-sorted(library_count)
+```
+#FIXME we need to format the output and cut the cruft out of here
 
 We can also use one of twarc1's utilities to output an html page
 to view the tweets in the context of a Twitter wall, but we can
