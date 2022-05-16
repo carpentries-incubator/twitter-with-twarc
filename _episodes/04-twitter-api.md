@@ -231,7 +231,8 @@ convert to CSV, and create a dataframe
 
 ```
 !twarc2 flatten raw_data/ucsblib_timeline.jsonl output_data/ucsblib_timeline_flat.jsonl
-!twarc2 csv output-data/ucsblib_timeline_flattened.jsonl output_data/ucsblib_timeline.csv
+!twarc2 csv output_data/ucsblib_timeline_flat.jsonl output_data/ucsblib_timeline.csv
+ucsblib_timeline_df = pandas.read_csv("output_data/ucsblib_timeline.csv")
 
 ```
 
@@ -243,22 +244,26 @@ along with a tweet by printing out a list of the dataframe
 headers:
 
 ~~~
-list(library_timeline_df.columns)
+list(ucsblib__timeline_df.columns)
 ~~~
 {: .language-python}
 
 and see the column headers here as a list.
 
 Easy 'analyses' using our dataframe:
+Call each of these elements out of the dataframe by sorting:
 - most retweeted
 - most quoted
 - tweeter with the most number of followers
 
-
 ~~~
+Put in the relevant code here #FIXME
 list(UCSB_df.columns)
 ~~~
 {: .language-python}
+
+
+
 
 # Final challenge
 
@@ -272,5 +277,8 @@ list(UCSB_df.columns)
 > 1. Which person has the most number of followers in your dataset? 
 > 1. Is it really a person?
 >
+> > ## Solution
+> > Fix me!
+> > {:.solution}
 {: .challenge}
 
