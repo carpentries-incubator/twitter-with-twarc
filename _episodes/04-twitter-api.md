@@ -126,8 +126,6 @@ of UCSB on twitter in the 7 days before the command was run.
 
 # Challenge
 
-
-
 > ## Try counting other things on Twitter
 > 
 > Mentions of the words poker, golf, basketball, baseball, and football. Aggregate
@@ -148,20 +146,25 @@ This endpoint gathers the most recent 6 days of a search string that
 you pass to the API via twarc. Let's gather all the recent mentions of 
 the UCSB Library. 
 
-Both filter and search use (Twitter's advanced search
-syntax)[https://twitter.com/search-advanced?lang=en]. 
+Both filter and search use <a href="https://twitter.com/search-advanced?lang=en">Twitter's advanced search syntax</a> 
 We can use a little Boolean logic to make sure we cast 
 a wide net, ie: that we search a variety of text strings and hashtags.
 
-`!twarc2 counts --granularity "day" 
+~~~
+!twarc2 counts --granularity "day" 
         --text "(#UCSBLibrary OR UCSBLibrary OR 
                  ucsblibrary OR #ucsblibrary OR 
-                 davidsonlibrary OR #davidsonlibrary)"`
+                 davidsonlibrary OR #davidsonlibrary)"
+~~~
+{: .source}
 
 Is it worth doing the OR's? For sure. Twitter is case sensitive, and we really
 are string searching, so the hashtag counts.
 
-`!twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary)"`
+~~~
+!twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary)"`
+~~~
+{: .source}
 
 ## Big Data
 ### What's a lot?
