@@ -236,16 +236,8 @@ Let's remind ourselves of all the different things that come
 along with a tweet by printing out a list of the dataframe 
 headers:
 
-```
-list(library_timeline_df.columns)
-
-functions that we can use.
-
-
-and we can load that into a pandas dataframe:
-
 ~~~
-code
+list(library_timeline_df.columns)
 ~~~
 {: .language-python}
 
@@ -258,12 +250,13 @@ Easy 'analyses' using our dataframe:
 
 
 ~~~
-list(kittens_df.columns)
+list(UCSB_df.columns)
 ~~~
 {: .language-python}
 
-# Final challenge: Cats of instagram
+# Final challenge
 
+> ## Cats of Instagram
 > Let's make a bigger datafile. Harvest 5000 tweets that use the hashtag "catsofinstagram"
 > and put the dataset through the pipeline to answer the following questions:
 > 
@@ -272,5 +265,6 @@ list(kittens_df.columns)
 > 1. What is the most re-tweeted recent tweet on #catsofinstagram?
 > 1. Which person has the most number of followers in your dataset? 
 > 1. Is it really a person?
-{. :challenge}
+>
+{: .challenge}
 
