@@ -180,12 +180,15 @@ Politics Twitter.
 But just how big is Twitter? Try running these counts:
 
 ## What's a lot?
-Let's try getting tweet counts for each of these common English words:
-- !twarc2 counts --text "dog" --granularity "day"
-- !twarc2 counts --text "cat" --granularity "day"
-- !twarc2 counts --text "amazon" --granularity "day"
-- !twarc2 counts --text "right" --granularity "day"
-- !twarc2 counts --text "good" --granularity "day"
+
+> ## Type along the following commands: 
+> Let's try getting tweet counts for each of these common English words:
+> - !twarc2 counts --text "dog" --granularity "day"
+> - !twarc2 counts --text "cat" --granularity "day"
+> - !twarc2 counts --text "amazon" --granularity "day"
+> - !twarc2 counts --text "right" --granularity "day"
+> - !twarc2 counts --text "good" --granularity "day"
+{: .challenge}
 
 It looks like any English word that is used on Twitter more than 10 million
 times a week on Twitter is a fairly non-specific search.
