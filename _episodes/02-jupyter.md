@@ -1,6 +1,6 @@
 ---
 title: "Getting familiar with JupyterLab"
-teaching: 20
+teaching: 30
 exercises: 10
 questions:
 - "What is JupyterLab?"
@@ -491,7 +491,8 @@ the BASH commands from inside of one cell.
 If you harvested the @ecodatasci tweets in the challenge, that would look like
 this:
 
-If we get it right, we can run both transforms from the same cell:
+If we get it right, we can run both transforms and
+create the dataframe all from the same cell:
 
 `!twarc2 flatten raw_data/ecodatasci.jsonl > output_data/ecodatasci_flattened.jsonl`
 `!twarc2 csv raw_data/ecodatasci_flattened.jsonl > output_data/ecodatasci.csv`
@@ -500,8 +501,5 @@ If we get it right, we can run both transforms from the same cell:
 Remember, if you get an error, you can correct it in the cell, and then
 run the cell again by pressing `ctrl` + `Enter`
 
-
-We can cut this down to just 
-loading the libraries if we this this is too long. 
 
 {% include links.md %}
