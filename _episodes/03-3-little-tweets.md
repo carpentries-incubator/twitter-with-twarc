@@ -72,6 +72,11 @@ and open it up with [an online JSONL viewer](https://codebeautify.org/jsonviewer
 
 ### screenshot goes here
 
+We can also see just the name of each field by using the Python command
+XXX on the dataframe we created in episode 2:
+
+`#FIXME`
+
 (need to write a bit more about the first tweet)
 
 Let's look at our `taxday.jsonl` file again. 
