@@ -39,7 +39,7 @@ collect Tweets during this workshop, let's get in the habit of limiting ourselve
 to 500 Tweets.
 
 ~~~
-!twarc2 timeline --limit 500 UCSBLibrary > 'raw_data/ucsblib.jsonl'
+!twarc2 timeline --limit 500 UCSBLibrary > 'raw_data/ucsblib_timeline.jsonl'
 ~~~
 {. :language-python}
 
@@ -49,7 +49,7 @@ Set --limit of 500 reached:  15%|█▋         | 500/3271 [00:04<00:24, 113.41i
 {: .output}
 
 So the above gives us, at most, 500 tweets from the UCSBLibrary Twitter 
-account's feed.
+account's timeline.
 
 You can always check to see how much of your quota you have used by visiting your 
 [Twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard)
@@ -98,7 +98,7 @@ When you are doing exploratory searching, these are the order you want to do
 things in so that you don't waste your quota.
 
 
-## Twarc's Data Collection
+### twarc's Data
 
 The data that is saved using Twarc is just what Twitter reads from a tweet as 
 data and provides as data. So, keeping the data authentic for analysis is a 
@@ -111,8 +111,9 @@ software that expect to get tweets as inputs. When you install Twarc, you will
 get two clients, twarc & twarc2. Twarc was designed with the v1 Twitter API in 
 mind, and Twarc2 was designed as a response to Twitter implementing their v2 API.
 
-## Tweet counts
-Allows you to fish around to estimate traffic without spending your quota
+### Tweet counts endpoint
+ This endpoint allows you to fish around to estimate traffic without spending 
+ your quota
 
 ~~~
 !twarc2 counts --text "UCSB"
@@ -132,6 +133,10 @@ of UCSB on twitter in the 7 days before the command was run.
 > the counts together by day. Can we use these results to imagine what sports are
 > most popular on Sports Twitter? Discuss.
 >
+> > ## Solution
+> > 
+> > #FIXME
+> {:solution}
 {: .challenge}
 
 
@@ -146,7 +151,8 @@ This endpoint gathers the most recent 6 days of a search string that
 you pass to the API via twarc. Let's gather all the recent mentions of 
 the UCSB Library. 
 
-Both filter and search use <a href="https://twitter.com/search-advanced?lang=en">Twitter's advanced search syntax</a> 
+Both filter and search use 
+<a href="https://twitter.com/search-advanced?lang=en" target="new">Twitter's advanced search syntax</a> 
 We can use a little Boolean logic to make sure we cast 
 a wide net, ie: that we search a variety of text strings and hashtags.
 
