@@ -210,16 +210,23 @@ Timelines need to run through the `flatten` twarc plug-in.
 We still haven't found another datatype that needs to be flattened. #FIXME ?
 
 So let's flatten the UCSBLibrary timeline, count up our tweets,
-and convert to CSV.
+convert to CSV, and create a dataframe
 
 ```
 !twarc2 flatten raw_data/ucsblib_timeline.jsonl output_data/ucsblib_timeline_flat.jsonl
 !twarc2 csv output-data/ucsblib_timeline_flattened.jsonl output_data/ucsblib_timeline.csv
 
 ```
-Here is where we can see the headers.
 
-Use wc: is it a reasonable amount? 
+Use `wc`: Did we get a reasonable amount? The api has a limit of 
+3200, and we received 3226. Seems reasonable. 
+
+Let's remind ourselves of all the different things that come
+along with a tweet by printing out a list of the dataframe 
+headers:
+
+```
+list(library_timeline_df.columns)
 
 functions that we can use.
 
