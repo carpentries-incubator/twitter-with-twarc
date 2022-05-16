@@ -51,7 +51,7 @@ We can see that it is the 4th piece of data in the tweet,
 after the author's ID, the language, and the time stamp. The fifth
 element tells us that this tweet is in reply to another tweet.
 
-### one_tweet_formated.png
+![view of one tweet data that is formatted](one_tweet_formated.png)
 
 There are many, many elements attached to each Tweet. You will probably never use
 most of them.
@@ -71,7 +71,7 @@ Some key pieces of a Tweet are:
 All of these elements become much more visible if we download our tweet
 and open it up with [an online JSONL viewer](https://codebeautify.org/jsonviewer)
 
-### screenshot goes here
+![view of one tweet data that is easier to view](beautify-one-tweet.png)
 
 We can also see just the name of each field by using the columns
 method on the dataframe we created in episode 2:
@@ -118,7 +118,7 @@ hence how many tweets we got:
 ~~~
 !wc raw_data/taxday.jsonl
 ~~~
-{. :language-python}
+{: .language-python}
 
 We can then look at the timestamps of the first and last tweets to determine
 the date range of our tweets by using the `head` and `tail` commands to
@@ -128,7 +128,7 @@ get the first line and last line of the file:
 
 !tail -n 1 raw_data/taxday.jsonl
 ~~~
-{: .language-Python}
+{: .language-python}
 
 lets save this output of taxday.jsonl into a file named taxday_range.jsonl:
 
@@ -137,7 +137,7 @@ lets save this output of taxday.jsonl into a file named taxday_range.jsonl:
 !tail -n 1 raw_data/taxday.jsonl >> output_data/taxday_range.jsonl
 !wc taxday.jsonl
 ~~~
-{. :language-python}
+{: .language-python}
 
 Let’s do this basic analysis for our two files: bergis.jsonl, ecodatasci.jsonl.
 
@@ -153,13 +153,13 @@ Let’s do this basic analysis for our two files: bergis.jsonl, ecodatasci.jsonl
 > > !tail -n 1 raw_data/bergis.jsonl >> output_data/bergis_range.jsonl
 > > !wc bergis.jsonl
 > > ~~~
-> > {. :language-python}
+> > {: .language-python}
 > > We can see that we retrieved Bergis' texts back to 2018.
 > >
 > > ~~~
 > > !head -n 1 raw_data/ecodatasci.jsonl > output_data/ecodatasci_range.jsonl
 > > !tail -n 1 raw_data/ecodatasci.jsonl >> output_data/ecodatasci_range.jsonl
-> > !wc bergis.jsonl
+> > !wc ecodatasci.jsonl
 > > ~~~
 > > {: .language-python}
 > >
@@ -174,7 +174,7 @@ timeline jsonl looks a tiny bit different from searched/filtered tweets
 as jsonl. I can’t confirm yet. Timeline doesn’t really give a
 line-oriented set of tweets. <<< this is why we need flatten or csv
 
-![concept map that describes twitter data](../fig/tweet-breakdown.png)
+![concept map that describes twitter data](../fig/tweet-breakdown.svg)
 
 
 # Another Challenge
