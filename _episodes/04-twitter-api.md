@@ -18,7 +18,7 @@ keypoints:
 
 ## The Twitter v.2 API
 
-If we are to retreive data, Twitter does not give us a huge data load of csv's or 
+If we are to retrieve data, Twitter does not give us a huge data load of csv's or 
 other giant files of data (we would not want that anyways). Instead Twitter makes 
 data access available to researchers that apply for the twitter api. The Twitter 
 Api allows applicants to collect tweets. This is also so Twitter can keep track 
@@ -192,32 +192,37 @@ Just like we should keep track of how many tweets we download at any given time,
 we should implement a standard workflow when gathering tweets. Generally for the
 rest of this workshop, we will follow this workflow:
 
--1 harvest json
--1 flatten if necessary (when using timeline, etc.)
--1 convert to csv
--1 use wc to make you received as much as you expected
--1 use twarc utilities and twarc2 plug-ins
--1 create a Pandas dataframe
--1 use external utiities for further analysis
+1. harvest json
+1. flatten if necessary (when using timeline, etc.)
+1. convert to csv
+1. use wc to make you received as much as you expected
+1. use head and tail to make sure you got the timespan you were expecting
+1. use twarc utilities and twarc2 plug-ins
+1. create a Pandas dataframe
+1. use external utiities for further analysis
 
-While JSON is common, it's not super human-readable, and it can be difficult to 
-convert to a dataframe (which most of us will want to do anyway). So twarc2 
-has an extension to turn our harvested jsonl
-to csv. csv's are always easily convertable into Pandas dataframes.
+We've already discussed that While JSON is common, it's not super 
+human-readable, and it can be difficult to convert to a dataframe (which most 
+of us will want to do anyway). So twarc2 has an extension to turn our harvested 
+jsonl to csv. csv's are always easily convertable into Pandas dataframes.
 
-Timelines need to be flattened. XXX What else needs to be flattened? XXX That's
-the next step in our workflow
+Timelines need to run through the `flatten` twarc plug-in.
+We still haven't found another datatype that needs to be flattened. #FIXME ?
 
-XXX flatten the UCSBLibrary timeline XXX
+So let's flatten the UCSBLibrary timeline, count up our tweets,
+and convert to CSV.
 
-Convert to CSV:
+```
+!twarc2 flatten raw_data/ucsblib_timeline.jsonl output_data/ucsblib_timeline_flat.jsonl
+!twarc2 csv output-data/ucsblib_timeline_flattened.jsonl output_data/ucsblib_timeline.csv
+
+```
 Here is where we can see the headers.
 
 Use wc: is it a reasonable amount? 
 
 functions that we can use.
 
-!twarc2 csv output-data/ucsblib_timeline_flattened.jsonl output-data/ucsblib_timeline.csv
 
 and we can load that into a pandas dataframe:
 
