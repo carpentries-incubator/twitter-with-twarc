@@ -136,13 +136,10 @@ What a bunch of garbage! Let's open it in nano so we can scroll up and down:
 
 nano raw_data/one_tweet.jsonl
 
-^J wraps the text, but this a Tweet is so long that it's
-kind of unreadable. Let's crawl along and see the  beginning of the tweet. 
-We see that JSON
-is a series of comma-separated key-value pairs. By inserting carriage returns
-we can see that the tweet itself is the 4th piece of data in the tweet,
-after the author's ID, the language, and the time stamp. The fifth
-element tells us that this tweet is in reply to another tweet.
+We will examine this file in detail later, but for now, notice that the
+tweet is a set of key-value pairs.
+
+^J wraps the text, 
 
 
 > ## Remember:

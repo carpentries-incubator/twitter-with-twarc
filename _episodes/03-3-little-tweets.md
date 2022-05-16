@@ -25,6 +25,57 @@ used twarc to search for all mentions of the hashtag `#taxday` (April 15th is
 the typical deadline for Americans to file their annual income report,
 but in 2022, it was April 18).
 
+Let's look at that individual tweet again.
+
+The Jupyter viewer has numbering, so we can see that this whole screen 
+is one line. Where the content starts, it becomes obvious that JSON is a 
+whole bunch of named-value pairs? ie:
+
+~~~
+"name": "Joe Gaucho",
+"address": "123 Del Playa",
+"age": 23,
+fav_foods: "Field tortillas",
+~~~
+
+In nano, we can start to format this a bit with returns and indents. You can see that 
+the key is in quotes, then there's a colon, then the value. If the value is text,
+that's going to be in quotes too.
+
+Let's crawl along until we find the tweet text itself.
+
+We can see that the tweet itself is the 4th piece of data in the tweet,
+after the author's ID, the language, and the time stamp. The fifth
+element tells us that this tweet is in reply to another tweet.
+
+There are many, many elements attached to each Tweet. You will probably never use
+most of them. 
+
+Some key pieces of a Tweet are:
+- created_at
+- id
+- entities
+  -- any hashtags that are used
+  -- any users who are @'ed
+- user
+  -- id
+  -- name
+  -- screen name (twitter handle)
+  -- followers_count
+  
+All of these elements become much more visible if we download our tweet 
+and open it up with (an online JSONL viewer)[https://codebeautify.org/jsonviewer] 
+
+* screenshot goes here *
+
+(need to write a bit more about the first tweet)
+
+### link to a page with a good view of tweets
+Amanda's image This pdf is old: 
+http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-copy.pdf
+
+
+
 Let's look at our `taxday.jsonl` file again. Remember that after we
 flatten them, our JSON 
 files are line-oriented, ie: one tweet per line. Let's use `head -n 2 
@@ -47,45 +98,9 @@ mess. Let's open the Jupyter graphical file viewer instead.
 Using either method, it's still difficult to tell what's going on. Can 
 we even tell where one tweet ends, and the second begings?
 
-The Jupyter viewer has numbering, so we can see that this whole screen 
-is one line, ie: still the first Tweet. It appears that a Tweet is all a 
-whole bunch of named-value pairs? ie:
 
-~~~
-"name": "Joe Gaucho",
-"address": "123 Del Playa",
-"age": 23,
-fav_foods: "Field tortillas",
-~~~
 
-Is that what Tweets look like? If we unwrap the text, indeed: each line of JSON is a Tweet,
-and JSON is a series of comma-separated name-value pairs. 
-
-There are many, many values attached to each Tweet. You will probably never use
-most of them. 
-
-Some key pieces of a Tweet are:
-- created_at
-- id
-- entities
-  -- any hashtags that are used
-  -- any users who are @'ed
-- user
-  -- id
-  -- name
-  -- screen name (twitter handle)
-  -- followers_count
-  
-All of these elements become much more visible if we download our tweet 
-and open it up with an online JSONL viewer like:
-
-https://codebeautify.org/jsonviewer 
-
-(need to write a bit more about the first tweet)
-
-### link to a page with a good view of tweets
-Amanda's image This pdf is old: 
-http://www.slaw.ca/wp-content/uploads/2011/11/map-of-a-tweet-copy.pdf
+# wc
 
 Our most basic analysis can be done with a BASH command:
 Demo `wc` for counting lines / tweets 
