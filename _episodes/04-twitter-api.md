@@ -120,7 +120,11 @@ Allows you to fish around to estimate traffic without spending your quota
 {: .bash}
 
 Output: screenshot of the bottom of the output showing there were 95,767 mentions 
-of kittens on twitter in the 7 days before the command was run. 
+of kittens on twitter in the 7 days before the command was run. #FIXME
+
+# Challenge
+
+Format this as a challenge: #FIXME
 
 Try counting 
 mentions of the words poker, golf, basketball, baseball, and football. Aggregate
@@ -165,11 +169,12 @@ Politics Twitter.
 But just how big is Twitter? Try running these counts:
 
 ## What's a lot?
-!twarc2 counts --text "dog" --granularity "day"
-!twarc2 counts --text "cat" --granularity "day"
-!twarc2 counts --text "amazon" --granularity "day"
-!twarc2 counts --text "right" --granularity "day"
-!twarc2 counts --text "good" --granularity "day"
+Let's try getting tweet counts for each of these common English words:
+- !twarc2 counts --text "dog" --granularity "day"
+- !twarc2 counts --text "cat" --granularity "day"
+- !twarc2 counts --text "amazon" --granularity "day"
+- !twarc2 counts --text "right" --granularity "day"
+- !twarc2 counts --text "good" --granularity "day"
 
 It looks like any English word that is used on Twitter more than 10 million
 times a week on Twitter is a fairly non-specific search.
@@ -179,7 +184,7 @@ is plenty to handle. And again: if you need more, there is a elevated level of
 access for more high-powered academics.
 
 
-## Pipeline: jsonl > csv > wc
+## Pipeline: jsonl > head & tail > wc > csv > dataframe 
 Just like we should keep track of how many tweets we download at any given time,
 we should implement a standard workflow when gathering tweets. Generally for the
 rest of this workshop, we will follow this workflow:
