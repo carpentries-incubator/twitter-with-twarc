@@ -66,7 +66,7 @@ different?
 
 Remember: timeline captures tweets of 1 person: this harvests up to some 
 arbitrary limit below 3200 You can request a specific time period for a person’s 
-timeline: Dong dong dong
+timeline: Dong dong dong (FIXME)
 
 ## Endpoints
 
@@ -115,21 +115,26 @@ mind, and Twarc2 was designed as a response to Twitter implementing their v2 API
 Allows you to fish around to estimate traffic without spending your quota
 
 ~~~
-!twarc2 counts --text "kittens"
+!twarc2 counts --text "UCSB"
 ~~~
 {: .bash}
 
-Output: screenshot of the bottom of the output showing there were 95,767 mentions 
-of kittens on twitter in the 7 days before the command was run. #FIXME
+Output: screenshot of the bottom of the output showing there were 1,997 mentions 
+of UCSB on twitter in the 7 days before the command was run.
+
+![UCSB_tweets](../fig/UCSB_tweets.PNG)
 
 # Challenge
 
-Format this as a challenge: #FIXME
 
-Try counting 
-mentions of the words poker, golf, basketball, baseball, and football. Aggregate
-then counts together by day. Can we use these results to imagine what sports are
-most popular on Sports Twitter? Discuss.
+
+> ## Try counting other things on Twitter
+> 
+> Mentions of the words poker, golf, basketball, baseball, and football. Aggregate
+> the counts together by day. Can we use these results to imagine what sports are
+> most popular on Sports Twitter? Discuss.
+>
+{: .challenge}
 
 
 ## Filtered Stream
