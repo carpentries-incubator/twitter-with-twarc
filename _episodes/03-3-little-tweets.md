@@ -51,7 +51,7 @@ We can see that it is the 4th piece of data in the tweet,
 after the author's ID, the language, and the time stamp. The fifth
 element tells us that this tweet is in reply to another tweet.
 
-![view of one tweet data that is formatted](one_tweet_formated.png)
+![view of one tweet data that is formatted](../fig/one_tweet_formated.png)
 
 There are many, many elements attached to each Tweet. You will probably never use
 most of them.
@@ -71,7 +71,7 @@ Some key pieces of a Tweet are:
 All of these elements become much more visible if we download our tweet
 and open it up with [an online JSONL viewer](https://codebeautify.org/jsonviewer)
 
-![view of one tweet data that is easier to view](beautify-one-tweet.png)
+![view of one tweet data that is easier to view](../fig/beautify-one-tweet.png)
 
 We can also see just the name of each field by using the columns
 method on the dataframe we created in episode 2:
