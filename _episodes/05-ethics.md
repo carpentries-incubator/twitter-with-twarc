@@ -27,11 +27,47 @@ of tweets we can partially shield ourselves. You're not going to read 10,000
 tweets, you are going to 'reading them from a distance' using analytical
 tools. 
 
-## examples
-comparing url's of images instead of the images
-wall without images?
+## Reading without reading
+Perhaps the most common textual analysis is to see the most commonly used
+words and phrases in a dataset (or 'a corpus,' as Text Data Mining folks like
+to call them). 
 
-XXX concordance! textblob word count goes here. xxx
+A complete list of words would be a concordance. We just want to see the 
+most commonly used words to get a sense of what we are dealing with. 
+
+### textblobs
+ word count goes here. xxx
+
+
+#### code block
+# our first full-text analysis
+# a list of words with TextBlob
+
+# first we need to pull just the text. remember from:
+# list(library_df.columns)
+# the tweet is library_df['text']
+
+
+# break tweets test column into a list, 
+# then .join into one long string 
+library_string = ' '.join(library_df['text'].tolist())
+
+
+# TextBlob has its own data format.
+library_blob = TextBlob(library_string)
+
+
+# we can count and sort that:
+
+library_count = library_blob.words.count
+sorted(library_count)
+
+We can also use one of twarc1's utilities to output an html page
+to view the tweets in the context of a Twitter wall, but we can
+prevent any images or videos from showing:
+
+Wall without images code   #FIXME
+
 
 # Let's Get Ethical
 Whe
