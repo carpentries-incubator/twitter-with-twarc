@@ -11,7 +11,7 @@ title: Setup
 > report). The Capitol riot tweets is a dataset from Kaggle.
 > - [Taxday data download link](https://drive.google.com/file/d/14_6b3Ej73pjPWb1_VdtmUlni9zvk67ae/view?usp=sharing) 
 > - [Capitol Riot Tweets download link](https://drive.google.com/file/d/1S0yYZpBgLGEiKDAUeKepuU5IaZiW2gFA/view?usp=sharing)
-> - [One Tweet download link](https://drive.google.com/file/d/1-LBzGySh272RIGSQltJSA3VvftkQbHcf/view?usp=sharing)
+> - [One Tweet download link](https://drive.google.com/file/d/1MNZRzCQPBKjvWCch7GvTywBFKvDstBcN/view?usp=sharing)
 >
 > Make sure you save the `taxday.jsonl` as a .jsonl file and not a .txt file. You can do this by right clicking in the browser, choose `save as` then choosing 'all file types'
 > and remove the .txt ending and change it to .jsonl.
