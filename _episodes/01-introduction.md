@@ -9,7 +9,7 @@ questions:
 objectives:
 - "How is a tweet considered to be data?"
 - "How to access the twitter API"
-- "How Twarc works with the API"
+- "How twarc works with the API"
 keypoints:
 - "Twitter is a microblogging platform where 'tweets' (text, image, and/or video postings) are created and shared."
 - "Twarc is a command line tool and Python library that allows users to programmatically collect and archive Tweets."
@@ -89,16 +89,16 @@ You can see a visualize of this analogy <a href="https://www.mulesoft.com/resour
 > There are often requirements about what you can and cannot retrieve from the site and what you can do once you have the data, but it is generally very efficient and doesn't require too much from the user.
 > **Webscraping** is a tool used to extract specific information from a website(s).
 > Typically, webscraping is best for extracting data from multiple sites at once, when there is no API available, or when the amount of data you want to extract exceeds the limits you're given.
-> If you're interested in learning more about webscraping, you can check out our ['Introduction to Webscraping'](https://ucsbcarpentry.github.io/2022-05-12-ucsb-webscraping/01-introduction/) workshop.
+> If you're interested in learning more about webscraping, you can check out our curriculumn of ['Introduction to Webscraping'](https://ucsbcarpentry.github.io/CustomLibraryWebscraping/).
 {: .callout}
 
 # Twarcing
 
-You may be asking, "What is Twarc?" or, "Why do all things involving
+You may be asking, "What is twarc?" or, "Why do all things involving
 Twitter have to start with a 'tw'?".
 
 Twarc is a command line tool and Python library that is used to collect
-and archive Tweets through the Twitter API. Twarc is a community built, Free and Open Source Software (FOSS).  To elaborate, Twarc
+and archive Tweets through the Twitter API. Twarc is a community built, Free and Open Source Software (FOSS).  To elaborate, twarc
 is accessible, free, and can help simplify data harvesting once you
 practice using it. Twarc is also an active open-source project, so
 it is open to collaboration and use by anyone.
@@ -107,10 +107,10 @@ It is well-documented on
 organization referred to as [Documenting the
 Now](https://www.docnow.io/).
 
-Twarc allows you to request specific data based on keywords, hashtags, events, and other areas of interest. Once you have your dataset, Twarc has what the developers refer to as 'utilities'. These are python programs that can be run on the command line to explore and visualize your data.
+Twarc allows you to request specific data based on keywords, hashtags, events, and other areas of interest. Once you have your dataset, twarc has what the developers refer to as 'utilities'. These are python programs that can be run on the command line to explore and visualize your data.
 
 > ## Issues
-> If you run into any errors, the people who built Twarc respond quite quickly (and they're very friendly).
+> If you run into any errors, the people who built twarc respond quite quickly (and they're very friendly).
 > Navigate to the ['Issues'](https://github.com/DocNow/twarc/issues) page on their repository and open a new issue. You also view pre-existing issues (open or closed) to see if someone has already answered a question like yours.
 {: .callout}
 
