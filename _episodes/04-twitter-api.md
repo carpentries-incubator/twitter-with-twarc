@@ -206,13 +206,15 @@ But just how big is Twitter? Try running these counts:
 
 ## What's a lot?
 
+(FIXME) it looks like the -- below doesn't register as two separat - -. Which produces an error if you only have one. 
+
 > ## Type along the following commands: 
 > Let's try getting tweet counts for each of these common English words:
-> - !twarc2 counts --text "dog" --granularity "day"
-> - !twarc2 counts --text "cat" --granularity "day"
-> - !twarc2 counts --text "amazon" --granularity "day"
-> - !twarc2 counts --text "right" --granularity "day"
-> - !twarc2 counts --text "good" --granularity "day"
+> - !twarc2 counts --text "dog" - -granularity "day"
+> - !twarc2 counts --text "cat" - -granularity "day"
+> - !twarc2 counts --text "amazon" - -granularity "day"
+> - !twarc2 counts --text "right" - -granularity "day"
+> - !twarc2 counts --text "good" - -granularity "day"
 > >
 > > ## Solution
 > > 
