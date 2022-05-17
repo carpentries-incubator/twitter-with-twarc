@@ -41,11 +41,12 @@ whole bunch of named-value pairs? ie:
 ~~~
 {: .output}
 
-In nano, or in the Jupyter editor, we can start to format this a bit with
+In nano, or in the Jupyter editor, I will start to format this a bit with
 returns and indents. You can see that the key is in quotes, then there's a
 colon, then the value. If the value is text, that's going to be in quotes too.
 
-Let's crawl along until we find the tweet text itself.
+You don't have to type along. I'm not going to save these changes. Let's 
+crawl along until we find the tweet text itself.
 
 We can see that it is the 4th piece of data in the tweet,
 after the author's ID, the language, and the time stamp. The fifth
