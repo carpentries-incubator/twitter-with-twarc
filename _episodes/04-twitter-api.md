@@ -319,15 +319,31 @@ list(UCSB_df.columns)
 > > Which in our case, only returned 3. 
 > > 
 > > 2. Let's start by converting our dataset to a csv, then run some python 
+> > ~~~ 
+> >!twarc2 csv source-data/catofinstagram.jsonl > output-data/catofinstagram.csv
+> > import pandas as pd
+> > cat_df = pd.read_csv("output-data/catofinstagram.csv") 
+> > list(cat_df.columns) #list the column name of cat_df 
+> > print(cat_df['created_at'].head()) # Start time 
+> > print(cat_df['created_at'].tail())# End time 
+> > ~~~
+> > (FIXME) I think there's an easier way to do this? Without converting to python?
 > >
-> > 3. 
-> >
+> > 3. We can do this by finding the max number of retweets in the dataset and then.
+> > ~~~
+> > cat_df[cat_df['public_metrics.retweet_count'] == cat_df['public_metrics.retweet_count'].max()].head()
+> > ~~~
 > > 4. 
+> > ~~~
+> > cat_df['author.public_metrics.followers_count'].max() #14574 followers
+> > most_follower = cat_df[cat_df['author.public_metrics.followers_count'] == cat_df['author.public_metrics.followers_count'].max()].head()
+> > ~~~
+> > User with author_id 248757990 has the most followers, which is 14574.
 > >
 > > 5. 
-> >
-> > 
-> >
+> > ~~~
+> > !twarc2 user id 248757990
+> > ~~~
 > > {:.solution}
 {: .challenge}
 
