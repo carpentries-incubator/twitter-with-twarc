@@ -140,8 +140,28 @@ of UCSB on twitter in the 7 days before the command was run.
 > most popular on Sports Twitter? Discuss.
 >
 > > ## Solution
-> > 
-> > #FIXME
+> >
+> > ~~~
+> > !twarc2 counts --granularity "day" --text "(Poker OR poker OR #Poker OR #poker)" 
+> > !twarc2 counts --granularity "day" --text "(Golf OR golf OR #Golf OR #golf)" 
+> > !twarc2 counts --granularity "day" --text "(Basketball OR basketball OR #Basketball OR #basketball)" 
+> > !twarc2 counts --granularity "day" --text "(Baseball OR baseball OR #Baseball OR #baseball)" 
+> > !twarc2 counts --granularity "day" --text "(Football OR football OR #Football OR #football)" `
+> > ~~~
+> > {: .language-python}
+> >
+> > And their respective outputs:
+> > ~~~
+> > Total Tweets: 108,021
+> > Total Tweets: 344,462
+> > Total Tweets: 471,942
+> > Total Tweets: 720,510
+> > Total Tweets: 1,789,262
+> > ~~~
+> > {: .output}
+> >
+> > From our output, football appears to be the most popular sport on Twitter currently, followed by baseball. 
+> >
 > {:solution}
 {: .challenge}
 
