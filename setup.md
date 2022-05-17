@@ -3,13 +3,15 @@ title: Setup
 ---
 > ## Data
 >
-> The data we will be using in the workshop is to practice working with twitter data. Please download the data files `taxday.jsonl` and `Capitol Riot Tweets.txt` and keep it in an accessible place (such as your desktop).
-> We used twarc to search for all mentions of the hashtag `#taxday` and created this file (April 15th is the deadline for Americans to file their annual income report).
-> The Capitol riot tweets is a dataset from Kaggle. 
-> <br/>
-> [Taxday data download link](https://github.com/UCSBCarpentry/twitter-with-twarc/raw/gh-pages/data/taxday.jsonl)
-> <br/>
-> [Capitol Riot Tweets download link](https://github.com/UCSBCarpentry/twitter-with-twarc/raw/gh-pages/data/dehydratedCapitolRiotTweets.txt)
+> The data we will be using in the workshop is to practice working with twitter 
+> data. Please download the data files `taxday.jsonl` and `Capitol Riot 
+> Tweets.txt` and keep it in an accessible place (such as your desktop). We used 
+> twarc to search for all mentions of the hashtag `#taxday` and created this 
+> file (April 15th is the deadline for Americans to file their annual income 
+> report). The Capitol riot tweets is a dataset from Kaggle.
+> - [Taxday data download link](https://drive.google.com/file/d/14_6b3Ej73pjPWb1_VdtmUlni9zvk67ae/view?usp=sharing) 
+> - [Capitol Riot Tweets download link](https://drive.google.com/file/d/1S0yYZpBgLGEiKDAUeKepuU5IaZiW2gFA/view?usp=sharing)
+> - [One Tweet download link](https://drive.google.com/file/d/1-LBzGySh272RIGSQltJSA3VvftkQbHcf/view?usp=sharing)
 >
 > Make sure you save the `taxday.jsonl` as a .jsonl file and not a .txt file. You can do this by right clicking in the browser, choose `save as` then choosing 'all file types'
 > and remove the .txt ending and change it to .jsonl.
