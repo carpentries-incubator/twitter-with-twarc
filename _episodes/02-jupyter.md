@@ -130,16 +130,16 @@ Jupyter notebook. Make sure BOTH are `twarc_run`.
 While we are in BASH, let's look an individual Tweet. We can use `cat` to
 print it to the screen:
 
-cat raw_data/one_tweet.jsonl
+`cat raw_data/one_tweet.jsonl`
 
 What a bunch of garbage! Let's open it in nano so we can scroll up and down:
 
-nano raw_data/one_tweet.jsonl
+`nano raw_data/one_tweet.jsonl`
 
 We will examine this file in detail later, but for now, notice that the
 tweet is a set of key-value pairs.
 
-^J wraps the text, 
+`^J` wraps the text, 
 
 
 > ## Remember:
