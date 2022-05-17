@@ -325,17 +325,6 @@ will be a file called "bjules.jsonl" inside of `raw_data` on your file browser. 
 contains the data of tweets under the username "@BergisJules".
 
 
-> ## Challenges
->
-> * Can you find the file called "bjules.jsonl"?
-> * Download a timeline for one of the twitter accounts from this list:
-> NCEAS "@ucsb_nceas", EcoDataScience "@ecodatasci", R-Ladies Santa Barbara "@RLadiesSB",
-> spatial@ucsb "@spatialUCSB", UCSB Collaboratory "@libratorybot"
->
-> * What do you notice about the file that was created from using the timeline command?
->
-{: .challenge}
-
 ## Twarc: twitter and archiving
 
 #### [Documenting the Now](https://www.docnow.io/)
@@ -446,6 +435,32 @@ import os
 Because these are python commands, you do not need to add the exclamation 
 point. 
 
+
+## Flattening Timelines
+
+Twitter Timelines, and other files we harvest using Twarc, need to be
+'flattened' before we use them. This will ensure that each line of jsonl
+is one tweet:
+
+~~~
+!twarc2 flatten raw_data/bjules.jsonl output_data/bjules_flattened.jsonl
+~~~
+{: .language-bash}
+
+
+> ## Challenge
+>
+> * Can you find the file called "bjules.jsonl"?
+> * Download a timeline for one of the twitter accounts from this list:
+> NCEAS "@ucsb_nceas", EcoDataScience "@ecodatasci", R-Ladies Santa Barbara "@RLadiesSB",
+> spatial@ucsb "@spatialUCSB", UCSB Collaboratory "@libratorybot"
+>
+> * What do you notice about the file that was created from using the timeline command?
+>
+{: .challenge}
+
+
+
 ## Converting between file types: jsonl to csv
 csv's are convenient for reading, and are useful as a data format
 later on for analyzing tweets outside of twarc. 
@@ -454,15 +469,6 @@ We will almost always convert our files to .csv format:
 
 This will be our introduction to writing Python in notebooks.
 Will reinforce running lines, clearing output.
-
-Twitter Timelines, and other files we harvest using Twarc, need to be
-'flattened' before we use it. This will ensure that each line of jsonl
-is one tweet:
-
-~~~
-!twarc2 flatten raw_data/bjules.jsonl output_data/bjules_flattened.jsonl
-~~~
-{: .language-python}
 
 csv's are even conventient for reading, and are useful as a data format
 later on for analyzing tweets outside of Twarc.
