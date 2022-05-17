@@ -95,7 +95,7 @@ instructions. Once the data files are uploaded, navigate back to our project
 directory `twarc_run`. Once you are done, your file organization should look like the
 below image.
 
-![file organization for jupyterlab](../fig/dir-data.png)
+![file organization for jupyterlab](../fig/data-dir.png)
 
 ## Using the Terminal and Nano Editor in Jupyterlab
 
@@ -295,11 +295,16 @@ In another cell, we will write some code:
 #they indicate a commitment
 print('Hello World!')
 ~~~
-{: .language-code}
+{: .language-python}
+
+~~~
+Hello World!
+~~~
+{: .output}
 
 Inside code cells, we can write comments or commands. Comments written with the hashtag `#` will not be ran. Other lines in the cell will be read as code.
 
-In a code cell, use the command `pwd` to check whether we are in the directory `twarc_run`. Use the command `cd` if you are not in `twarc_run`. Now, let's call twarc2 from inside of our notebook.
+In another code cell, use the command `pwd` to check whether we are in the directory `twarc_run`. Use the command `cd` if you are not in `twarc_run`. Now, let's call twarc2 from inside of our notebook.
 
 > ## BASH Commands in JupyterLab
 >
@@ -487,7 +492,7 @@ later on for analyzing tweets outside of twarc.
 We will almost always convert our files to .csv format.
 
 ~~~
-!twarc2 csv raw_data/bjules.jsonl output_data/bjules.csv
+!twarc2 csv 'raw_data/bjules.jsonl' > 'output_data/bjules.csv'
 ~~~
 {: .language-bash}
 
