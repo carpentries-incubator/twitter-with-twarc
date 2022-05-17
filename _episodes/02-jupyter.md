@@ -502,8 +502,8 @@ If we get it right, we can run both transforms and
 create the dataframe all from the same cell:
 
 `!twarc2 flatten raw_data/ecodatasci.jsonl > output_data/ecodatasci_flattened.jsonl`
-`!twarc2 csv raw_data/ecodatasci_flattened.jsonl > output_data/ecodatasci.csv`
-`ecodatasci_df = pandas.read_csv("output_data/ecodatasci.df")`
+`!twarc2 csv output_data/ecodatasci_flattened.jsonl > output_data/ecodatasci.csv`
+`ecodatasci_df = pandas.read_csv("output_data/ecodatasci.csv")`
 
 Remember, if you get an error, you can correct it in the cell, and then
 run the cell again by pressing `ctrl` + `Enter`
