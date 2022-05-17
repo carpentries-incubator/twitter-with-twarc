@@ -217,10 +217,10 @@ But just how big is Twitter? Try running these counts:
 > > ## Solution
 > > 
 > > ~~~
-> > !twarc2 search --limit 5000 "#catofinstagram" source-data/catofinstagram.jsonl
+> > 
 > > ~~~
 > >
-> > Then we can check whether or not our dataset has 5000 tweets by
+> > 
 > > {: .language-python}
 > {:solution}
 {: .challenge}
@@ -302,13 +302,32 @@ list(UCSB_df.columns)
 > and put the dataset through the pipeline to answer the following questions:
 > 
 > 1. Did you get exactly 5000?
-> 1. How far back in time did you get?
-> 1. What is the most re-tweeted recent tweet on #catsofinstagram?
-> 1. Which person has the most number of followers in your dataset? 
-> 1. Is it really a person?
+> 2. How far back in time did you get?
+> 3. What is the most re-tweeted recent tweet on #catsofinstagram?
+> 4. Which person has the most number of followers in your dataset? 
+> 5. Is it really a person?
 >
 > > ## Solution
-> > Fix me!
+> > ~~~
+> > !twarc2 search --limit 5000 "#catsofinstagram" source-data/catsofinstagram.jsonl
+> > ~~~
+> > 
+> > 1. To check the number of tweets we collected, we can run the following.
+> > ~~~
+> > !wc -l 'catsofinstagram.jsonl'
+> > ~~~
+> > Which in our case, only returned 3. 
+> > 
+> > 2. Let's start by converting our dataset to a csv, then run some python 
+> >
+> > 3. 
+> >
+> > 4. 
+> >
+> > 5. 
+> >
+> > 
+> >
 > > {:.solution}
 {: .challenge}
 
