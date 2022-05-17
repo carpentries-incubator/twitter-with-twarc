@@ -23,7 +23,7 @@ title: Setup
 > 
 > We will also be using an extended set of utilities that will help explore the data collected through twarc.
 > <br/>
-> [twarc utilities download link](https://github.com/UCSBCarpentry/twitter-with-twarc/blob/gh-pages/files/utils.zip)
+> [twarc utilities download link](https://github.com/UCSBCarpentry/twitter-with-twarc/blob/gh-pages/files/utils.zip?raw=true)
 >
 > Make sure you download and unzip this folder onto your desktop. Later in the workshop, we will upload this set of tools to our JupyterHub. 
 >
