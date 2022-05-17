@@ -79,28 +79,37 @@ method on the dataframe we created in episode 2:
 `list(ecodatascience_df.columns)`
 
 (need to write a bit more about the first tweet) #FIXME
+This gives you a sense of just how much data comes along with a tweet. 
 
+## First and last tweets
 Let's look at our `taxday.jsonl` file again.
 
 Remember our JSONL files are line-oriented, ie: one tweet per line. Let's use the
-`head` command to create a
-file with just two tweets.
+`head` and `tail` command to create files with two tweets each.
 
 ~~~
-!head -n 2 raw_data/taxday.jsonl > output_data/2_tweets.jsonl
+!head -n 2 raw_data/taxday.jsonl > output_data/first_2_tweets.jsonl
 ~~~
-{: .language-python}
+{: .language-bash}
 
-If we use `!cat` to output that file to a Notebook cell, we see a real
+~~~
+!tail -n 2 raw_data/taxday.jsonl > output_data/last_2_tweets.jsonl
+~~~
+{: .language-bash}
+
+
+If we use `!cat` to output one of these files, we see a real
 mess. Let's open the Jupyter graphical file viewer instead.
 
 > ## Why not use BASH?
 >
-> We could use nano instead, and stay in our little shell window
+> We stay in our little shell window
 > with our hands on our keyboards.  However, we are going to spend
 > our workshop in Jupyter to make our work more reproducible.
 >
-> If you want to keep using nano, feel free.
+> However, sometimes it's going to be advantageous to 
+> look at a file in nano, because the JSONL files open with lines
+> unwrapped.
 > {: .source}
 {: .callout}
 
@@ -109,7 +118,8 @@ we even tell where one tweet ends, and the second begins?
 
 # A Very Basic Analysis
 
-When we harvest tweets, it is a very good idea to do a little exploratory
+We can do a few things without even looking at the JSONL 
+directly. When we harvest tweets, it is a very good idea to do a little exploratory
 analysis to make sure you got what you expected. As we did in the previous
 episode, We can use
 the bash command `wc` (word count) to see how many lines of JSON we retrieved,
@@ -142,8 +152,9 @@ lets save this output of taxday.jsonl into a file named taxday_range.jsonl:
 Let’s do this basic analysis for our two files: bergis.jsonl, ecodatasci.jsonl.
 
 > ## Challenge: Getting Date Ranges
-> Please create the files bergis_range.jsonl and ecodatasci_range.jsonl that contains the first and last tweets of
-> bergia.jsonl and ecodatasci.jsonl.  Use one cell per file.
+> Please create the files `bergis_range.jsonl` and `ecodatasci_range.jsonl` that 
+> contains the first and last tweets of bergis.jsonl and ecodatasci.jsonl.  Use 
+> one cell per file.
 >
 > Remember to specify where to store your output files.
 >
