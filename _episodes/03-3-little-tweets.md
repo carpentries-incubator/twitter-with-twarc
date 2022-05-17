@@ -51,14 +51,14 @@ We can see that it is the 4th piece of data in the tweet,
 after the author's ID, the language, and the time stamp. The fifth
 element tells us that this tweet is in reply to another tweet.
 
-![view of one tweet data that is formatted](../fig/one_tweet_formated.png)
+![view of one tweet data that is formatted](../fig/one_tweet_formatted.png)
 
 There are many, many elements attached to each Tweet. You will probably never use
 most of them.
 
 Some key pieces of a Tweet are:
-- created_at
-- id
+- created_at: the exact day and time (in GMT) the tweet was posted
+- id: a unique tweet ID number
 - entities
   -- any hashtags that are used
   -- any users who are @'ed
