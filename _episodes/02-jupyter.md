@@ -436,8 +436,12 @@ we will be using today, and then load our Tax Day data into a Pandas dataframe:
 ~~~
 import pandas as pd
 import twarc_csv
+import textblob
+import nltk
+import os
 ~~~
 {: .language-Terminal}
+
 
 Because these are python commands, you do not need to add the exclamation 
 point. 
