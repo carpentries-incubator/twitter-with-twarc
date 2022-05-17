@@ -506,6 +506,7 @@ many tweets we harvested from Jules's timeline using `wc` in the terminal.
 
 How many Tweets did we get from Bergis?
 
+# Challenge 
 
 > ## Compare two timelines
 >
@@ -515,6 +516,7 @@ How many Tweets did we get from Bergis?
 > 
 > > ## Solution
 > > 
+> > Get the timeline from ecodatasci
 > > ~~~
 > > !twarc2 timeline ecodatasci > raw_data/ecodatasci.jsonl
 > > ~~~
