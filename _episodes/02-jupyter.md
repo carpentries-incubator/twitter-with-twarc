@@ -506,14 +506,36 @@ many tweets we harvested from Jules's timeline using `wc` in the terminal.
 
 How many Tweets did we get from Bergis?
 
-Now we will do the same transformations on tweets from the twitter user "ecodatasci". Please run the `timeline` command on the Twitter user "ecodatasci" if you have not already.
 
-~~~
-!twarc2 flatten 'raw_data/ecodatasci.jsonl' > 'output_data/ecodatasci_flattened.jsonl'
-!twarc2 csv 'output_data/ecodatasci_flattened.jsonl' > 'output_data/ecodatasci.csv'
-ecodatasci_df = pd.read_csv('output_data/ecodatasci.csv')
-~~~
-{: .language-code}
+> ## Compare two timelines
+>
+> Now we will do the same transformation on tweets from the twitter user `ecodatasci`. 
+> Please run the `timeline` command on the Twitter user `ecodatasci` if you have not already.
+> How many tweets did we get from ecodatasci? 
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > !twarc2 timeline ecodatasci > raw_data/ecodatasci.jsonl
+> > ~~~
+> > Flatten your collected tweets
+> > ~~~
+> > !twarc2 flatten 'raw_data/ecodatasci.jsonl' > 'output_data/ecodatasci_flattened.jsonl'
+> > ~~~
+> > convert to csv format
+> > ~~~ 
+> > !twarc2 csv 'output_data/ecodatasci_flattened.jsonl' > 'output_data/ecodatasci.csv'
+> > ~~~ 
+> > convert to pandas dataframe
+> > ~~~ 
+> > ecodatasci_df = pd.read_csv('output_data/ecodatasci.csv')
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge} 
+
+
+
 
 Remember, if you get an error, you can correct it in the cell, and then
 run the cell again.
