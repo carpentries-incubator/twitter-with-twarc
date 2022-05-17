@@ -69,7 +69,7 @@ project with one App inside of it.
 <img src="fig/dashboard.PNG" width="500">
 
 
-Go through the four steps to create your first Twitter App. It will ask you for the project name, use case, and description. 
+Fill out the four questions to create your first Twitter App. It will ask you for the project name, use case, and description. 
 These can be edited and amended later if you choose to change something in the App. 
 
 <img src="fig/what-you-api.PNG" width="600">
