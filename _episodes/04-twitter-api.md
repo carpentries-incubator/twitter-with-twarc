@@ -18,13 +18,19 @@ keypoints:
 
 ## The Twitter v.2 API
 
-If we are to retrieve data, Twitter does not give us a huge data load of csv's or 
-other giant files of data (we would not want that anyways). Instead Twitter makes 
-data access available to researchers that apply for the twitter api. The Twitter 
-Api allows applicants to collect tweets. This is also so Twitter can keep track 
-of who is getting this data, and monitor data use.
+The Twitter API is what allows us to collect tweets. Twitter also keeps track 
+of who is getting this data, and monitors data use--hence all that rigamarole to the
+the API credentials.
 
-Recall that API is an acronym for Application Programming Interface. Compared to 
+We don't just go copy data out of Twitter's archive. We don't want that anyway. We want realtime
+access to what is happening on Twitter, and we want to request only the information we need.
+
+Recall that API is an acronym for Application Programming Interface. Typically, people are building
+Tweeting robots (such as seismographs or weather forecasts) or looking to deliver content
+on behalf of a commercial brand (or malicious actors--hence all the rigamarole to get the 
+API keys). Those same API features allow us to do our research.
+ 
+Compared to 
 v1, the most recent version of the Twitter API (v2) includes additional levels of 
 access, more features, and faster onboarding for developers and academic 
 researchers.
@@ -33,7 +39,7 @@ The Twitter API comes along with all sorts of rules and regulations: how to
 submit requests, how many requests you can make in an hour, how many Tweets you 
 can download in a month.
 
-That last regulation is something we should highlight. The level of API access 
+That last policy is something we should highlight. The level of API access 
 you have is limited to 500,000 Tweets per month. For that reason, while we 
 collect Tweets during this workshop, let's get in the habit of limiting ourselves 
 to 500 Tweets.
@@ -49,7 +55,7 @@ Set --limit of 500 reached:  15%|█▋         | 500/3271 [00:04<00:24, 113.41i
 {: .output}
 
 So the above gives us, at most, 500 tweets from the UCSBLibrary Twitter 
-account's timeline.
+account's timeline. And twarc tells us that it only gave us 15% of what is available.
 
 You can always check to see how much of your quota you have used by visiting your 
 [Twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard)
