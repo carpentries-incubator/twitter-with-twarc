@@ -131,16 +131,12 @@ of UCSB on twitter in the 7 days before the command was run.
 
 ![UCSB_tweets](../fig/UCSB_tweets.PNG)
 
-# Challenge
-
-> ## Try counting other things on Twitter
-> 
+> ## Challenge: Try counting other things on Twitter
 > Mentions of the words poker, golf, basketball, baseball, and football. Aggregate
 > the counts together by day. Can we use these results to imagine what sports are
 > most popular on Sports Twitter? Discuss.
 >
 > > ## Solution
-> >
 > > ~~~
 > > !twarc2 counts --granularity "day" --text "(Poker OR poker OR #Poker OR #poker)" 
 > > !twarc2 counts --granularity "day" --text "(Golf OR golf OR #Golf OR #golf)" 
@@ -149,7 +145,6 @@ of UCSB on twitter in the 7 days before the command was run.
 > > !twarc2 counts --granularity "day" --text "(Football OR football OR #Football OR #football)" `
 > > ~~~
 > > {: .language-python}
-> >
 > > And their respective outputs:
 > > ~~~
 > > Total Tweets: 108,021
@@ -159,12 +154,10 @@ of UCSB on twitter in the 7 days before the command was run.
 > > Total Tweets: 1,789,262
 > > ~~~
 > > {: .output}
-> >
 > > From our output, football appears to be the most popular sport on Twitter currently, followed by baseball. 
 > >
 > {:solution}
 {: .challenge}
-
 
 ## Filtered Stream
 Filtering collects tweets as they happen in realtime. We will do a filtered
@@ -220,7 +213,18 @@ But just how big is Twitter? Try running these counts:
 > - !twarc2 counts --text "amazon" --granularity "day"
 > - !twarc2 counts --text "right" --granularity "day"
 > - !twarc2 counts --text "good" --granularity "day"
+> >
+> > ## Solution
+> > 
+> > ~~~
+> > !twarc2 search --limit 5000 "#catofinstagram" source-data/catofinstagram.jsonl
+> > ~~~
+> >
+> > Then we can check whether or not our dataset has 5000 tweets by
+> > {: .language-python}
+> {:solution}
 {: .challenge}
+
 
 It looks like any English word that is used on Twitter more than 10 million
 times a week on Twitter is a fairly non-specific search.
