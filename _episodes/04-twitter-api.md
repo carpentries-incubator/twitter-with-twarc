@@ -47,7 +47,7 @@ to 500 Tweets.
 ~~~
 !twarc2 timeline --limit 500 UCSBLibrary > 'raw_data/ucsblib_timeline.jsonl'
 ~~~
-{. :language-python}
+{: .language-python}
 
 ~~~
 Set --limit of 500 reached:  15%|█▋         | 500/3271 [00:04<00:24, 113.41it/s]
@@ -137,15 +137,18 @@ of UCSB on twitter in the 7 days before the command was run.
 > most popular on Sports Twitter? Discuss.
 >
 > > ## Solution
-> > ~~~
+> > 
+> > ~~
 > > !twarc2 counts --granularity "day" --text "(Poker OR poker OR #Poker OR #poker)" 
 > > !twarc2 counts --granularity "day" --text "(Golf OR golf OR #Golf OR #golf)" 
 > > !twarc2 counts --granularity "day" --text "(Basketball OR basketball OR #Basketball OR #basketball)" 
 > > !twarc2 counts --granularity "day" --text "(Baseball OR baseball OR #Baseball OR #baseball)" 
-> > !twarc2 counts --granularity "day" --text "(Football OR football OR #Football OR #football)" `
+> > !twarc2 counts --granularity "day" --text "(Football OR football OR #Football OR #football)"
 > > ~~~
 > > {: .language-python}
+> > 
 > > And their respective outputs:
+> > 
 > > ~~~
 > > Total Tweets: 108,021
 > > Total Tweets: 344,462
@@ -154,9 +157,10 @@ of UCSB on twitter in the 7 days before the command was run.
 > > Total Tweets: 1,789,262
 > > ~~~
 > > {: .output}
+> > 
 > > From our output, football appears to be the most popular sport on Twitter currently, followed by baseball. 
-> >
-> {:solution}
+> > 
+> {: .solution}
 {: .challenge}
 
 ## Filtered Stream
@@ -211,12 +215,15 @@ But just how big is Twitter? Try running these counts:
 
 > ## Type along the following commands: 
 > Let's try getting tweet counts for each of these common English words:
+> ~~~
 > - !twarc2 counts --text "dog" --granularity "day"
 > - !twarc2 counts --text "cat" --granularity "day"
 > - !twarc2 counts --text "amazon" --granularity "day"
 > - !twarc2 counts --text "right" --granularity "day"
 > - !twarc2 counts --text "good" --granularity "day"
-> >
+> ~~~
+> {: .language-bash}
+> 
 > > ## Solution
 > > 
 > > Their respective outputs are:
@@ -225,10 +232,10 @@ But just how big is Twitter? Try running these counts:
 > > Total Tweets: 6,538,724
 > > Total Tweets: 13,321,791
 > > Total Tweets: 28,238,126
-> >
+> > 
 > > You may notice that the word "good" is mentioned more than twice the amount of times that "right" is mentioned. 
-> > {: .language-python}
-> {:solution}
+> > 
+> {: .solution}
 {: .challenge}
 
 
@@ -312,7 +319,7 @@ list(UCSB_df.columns)
 > 3. What is the most re-tweeted recent tweet on #catsofinstagram?
 > 4. Which person has the most number of followers in your dataset? 
 > 5. Is it really a person?
->
+> 
 > > ## Solution
 > > ~~~
 > > !twarc2 search --limit 5000 "#catsofinstagram" source-data/catsofinstagram.jsonl
@@ -350,6 +357,6 @@ list(UCSB_df.columns)
 > > ~~~
 > > !twarc2 user id 248757990
 > > ~~~
-> > {:.solution}
+> > {: .solution}
 {: .challenge}
 
