@@ -138,7 +138,7 @@ of UCSB on twitter in the 7 days before the command was run.
 >
 > > ## Solution
 > > 
-> > ~~
+> > ~~~
 > > !twarc2 counts --granularity "day" --text "(Poker OR poker OR #Poker OR #poker)" 
 > > !twarc2 counts --granularity "day" --text "(Golf OR golf OR #Golf OR #golf)" 
 > > !twarc2 counts --granularity "day" --text "(Basketball OR basketball OR #Basketball OR #basketball)" 
@@ -216,11 +216,11 @@ But just how big is Twitter? Try running these counts:
 > ## Type along the following commands: 
 > Let's try getting tweet counts for each of these common English words:
 > ~~~
-> - !twarc2 counts --text "dog" --granularity "day"
-> - !twarc2 counts --text "cat" --granularity "day"
-> - !twarc2 counts --text "amazon" --granularity "day"
-> - !twarc2 counts --text "right" --granularity "day"
-> - !twarc2 counts --text "good" --granularity "day"
+> !twarc2 counts --text "dog" --granularity "day"
+> !twarc2 counts --text "cat" --granularity "day"
+> !twarc2 counts --text "amazon" --granularity "day"
+> !twarc2 counts --text "right" --granularity "day"
+> !twarc2 counts --text "good" --granularity "day"
 > ~~~
 > {: .language-bash}
 > 
@@ -308,9 +308,8 @@ list(UCSB_df.columns)
 
 
 
-# Final challenge
 
-> ## Cats of Instagram
+> ## Challenge: Cats of Instagram
 > Let's make a bigger datafile. Harvest 5000 tweets that use the hashtag "catsofinstagram"
 > and put the dataset through the pipeline to answer the following questions:
 > 
@@ -324,39 +323,50 @@ list(UCSB_df.columns)
 > > ~~~
 > > !twarc2 search --limit 5000 "#catsofinstagram" source-data/catsofinstagram.jsonl
 > > ~~~
+> > {: .language-bash}
 > > 
 > > 1. To check the number of tweets we collected, we can run the following.
 > > ~~~
 > > !wc -l 'catsofinstagram.jsonl'
 > > ~~~
+> > {: .language-bash}
+> > 
 > > Which in our case, only returned 3. 
 > > 
 > > 2. Let's start by converting our dataset to a csv, then run some python 
 > > ~~~ 
-> >!twarc2 csv source-data/catofinstagram.jsonl > output-data/catofinstagram.csv
+> > !twarc2 csv source-data/catofinstagram.jsonl > output-data/catofinstagram.csv
 > > import pandas as pd
 > > cat_df = pd.read_csv("output-data/catofinstagram.csv") 
 > > list(cat_df.columns) #list the column name of cat_df 
 > > print(cat_df['created_at'].head()) # Start time 
 > > print(cat_df['created_at'].tail())# End time 
 > > ~~~
+> > {: .language-code}
+> > 
 > > (FIXME) I think there's an easier way to do this? Without converting to python?
 > >
 > > 3. We can do this by finding the max number of retweets in the dataset and then.
 > > ~~~
 > > cat_df[cat_df['public_metrics.retweet_count'] == cat_df['public_metrics.retweet_count'].max()].head()
 > > ~~~
+> > {: .language-python}
+> > 
 > > 4. 
 > > ~~~
 > > cat_df['author.public_metrics.followers_count'].max() #14574 followers
 > > most_follower = cat_df[cat_df['author.public_metrics.followers_count'] == cat_df['author.public_metrics.followers_count'].max()].head()
 > > ~~~
+> > {: .language-python}
+> > 
 > > User with author_id 248757990 has the most followers, which is 14574.
 > >
 > > 5. 
 > > ~~~
 > > !twarc2 user id 248757990
 > > ~~~
-> > {: .solution}
+> > {: .language-bash}
+> > 
+> {: .solution}
 {: .challenge}
 
