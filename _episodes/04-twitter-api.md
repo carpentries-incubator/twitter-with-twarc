@@ -47,7 +47,7 @@ to 500 Tweets.
 ~~~
 !twarc2 timeline --limit 500 UCSBLibrary > 'raw_data/ucsblib_timeline.jsonl'
 ~~~
-{: .language-python}
+{. :language-python}
 
 ~~~
 Set --limit of 500 reached:  15%|█▋         | 500/3271 [00:04<00:24, 113.41it/s]
@@ -137,18 +137,15 @@ of UCSB on twitter in the 7 days before the command was run.
 > most popular on Sports Twitter? Discuss.
 >
 > > ## Solution
-> > 
 > > ~~~
 > > !twarc2 counts --granularity "day" --text "(Poker OR poker OR #Poker OR #poker)" 
 > > !twarc2 counts --granularity "day" --text "(Golf OR golf OR #Golf OR #golf)" 
 > > !twarc2 counts --granularity "day" --text "(Basketball OR basketball OR #Basketball OR #basketball)" 
 > > !twarc2 counts --granularity "day" --text "(Baseball OR baseball OR #Baseball OR #baseball)" 
-> > !twarc2 counts --granularity "day" --text "(Football OR football OR #Football OR #football)"
+> > !twarc2 counts --granularity "day" --text "(Football OR football OR #Football OR #football)" `
 > > ~~~
 > > {: .language-python}
-> > 
 > > And their respective outputs:
-> > 
 > > ~~~
 > > Total Tweets: 108,021
 > > Total Tweets: 344,462
@@ -157,10 +154,9 @@ of UCSB on twitter in the 7 days before the command was run.
 > > Total Tweets: 1,789,262
 > > ~~~
 > > {: .output}
-> > 
 > > From our output, football appears to be the most popular sport on Twitter currently, followed by baseball. 
-> > 
-> {: .solution}
+> >
+> {:solution}
 {: .challenge}
 
 ## Filtered Stream
@@ -215,27 +211,24 @@ But just how big is Twitter? Try running these counts:
 
 > ## Type along the following commands: 
 > Let's try getting tweet counts for each of these common English words:
-> ~~~
-> !twarc2 counts --text "dog" --granularity "day"
-> !twarc2 counts --text "cat" --granularity "day"
-> !twarc2 counts --text "amazon" --granularity "day"
-> !twarc2 counts --text "right" --granularity "day"
-> !twarc2 counts --text "good" --granularity "day"
-> ~~~
-> {: .language-bash}
-> 
+> - !twarc2 counts --text "dog" --granularity "day"
+> - !twarc2 counts --text "cat" --granularity "day"
+> - !twarc2 counts --text "amazon" --granularity "day"
+> - !twarc2 counts --text "right" --granularity "day"
+> - !twarc2 counts --text "good" --granularity "day"
+> >
 > > ## Solution
 > > 
-> > Their respective outputs are:
-> > Total Tweets: 1,605,699
-> > Total Tweets: 2,481,676
-> > Total Tweets: 6,538,724
-> > Total Tweets: 13,321,791
-> > Total Tweets: 28,238,126
-> > 
+> > Their respective outputs are:  
+> > Total Tweets: 1,605,699  
+> > Total Tweets: 2,481,676  
+> > Total Tweets: 6,538,724  
+> > Total Tweets: 13,321,791  
+> > Total Tweets: 28,238,126  
+> >
 > > You may notice that the word "good" is mentioned more than twice the amount of times that "right" is mentioned. 
-> > 
-> {: .solution}
+> > {: .language-python}
+> {:solution}
 {: .challenge}
 
 
@@ -308,8 +301,9 @@ list(UCSB_df.columns)
 
 
 
+# Final challenge
 
-> ## Challenge: Cats of Instagram
+> ## Cats of Instagram
 > Let's make a bigger datafile. Harvest 5000 tweets that use the hashtag "catsofinstagram"
 > and put the dataset through the pipeline to answer the following questions:
 > 
@@ -318,52 +312,60 @@ list(UCSB_df.columns)
 > 3. What is the most re-tweeted recent tweet on #catsofinstagram?
 > 4. Which person has the most number of followers in your dataset? 
 > 5. Is it really a person?
-> 
+>
 > > ## Solution
+> > We'll start by harvesting the tweets.
 > > ~~~
 > > !twarc2 search --limit 5000 "#catsofinstagram" source-data/catsofinstagram.jsonl
 > > ~~~
-> > {: .language-bash}
 > > 
-> > 1. To check the number of tweets we collected, we can run the following.
+> > 1. Then, to check the number of tweets we collected, we can run the following.
 > > ~~~
 > > !wc -l 'catsofinstagram.jsonl'
 > > ~~~
-> > {: .language-bash}
-> > Which in our case, only returned 3. 
+> > Which in our case, returned 51. 
 > > 
 > > 2. Let's start by converting our dataset to a csv, then run some python 
 > > ~~~ 
-> > !twarc2 csv source-data/catofinstagram.jsonl > output-data/catofinstagram.csv
+> > # install and import dependencies 
+> > !pip install ipywidgets
+> > !pip install twarc_csv
+> > import twarc_csv as csv
 > > import pandas as pd
-> > cat_df = pd.read_csv("output-data/catofinstagram.csv") 
-> > list(cat_df.columns) #list the column name of cat_df 
-> > print(cat_df['created_at'].head()) # Start time 
-> > print(cat_df['created_at'].tail())# End time 
-> > ~~~
-> > {: .language-code}
 > > 
-> > (FIXME) I think there's an easier way to do this? Without converting to python?
+> > # convert jsonl to csv
+> > !twarc2 csv source-data/catsofinstagram.jsonl > output-data/catsofinstagram.csv
+> > 
+> > # read in csv using pandas
+> > cats_df = pd.read_csv("output-data/catsofinstagram.csv") 
+> > 
+> > #list the column name of cat_df 
+> > list(cats_df.columns) 
+> > 
+> > # returns the earliest creation time
+> > cats_df[cats_df.created_at == cats_df.created_at.min()].loc[:,'created_at']
+> > ~~~
+> > The earliest tweet we retrieved with the #catsofinstagram tag is from 05/16/2022 at 12:28:15 pm. 
 > >
-> > 3. We can do this by finding the max number of retweets in the dataset and then.
+> > 3. We can do this by assigning the row with the max number of retweets to the variable most_rt and then printing out the tweet (or just > > the text of the tweet).
 > > ~~~
-> > cat_df[cat_df['public_metrics.retweet_count'] == cat_df['public_metrics.retweet_count'].max()].head()
-> > ~~~
-> > {: .language-python}
+> > most_rt = cats_df[cats_df['public_metrics.retweet_count'] == cats_df['public_metrics.retweet_count'].max()].head()
+> > # print tweet
+> > print(most_rt)
 > > 
-> > 4. User with author_id 248757990 has the most followers, which is 14574.
+> > most_rt.text
+> > ~~~
+> > 4. 
 > > ~~~
 > > cat_df['author.public_metrics.followers_count'].max() #14574 followers
 > > most_follower = cat_df[cat_df['author.public_metrics.followers_count'] == cat_df['author.public_metrics.followers_count'].max()].head()
 > > ~~~
-> > {: .language-python}
+> > User with author_id 248757990 has the most followers, which is 14574.
 > >
-> > 5. use command user id on 248757990
+> > 5. 
 > > ~~~
 > > !twarc2 user id 248757990
 > > ~~~
-> > {: .language-bash}
-> > 
-> {: .solution}
+> > {:.solution}
 {: .challenge}
 
