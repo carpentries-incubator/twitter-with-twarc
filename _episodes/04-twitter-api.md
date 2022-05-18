@@ -192,6 +192,7 @@ Twitter is NOT case sensitive.
 {: .source}
 
 ## Big Data
+
 ### What's a lot?
 Getting a sense of the scale of the conversation on Twitter is important. 
 When you are starting out, you won't have much idea about how many tweets a 
@@ -210,19 +211,22 @@ But just how big is Twitter? Try running these counts:
 
 > ## Type along the following commands: 
 > Let's try getting tweet counts for each of these common English words:
-> - !twarc2 counts --text "dog" - -granularity "day"
-> - !twarc2 counts --text "cat" - -granularity "day"
-> - !twarc2 counts --text "amazon" - -granularity "day"
-> - !twarc2 counts --text "right" - -granularity "day"
-> - !twarc2 counts --text "good" - -granularity "day"
+> - !twarc2 counts --text "dog" --granularity "day"
+> - !twarc2 counts --text "cat" --granularity "day"
+> - !twarc2 counts --text "amazon" --granularity "day"
+> - !twarc2 counts --text "right" --granularity "day"
+> - !twarc2 counts --text "good" --granularity "day"
 > >
 > > ## Solution
 > > 
-> > ~~~
-> > 
-> > ~~~
+> > Their respective outputs are:
+> > Total Tweets: 1,605,699
+> > Total Tweets: 2,481,676
+> > Total Tweets: 6,538,724
+> > Total Tweets: 13,321,791
+> > Total Tweets: 28,238,126
 > >
-> > 
+> > You may notice that the word "good" is mentioned more than twice the amount of times that "right" is mentioned. 
 > > {: .language-python}
 > {:solution}
 {: .challenge}
