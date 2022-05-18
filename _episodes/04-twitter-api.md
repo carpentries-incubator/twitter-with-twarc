@@ -330,7 +330,6 @@ list(UCSB_df.columns)
 > > !wc -l 'catsofinstagram.jsonl'
 > > ~~~
 > > {: .language-bash}
-> > 
 > > Which in our case, only returned 3. 
 > > 
 > > 2. Let's start by converting our dataset to a csv, then run some python 
@@ -352,16 +351,14 @@ list(UCSB_df.columns)
 > > ~~~
 > > {: .language-python}
 > > 
-> > 4. 
+> > 4. User with author_id 248757990 has the most followers, which is 14574.
 > > ~~~
 > > cat_df['author.public_metrics.followers_count'].max() #14574 followers
 > > most_follower = cat_df[cat_df['author.public_metrics.followers_count'] == cat_df['author.public_metrics.followers_count'].max()].head()
 > > ~~~
 > > {: .language-python}
-> > 
-> > User with author_id 248757990 has the most followers, which is 14574.
 > >
-> > 5. 
+> > 5. use command user id on 248757990
 > > ~~~
 > > !twarc2 user id 248757990
 > > ~~~
