@@ -292,7 +292,7 @@ In another cell, we will write some code:
 
 ~~~
 #hashtages are not only used in Twitter
-#they indicate a commitment
+#they indicate a python comment
 print('Hello World!')
 ~~~
 {: .language-python}
@@ -496,6 +496,11 @@ We will almost always convert our files to .csv format.
 ~~~
 {: .language-bash}
 
+~~~
+bjules_df = pd.read_csv('output_data/bjules.csv')
+~~~
+{: .language-python}
+
 Check the file browser to make sure
 your file was created where you expected it to be. We will also get in the habit of making dataframes
 out of our csv's, because dataframes are a convenient format for
@@ -503,6 +508,11 @@ manipulating data in Pandas.
 
 Now that we have flattened our data and made a csv, we can see how
 many tweets we harvested from Jules's timeline using `wc` in the terminal.
+
+~~~
+!wc 'output_data/bjules.csv'
+~~~
+{: .language-bash}
 
 How many Tweets did we get from Bergis?
 
