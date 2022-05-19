@@ -145,16 +145,16 @@ of UCSB on twitter in the 7 days before the command was run.
 > > !twarc2 counts --granularity "day" --text "(Baseball OR baseball OR #Baseball OR #baseball)" 
 > > !twarc2 counts --granularity "day" --text "(Football OR football OR #Football OR #football)"
 > > ~~~
-> > {: .language-python}
+> > {: .language-bash}
 > > 
 > > And their respective outputs:
 > > 
 > > ~~~
-> > Total Tweets: 108,021
-> > Total Tweets: 344,462
-> > Total Tweets: 471,942
-> > Total Tweets: 720,510
-> > Total Tweets: 1,789,262
+> > Total Tweets: 108,021  
+> > Total Tweets: 344,462  
+> > Total Tweets: 471,942  
+> > Total Tweets: 720,510  
+> > Total Tweets: 1,789,262  
 > > ~~~
 > > {: .output}
 > > 
@@ -227,11 +227,11 @@ But just how big is Twitter? Try running these counts:
 > > ## Solution
 > > 
 > > Their respective outputs are:
-> > Total Tweets: 1,605,699
-> > Total Tweets: 2,481,676
-> > Total Tweets: 6,538,724
-> > Total Tweets: 13,321,791
-> > Total Tweets: 28,238,126
+> > Total Tweets: 1,605,699  
+> > Total Tweets: 2,481,676   
+> > Total Tweets: 6,538,724  
+> > Total Tweets: 13,321,791  
+> > Total Tweets: 28,238,126  
 > > 
 > > You may notice that the word "good" is mentioned more than twice the amount of times that "right" is mentioned. 
 > > 
@@ -325,44 +325,51 @@ list(UCSB_df.columns)
 > > ~~~
 > > {: .language-bash}
 > > 
-> > 1. To check the number of tweets we collected, we can run the following.
+> > 1. Let's start by converting our dataset to a csv, then run some python 
 > > ~~~
-> > !wc -l 'catsofinstagram.jsonl'
+> > # convert from jsonl to csv
+> > !twarc2 csv source-data/catsofinstagram.jsonl output-data/catsofinstagram.csv
+> > # read in csv using pandas (denoted by pd)
+> > cats_df = pd.read_csv("output-data/catsofinstagram.csv") 
+> > cats_df.shape
 > > ~~~
 > > {: .language-bash}
-> > Which in our case, only returned 3. 
 > > 
-> > 2. Let's start by converting our dataset to a csv, then run some python 
+> > Which, in our case, returned 5093 tweets. It's a little bit over our limit but that's okay. 
+> > 
+> > 2. 
 > > ~~~ 
-> > !twarc2 csv source-data/catofinstagram.jsonl > output-data/catofinstagram.csv
-> > import pandas as pd
-> > cat_df = pd.read_csv("output-data/catofinstagram.csv") 
-> > list(cat_df.columns) #list the column name of cat_df 
-> > print(cat_df['created_at'].head()) # Start time 
-> > print(cat_df['created_at'].tail())# End time 
+> > # print the earliest 'created_at' time in dataset
+> > cats_df[cats_df.created_at == cats_df.created_at.min()].loc[:,'created_at']
 > > ~~~
 > > {: .language-code}
 > > 
-> > (FIXME) I think there's an easier way to do this? Without converting to python?
+> > The earliest time from our dataset is 05/17/2022 at 144:50:26 pm. 
 > >
 > > 3. We can do this by finding the max number of retweets in the dataset and then.
 > > ~~~
-> > cat_df[cat_df['public_metrics.retweet_count'] == cat_df['public_metrics.retweet_count'].max()].head()
+> > most_rt = cats_df[cats_df['public_metrics.retweet_count'] == cats_df['public_metrics.retweet_count'].max()].head()
+> > print(most_rt.text)
 > > ~~~
 > > {: .language-python}
 > > 
-> > 4. User with author_id 248757990 has the most followers, which is 14574.
+> > This returns the tweet text '❃❃❃ PURE LOVE ❤💘❤\n#CatsOfTwitter #catsofinstagram #cats https://t.co/kIbFkKFWeT'.
+> > 
+> > 4. We can calculate the max number of follows in the dataset and then select the tweet that meets that requirement. 
 > > ~~~
-> > cat_df['author.public_metrics.followers_count'].max() #14574 followers
-> > most_follower = cat_df[cat_df['author.public_metrics.followers_count'] == cat_df['author.public_metrics.followers_count'].max()].head()
+> > most_fo = cats_df[cats_df['author.public_metrics.followers_count'] == cats_df['author.public_metrics.followers_count'].max()].head()
 > > ~~~
 > > {: .language-python}
 > >
-> > 5. use command user id on 248757990
+> > User with author_id 248757990 has the most followers, which is 2086382. 
+> >
+> > 5. We can then run
 > > ~~~
 > > !twarc2 user id 248757990
 > > ~~~
 > > {: .language-bash}
+> > 
+> > To get the information on the user. Thankfully, this is a real person!
 > > 
 > {: .solution}
 {: .challenge}
