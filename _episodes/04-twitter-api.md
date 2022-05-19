@@ -211,8 +211,6 @@ But just how big is Twitter? Try running these counts:
 
 ## What's a lot?
 
-(FIXME) it looks like the -- below doesn't register as two separat - -. Which produces an error if you only have one. 
-
 > ## Type along the following commands: 
 > Let's try getting tweet counts for each of these common English words:
 > ~~~
@@ -226,18 +224,20 @@ But just how big is Twitter? Try running these counts:
 > 
 > > ## Solution
 > > 
+> > ~~~
 > > Their respective outputs are:
 > > Total Tweets: 1,605,699  
 > > Total Tweets: 2,481,676   
 > > Total Tweets: 6,538,724  
 > > Total Tweets: 13,321,791  
 > > Total Tweets: 28,238,126  
+> > ~~~
+> > {: .output}
 > > 
 > > You may notice that the word "good" is mentioned more than twice the amount of times that "right" is mentioned. 
 > > 
 > {: .solution}
 {: .challenge}
-
 
 It looks like any English word that is used on Twitter more than 10 million
 times a week on Twitter is a fairly non-specific search.
