@@ -81,7 +81,6 @@ and upload all of the datafiles:
 - `taxday.jsonl` tweets from American tax day, 2022
 - `one_tweet.jsonl` a single tweet
 - `dehydratedCapitolRiotTweets.txt` TweetIDs from the January 6 insurrection.
-- (FIXME)
 
 Inside of `twarc-run`, create another folder called `utils` to contain all the `.py` files that are inside of
 `utils.zip`.
