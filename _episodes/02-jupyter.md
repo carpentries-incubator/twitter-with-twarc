@@ -449,7 +449,8 @@ our JupyterLab server restarts. So go ahead and put that in a
 cell at the top of your notebook:
 
 ~~~
-!pip install twarc_csv
+! pip install twarc_csv
+! pip install emojis
 ~~~
 {: .language-bash}
 
