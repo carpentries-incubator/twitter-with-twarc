@@ -9,7 +9,7 @@ title: Setup
 > twarc to search for all mentions of the hashtag `#taxday` and created this 
 > file (April 15th is the deadline for Americans to file their annual income 
 > report). The Capitol riot tweets is a dataset from Kaggle.
-> - [Taxday data download link](https://raw.githubusercontent.com/UCSBCarpentry/twitter-with-twarc/gh-pages/data/taxday.jsonl)
+> - [Taxday data download link](https://drive.google.com/file/d/14_6b3Ej73pjPWb1_VdtmUlni9zvk67ae/view?usp=sharing)
 > - [Capitol Riot Tweets download link](https://drive.google.com/file/d/1S0yYZpBgLGEiKDAUeKepuU5IaZiW2gFA/view?usp=sharing)
 > - [One Tweet download link](https://drive.google.com/file/d/1MNZRzCQPBKjvWCch7GvTywBFKvDstBcN/view?usp=sharing)
 >
