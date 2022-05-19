@@ -13,8 +13,14 @@ title: Setup
 > - [Capitol Riot Tweets download link](https://drive.google.com/file/d/1S0yYZpBgLGEiKDAUeKepuU5IaZiW2gFA/view?usp=sharing)
 > - [One Tweet download link](https://drive.google.com/file/d/1MNZRzCQPBKjvWCch7GvTywBFKvDstBcN/view?usp=sharing)
 >
-> Make sure you save the taxday data as `taxday.jsonl`, the file should be a .jsonl file and not a .txt file. You can do this by right clicking on the page, choose `save as`, then choose "all file types"
-> and remove the ".txt" ending and keep the ".jsonl" ending.
+> Google Drive may change the file extensions when you download these.
+> Make sure you that taxday and one_tweet are `.jsonl`, NOT `.jsn`.
+> capitol_riots.txt really is `.txt`.
+
+> You can force this by right 
+> clicking on the page link, choose `save as`, then choose "all file types" 
+> and remove the ".txt" ending and keep the ".jsonl" choose the approopriate
+> filename extension.
 >
 {: .prereq}
 
