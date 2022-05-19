@@ -214,11 +214,11 @@ But just how big is Twitter? Try running these counts:
 > ## Type along the following commands: 
 > Let's try getting tweet counts for each of these common English words:
 > ~~~
-> !twarc2 counts --text "dog" --granularity "day"
-> !twarc2 counts --text "cat" --granularity "day"
-> !twarc2 counts --text "amazon" --granularity "day"
-> !twarc2 counts --text "right" --granularity "day"
-> !twarc2 counts --text "good" --granularity "day"
+> !twarc2 counts --granularity "dog" --text "day"
+> !twarc2 counts --granularity "cat" --text "day"
+> !twarc2 counts --granularity "amazon" --text "day"
+> !twarc2 counts --granularity "right" --text "day"
+> !twarc2 counts --granularity "good" --text "day"
 > ~~~
 > {: .language-bash}
 > 
