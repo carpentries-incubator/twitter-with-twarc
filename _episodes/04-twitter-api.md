@@ -42,7 +42,7 @@ can download in a month.
 That last policy is something we should highlight. The level of API access 
 you have is limited to 500,000 Tweets per month. For that reason, while we 
 collect Tweets during this workshop, let's get in the habit of limiting ourselves 
-to 500 Tweets.
+to 500 Tweets. This is a ballpark so don't be surprised if there are more or less. 
 
 ~~~
 !twarc2 timeline --limit 500 UCSBLibrary > 'raw_data/ucsblib_timeline.jsonl'
