@@ -15,23 +15,6 @@ keypoints:
 
 ## When we have thousands of tweets: we need analysis tools
 
-- -
-Jupyter has its own built-in viewer that works great for csvs. (INSERT PICTURE AND
-NAVIGATE TO JUPYTER) -
-
-Maybe insert a challenge right here where we can ask them to find
-something with in the data: text, number of retweets, username,...
-
-If you're finding it hard to process the information in these
-JSON files, don't worry! That's why we have our jsonl > csv >
-dataframe pipeline.
-
-
-Should we add another challenge here to have them look for the
-emojis section? Or another portion of the csv to make sure
-they know how to navigate?
-- -
-
 Back in Episode 1, we mentioned something referred to as
 'utilities'. Now, we'll take a closer look at what those
 utilities are, how you use them, and why they are important to
@@ -58,7 +41,7 @@ The first utility from twarc1 reads emojis. You will need to pip install this ut
 
 ~~~
 import emoji
-print(emoji.emojize('Hello :earth:!'))
+print(emoji.emojize('Hello :globe_showing_Europe-Africa:!'))
 ~~~
 {: .language-python}
 
@@ -161,15 +144,8 @@ should add it to our workflow:
 
 ## Followers
 
-<<<<<<< HEAD
 (FIXME) Even 5 takes a long time to run. We could try to expand on
 ~~~
 !twarc2 followers --limit 5 tinycarebot >  'raw_data/tcb_followers.jsonl'
 ~~~
 {: .language-bash}
-=======
-Challenge: Boolean and: how to feed search multiple ID’s? This is a challenge
-about using twitter advanced search syntax. Can we distinguish between AND’s and
-OR’s?
-
->>>>>>> f4167cde944f01c8c0bdc3b5e5639a57b3a2b1db
