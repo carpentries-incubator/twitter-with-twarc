@@ -5,11 +5,9 @@ exercises: 0
 questions:
 - "How can we look at our tweets more easily" 
 - "What's the difference between old twarc and twarc2?"
-- 
 - "How can I separate original content from retweets/replies?"
 - "What are we using to view our data? "
 
-objectives:
 
 keypoints: 
 - "CSV’s are way more readable in Jupyter."
@@ -67,20 +65,15 @@ link to github guide
 Jon 
 and I made in case they want example and explanations of twarc utilities.
 
-
-
 The twarc1 utils folder:
 https://github.com/DocNow/twarc/tree/main/utils
-We will download at part of installation.
+We downloaded as part of installation.
 
-
+## Tweets vs. retweets
 
 Looking at our csv, there's a LOT of retweets here (a tweet that 
 starts with a RT). We can run a Tweets vs. retweets (as a graph?)
 
-
-- Start running utils:
-  - Tweets vs. retweets
 
 Originals vs. retweets is such a good metric to have, we 
 should add it to our workflow:
@@ -93,6 +86,11 @@ should add it to our workflow:
 - determine date range
 - Originals vs. retweets
 
+# A simple view of results
+- Start running utils:
+!python utils/wall.py raw_data/taxday.jsonl > output_data/taxday_wall.html
+
+taxday might be too big for wall.
 
 
 Twarc-hashtags: is a built in extension/plug-in
