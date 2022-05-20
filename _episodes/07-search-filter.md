@@ -14,23 +14,29 @@ keypoints:
 
 # Twarc Search Command
 
-Returns pre-existing tweets from the past 7 days that match a given query.
+Returns tweets posted during the past 7 days that match a given query.
 
 Let's make a new cell in our Notebook and run a search command. Remember that
 we need to specify an output file. It is optional to use the `>` sign to signify the output file.
 
+Earlier we searched for 500 posts for #catsofinstagram. Now let's look for 2000.
+
 ~~~
-!twarc2 search --limit 500 "(#catsofinstagram)" hashtag_cats.jsonl
+!twarc2 search --limit 2000 "(#catsofinstagram)" hashtag_cats.jsonl
 ~~~
-{: .source}
+{: .bash}
 
 ![image "the output from two twarc searches"](../fig/cats.png){: .image-with-shadow}
 
-This command will search for any recent tweets that contain #catsofinstagram. Twarc tells me that I hit my limit of 500 after checking back in after a few hours.
+This command will search for any recent tweets that contain #catsofinstagram. Twarc tells me that I hit 
+my limit of 2000 after checking back in after a few minutes.
 
-We can use the visual indicator to confirm the limit of our second search. We may also open the file and see if we have something less than 5000 tweets or 6 days worth.
+We can use the visual indicator to confirm the limit of our second search. We may also open the file 
+and see if we have something less than 2,000 tweets or 6 days worth. For this hashtag, you will
+probably hit your limit.
 
 If you want to go back as far in time as the Twitter API allows (6 days typically),
+and NOT eat up too much of your monthly quota, 
 you can simultaneously tighten up your search parameters and keep your `--limit` value low.
 
 ~~~
@@ -38,7 +44,8 @@ you can simultaneously tighten up your search parameters and keep your `--limit`
 ~~~
 {. :language-python}
 
-This adjusted search returns 5 out of six days. So asking for 800 Tweets should get me six days' worth of results.
+This adjusted search returns 5 out of six days. So asking for 800 Tweets should get me six days' worth 
+of results.
 
 ~~~
 !twarc2 search --limit 800 "(#catsofinstagram AND #cute)" > hashtag_cats_800.jsonl
@@ -53,7 +60,10 @@ The Twarc search command uses the same search syntax as the search bar on your [
 
 ![top of the twitter home page](../fig/twitter_search.png)
 
-We will demonstrate some options you may use when searching tweets in both the Twitter search bar and through the Twarc search command. First, you may search tweets for content that contains certain words. In the example image below, we search for tweets that contain both the words "archive" and "data" by separating these words with a capitalized `AND`.
+We will demonstrate some options you may use when searching tweets in both the Twitter search bar and 
+through the Twarc search command. First, you may search tweets for content that contains certain words. 
+In the example image below, we search for tweets that contain both the words "archive" and "data" by 
+separating these words with a capitalized `AND`.
 
 ![search tweets that contain the words archive and data](../fig/twitter-search-words.png)
 
