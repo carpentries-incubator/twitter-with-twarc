@@ -310,10 +310,10 @@ list(UCSB_df.columns)
 
 
 > ## Challenge: Cats of Instagram
-> Let's make a bigger datafile. Harvest 5000 tweets that use the hashtag "catsofinstagram"
+> Let's make a bigger datafile. Harvest 500 tweets that use the hashtag "catsofinstagram"
 > and put the dataset through the pipeline to answer the following questions:
 > 
-> 1. Did you get exactly 5000?
+> 1. Did you get exactly 500?
 > 2. How far back in time did you get?
 > 3. What is the most re-tweeted recent tweet on #catsofinstagram?
 > 4. Which person has the most number of followers in your dataset? 
@@ -321,7 +321,7 @@ list(UCSB_df.columns)
 > 
 > > ## Solution
 > > ~~~
-> > !twarc2 search --limit 5000 "#catsofinstagram" source-data/catsofinstagram.jsonl
+> > !twarc2 search --limit 500 "#catsofinstagram" source-data/catsofinstagram.jsonl
 > > ~~~
 > > {: .language-bash}
 > > 
