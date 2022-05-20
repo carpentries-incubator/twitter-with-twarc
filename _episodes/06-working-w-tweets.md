@@ -1,13 +1,12 @@
 ---
-title: "Working with our Tweets"
+title: "twarc Plus-ins and Utilities"
 teaching: 0
 exercises: 0
 questions:
 - "How can we look at our tweets more easily" 
 - "What's the difference between old twarc and twarc2?"
 - "How can I separate original content from retweets/replies?"
-- "What are we using to view our data? "
-
+- "What are we using to view our data?"
 
 keypoints: 
 - "CSV’s are way more readable in Jupyter."
