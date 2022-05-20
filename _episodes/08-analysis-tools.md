@@ -1,13 +1,11 @@
 ---
 title: "Python Text Analysis"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 20
 questions:
 - "What else can we do with our tweets?"
 - "How can I analyze my tweets beyond what twarc offers?"
-- "Is it possible to tell if tweets are expressing positive or negative feelings?
-"
-
+- "Is it possible to tell if tweets are expressing positive or negative feelings?"
 
 objectives:
 - "We use Python and the power of Pandas with our Jupyter notebook"
@@ -15,9 +13,7 @@ objectives:
 
 ---
 
-# 
-
-ep 6 objective?
+### ep 6 objective?
 - "twarc1 .py utilities and twarc2 plug-ins are two separate sets of tools"
 
 ## Where We've Been: twarc Built-ins
@@ -56,12 +52,7 @@ That column is named `text`, we pull that
 out of our dataframe and convert it to a list. Then we can 
 convert the list into one long string. 
 
-We can do this all in 
-one line of code.
-
-#FIXME 
-Describe the algorhythm and a little bit about what else it does,
-like remove stop words and url's, determines language, etc.
+We can do this all in one cell.
 
 TextBlob requires its own special datatype, so we convert our 
 string into a blob. Then we send the blob through TextBlob's
@@ -75,20 +66,20 @@ hashtagcats_list = ' '.join(hashtagcats_df['text'].tolist())
 hashtagcats_blob = textblob.TextBlob(hashtagcats_list)
 # get the sentiment
 hashtagcats_blob.sentiment
-
-~~~
-{: .python}
-
-~~~
-
 ~~~ 
 Sentiment(polarity=0.2378257657037288, 
           subjectivity=0.6328352645350159)
 ~~~ 
 {: .output}
+{: .python}
+
 
 The overall sentiment of the language of cat twiter is rather 
 positive. And the tweets tend to be subjective.
+
+#FIXME 
+Describe the algorhythm and a little bit about what else it does,
+like remove stop words and url's, determines language, etc.
 
 
 
@@ -102,7 +93,5 @@ will be the least positive to most positive sentiment.
 
 
 ## What else from the old slide-deck must we cover?
-Twarc2 extensions
-Network (very slow. Demo only? Pre-worked example?)
 
 
