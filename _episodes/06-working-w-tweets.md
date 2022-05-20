@@ -107,3 +107,7 @@ tweets alot, we can see who they are
 @-ing on their timeline. OR: see @'s as part of a search/stream
 
 
+Challenge: Boolean and: how to feed search multiple ID’s? This is a challenge
+about using twitter advanced search syntax. Can we distinguish between AND’s and
+OR’s?
+
