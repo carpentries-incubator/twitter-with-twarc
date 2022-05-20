@@ -27,6 +27,7 @@ Earlier we searched for 500 posts for #catsofinstagram. Now let's look for 2000.
 {: .bash}
 
 ![image "the output from two twarc searches"](../fig/cats.png){: .image-with-shadow}
+(FIXME need to change this picture to include 2000 limit, not 5000)
 
 This command will search for any recent tweets that contain #catsofinstagram. Twarc tells me that I hit 
 my limit of 2000 after checking back in after a few minutes.
@@ -38,6 +39,7 @@ probably hit your limit.
 If you want to go back as far in time as the Twitter API allows (6 days typically),
 and NOT eat up too much of your monthly quota, 
 you can simultaneously tighten up your search parameters and keep your `--limit` value low.
+(FIXME: wasn't this the challenge from episode 4 asking for 500/5000 cats?)
 
 ~~~
 !twarc2 search --limit 500 "(#catsofinstagram AND #cute)" > hashtag_cats_500.jsonl
