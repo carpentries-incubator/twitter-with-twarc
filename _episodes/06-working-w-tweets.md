@@ -161,8 +161,15 @@ should add it to our workflow:
 
 ## Followers
 
+<<<<<<< HEAD
 (FIXME) Even 5 takes a long time to run. We could try to expand on
 ~~~
 !twarc2 followers --limit 5 tinycarebot >  'raw_data/tcb_followers.jsonl'
 ~~~
 {: .language-bash}
+=======
+Challenge: Boolean and: how to feed search multiple ID’s? This is a challenge
+about using twitter advanced search syntax. Can we distinguish between AND’s and
+OR’s?
+
+>>>>>>> f4167cde944f01c8c0bdc3b5e5639a57b3a2b1db
