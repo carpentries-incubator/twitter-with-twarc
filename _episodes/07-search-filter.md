@@ -165,7 +165,7 @@ You may stream tweets that contain words and hashtags like we had done in Twarc 
 When you start collecting tweets with the rules you have set in place, you must create the file that the data will be stored in:
 
 ~~~
-!twarc2 stream > "source_data/streamed_tweets.jsonl"
+!twarc2 stream > "raw_data/streamed_tweets.jsonl"
 ~~~
 {: .language-python}
 
