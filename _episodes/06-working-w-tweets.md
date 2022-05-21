@@ -21,10 +21,35 @@ In this episode, we will look at twarc-hashtags and twarc-network
 A few (more twarc2 plugins)[https://twarc-project.readthedocs.io/en/latest/plugins/] 
 area available.
 
+First you need to `pip install` in BASH
+
+!pip install twarc-hashtags
+!pip install twarc-network
+
+Run them both.
+
+We see the hashtag we search for first (we'd better), and we see a lot of dogs and japanese 
+cropping up. In case you didn't know it, Internet cats are huge in Japan.
+
+# Challenge: look for surprising and anticipated hashtags
+in a couple of other datasets that we have.
+
+## Interpreting the network results
+The built-in web viewer ain't so hot. download that html file to view the network on your own computer. 
+Chromre works ok, and let's a see both how a corporate entity (litter box stuff) shows up,
+and that a big sub-network exists nearby, but separate from, the @catsofinstagram twitter account.
+
+*image goes here
+
 
 
 ### twarc1 utilities
 we may ditch these
+
+
+
+
+
 
 Back in Episode 1, we mentioned something referred to as
 'utilities'. Now, we'll take a closer look at what those
