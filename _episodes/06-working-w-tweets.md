@@ -4,16 +4,27 @@ teaching: 0
 exercises: 0
 questions:
 - "How can we look at our tweets more easily"
-- "What's the difference between the first release of twarc and twarc2?"
+- "Are there move twarc2 plugins?"
 - "How can I separate original content from retweets/replies?"
 
 keypoints:
 - "CSV’s are way more readable in Jupyter."
-- "twarc1 has a folder of python scripts for basic analysis that still work, but you need to retrieve them."
 - "twarc2 has plug-ins that need separate installation"
+- "twarc1 has a folder of python scripts for basic analysis that might still work."
 ---
 
 ## When we have thousands of tweets: we need analysis tools
+
+twarc2 plug-ins like csv need to be installed separately. 
+In this episode, we will look at twarc-hashtags and twarc-network
+
+A few (more twarc2 plugins)[https://twarc-project.readthedocs.io/en/latest/plugins/] 
+area available.
+
+
+
+### twarc1 utilities
+we may ditch these
 
 Back in Episode 1, we mentioned something referred to as
 'utilities'. Now, we'll take a closer look at what those
@@ -23,9 +34,6 @@ our Twitter data analysis and exploration.
 It's important to note that there are two sets of
 utilities: those that came from the first iteration of twarc (files in the "utils" folder), and those that get pip installed on top
 of twarc2.
-
-Twarc2 plug-ins come with the initial twarc2 installation, but needs to be installed separately. For example, `twarc-csv` is a twarc2 plugin,
-but we needed to pip install `twarc-csv` before we could use it in our notebook.
 
 The utilities from the first release of twarc, which we'll simply refer to as "twarc 1", are python files that we uploaded as part
 of setup. They should now be in your "utils" folder. These utilities provide useful data-processing tools that we can use on Twitter data that have been harvested using twarc2 commands.
