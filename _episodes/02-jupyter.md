@@ -437,6 +437,25 @@ help for twarc 1.0!
 >
 > * What do you notice about the file that was created from using the timeline command?
 >
+> > ## Solution
+> > * Remember, we ran the following code a little earlier in the episode:
+> > ~~~
+> > !twarc2 timeline BergisJules > 'raw_data/bjules.jsonl'
+> > ~~~
+> > Our output tag `raw_data/bjules.jsonl` indicates that our file `bjules.jsonl` is located in the folder `raw_data`.
+> > 
+> > * To download the timelines for the twitter accounts from the list:
+> > ~~~
+> > !twarc2 timeline ucsb_nceas ucsb_nceas_tweets.jsonl
+> > !twarc2 timeline ecodatasci ecodatasci_tweets.jsonl
+> > !twarc2 timeline RLadiesSB RLadiesSB_tweets.jsonl
+> > !twarc2 timeline spatialUCSB spatialUCSB_tweets.jsonl
+> > !twarc2 timeline libratorybot libratorybot_tweets.jsonl
+> > ~~~
+> > Note: if you included the @ sign, you probably got an error
+> >
+> > * Some observations on the files we created: they're all jsonl. Most of them are fairly small (around 300 tweets), apart from `ucsb_nceas_tweets` which reached the API timeline limit of 3200 tweets. 
+> {: .solution}
 {: .challenge}
 
 # Sending BASH Commands from your Notebook
@@ -516,8 +535,6 @@ many tweets we harvested from Jules's timeline using `wc` in the terminal.
 
 How many Tweets did we get from Bergis?
 
-# Challenge 
-
 > ## Compare two timelines
 >
 > Now we will do the same transformation on tweets from the twitter user `ecodatasci`. 
@@ -542,7 +559,6 @@ How many Tweets did we get from Bergis?
 > > ~~~ 
 > > ecodatasci_df = pd.read_csv('output_data/ecodatasci.csv')
 > > ~~~
-> > {: .output}
 > {: .solution}
 {: .challenge} 
 
