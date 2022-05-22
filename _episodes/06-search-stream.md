@@ -26,8 +26,7 @@ Earlier we searched for 500 posts for #catsofinstagram. Now let's look for 2000.
 ~~~
 {: .bash}
 
-![image "the output from two twarc searches"](../fig/cats.png){: .image-with-shadow}
-(FIXME need to change this picture to include 2000 limit, not 5000)
+![image "the output from two twarc searches"](../fig/hashtag_cats_2000.png){: .image-with-shadow}
 
 This command will search for any recent tweets that contain #catsofinstagram. Twarc tells me that I hit 
 my limit of 2000 after checking back in after a few minutes.
