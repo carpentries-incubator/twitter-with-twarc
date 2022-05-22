@@ -1,5 +1,5 @@
 ---
-title: "Twarc Plus-ins"
+title: "Twarc Plugins"
 teaching: 0
 exercises: 0
 questions:
