@@ -1,10 +1,10 @@
 ---
-title: "Twarc Plus-ins and Utilities"
+title: "Twarc Plus-ins"
 teaching: 0
 exercises: 0
 questions:
 - "How can we look at our tweets more easily"
-- "Are there move twarc2 plugins?"
+- "Are there more twarc2 plugins?"
 - "How can I separate original content from retweets/replies?"
 
 keypoints:
@@ -18,18 +18,28 @@ keypoints:
 twarc2 plug-ins like csv need to be installed separately. 
 In this episode, we will look at twarc-hashtags and twarc-network
 
-A few (more twarc2 plugins)[https://twarc-project.readthedocs.io/en/latest/plugins/] 
-area available.
+A few [more twarc2 plugins](https://twarc-project.readthedocs.io/en/latest/plugins/)
+are available.
 
 First you need to `pip install` in BASH
 
-!pip install twarc-hashtags
-!pip install twarc-network
+`!pip install twarc-hashtags`
+`!pip install twarc-network`
 
-Run them both.
-
-We see the hashtag we search for first (we'd better), and we see a lot of dogs and japanese 
+When we run hashtags on our `hashtagcats` dataset, we should see the hashtag 
+we search for first. Our other results make sense as well. We see a lot of dogs and Japanese 
 cropping up. In case you didn't know it, Internet cats are huge in Japan.
+
+> ## Most seen hashtags
+> 
+> ~~~
+> !twarc2 network raw_data/hashtagcats.jsonl output_data/hashtagcats_network.html
+> ~~~
+> {: .source}
+>
+> > ## Top hashtags
+> > ![screenshot showing top 20 hashtags](../fig/cat_hashtags.png)
+
 
 # Challenge: look for surprising and anticipated hashtags
 in a couple of other datasets that we have.
@@ -45,11 +55,6 @@ and that a big sub-network exists nearby, but separate from, the @catsofinstagra
 
 ### twarc1 utilities
 we may ditch these
-
-
-
-
-
 
 Back in Episode 1, we mentioned something referred to as
 'utilities'. Now, we'll take a closer look at what those
