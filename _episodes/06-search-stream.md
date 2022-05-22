@@ -14,12 +14,12 @@ keypoints:
 
 # Twarc Search Command
 
-Returns tweets posted during the past 7 days that match a given query.
-
-Let's make a new cell in our Notebook and run a search command. Remember that
-we need to specify an output file. It is optional to use the `>` sign to signify the output file.
+Returns tweets posted during the past 7 days that match a given query. We can put
+in more than just one word, but for now let's stick with a previous one-word search.
 
 Earlier we searched for 500 posts for #catsofinstagram. Now let's look for 2000.
+Let's make a new cell in our Notebook and run a search command. Remember that we need to 
+specify an output file. It is optional to use the `>` sign to signify the output file.
 
 ~~~
 !twarc2 search --limit 2000 "(#catsofinstagram)" hashtag_cats.jsonl
@@ -28,16 +28,19 @@ Earlier we searched for 500 posts for #catsofinstagram. Now let's look for 2000.
 
 ![image "the output from two twarc searches"](../fig/hashtag_cats_2000.png){: .image-with-shadow}
 
-This command will search for any recent tweets that contain #catsofinstagram. Twarc tells me that I hit 
-my limit of 2000 after checking back in after a few minutes.
+This command will search for any recent tweets that contain #catsofinstagram. Twarc 
+tells me that I hit my limit of 2000 after checking back in after a few minutes. If
+we had not limited our search and allowed twarc to gather 6-days' worth of tweets,
+we would have used our entire download quota for the month.
 
-We can use the visual indicator to confirm the limit of our second search. We may also open the file 
-and see if we have something less than 2,000 tweets or 6 days worth. For this hashtag, you will
-probably hit your limit.
+We can use the visual indicator to confirm the limit of our second search. We may also 
+open the file and see if we have something less than 2,000 tweets or 6 days worth. For 
+this hashtag, you will probably hit your limit.
 
 If you want to go back as far in time as the Twitter API allows (6 days typically),
 and NOT eat up too much of your monthly quota, 
 you can simultaneously tighten up your search parameters and keep your `--limit` value low.
+
 (FIXME: wasn't this the challenge from episode 4 asking for 500/5000 cats?)
 
 ~~~
@@ -58,19 +61,22 @@ limit.
 
 ## Twitter Search
 
-The Twarc search command uses the same search syntax as the search bar on your [Twitter home page](https://twitter.com/home)
+Twitter let's us get much more specific (or broad, if we want) with our searches. twarc 
+search command uses the same search syntax as the search bar on your [Twitter home 
+page](https://twitter.com/home)
 
 ![top of the twitter home page](../fig/twitter_search.png)
 
-We will demonstrate some options you may use when searching tweets in both the Twitter search bar and 
-through the Twarc search command. First, you may search tweets for content that contains certain words. 
-In the example image below, we search for tweets that contain both the words "archive" and "data" by 
-separating these words with a capitalized `AND`.
+We will demonstrate some options you may use when searching tweets in both the Twitter 
+search bar and through the Twarc search command. First, you may search tweets for 
+content that contains certain words. In the example image below, we search for tweets 
+that contain both the words "archive" and "data" by separating these words with a 
+capitalized `AND`.
 
 ![search tweets that contain the words archive and data](../fig/twitter-search-words.png)
 
 ~~~
-twarc2 search "(archive AND data)"
+! twarc2 search "(archive AND data)"
 ~~~
 {: .language-bash}
 
