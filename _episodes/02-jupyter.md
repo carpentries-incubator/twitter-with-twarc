@@ -535,8 +535,6 @@ many tweets we harvested from Jules's timeline using `wc` in the terminal.
 
 How many Tweets did we get from Bergis?
 
-# Challenge 
-
 > ## Compare two timelines
 >
 > Now we will do the same transformation on tweets from the twitter user `ecodatasci`. 
@@ -561,7 +559,6 @@ How many Tweets did we get from Bergis?
 > > ~~~ 
 > > ecodatasci_df = pd.read_csv('output_data/ecodatasci.csv')
 > > ~~~
-> > {: .output}
 > {: .solution}
 {: .challenge} 
 
