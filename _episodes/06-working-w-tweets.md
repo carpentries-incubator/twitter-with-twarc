@@ -45,12 +45,16 @@ cropping up. In case you didn't know it, Internet cats are huge in Japan.
 in a couple of other datasets that we have.
 
 ## Interpreting the network results
-The built-in web viewer ain't so hot. download that html file to view the network on your own computer. 
-Chromre works ok, and let's a see both how a corporate entity (litter box stuff) shows up,
-and that a big sub-network exists nearby, but separate from, the @catsofinstagram twitter account.
 
-*image goes here
+> !twarc2 network raw_data/hashtagcats.jsonl output_data/hashtagcats_network.html
 
+The built-in web viewer ain't so hot, so download that html file to view the network on 
+your own computer. Chrome works fine, and let's a see both how a corporate entity (litter 
+box stuff) shows up, and that a big sub-network exists nearby, but separate from, the 
+@catsofinstagram twitter account.
+
+![portion of a network diagram with a central node kiko11232015 off to the
+side of the main cluster of the account @catsofinstagram](../fig/cat_network.png)
 
 
 ### twarc1 utilities
