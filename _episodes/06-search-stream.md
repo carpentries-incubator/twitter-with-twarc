@@ -45,15 +45,16 @@ you can simultaneously tighten up your search parameters and keep your `--limit`
 ~~~
 {. :language-python}
 
-This adjusted search returns 5 out of six days. So asking for 800 Tweets should get me six days' worth 
-of results.
+This adjusted search returns 5 out of six days. So asking for 800 Tweets should get me 
+six days' worth of results.
 
 ~~~
 !twarc2 search --limit 800 "(#catsofinstagram AND #cute)" > hashtag_cats_800.jsonl
 ~~~
 {: .language-python}
 
-In this way we can 'sip' at our quota and make sure we can work within the 500,000 tweet limit.
+In this way we can 'sip' at our quota and make sure we can work within the 500,000 tweet 
+limit.
 
 ## Twitter Search
 
@@ -73,11 +74,17 @@ twarc2 search "(archive AND data)"
 ~~~
 {: .language-bash}
 
-To search for tweets that contain either word, and not require both words, the search may use a capitalized `OR` instead.
+To search for tweets that contain either word, and not require both words, the search 
+may use a capitalized `OR` instead.
 
-The Twitter search and Twarc search command also supports looking for tweets that mention a specified twitter account (mentioning another Twitter account in a tweet is known as "at-ing/ @-ing" or "tagging"). In the below example, Jon @-ed the Twitter account @ucsblibrary.
+The Twitter search and Twarc search command also supports looking for tweets that 
+mention a specified twitter account (mentioning another Twitter account in a tweet is 
+known as "at-ing/ @-ing" or "tagging"). In the below example, Jon @-ed the Twitter 
+account @ucsblibrary.
 
-Note that capitalization for the account name does not affect the search.  Also, including the "@" symbol in front of the account name is not necessary, the search explicitly spells out the "to:" instead.
+Note that capitalization for the account name does not affect the search.  Also, 
+including the "@" symbol in front of the account name is not necessary, the search 
+explicitly spells out the "to:" instead.
 
 ![search tweets that tag the twitter account ucsblibrary](../fig/twitter-search-at.png)
 
@@ -86,7 +93,9 @@ twarc2 search "(to:ucsblibrary)"
 ~~~
 {: .language-bash}
 
-As we have seen before, we may also search tweets that contain hastags. In the example below, notice that the resulting tweet also contains other hashtags that we did not explicitly search for.
+As we have seen before, we may also search tweets that contain hastags. In the example 
+below, notice that the resulting tweet also contains other hashtags that we did not 
+explicitly search for.
 
 ![search tweets that has the hashtag ecodatasci](../fig/twitter-search-hashtags.png)
 
@@ -116,7 +125,12 @@ twarc2 search "(archive AND data) (#ecodatasci) (#ecodatasci)"
 
 ## Twarc Stream Command
 
-You may also collect tweets as they are posted, and establish rules to what tweets will be collected (as you did for setting search parameters). To start with a stream, let's set some tweet parameters or rules:
+You may also collect tweets as they are posted, and establish rules to what tweets will 
+be collected (as you did for setting search parameters). To start with a stream, let's 
+set some tweet parameters or rules:
+
+You may want to see 'what's trending' on Twitter to make sure you 
+get a good number of results here.
 
 ~~~
 !twarc2 stream-rules add "#catsofinstagram"
@@ -172,7 +186,10 @@ When you start collecting tweets with the rules you have set in place, you must 
 
 Once this command is run, you will collect tweets that match the rules set in place.
 
-This collection will be ongoing unless you explicitly shut down the stream with `ctrl + c`. While this stops the stream collection, it does not remove the stream-rules. In order to remove the rules you had set in place, you must use delete:
+This collection will be ongoing unless you explicitly shut down the stream by 
+interrupting the kernel (in Jupyter) or by typing a `ctrl + c` (from the console). While 
+this stops the stream collection, it does not remove the stream-rules. In order to 
+remove the rules you had set in place, you must use delete:
 
 ~~~
 !twarc2 stream-rules delete ""#catsofinstagram"
