@@ -13,15 +13,10 @@ objectives:
 
 ---
 
-### ep 6 objective?
-- "twarc1 .py utilities and twarc2 plug-ins are two separate sets of tools"
-
 ## Where We've Been: twarc Built-ins
-We have already looked at the proportions of tweets to retweets,
-and examines Emojis as a proxy measurement of qualitative emotional 
-content. ie: you can visually see sentiment in emojis.
-
-The are emotional icons.
+We have already looked at the hashtags in a dataset, and the
+proportions of tweets to retweets. But what about the semantic meaning
+of the tweets? For that we need some textual analysis.
 
 # Sentiment Analysis with TextBlob
 Sentiment analysis can be used to estimate the overall 
@@ -80,6 +75,12 @@ positive. And the tweets tend to be subjective.
 #FIXME 
 Describe the algorhythm and a little bit about what else it does,
 like remove stop words and url's, determines language, etc.
+
+
+examined Emojis as a proxy measurement of qualitative emotional 
+content. ie: you can visually see sentiment in emojis.
+
+They are emotional icons.
 
 
 
