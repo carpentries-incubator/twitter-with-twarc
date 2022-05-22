@@ -3,7 +3,7 @@ title: "Search and Stream"
 teaching: 0
 exercises: 0
 questions:
-- "How can we specify what Tweets are being collected?"
+- "How can we specify what Tweets to collect?"
 - "How can we collect Tweets as they are posted?"
 objectives:
 - "Search vs Stream"
