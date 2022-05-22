@@ -52,3 +52,7 @@ official, UCSB-sponsored archive?
 	Library mentions? 
 	Library timeline? 
 	#FIXME
+
+## DocNow's new tool for consent. 
+
+DocNow released a [new tool](https://www.docnow.io/docnow-app/) that allows for the appraising, collecting, and gathering of consent for social media archives. 
