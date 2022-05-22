@@ -117,6 +117,9 @@ Note: the language for using this is BASH, not python. The emojis is python-base
 # Utilities: wall
 
 (FIXME) What wall command does
+
+The wall command create a wall of tweets in a reader-friendly html page. It contains all of the tweets you harvested in the jsonl files.
+
 (FIXME) Why we need to flatten
 
 ~~~
@@ -131,6 +134,18 @@ Note: the language for using this is BASH, not python. The emojis is python-base
 
 
 (FIXME) Twarc-hashtags: is a built in extension/plug-in
+
+First, we need to install the Twarc-hashtags plugins from PyPI
+~~~
+!pip install twarc-hashtags
+~~~
+{: .language-bash}
+
+Then run the following command to extract all hashtags from capitol_flat.jsonl
+~~~
+!twarc2 hashtags 'output_data/capitol_flat.jsonl' > 'output_data/capital_hashtags.csv'
+~~~
+{: .language-bash}
 
 
 (FIXME) If we can find someone (such as @tinycarebot) who
