@@ -1,7 +1,7 @@
 ---
 title: "Twarc Plugins"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 5
 questions:
 - "How can we look at our tweets more easily"
 - "Are there more twarc2 plugins?"
