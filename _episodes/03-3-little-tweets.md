@@ -87,17 +87,18 @@ most of them.
 Some key pieces of a Tweet are:
 - created_at: the exact day and time (in GMT) the tweet was posted
 - id: a unique tweet ID number
-- entities
-  -- any hashtags that are used
-  -- any users who are @'ed
+- entities: strings pulled out of a tweet that line up with something
+  - any hashtags that are used
+  - any users who are @'ed
+  - personal names
 - referenced_tweets.retweeted.id' if this is a retweet, this field shows the id of 
   the original tweet.
 
 - user
-  -- id
-  -- name
-  -- screen name (twitter handle)
-  -- followers_count (at the time the tweet was created)
+  - id
+  - name
+  - screen name (twitter handle)
+  - followers_count (at the time the tweet was created)
 
 All of these elements become much more visible if we download our tweet
 and open it up with [an online JSONL viewer](https://codebeautify.org/jsonviewer)
