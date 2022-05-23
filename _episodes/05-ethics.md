@@ -17,31 +17,39 @@ key points:
 
 ## Twitter Content
 
-Researching tweets on Twitter may expose you to hate speech,
-and possibly disturbing imagery. Fortunately, we are working with thousands
-of tweets that dilute such content. As we have seen in previous episodes, we are able to curate what tweets to collect. In this episode, we will go over how to work with the text from data we have collected. You will see that we can specify our parameters to as needed for our research intentions.
+Researching tweets on Twitter may expose you to hate speech, and possibly disturbing imagery. 
+Fortunately, when we work with thousands of tweets at a time, we do so at a distance,
+so we can avoid consuming disturbing content directly.
+
+First of all we need to get at the language.
 
 ## Text Analysis with Textblob
 
 Looking at the most commonly used words and phrases in a dataset is a text analysis practice.
 This helps us to get a sense of what we are dealing with in our dataset.
 
-In Text Data Mining, a complete list of words that appears in the dataset is called a "concordance" and everything else is metadata. In regards to Twitter data, the tweets themselves is referred to as "a corpus".
+In Text Data Mining, a complete list of words and their frequency of appearance
+is is called a 
+"concordance." We would consider texts of the tweets themseves to be the corpus. 
+Everything else is metadata.
 
-We will use the TextBlob package for our first full-text analysis.
+We will use the TextBlob package for our full-text analysis.
 
 ~~~
-ucsblib_timeline_df.columns
+hashtag_cats_df.columns
 ~~~
 {: .language-python}
 
 ~~~
 # tweet content is found under the column "text"
-ucsblib_timeline_df['text'].head()
+hastag_cats_df['text'].head()
+=======
+# we' see that the tweet is found under the column "text"
+library_df['text'].head()
 ~~~
 {: .language-python}
 
-First we need to pull just the values found under text column into a python list.
+First we pull the values from the `text` column into a python list.
 
 ~~~
 list_tweets = ucsblib_timeline_df['text'].tolist()
@@ -55,14 +63,16 @@ string_tweets = ' '.join(list_tweets)
 ~~~
 {: .language-python}
 
-TextBlob has its own data format, so we need an object of that type. The function `TextBlob` converts the string of tweets to a textblob.
+TextBlob has its own data format, so we need an object of that type. The function `TextBlob` 
+converts the string of tweets to a textblob.
 
 ~~~
 library_blob = TextBlob(string_tweets)
 ~~~
 {: .language-python}
 
-Now that we have our TextBlob, we can count and sort it. We do this using the python function `word_counts` and `sorted`.
+Now that we have our TextBlob, we can count and sort it. We do this using the python function 
+`word_counts` and `sorted`.
 
 ~~~
 library_freq = library_blob.word_counts
@@ -73,7 +83,7 @@ print(library_sorted_freq)
 {: .language-python}
 
 This shows a lot of text with no meaning though. To help with this, we can get rid of
-English stop words.
+English stop words, like all the a's, and's, and the's.
 
 ~~~
 # load the stopwords to use:
@@ -108,8 +118,8 @@ We need TextBlob help #FIXME
 
 
 ## Just the Text
-
-We can also use one of twarc1's utilities to output an html page, and
+If you don't mind the obscene text, but want to avoid graphic imagery,
+then there is a twarc1's utility to output an html page, and
 to view the tweets in the context of a Twitter wall. This will allow
 a scan of the language without showing any images:
 
