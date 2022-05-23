@@ -1,5 +1,5 @@
 ---
-title: "Anatomy of a tweet: structure of a tweet as JSON"
+title: "Anatomy of a tweet: structure of a tweet as JSONL"
 teaching: 20
 exercises: 10
 questions:
@@ -20,12 +20,9 @@ keypoints:
 
 JSONL, Line-oriented JavaScript Object Notation, is frequently used as a
 data interchange format. It has become super common in the data science
-field, and you will encounter it frequently. On April 18th, 2022, we
-used twarc to search for all mentions of the hashtag "#taxday" (April 15th is
-the typical deadline for Americans to file their annual income report,
-but in 2022, it was April 18).
+field, and you will encounter it frequently. 
 
-Let's look at that individual tweet again, but now we will open it in the Jupyter viewer.
+Let's look at one individual tweet file, in the Jupyter viewer.
 
 ![single jsonl tweet opened in jupyterlab](../fig/hot-mess-tweet.png)
 
@@ -47,7 +44,9 @@ colon, then the value. If the value is text, that's going to be in quotes too.
 Both nano and the Jupyter editor allows us to format the text with
 returns and indents, so that the individual named-value pairs are easier to identify.
 
-Just to show you the the contents of a single tweet, look to the output below. The output is an edit of the data with only white-space characters. These edits have been made to explore and separate the tweet's content from the metadata.
+Just to show you the the contents of a single tweet, look to the output below. The 
+output is an edit of the data with only white-space characters. These edits have been 
+made to explore and separate the tweet's content from the metadata.
 
 We can see that it is the 4th piece of data in the tweet is "text", and is
 after the author's ID, the language, and time stamp. The fifth
@@ -91,11 +90,14 @@ Some key pieces of a Tweet are:
 - entities
   -- any hashtags that are used
   -- any users who are @'ed
+- referenced_tweets.retweeted.id' if this is a retweet, this field shows the id of 
+  the original tweet.
+
 - user
   -- id
   -- name
   -- screen name (twitter handle)
-  -- followers_count
+  -- followers_count (at the time the tweet was created)
 
 All of these elements become much more visible if we download our tweet
 and open it up with [an online JSONL viewer](https://codebeautify.org/jsonviewer)
@@ -131,7 +133,7 @@ list(ecodatasci_df.columns)
 This gives you a sense of just how much data comes along with a tweet.
 
 ## First and last tweets
-Let's look at our `taxday.jsonl` file again.
+Let's look at our `gasprices_flat.jsonl` file again.
 
 Remember our JSONL files are line-oriented, ie: one tweet per line. Let's use the
 `head` and `tail` command to create files with two tweets each.
@@ -145,7 +147,6 @@ Remember our JSONL files are line-oriented, ie: one tweet per line. Let's use th
 !tail -n 2 'raw_data/taxday.jsonl' > 'output_data/last_2_tweets.jsonl'
 ~~~
 {: .language-bash}
-
 
 If we use `!cat` to output one of these files, we see a real
 mess. Let's open the Jupyter graphical file viewer instead.
@@ -170,17 +171,18 @@ we even tell where one tweet ends, and the second begins?
 We can do a few things without even looking at the JSONL
 directly. When we harvest tweets, it is a very good idea to do a little exploratory
 analysis to make sure you got what you expected. As we did in the previous
-episode, We can use
-the bash command `wc` (word count) to see how many lines of JSON we retrieved,
-hence how many tweets we got:
+episode, let's look at 
+the bash command `wc` (word count) to see how many lines of JSONL are in
+our gas prices file. We will need to flatten it!
 
 ~~~
-!wc 'raw_data/taxday.jsonl'
+! twarc2 flatten raw_data/hashtag_gasprices.jsonl output_data/hashtag_gasprices.jsonl
+! wc output_data/hashtag_gasprices.jsonl
 ~~~
 {: .language-python}
 
 ~~~
-15698   7653538 100048736 raw_data/taxday.jsonl
+15698   7653538 100048736 hashtag_gasprices.jsonl
 ~~~
 {: .output}
 
