@@ -174,7 +174,7 @@ we even tell where one tweet ends, and the second begins? Jupyter
 does have line numbers, so at least we can see 
 it's 4 lines.
 
-In nano, it's very easy to see what order the tweets come in, and therefor, what
+In nano, it's very easy to see what order the tweets come in, and therefore, what
 the date range of our tweets are:
 
 ![4 tweets in nano](../fig/4_tweets_nano.PNG)
@@ -270,7 +270,7 @@ line-oriented set of tweets. <<< this is why we need flatten or csv
 > save more than just the first 2 and last 2 tweets in `hashtag_gasprices.jsonl`.
 > View the file and determine:
 > 1. How long is the time difference between the first and the last tweets?
-> 2. Judging by these 4 tweets, do they arrive in chronological order?
+> 2. Judging by these 20 tweets, do they arrive in chronological order?
 > 3. Can you think of a more rigorous way to check?
 >
 > ~~~
