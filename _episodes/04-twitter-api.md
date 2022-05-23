@@ -286,17 +286,12 @@ list(ucsblib__timeline_df.columns)
 
 and see the column headers here as a list.
 
+#FIXME write the code for below:
 Easy 'analyses' using our dataframe:
 Call each of these elements out of the dataframe by sorting:
 - most retweeted
 - most quoted
 - tweeter with the most number of followers
-
-~~~
-Put in the relevant code here #FIXME
-list(UCSB_df.columns)
-~~~
-{: .language-python}
 
 
 
