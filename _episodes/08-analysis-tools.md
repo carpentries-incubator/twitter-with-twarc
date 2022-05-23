@@ -82,7 +82,6 @@ Describe the algorhythm and a little bit about what else it does,
 like remove stop words and url's, determines language, etc.
 
 > ## Challenge: Anticipating Sentiment
->
 > Write Python code that outputs three sets of 
 > sentiment values:  gasprices, catsofinsta, capitolriotsrehydrated
 
@@ -92,7 +91,6 @@ like remove stop words and url's, determines language, etc.
 > Remember, you need to pass TextBlob a string. A list will work:
 > ~~~
 > your_data_list = ' '.join(your_data_df['text'].tolist())
-> 
 > your_data_blob = textblob.TextBlob(your_data_list)
 > ~~~
 > {: .source}
@@ -108,8 +106,8 @@ like remove stop words and url's, determines language, etc.
 > > - library timeline
 > > - ecodatascience
 > > - catsofinstagram
-> > - fluffly catsofinstagram
-> > -
+> > - fluffl catsofinstagram
+> > 
 > > ~~~
 > > it may also include some code
 > > ~~~
