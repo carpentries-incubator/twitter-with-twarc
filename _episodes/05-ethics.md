@@ -42,17 +42,17 @@ hashtagcats_df.columns
 
 ~~~
 # tweet content is found under the column "text"
-hastagcats_df['text'].head()
+hashtagcats_df['text'].head()
 =======
 # we' see that the tweet is found under the column "text"
-library_df['text'].head()
+hashtagcats_df['text'].head()
 ~~~
 {: .language-python}
 
 First we pull the values from the `text` column into a python list.
 
 ~~~
-list_tweets = ucsblib_timeline_df['text'].tolist()
+list_tweets = hashtagcats_df['text'].tolist()
 ~~~
 {: .language-python}
 
