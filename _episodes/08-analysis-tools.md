@@ -15,22 +15,27 @@ objectives:
 
 ## Where We've Been: twarc Built-ins
 We have already looked at the hashtags in a dataset, and the
-proportions of tweets to retweets. But what about the semantic meaning
+proportions of tweets to retweets. But what about content
 of the tweets? For that we need some textual analysis.
 
 # Sentiment Analysis with TextBlob
+TextBlob is a Python library that does all sorts of text processing, 
+including sentiment analysis. 
+
 Sentiment analysis can be used to estimate the overall 
 positivity or negativity of a text corpus. There are a variety 
 of algorythms and scales. TextBlob's default `.sentiment` 
 function rates an input text as negative or positive on a 
 scale of -1 to 1.
 
-TextBlob is a Python library that does all sorts of text processing, 
-including sentiment analysis. 
-The sentiment property returns a named tuple of the form 
-Sentiment(polarity, subjectivity). The polarity score is a float 
-within the range [-1.0, 1.0]. The subjectivity is a float within the 
-range [0.0, 1.0] where 0.0 is very objective and 1.0 is very 
+The sentiment function returns two numbers in the form of a named tuple: 
+
+Sentiment(polarity, subjectivity). 
+
+The polarity score is a float 
+within the range [-1.0, 1.0]. Subjectivity is a float within the 
+range [0.0, 1.0] where 0.0 is very objective (ie: does not express
+strong sentiment) and 1.0 is very 
 subjective.
 
 Before we can do any sentiment analysis, we need to download
@@ -42,8 +47,8 @@ the linguistic datasets that TextBlob uses in its analyses:
 {: python}
 
 We need to feed TextBlob something like plain text. Therefore, 
-we need to create a text object from out dataframe. 
-That column is named `text`, we pull that  
+we need to create a text object from our dataframe. 
+That column is named `text`, we pull that 
 out of our dataframe and convert it to a list. Then we can 
 convert the list into one long string. 
 
@@ -76,23 +81,49 @@ positive. And the tweets tend to be subjective.
 Describe the algorhythm and a little bit about what else it does,
 like remove stop words and url's, determines language, etc.
 
+> ## Challenge: Anticipating Sentiment
+>
+> Write Python code that outputs three sets of 
+> sentiment values:  gasprices, catsofinsta, capitolriotsrehydrated
 
+> When you output the three values, arrange them in what you guess
+> will be the least positive to most positive sentiment.
+>
+> Remember, you need to pass TextBlob a string. A list will work:
+> ~~~
+> your_data_list = ' '.join(your_data_df['text'].tolist())
+> 
+> your_data_blob = textblob.TextBlob(your_data_list)
+> ~~~
+> {: .source}
+>
+> > ## Solution
+> >
+> > I'm going to guess that all my datasets are going to 
+> > be pretty subjective. Except for maybe ecodatascience.
+> > 
+> > My anticipated sentiment order:
+> > - capitol
+> > - gas prices
+> > - library timeline
+> > - ecodatascience
+> > - catsofinstagram
+> > - fluffly catsofinstagram
+> > -
+> > ~~~
+> > it may also include some code
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
+
+
+
+## Can we do anything with the emojis?
 examined Emojis as a proxy measurement of qualitative emotional 
 content. ie: you can visually see sentiment in emojis.
 
 They are emotional icons.
-
-
-
-Challenge: Anticipating sentiment
-
-Write Python code that outputs three sets of 
-sentiment values:  taxday, catsofinsta, capitolriotsrehydrated
-
-When you output the three values, arrange them in what you guess
-will be the least positive to most positive sentiment.
-
-
-## What else from the old slide-deck must we cover?
 
 
