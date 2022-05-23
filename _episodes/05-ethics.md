@@ -31,20 +31,20 @@ In Text Data Mining, a complete list of words that appears in the dataset is cal
 We will use the TextBlob package for our first full-text analysis.
 
 ~~~
-library_df.columns
+ucsblib_timeline_df.columns
 ~~~
 {: .language-python}
 
 ~~~
 # tweet content is found under the column "text"
-library_df['text'].head()
+ucsblib_timeline_df['text'].head()
 ~~~
 {: .language-python}
 
 First we need to pull just the values found under text column into a python list.
 
 ~~~
-list_tweets = library_df['text'].tolist()
+list_tweets = ucsblib_timeline_df['text'].tolist()
 ~~~
 {: .language-python}
 
