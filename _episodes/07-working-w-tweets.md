@@ -114,7 +114,8 @@ is 1522543998996414464.
 
 ## Followers
 
-(FIXME) Even 5 takes a long time to run. We could try to expand on
+Another form of Twitter data is a follower list. twarc allows
+us to get a follower list:
 ~~~
 !twarc2 followers --limit 5 tinycarebot >  'raw_data/tcb_followers.jsonl'
 ~~~
