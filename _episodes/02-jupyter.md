@@ -78,15 +78,18 @@ of `raw_data`, and vice versa. Instead, both folders should be inside of `twarc_
 Since `raw_data` is where we will store our original data files, please open this data folder
 and upload all of the datafiles:
 
-- `taxday.jsonl` tweets from American tax day, 2022
+- `hashtag_gasprices.jsonl` tweets that use #gasprices collected May 22, 2022.
 - `one_tweet.jsonl` a single tweet
 - `dehydratedCapitolRiotTweets.txt` TweetIDs from the January 6 insurrection.
 
-Inside of `twarc-run`, create another folder called `utils` to contain all the `.py` files that are inside of
-`utils.zip`.
-- Do not upload the zip file. Unzip `utils.zip` and upload all 46 of the individual `.py` files.
+<! --
+# Inside of `twarc-run`, create another folder called `utils` to contain all the `.py` files that are inside of
+# `utils.zip`.
+# - Do not upload the zip file. Unzip `utils.zip` and upload all 46 of the individual `.py` files.
+-->
 
-In total you should now have three folders within twarc_run: `raw_data`, `output_data`, and `utils`
+In total you should now have three folders within twarc_run: `raw_data`, `output_data`, 
+and `utils`
 
 If you have not downloaded the data, please
 do so now from the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
@@ -135,14 +138,17 @@ cat raw_data/one_tweet.jsonl
 ~~~
 {: .language-bash}
 
-Using this method, the content may be hard to read. Let's open it in nano for a better view of this data.
+Using this method, the content may be hard to read. Let's open it in nano for a better 
+view of this data.
 
 ~~~
 nano raw_data/one_tweet.jsonl
 ~~~
 {: .language-bash}
 
-In nano, options for data editing are listed a the bottom. For instance, you may use `ctrl + j` (windows/linux) or `cmd + j` (mac) to wrap the text. We will examine this file in detail later. To exit nano, use `ctrl + x` or `cmd + x`.
+In nano, options for data editing are listed a the bottom. For instance, you may use 
+`ctrl + j` (windows/linux) or `cmd + j` (mac) to wrap the text. We will examine this 
+file in detail later. To exit nano, use `ctrl + x` or `cmd + x`.
 
 
 > ## Remember:
@@ -490,18 +496,28 @@ Because these are python commands, you do not need to add the exclamation
 point.
 
 
-## Flattening Timelines
+## Flattening Twitter Data
 
 Twitter Timelines, and other files we harvest using twarc, need to be
 'flattened' before we use them. This will ensure that each line of jsonl
-is one tweet:
+is one tweet.
+
+Flatten will ensure that each line of the file is 1 tweet, allowing us to immediately
+know how many tweets we have after we create the flattened file.
+
+Before flattening:
+`! wc raw_data/bjules.jsonl`
+
+We might think there are 32 tweets in Jules' timeline.
 
 ~~~
-!twarc2 flatten 'raw_data/bjules.jsonl' > 'output_data/bjules_flattened.jsonl'
+!twarc2 flatten 'raw_data/bjules.jsonl' > 'output_data/bjules_flat.jsonl'
 ~~~
 {: .language-bash}
 
 
+After flattening:
+`! wc output_data/bjules_flat`
 
 ## Converting between file types: jsonl to csv
 csv's are convenient for reading, and are useful as a data format
@@ -520,10 +536,9 @@ bjules_df = pd.read_csv('output_data/bjules.csv')
 ~~~
 {: .language-python}
 
-Check the file browser to make sure
-your file was created where you expected it to be. We will also get in the habit of making dataframes
-out of our csv's, because dataframes are a convenient format for
-manipulating data in Pandas.
+Check the file browser to make sure your file was created where you expected it to be. 
+We will also get in the habit of making dataframes out of our csv's, because dataframes 
+are a convenient format for manipulating data in Pandas.
 
 Now that we have flattened our data and made a csv, we can see how
 many tweets we harvested from Jules's timeline using `wc` in the terminal.
