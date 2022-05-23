@@ -143,32 +143,42 @@ file with all 4.
 The double-greater-than `>>` appends rather than creates. 
 
 ~~~
-!head -n 2 'output_data/hashtag_gasprices_flat.jsonl' > 'output_data/4_tweets.jsonl'
+!head -n 2 'output_data/bergis_flat.jsonl' > 'output_data/4_tweets.jsonl'
 ~~~
 {: .language-bash}
 
 ~~~
-!tail -n 2 'output_data/hashtag_gasprices_flat.jsonl' >> 'output_data/4_tweets.jsonl'
+!tail -n 2 'output_data/bergis_flat.jsonl' >> 'output_data/4_tweets.jsonl'
 ~~~
 {: .language-bash}
 
 If we use `!cat` to output one of these files, we see a real
 mess. Let's open the Jupyter graphical file viewer instead.
 
-> ## Why not use BASH?
+> ## Why not use nano?
 >
-> We stay in our little shell window
+> Nano, which we can call from the shell window, is a great way
+> to stay in our little shell window
 > with our hands on our keyboards.  However, we are going to spend
 > our workshop in Jupyter to make our work more reproducible.
 >
 > However, sometimes it's going to be advantageous to
 > look at a file in nano, because the JSONL files open with lines
 > unwrapped.
+> our 4-tweets file, for example
 > {: .source}
 {: .callout}
 
 Using either method, it's still difficult to tell what's going on. Can
-we even tell where one tweet ends, and the second begins?
+we even tell where one tweet ends, and the second begins? Jupyter
+does have line numbers, so at least we can see 
+it's 4 lines.
+
+In nano, it's very easy to see what order the tweets come in, and therefor, what
+the date range of our tweets are:
+
+#FIXME screenshot of 4 tweets in nano
+
 
 # A Very Basic Analysis
 
@@ -180,8 +190,8 @@ the bash command `wc` (word count) to see how many lines of JSONL are in
 our gas prices file. We will need to flatten it!
 
 ~~~
-! twarc2 flatten raw_data/hashtag_gasprices.jsonl output_data/hashtag_gasprices.jsonl
-! wc output_data/hashtag_gasprices.jsonl
+! twarc2 flatten raw_data/hashtag_gasprices.jsonl output_data/hashtag_gasprices_flat.jsonl
+! wc output_data/hashtag_gasprices_flat.jsonl
 ~~~
 {: .language-python}
 
@@ -194,22 +204,21 @@ We can then look at the timestamps of the first and last tweets to determine
 the date range of our tweets by using the `head` and `tail` commands to
 get the first line and last line of the file:
 ~~~
-!head -n 1 'raw_data/taxday.jsonl'
-
-!tail -n 1 'raw_data/taxday.jsonl'
+!head -n 1 'output_data/hashtag_gasprices_flat.jsonl'
+!tail -n 1 'output_data/hashtag_gasprices_flat.jsonl'
 ~~~
-{: .language-python}
+{: .bash}
 
-lets save this output of taxday.jsonl into a file named "taxday_range.jsonl":
+Lets save this output into a file named "gasprice_date_range.jsonl":
 
 ~~~
-!head -n 1 'raw_data/taxday.jsonl' > 'output_data/taxday_range.jsonl'
-!tail -n 1 'raw_data/taxday.jsonl' >> 'output_data/taxday_range.jsonl'
-!wc 'raw_data/taxday.jsonl'
+!head -n 1 'raw_data/hashtag_gasprices.jsonl' > 'output_data/gasprice_range.jsonl'
+!tail -n 1 'raw_data/hashtag_gasprices.jsonl' >> 'output_data/gasprice_range.jsonl'
 ~~~
-{: .language-python}
+{: .bash}
 
-Let’s do this basic analysis for our two other files of raw data: bjules.jsonl, ecodatasci.jsonl.
+Let’s do this basic analysis for our two other files of raw data: bjules.jsonl and
+ ecodatasci.jsonl (or whatever timeline you downloaded).
 
 > ## Challenge: Getting Date Ranges
 > Please create the files `bjules_range.jsonl` and `ecodatasci_range.jsonl` that
