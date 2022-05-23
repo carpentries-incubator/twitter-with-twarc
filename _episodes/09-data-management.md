@@ -56,3 +56,24 @@ official, UCSB-sponsored archive?
 ## DocNow's new tool for consent. 
 
 DocNow released a [new tool](https://www.docnow.io/docnow-app/) that allows for the appraising, collecting, and gathering of consent for social media archives. 
+
+User Content, Re-use, and Consent Twitter users have various options of privacy over their 
+content and profile. Some of these options include that their profiles do not show up in 
+web searches and that their content is hidden only to followers. While these options are 
+available to users, it does not have any retroactive effect on what has already been 
+collected. That is, if a user’s tweets are collected and the user deletes their Twitter 
+account, their content is still in someone else’s database for use. When creating an 
+archive of data, we must understand that the creators behind these tweets have not 
+consented to their content being kept for years from now.
+
+Furthermore, Twitter users who do not put a restriction on what content may be viewed may 
+also not be aware of who has access to data collection; and what they may do with it. A 
+study from Cardiff University found an association between concern for anonymity and sexual 
+orientation, ethnicity and gender. Twitter data may contain identifying demographic 
+information, identifying associations or membership, and expression of a very personal 
+nature. These are items that users may want to protect. A basis for ethical consideration 
+is not only to conduct good and upholding science, but also to minimize risk or harm during 
+any of the study’s data collection and publication.
+
+Citations
+
