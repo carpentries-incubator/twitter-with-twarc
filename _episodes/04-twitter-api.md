@@ -18,31 +18,25 @@ keypoints:
 
 ## The Twitter v.2 API
 
-The Twitter API is what allows us to collect tweets. Twitter also keeps track 
-of who is getting this data, and monitors data use--hence all that rigamarole to the
-the API credentials.
+The Twitter API is what allows us to collect tweets. Twitter also keeps track of who is getting this data, and which is why there is an application tied to their API access.
 
-We don't just go copy data out of Twitter's archive. We don't want that anyway. We want realtime
-access to what is happening on Twitter, and we want to request only the information we need.
+One of the ways to utilize the API access is to collect tweets and request only the information we need.
 
-Recall that API is an acronym for Application Programming Interface. Typically, people are building
-Tweeting robots (such as seismographs or weather forecasts) or looking to deliver content
-on behalf of a commercial brand (or malicious actors--hence all the rigamarole to get the 
-API keys). Those same API features allow us to do our research.
- 
-Compared to 
-v1, the most recent version of the Twitter API (v2) includes additional levels of 
-access, more features, and faster onboarding for developers and academic 
+Recall that API is an acronym for Application Programming Interface. APIs allow the development of bots that generate tweets. Some examples include seismographs, weather forecasts, or delivering content on behalf of a commercial brand. Those same API features allow us to do our research.
+
+Compared to
+v1, the most recent version of the Twitter API (v2) includes additional levels of
+access, more features, and faster onboarding for developers and academic
 researchers.
 
-The Twitter API comes along with all sorts of rules and regulations: how to 
-submit requests, how many requests you can make in an hour, how many Tweets you 
+The Twitter API comes along with all sorts of rules and regulations: how to
+submit requests, how many requests you can make in an hour, how many Tweets you
 can download in a month.
 
-That last policy is something we should highlight. The level of API access 
-you have is limited to 500,000 Tweets per month. For that reason, while we 
-collect Tweets during this workshop, let's get in the habit of limiting ourselves 
-to 500 Tweets. This is a ballpark so don't be surprised if there are more or less. 
+That last policy is something we should highlight. The level of API access
+you have is limited to 500,000 Tweets per month. For that reason, while we
+collect Tweets during this workshop, let's get in the habit of limiting ourselves
+to 500 Tweets. This is a ballpark so don't be surprised if there are more or less.
 
 ~~~
 !twarc2 timeline --limit 500 UCSBLibrary > 'raw_data/ucsblib_timeline.jsonl'
@@ -54,10 +48,10 @@ Set --limit of 500 reached:  15%|█▋         | 500/3271 [00:04<00:24, 113.41i
 ~~~
 {: .output}
 
-So the above gives us, at most, 500 tweets from the UCSBLibrary Twitter 
+So the above gives us, at most, 500 tweets from the UCSBLibrary Twitter
 account's timeline. And twarc tells us that it only gave us 15% of what is available.
 
-You can always check to see how much of your quota you have used by visiting your 
+You can always check to see how much of your quota you have used by visiting your
 [Twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard)
 
 > ## Academic access
@@ -65,21 +59,12 @@ You can always check to see how much of your quota you have used by visiting you
 >
 {: .callout}
 
-## Twarc let’s you interact via the v1 api and v2 api.
-We already did twarc2 timeline. Twarc1 timeline gives slightly different results 
-(We need to confirm and figure out how they are different?). How are they 
-different?
-
-Remember: timeline captures tweets of 1 person: this harvests up to some 
-arbitrary limit below 3200 You can request a specific time period for a person’s 
-timeline: Dong dong dong (FIXME)
-
 ## Endpoints
 
-The Twitter API (similarly to other API's) make requests for data and deliver 
-data to you by calling an endpoint. An endpoint is a unique address that 
-corresponds to specific types of information, and marks the limit (or endpoint) 
-that an API may retrieve data from Twitter. The Twitter API include a range of 
+The Twitter API (similarly to other API's) make requests for data and deliver
+data to you by calling an endpoint. An endpoint is a unique address that
+corresponds to specific types of information, and marks the limit (or endpoint)
+that an API may retrieve data from Twitter. The Twitter API include a range of
 endpoints, and they are categorized as:
 
 * Accounts and users
@@ -87,11 +72,11 @@ endpoints, and they are categorized as:
 * Direct Messages
 * Publisher tools and Software Development Kits
 
-For this lesson, we will be covering some of your endpoint options that are 
-available for to you as a user of the public Twitter v.2 API.  All these 
-endpoints apply to the Tweets and Replies that satisfy a set of parameters you 
-have set (e.g. Tweets from a certain account, Tweets containing a certain 
-hashtag, etc). These endpoints indicate *how* we may retrieve Twitter data. 
+For this lesson, we will be covering some of your endpoint options that are
+available for to you as a user of the public Twitter v.2 API.  All these
+endpoints apply to the Tweets and Replies that satisfy a set of parameters you
+have set (e.g. Tweets from a certain account, Tweets containing a certain
+hashtag, etc). These endpoints indicate *how* we may retrieve Twitter data.
 Twarc2 give us easy access to these endpoints as commands.
 
 | Endpoint            | Description |
@@ -100,55 +85,65 @@ Twarc2 give us easy access to these endpoints as commands.
 | Recent Search       | Access to public Tweets posted in the last 7 days. |
 | Filtered Stream     | Collect Tweets as they are posted in real-time. |
 
-When you are doing exploratory searching, these are the order you want to do 
+When you are doing exploratory searching, these are the order you want to do
 things in so that you don't waste your quota.
 
 
-### twarc's Data
+### Twarc's Data
 
-The data that is saved using Twarc is just what Twitter reads from a tweet as 
-data and provides as data. So, keeping the data authentic for analysis is a 
-design of Twarc. Twarc is also traceable, so people can see a log of how and when 
+The data that is saved using Twarc is just what Twitter reads from a tweet as
+data and provides as data. So, keeping the data authentic for analysis is a
+design of Twarc. Twarc is also traceable, so people can see a log of how and when
 the data was collected.
 
-In the v2 redesign, Twarc was also designed to be easily part of a pipeline of 
-commands. Users can connect their data collecting to other pieces of their 
-software that expect to get tweets as inputs. When you install Twarc, you will 
-get two clients, twarc & twarc2. Twarc was designed with the v1 Twitter API in 
+In the v2 redesign, Twarc was also designed to be easily part of a pipeline of
+commands. Users can connect their data collecting to other pieces of their
+software that expect to get tweets as inputs. When you install Twarc, you will
+get two clients, twarc & twarc2. Twarc was designed with the v1 Twitter API in
 mind, and Twarc2 was designed as a response to Twitter implementing their v2 API.
 
 ### Tweet counts endpoint
- This endpoint allows you to fish around to estimate traffic without spending 
- your quota
+After we specify parameters for what tweets we are interested in, we are able to get a count of tweets. This allows us to gain insight on the amount of available data without needing to pull tweets and spend our limited quota.
 
 ~~~
 !twarc2 counts --text "UCSB"
 ~~~
-{: .bash}
+{: .language-bash}
 
-Output: screenshot of the bottom of the output showing there were 1,997 mentions 
-of UCSB on twitter in the 7 days before the command was run.
+The output shows there were 1,997 mentions
+of UCSB on Twitter in the 7 days before the command was run.
 
-![UCSB_tweets](../fig/UCSB_tweets.PNG)
+~~~
+2022-05-15T18:00:00.000Z - 2022-05-15T19:00:00.000Z: 16
+2022-05-15T19:00:00.000Z - 2022-05-15T20:00:00.000Z: 17
+2022-05-15T20:00:00.000Z - 2022-05-15T21:00:00.000Z: 19
+...
+2022-05-15T18:00:00.000Z - 2022-05-16T19:00:00.000Z: 23
+2022-05-15T19:00:00.000Z - 2022-05-16T20:00:00.000Z: 22
+2022-05-15T20:00:00.000Z - 2022-05-16T21:00:00.000Z: 16
 
-> ## Challenge: Try counting other things on Twitter
-> Mentions of the words poker, golf, basketball, baseball, and football. Aggregate
-> the counts together by day. Can we use these results to imagine what sports are
-> most popular on Sports Twitter? Discuss.
+Total Tweets: 1,997
+~~~
+{: output}
+
+> ## Challenge: Sports on Twitter
+> Challenge Try using the counts command on other topics by comparing the counts from the words "poker", "golf",
+> "basketball", "baseball", and "football". Aggregate the counts together by day. Can we use these results to
+> imagine what sports are most popular on Sports Twitter? Discuss.
 >
 > > ## Solution
-> > 
+> > The `--granularity` flag for the counts command sets the time interval for aggregate counts.
 > > ~~~
-> > !twarc2 counts --granularity "day" --text "(Poker OR poker OR #Poker OR #poker)" 
-> > !twarc2 counts --granularity "day" --text "(Golf OR golf OR #Golf OR #golf)" 
-> > !twarc2 counts --granularity "day" --text "(Basketball OR basketball OR #Basketball OR #basketball)" 
-> > !twarc2 counts --granularity "day" --text "(Baseball OR baseball OR #Baseball OR #baseball)" 
+> > !twarc2 counts --granularity "day" --text "(Poker OR poker OR #Poker OR #poker)"
+> > !twarc2 counts --granularity "day" --text "(Golf OR golf OR #Golf OR #golf)"
+> > !twarc2 counts --granularity "day" --text "(Basketball OR basketball OR #Basketball OR #basketball)"
+> > !twarc2 counts --granularity "day" --text "(Baseball OR baseball OR #Baseball OR #baseball)"
 > > !twarc2 counts --granularity "day" --text "(Football OR football OR #Football OR #football)"
 > > ~~~
 > > {: .language-bash}
-> > 
+> >
 > > And their respective outputs:
-> > 
+> >
 > > ~~~
 > > Total Tweets: 108,021  
 > > Total Tweets: 344,462  
@@ -157,9 +152,9 @@ of UCSB on twitter in the 7 days before the command was run.
 > > Total Tweets: 1,789,262  
 > > ~~~
 > > {: .output}
-> > 
-> > From our output, football appears to be the most popular sport on Twitter currently, followed by baseball. 
-> > 
+> >
+> > From our output, football appears to be the most popular sport on Twitter currently, followed by baseball.
+> >
 > {: .solution}
 {: .challenge}
 
@@ -171,23 +166,23 @@ how long to run it.
 
 ## Recent Search
 This endpoint gathers the most recent 6 days of a search string that
-you pass to the API via twarc. Let's gather all the recent mentions of 
-the UCSB Library. 
+you pass to the API via twarc. Let's gather all the recent mentions of
+the UCSB Library.
 
-Both filter and search use 
-<a href="https://twitter.com/search-advanced?lang=en" target="new">Twitter's advanced search syntax</a> 
-We can use a little Boolean logic to make sure we cast 
+Both filter and search use
+<a href="https://twitter.com/search-advanced?lang=en" target="new">Twitter's advanced search syntax</a>
+We can use a little Boolean logic to make sure we cast
 a wide net, ie: that we search a variety of text strings and hashtags.
 
 ~~~
-!twarc2 counts --granularity "day" 
-        --text "(#UCSBLibrary OR UCSBLibrary OR 
-                 ucsblibrary OR #ucsblibrary OR 
+!twarc2 counts --granularity "day"
+        --text "(#UCSBLibrary OR UCSBLibrary OR
+                 ucsblibrary OR #ucsblibrary OR
                  davidsonlibrary OR #davidsonlibrary)"
 ~~~
 {: .source}
 
-Is it worth doing the OR's? For sure. 
+Is it worth doing the OR's? For sure.
 Twitter is NOT case sensitive.
 
 ~~~
@@ -198,20 +193,20 @@ Twitter is NOT case sensitive.
 ## Big Data
 
 ### What's a lot?
-Getting a sense of the scale of the conversation on Twitter is important. 
-When you are starting out, you won't have much idea about how many tweets a 
+Getting a sense of the scale of the conversation on Twitter is important.
+When you are starting out, you won't have much idea about how many tweets a
 search will return. With a monthly limit of 500,000 tweets, it's good to use
 the Recent Tweet Counts endpoint to do some exploratory searching.
 
 We got almost 100,000 kitten tweets. That's a healthy amount of data to analyze. We
-also compared the numbers on Sports Twitter--second in size perhaps only to 
-Politics Twitter. 
+also compared the numbers on Sports Twitter--second in size perhaps only to
+Politics Twitter.
 
 But just how big is Twitter? Try running these counts:
 
 ## What's a lot?
 
-> ## Type along the following commands: 
+> ## Type along the following commands:
 > Let's try getting tweet counts for each of these common English words:
 > ~~~
 > !twarc2 counts --granularity "dog" --text "day"
@@ -221,9 +216,9 @@ But just how big is Twitter? Try running these counts:
 > !twarc2 counts --granularity "good" --text "day"
 > ~~~
 > {: .language-bash}
-> 
+>
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > Their respective outputs are:
 > > Total Tweets: 1,605,699  
@@ -233,9 +228,9 @@ But just how big is Twitter? Try running these counts:
 > > Total Tweets: 28,238,126  
 > > ~~~
 > > {: .output}
-> > 
-> > You may notice that the word "good" is mentioned more than twice the amount of times that "right" is mentioned. 
-> > 
+> >
+> > You may notice that the word "good" is mentioned more than twice the amount of times that "right" is mentioned.
+> >
 > {: .solution}
 {: .challenge}
 
@@ -247,7 +242,7 @@ is plenty to handle. And again: if you need more, there is a elevated level of
 access for more high-powered academics.
 
 
-## Pipeline: jsonl > head & tail > wc > csv > dataframe 
+## Pipeline: jsonl > head & tail > wc > csv > dataframe
 Just like we should keep track of how many tweets we download at any given time,
 we should implement a standard workflow when gathering tweets. Generally for the
 rest of this workshop, we will follow this workflow:
@@ -261,9 +256,9 @@ rest of this workshop, we will follow this workflow:
 1. create a Pandas dataframe
 1. use external utiities for further analysis
 
-We've already discussed that While JSON is common, it's not super 
-human-readable, and it can be difficult to convert to a dataframe (which most 
-of us will want to do anyway). So twarc2 has an extension to turn our harvested 
+We've already discussed that While JSON is common, it's not super
+human-readable, and it can be difficult to convert to a dataframe (which most
+of us will want to do anyway). So twarc2 has an extension to turn our harvested
 jsonl to csv. csv's are always easily convertable into Pandas dataframes.
 
 Timelines need to run through the `flatten` twarc plug-in.
@@ -279,11 +274,11 @@ ucsblib_timeline_df = pandas.read_csv("output_data/ucsblib_timeline.csv")
 
 ```
 
-Use `wc`: Did we get a reasonable amount? The api has a limit of 
-3200, and we received 3226. Seems reasonable. 
+Use `wc`: Did we get a reasonable amount? The api has a limit of
+3200, and we received 3226. Seems reasonable.
 
 Let's remind ourselves of all the different things that come
-along with a tweet by printing out a list of the dataframe 
+along with a tweet by printing out a list of the dataframe
 headers:
 
 ~~~
@@ -312,39 +307,39 @@ list(UCSB_df.columns)
 > ## Challenge: Cats of Instagram
 > Let's make a bigger datafile. Harvest 500 tweets that use the hashtag "catsofinstagram"
 > and put the dataset through the pipeline to answer the following questions:
-> 
+>
 > 1. Did you get exactly 500?
 > 2. How far back in time did you get?
 > 3. What is the most re-tweeted recent tweet on #catsofinstagram?
-> 4. Which person has the most number of followers in your dataset? 
+> 4. Which person has the most number of followers in your dataset?
 > 5. Is it really a person?
-> 
+>
 > > ## Solution
 > > ~~~
 > > !twarc2 search --limit 500 "#catsofinstagram" source-data/catsofinstagram.jsonl
 > > ~~~
 > > {: .language-bash}
-> > 
-> > 1. Let's start by converting our dataset to a csv, then run some python 
+> >
+> > 1. Let's start by converting our dataset to a csv, then run some python
 > > ~~~
 > > # convert from jsonl to csv
 > > !twarc2 csv source-data/catsofinstagram.jsonl output-data/catsofinstagram.csv
 > > # read in csv using pandas (denoted by pd)
-> > cats_df = pd.read_csv("output-data/catsofinstagram.csv") 
+> > cats_df = pd.read_csv("output-data/catsofinstagram.csv")
 > > cats_df.shape
 > > ~~~
 > > {: .language-bash}
-> > 
-> > Which, in our case, returned 5093 tweets. It's a little bit over our limit but that's okay. 
-> > 
-> > 2. 
-> > ~~~ 
+> >
+> > Which, in our case, returned 5093 tweets. It's a little bit over our limit but that's okay.
+> >
+> > 2.
+> > ~~~
 > > # print the earliest 'created_at' time in dataset
 > > cats_df[cats_df.created_at == cats_df.created_at.min()].loc[:,'created_at']
 > > ~~~
 > > {: .language-code}
-> > 
-> > The earliest time from our dataset is 05/17/2022 at 144:50:26 pm. 
+> >
+> > The earliest time from our dataset is 05/17/2022 at 144:50:26 pm.
 > >
 > > 3. We can do this by finding the max number of retweets in the dataset and then.
 > > ~~~
@@ -352,25 +347,24 @@ list(UCSB_df.columns)
 > > print(most_rt.text)
 > > ~~~
 > > {: .language-python}
-> > 
+> >
 > > This returns the tweet text '❃❃❃ PURE LOVE ❤💘❤\n#CatsOfTwitter #catsofinstagram #cats https://t.co/kIbFkKFWeT'.
-> > 
-> > 4. We can calculate the max number of follows in the dataset and then select the tweet that meets that requirement. 
+> >
+> > 4. We can calculate the max number of follows in the dataset and then select the tweet that meets that requirement.
 > > ~~~
 > > most_fo = cats_df[cats_df['author.public_metrics.followers_count'] == cats_df['author.public_metrics.followers_count'].max()].head()
 > > ~~~
 > > {: .language-python}
 > >
-> > User with author_id 248757990 has the most followers, which is 2086382. 
+> > User with author_id 248757990 has the most followers, which is 2086382.
 > >
 > > 5. We can then run
 > > ~~~
 > > !twarc2 user id 248757990
 > > ~~~
 > > {: .language-bash}
-> > 
+> >
 > > To get the information on the user. Thankfully, this is a real person!
-> > 
+> >
 > {: .solution}
 {: .challenge}
-
