@@ -36,13 +36,13 @@ Everything else is metadata.
 We will use the TextBlob package for our full-text analysis.
 
 ~~~
-hashtag_cats_df.columns
+hashtagcats_df.columns
 ~~~
 {: .language-python}
 
 ~~~
 # tweet content is found under the column "text"
-hastag_cats_df['text'].head()
+hastagcats_df['text'].head()
 =======
 # we' see that the tweet is found under the column "text"
 library_df['text'].head()
