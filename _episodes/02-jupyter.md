@@ -434,12 +434,12 @@ Commands:
 These are all of the commands that you can send via twarc2. You can also view all the
 help for twarc 1.0!
 
-> ## Challenge
+> ## Challenge: 2 timelines
 >
 > * Can you find the file called "bjules.jsonl"?
 > * Download a timeline for one of the twitter accounts from this list:
-> NCEAS "@ucsb_nceas", EcoDataScience "@ecodatasci", R-Ladies Santa Barbara "@RLadiesSB",
-> spatial@ucsb "@spatialUCSB", UCSB Collaboratory "@libratorybot"
+>   NCEAS "@ucsb_nceas", EcoDataScience "@ecodatasci", R-Ladies Santa Barbara "@RLadiesSB",
+>   spatial@ucsb "@spatialUCSB", UCSB Collaboratory "@libratorybot"
 >
 > * What do you notice about the file that was created from using the timeline command?
 >
@@ -561,18 +561,14 @@ Check how many Tweets we got from Bergis by looking at:
 - word count
 - looking at the csv in jupyter
 
-> ## Compare two timelines
+> ## Challenge: Compare and prepare two timelines
 >
 > Now we will do the same transformation on tweets from the twitter user `ecodatasci`. 
 > (or whoever's timeline you downloaded)
-> Please run the `timeline` command on the Twitter user `ecodatasci` if you have not already.
-> How many tweets did we get from ecodatasci? 
+> How many tweets did you get from the timeline that you downloaded? 
 > 
 > > ## Solution
 > > 
-> > Get the timeline from ecodatasci
-> > ~~~
-> > !twarc2 timeline ecodatasci > raw_data/ecodatasci.jsonl
 > > ~~~
 > > Flatten your collected tweets
 > > ~~~
@@ -588,8 +584,6 @@ Check how many Tweets we got from Bergis by looking at:
 > > ~~~
 > {: .solution}
 {: .challenge} 
-
-
 
 
 Remember, if you get an error, you can correct it in the cell, and then
