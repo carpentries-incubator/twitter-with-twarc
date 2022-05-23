@@ -143,12 +143,12 @@ file with all 4.
 The double-greater-than `>>` appends rather than creates. 
 
 ~~~
-!head -n 2 'output_data/bergis_flat.jsonl' > 'output_data/4_tweets.jsonl'
+!head -n 2 'output_data/bjules_flat.jsonl' > 'output_data/4_tweets.jsonl'
 ~~~
 {: .language-bash}
 
 ~~~
-!tail -n 2 'output_data/bergis_flat.jsonl' >> 'output_data/4_tweets.jsonl'
+!tail -n 2 'output_data/bjules_flat.jsonl' >> 'output_data/4_tweets.jsonl'
 ~~~
 {: .language-bash}
 
