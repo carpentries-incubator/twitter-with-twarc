@@ -9,7 +9,7 @@ title: Setup
 > twarc to search for all mentions of the hashtag `#taxday` and created this 
 > file (April 15th is the deadline for Americans to file their annual income 
 > report). The Capitol riot tweets is a dataset from Kaggle.
-> - [Taxday data download link](https://drive.google.com/file/d/14_6b3Ej73pjPWb1_VdtmUlni9zvk67ae/view?usp=sharing)
+> - [tweets containing #gasprices data download link](https://drive.google.com/file/d/1hzBuHOuI-ZIfvrT1-rfUj34XaqFfJX9d/view?usp=sharing)
 > - [Capitol Riot Tweets download link](https://drive.google.com/file/d/1S0yYZpBgLGEiKDAUeKepuU5IaZiW2gFA/view?usp=sharing)
 > - [One Tweet download link](https://drive.google.com/file/d/1MNZRzCQPBKjvWCch7GvTywBFKvDstBcN/view?usp=sharing)
 >
@@ -27,9 +27,9 @@ title: Setup
 
 > ## Additional Utilities
 > 
-> We will also be using an extended set of utilities that will help explore the data collected through twarc.
-> <br/>
-> [twarc utilities download link](https://github.com/UCSBCarpentry/twitter-with-twarc/blob/gh-pages/files/utils.zip?raw=true)
+> We will also be using an extended set of utilities that will help explore the data 
+> collected through twarc. <br/> [twarc utilities download 
+> link](https://github.com/UCSBCarpentry/twitter-with-twarc/blob/gh-pages/files/utils.zip?raw=true)
 >
 > Make sure you download and unzip this folder onto your desktop. Later in the workshop, we will upload this set of tools to our JupyterHub. 
 >
