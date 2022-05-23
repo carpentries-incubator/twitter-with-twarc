@@ -177,7 +177,7 @@ it's 4 lines.
 In nano, it's very easy to see what order the tweets come in, and therefor, what
 the date range of our tweets are:
 
-#FIXME screenshot of 4 tweets in nano
+![4 tweets in nano](../fig/4_tweets_nano.PNG)
 
 
 # A Very Basic Analysis
