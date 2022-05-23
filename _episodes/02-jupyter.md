@@ -519,7 +519,7 @@ We might think there are 32 tweets in Jules' timeline.
 After flattening:
 `! wc output_data/bjules_flat`
 
-## Converting between file types: jsonl to csv
+## Converting between file types: jsonl to csv to dataframe
 csv's are convenient for reading, and are useful as a data format
 later on for analyzing tweets outside of twarc. csv's are even conventient for reading, and are useful as a data format
 later on for analyzing tweets outside of twarc.
@@ -548,11 +548,23 @@ many tweets we harvested from Jules's timeline using `wc` in the terminal.
 ~~~
 {: .language-bash}
 
-How many Tweets did we get from Bergis?
+Another common transformation we will make, since we are working in Jupyter and will
+be using Python to analyze our tweets, is to create a Pandas dataframe of our tweets:
+
+~~~
+bjules = pandas.read_csv("output_data/bjules.csv")
+~~~
+{: .language-python}
+
+Check how many Tweets we got from Bergis by looking at:
+- the length of the dataframe
+- word count
+- looking at the csv in jupyter
 
 > ## Compare two timelines
 >
 > Now we will do the same transformation on tweets from the twitter user `ecodatasci`. 
+> (or whoever's timeline you downloaded)
 > Please run the `timeline` command on the Twitter user `ecodatasci` if you have not already.
 > How many tweets did we get from ecodatasci? 
 > 
