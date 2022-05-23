@@ -1,26 +1,32 @@
 ---
 title: "Data Management"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 5
 questions:
-- "Key question (FIXME)"
+- "What are some best practices for handling our data 'for the long term'?"
 objectives:
-- "How do we manage data?"
+- "Twitter has a Terms of Service for data"
+- "Long-term storage of id-only datasets is a good method"
 keypoints:
-- "Long-term archiving, dehydration, workflow presentation (FIXME)"
+- "Dehydrating your tweets solves a lot of issues"
 ---
 
 # Now What?
-You have determined the relative sentiment of several different
-Twitter datasets. You have harvested data from the Twitter
+You have gathered timelines on individuals going back years.
+
+You have harvested data from the Twitter
 livestream and searched back over the previous six days.
 
-You have gathered timelines on individuals going back years.
+You have determined the relative sentiment of several different
+Twitter datasets, examined the top hashtags, the most frequently
+used words, and the proportion of tweets to retweets. 
+
+You made a network diagram!
 
 ## Twitter's TOS and the EU's GDPR
 Twitter the corporation allows users to delete (but currently not
 edit) their own content. And when the European Union created its
-General Data Protection Regulations, it enshrined in las the 'right
+General Data Protection Regulations, it enshrined in law the 'right
 to be forgotten.' 
 
 And so, to respect Twitter's Terms of Service as well as what is widely
@@ -39,11 +45,15 @@ research is complete we should always dehydrate our dataset for
 long-term archiving, or before we share data with people outside of 
 our immediate research team.
 
-### task: dehydrate something we harvested
+~~~
+! twarc2 dehydrate raw_data/hashtagcats.jsonl output_data/dehydrated_cats.txt
+~~~
+{:.bash}
+
 
 
 ## discussion challenge
-Was making you log-in to get full-text tax-day tweets a good enough
+Was making you log-in to get full-text gas-price tweets a good enough
 protection for our taxday dataset?
 
 Which of our datasets would you feel comfortable creating an 
@@ -51,6 +61,7 @@ official, UCSB-sponsored archive?
 	Bergis Jules' timeline? 
 	Library mentions? 
 	Library timeline? 
+	hashtag catsofinstagram?
 	#FIXME
 
 ## DocNow's new tool for consent. 
