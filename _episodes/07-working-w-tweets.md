@@ -8,8 +8,8 @@ questions:
 - "How can I separate original content from retweets/replies?"
 
 keypoints:
-- "CSV’s are way more readable in Jupyter."
 - "twarc2 has plug-ins that need separate installation"
+- "The network plug-in shows us how tweeters are related to each other"
 - "twarc1 has a folder of python scripts for basic analysis that might still work."
 ---
 
@@ -23,23 +23,20 @@ are available.
 
 First you need to `pip install` in BASH
 
-`!pip install twarc-hashtags`
-`!pip install twarc-network`
-
 ~~~
 !pip install twarc-hashtags
+!pip install twarc-network
 ~~~
 {: .language-bash}
 
-
+### Most seen hashtags
 When we run hashtags on our `hashtagcats` dataset, we should see the hashtag 
 we search for first. Our other results make sense as well. We see a lot of dogs and Japanese 
 cropping up. In case you didn't know it, Internet cats are huge in Japan.
 
-> ## Most seen hashtags
-> 
+
 > ~~~
-> !twarc2 network raw_data/hashtagcats.jsonl output_data/hashtagcats_network.html
+> !twarc2 hashtags raw_data/hashtagcats.jsonl output_data/hashtagcats_network.html
 > ~~~
 > {: .source}
 >
@@ -47,8 +44,29 @@ cropping up. In case you didn't know it, Internet cats are huge in Japan.
 > > ![screenshot showing top 20 hashtags](../fig/cat_hashtags.png)
 
 
-# Challenge: look for surprising and anticipated hashtags
-in a couple of other datasets that we have.
+> ## Challenge: Look for surprises
+>
+> Run hashtags on two of your other datasets.
+>
+> Are there tags that surprised you?
+> Look at that individual tweet and figure out if that context helps you
+> understand why that unanticipated hashtag is there.
+> ~~~
+> it may include some code
+> ~~~
+> {: .source}
+>
+> > ## Solution
+> >
+> > This is the body of the solution.
+> >
+> > ~~~
+> > it may also include some code
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
 
 ## Interpreting the network results
 
