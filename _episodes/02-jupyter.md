@@ -82,14 +82,8 @@ and upload all of the datafiles:
 - `one_tweet.jsonl` a single tweet
 - `dehydratedCapitolRiotTweets.txt` TweetIDs from the January 6 insurrection.
 
-<! --
-# Inside of `twarc-run`, create another folder called `utils` to contain all the `.py` files that are inside of
-# `utils.zip`.
-# - Do not upload the zip file. Unzip `utils.zip` and upload all 46 of the individual `.py` files.
--->
 
-In total you should now have three folders within twarc_run: `raw_data`, `output_data`, 
-and `utils`
+In total you should now have two folders within twarc_run: `raw_data` and `output_data`.
 
 If you have not downloaded the data, please
 do so now from the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
