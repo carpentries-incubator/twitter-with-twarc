@@ -67,18 +67,44 @@ library_sorted_freq = sorted(library_freq.items(),
 print(library_sorted_freq)
 
 ```
-#FIXME we need to format the output and cut the cruft out of here
 
+This shows a lot of text with no meaning though. We can get rid of 
+English stop words. That will help:
+
+```
+# load the stopwords to use
+from nltk.corpus import stopwords
+sw_nltk = stopwords.words('english')
+
+# create a new object without the stopwords
+library_blob_stopped = textblob.TextBlob(library_words_stopped)
+library_blob_stopped_freq = library_blob_stopped.word_counts
+library_blob_stopped_sorted_freq = sorted(library_blob_stopped_freq.items(), 
+                             key = lambda kv: kv[1], 
+                             reverse = True)
+library_blob_stopped_sorted_freq[1:50]
+
+
+# cut off the most used, which are http, ucsb, etc.
+library_blob_stopped_sorted_freq[7:57]
+```
+
+Can we pass this through another built-in filter? 
+Or pass a paramter to get only words longer than 
+2 characters?
+We need TextBlob help #FIXME
+
+
+## Just the Text
 We can also use one of twarc1's utilities to output an html page
-to view the tweets in the context of a Twitter wall, but we can
-prevent any images or videos from showing:
+to view the tweets in the context of a Twitter wall, this will allow
+a scan of the language without showing any images:
 
-Wall without images code   #FIXME
-
+this doesn't work #FIXME
+!python utils/wall.py output_data/hashtagcats_flat.jsonl > output_data/hashtagcats.html
 
 # Let's Get Ethical
-Whe
-There are multiple ethical fields to consider when using and presenting Twitter 
+There are multiple ethical issues to consider when using Twitter 
 data. In this lesson, we will be focusing on two issues: consent, misinformation, 
 and core legal practices as it relates to archiving data.
 
@@ -90,38 +116,15 @@ Something about social media as a tool for people with certain motives. I wonder
 if theres a Parler Dataset on Kaggle? Or do you think that might violate the 
 Carpentries code of conduct (too risky?)?
 
-DocTheNow's personas
+# DocTheNow's personas
 
 ## Avoiding the ickiness
-What is distance reading and how does it relate to social media research?
+Twitter already protects us by removing content that violates its Terms of 
+Use or that it otherwise finds objectionable. Sometimes this means removing
+entire accounts, such as that of the former US President.
 
-
-Rehydrate: get an archive from the Jan. 6 
-archive? 
-← -1 from Amanda: may contain inappropriate content for a carpentry 
-workshop Analyze to see how much got deleted as Twitter expunged extremists? 
-Are 
-the archives dehydrated? Can you get the fulltext from twitter? 
-If not, from 
-where? 
-Kaggle has full text csvs One with a cc license. One with a copyright. 
-Tweetsets GWU: https://tweetsets.library.gwu.edu/ Who got deleted? Are they real 
-people? 
-
-Is the data really deleted? 
-https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png 
-Challenge: Boolean and: how to feed search multiple ID’s? This is a challenge 
-about using twitter advanced search syntax. Can we distinguish between AND’s and 
-OR’s? 
-
-Challenge: Where does Jules B. live? Zoom poll? 
-which of the following 
-would be inappropriate uses of twitter data? Use Rehydration to find deleted 
-accounts (violators, robots, etc.) 
-
-Search for individual tweeterIDs? Find one that definitely has been 
-deleted? There is only a tiny little fraction of the content still available from 
-twitter. (peg the number for the script?)
+Speaking of which, let's see if data from January 6th, 2021
+is still available.
 
 
 > ## Challenge: January 6 Insurrectionists
@@ -151,22 +154,38 @@ twitter. (peg the number for the script?)
 {: .challenge}
 
 
+Is the data really deleted? 
+https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png 
+
+
+
+Zoom poll? 
+which of the following 
+would be inappropriate uses of twitter data? Use Rehydration to find deleted 
+accounts (violators, robots, etc.) 
+
+Search for individual tweeterIDs? Find one that definitely has been 
+deleted? There is only a tiny little fraction of the content still available from 
+twitter. (peg the number for the script?)
+
+
+
 
 ## Personally identifable information
-The first 90 seconds(?) of this video:
+The first two minutes of this standup comedy routine
+shows the hazards of sharing too much personal information on social 
+media:
 https://www.youtube.com/watch?v=1qqo6z_aBzU
 
 We get a lot of personal information when we gather tweets. Enough to create 
 personalized ads, right? 
 
-We can determine a users’ approximate location, what 
+We can determine often determin a users’ approximate location, what 
 they like, their beliefs, etc. 
 
-Yes What is distance reading and how does it 
-relate to social media research? 
-One benefit of distance reading is that it prevents us 
-from seeing unwanted images and language that we might see when simply doom 
-scrolling twitter on our phones. 
+Challenge: Where does Jules B. live? 
+
+
 
 ## Authorship, the GDPR, and the Right to be Forgotten
 
@@ -210,35 +229,8 @@ GDPR defines Personal data as:
 
 
 
-# robots
+# Social Humans and robots
 We can apply DocTheNow’s SH-A labels to individual Tweets to identify bots, 
 trolls, and malicious actors.
 
-
-
-# move to lesson 9?
-## User Content, Re-use, and Consent
-
-Twitter users have various options of privacy over their content and profile. 
-Some of these options include that their profiles do not show up in web searches 
-and that their content is hidden only to followers. While these options are 
-available to users, it does not have any retroactive effect on what has already 
-been collected. That is, if a user's tweets are collected and the user deletes 
-their Twitter account, their content is still in someone else's database for use. 
-When creating an archive of data, we must understand that the creators behind 
-these tweets have not consented to their content being kept for years from now.
-
-Furthermore, Twitter users who do not put a restriction on what content may be 
-viewed may also not be aware of who has access to data collection; and what they 
-may do with it. A study from Cardiff University found an association between 
-concern for anonymity and sexual orientation, ethnicity and gender. Twitter data 
-may contain identifying demographic information, identifying associations or 
-membership, and expression of a very personal nature. These are items that users 
-may want to protect. A basis for ethical consideration is not only to conduct 
-good and upholding science, but also to minimize risk or harm during any of the 
-study's data collection and publication.
-
-## Citations
-
-# more?
-What should be said about human subjects?
+https://www.docnow.io/social-humans/
