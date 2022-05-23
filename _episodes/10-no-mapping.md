@@ -15,3 +15,9 @@ keypoints:
 ---
 
 # Why we shouldn't map Twitter
+
+Only a tiny little fraction of tweets have meaningful
+and useful geographic information. And even those that have
+Twitter's geolocations embedded in them are pretty useless.
+
+Some day we will sit down and tell you why.
