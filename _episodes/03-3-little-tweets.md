@@ -267,15 +267,15 @@ line-oriented set of tweets. <<< this is why we need flatten or csv
 > ## Challenge: First and last Tweets
 >
 > Using the terminal or Jupyter, use the commands `head` and `tail` to
-> save more than just the first 2 and last 2 tweets in `taxday.jsonl`.
+> save more than just the first 2 and last 2 tweets in `hashtag_gasprices.jsonl`.
 > View the file and determine:
 > 1. How long is the time difference between the first and the last tweets?
 > 2. Judging by these 4 tweets, do they arrive in chronological order?
 > 3. Can you think of a more rigorous way to check?
 >
 > ~~~
-> !head -n 10 'raw_data/taxday.jsonl' >  'output_data/20tweets.jsonl'
-> !tail -n 10 'raw_data/taxday.jsonl' >> 'output_data/20tweets.jsonl'
+> !head -n 10 'raw_data/hashtag_gasprices.jsonl' >  'output_data/20tweets.jsonl'
+> !tail -n 10 'raw_data/hashtag_gasprices.jsonl' >> 'output_data/20tweets.jsonl'
 > ~~~
 > {: .language-python}
 >
