@@ -36,7 +36,7 @@ cropping up. In case you didn't know it, Internet cats are huge in Japan.
 
 #### Top hashtags
 ~~~
-!twarc2 hashtags raw_data/hashtagcats.jsonl output_data/hashtagcats_network.html
+!twarc2 hashtags raw_data/hashtagcats.jsonl output_data/hashtagcats_hashtags.csv
 ~~~
 {: .bash}
 
@@ -56,12 +56,12 @@ cropping up. In case you didn't know it, Internet cats are huge in Japan.
 > > I looked at the Library's timeline to see how it uses hashtags.
 > >
 > > ~~~
-> > ! twarc2 hashtags library_timeline_flat.jsonl
+> > ! twarc2 hashtags xxx.jsonl
 > > ~~~
 > > {: .output}
 > >
-> > I don't think there's much surprising?????
-> >
+> > #FIXME what sort of challenge can we have?
+> > library mentions got nuked because nobody tweets @at the library
 > >
 > >
 > {: .solution}
@@ -75,7 +75,7 @@ We call network the same way we called hashtags
 ~~~
 > !twarc2 network raw_data/hashtagcats.jsonl output_data/hashtagcats_network.html
 ~~~
-{.:bash}
+{: .language-bash}
 
 The built-in web viewer ain't so hot, so download that html file to view the network on 
 your own computer. Chrome works fine, and it's best to make the diagram fullscreen. We can 
@@ -89,7 +89,7 @@ see:
   image below. Kiko is nearby, but separate from, the 
   @catsofinstagram twitter account.
 
-[portion of a network diagram with a central node kiko11232015 off to the
+![portion of a network diagram with a central node kiko11232015 off to the
 side of the main cluster of the account @catsofinstagram](../fig/cat_network.png)
 
 # Retweets
