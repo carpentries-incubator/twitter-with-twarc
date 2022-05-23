@@ -106,7 +106,8 @@ and open it up with [an online JSONL viewer](https://codebeautify.org/jsonviewer
 ![view of one tweet data that is easier to view](../fig/beautify-one-tweet.png)
 
 We can also see just the name of each field by using the columns
-method on ecodatasci_df, the dataframe created from ecodatasci tweets:
+method on any dataframe we have made from Twitter data. For example,
+ ecodatasci_df, the dataframe created from the ecodatasci timeline:
 
 ~~~
 list(ecodatasci_df.columns)
@@ -130,22 +131,24 @@ list(ecodatasci_df.columns)
 ~~~
 {: .output}
 
-(need to write a bit more about the first tweet) #FIXME
 This gives you a sense of just how much data comes along with a tweet.
 
 ## First and last tweets
 Let's look at our `gasprices_flat.jsonl` file again.
 
 Remember our JSONL files are line-oriented, ie: one tweet per line. Let's use the
-`head` and `tail` command to create files with two tweets each.
+`head` and `tail` command to create files with two tweets each. Better yet, one
+file with all 4.
+
+The double-greater-than `>>` appends rather than creates. 
 
 ~~~
-!head -n 2 'raw_data/taxday.jsonl' > 'output_data/first_2_tweets.jsonl'
+!head -n 2 'output_data/hashtag_gasprices_flat.jsonl' > 'output_data/4_tweets.jsonl'
 ~~~
 {: .language-bash}
 
 ~~~
-!tail -n 2 'raw_data/taxday.jsonl' > 'output_data/last_2_tweets.jsonl'
+!tail -n 2 'output_data/hashtag_gasprices_flat.jsonl' >> 'output_data/4_tweets.jsonl'
 ~~~
 {: .language-bash}
 
