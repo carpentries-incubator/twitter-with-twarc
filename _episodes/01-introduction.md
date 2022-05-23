@@ -97,7 +97,13 @@ You can see a visualize of this analogy <a href="https://www.mulesoft.com/resour
 You may be asking, "What is twarc?" or, "Why do all things involving
 Twitter have to start with a 'tw'?".
 
-Twarc is a command line tool and Python library that is used to collect
+twarc was created by a group of people now known as Documenting the Now.
+
+[Documenting the Now](docnow.io) develops open source tools and community centered 
+practices that support the ethical collection, use, and preservation of publicly 
+available content shared on the web and social media.
+
+twarc is a command line tool and Python library that is used to collect
 and archive Tweets through the Twitter API. Twarc is a community built, Free and Open Source Software (FOSS).  To elaborate, twarc
 is accessible, free, and can help simplify data harvesting once you
 practice using it. Twarc is also an active open-source project, so
@@ -107,7 +113,10 @@ It is well-documented on
 organization referred to as [Documenting the
 Now](https://www.docnow.io/).
 
-Twarc allows you to request specific data based on keywords, hashtags, events, and other areas of interest. Once you have your dataset, twarc has what the developers refer to as 'utilities'. These are python programs that can be run on the command line to explore and visualize your data.
+twarc allows you to request specific data based on keywords, hashtags, events, and other 
+areas of interest. Once you have your dataset, twarc has what the developers refer to as 
+'utilities'. These are python programs that can be run on the command line to explore 
+and visualize your data.
 
 > ## Issues
 > If you run into any errors, the people who built twarc respond quite quickly (and they're very friendly).
