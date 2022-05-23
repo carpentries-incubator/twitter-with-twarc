@@ -88,6 +88,10 @@ Twarc2 give us easy access to these endpoints as commands.
 When you are doing exploratory searching, these are the order you want to do
 things in so that you don't waste your quota.
 
+Filtering collects tweets as they happen in realtime. We will do a filtered
+search later on. It's important to estimate how many tweets you
+might get via a filtered stream before you start, so that you know
+how long to run it.
 
 ### Twarc's Data
 
@@ -158,13 +162,8 @@ Total Tweets: 1,997
 > {: .solution}
 {: .challenge}
 
-## Filtered Stream
-Filtering collects tweets as they happen in realtime. We will do a filtered
-search later on. It's important to estimate how many tweets you
-might get via a filtered stream before you start, so that you know
-how long to run it.
-
 ## Recent Search
+
 This endpoint gathers the most recent 6 days of a search string that
 you pass to the API via twarc. Let's gather all the recent mentions of
 the UCSB Library.
@@ -180,40 +179,35 @@ a wide net, ie: that we search a variety of text strings and hashtags.
                  ucsblibrary OR #ucsblibrary OR
                  davidsonlibrary OR #davidsonlibrary)"
 ~~~
-{: .source}
+{: .language-bash}
 
-Is it worth doing the OR's? For sure.
-Twitter is NOT case sensitive.
+The `OR` is necessary for syntax. Twitter is NOT case sensitive, so we want to specify the counts command to include various capitalizations.
 
 ~~~
 !twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary)"`
 ~~~
-{: .source}
+{: .language-bash}
 
-## Big Data
+## Gathering Big Data
 
-### What's a lot?
 Getting a sense of the scale of the conversation on Twitter is important.
 When you are starting out, you won't have much idea about how many tweets a
 search will return. With a monthly limit of 500,000 tweets, it's good to use
 the Recent Tweet Counts endpoint to do some exploratory searching.
 
-We got almost 100,000 kitten tweets. That's a healthy amount of data to analyze. We
-also compared the numbers on Sports Twitter--second in size perhaps only to
-Politics Twitter.
+You are able to get thousands of tweets when specifying your parameters to cat-related Twitter content. That’s a healthy amount of data to analyze, and cats-related content is the most popular posting on Twitter. We also looked at and compared the number of tweets related to sports content in Twitter. Sports is second in popularity, perhaps second only to political-related content.
 
 But just how big is Twitter? Try running these counts:
 
-## What's a lot?
 
 > ## Type along the following commands:
 > Let's try getting tweet counts for each of these common English words:
 > ~~~
-> !twarc2 counts --granularity "dog" --text "day"
-> !twarc2 counts --granularity "cat" --text "day"
-> !twarc2 counts --granularity "amazon" --text "day"
-> !twarc2 counts --granularity "right" --text "day"
-> !twarc2 counts --granularity "good" --text "day"
+> !twarc2 counts --granularity "day" --text "dog"
+> !twarc2 counts --granularity "day" --text "cat"
+> !twarc2 counts --granularity "day" --text "amazon"
+> !twarc2 counts --granularity "day" --text "right"
+> !twarc2 counts --granularity "day" --text "good"
 > ~~~
 > {: .language-bash}
 >
@@ -229,13 +223,17 @@ But just how big is Twitter? Try running these counts:
 > > ~~~
 > > {: .output}
 > >
-> > You may notice that the word "good" is mentioned more than twice the amount of times that "right" is mentioned.
+> > Specific topics, such as "dog" and "cat", return lower counts compared to searches of
+> > commonly used words, "right" and "good". Notice that the word "amazon" has a count that
+> > is between specific topics and commonly used words. "amazon" may refer to the geographical Amazonia,
+> > or the company.
 > >
+> > This shows the range of numbers we are able to get from Twitter, and that the
+> > counts depend on the scope of the word.
+> > It looks like any English word that is used on Twitter more than 10 million
+> > times a week on Twitter is a fairly non-specific search.
 > {: .solution}
 {: .challenge}
-
-It looks like any English word that is used on Twitter more than 10 million
-times a week on Twitter is a fairly non-specific search.
 
 That should give us a pretty good idea that for research use, 500,000 tweets
 is plenty to handle. And again: if you need more, there is a elevated level of
