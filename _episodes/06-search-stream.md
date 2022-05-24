@@ -114,6 +114,8 @@ This will match tweets containing the terms grumpy or cat, but omit anything abo
 ~~~
 {: .language-bash}
 
+### Searching twitters by users
+
 The Twitter search and Twarc search command also supports looking for tweets that
 mention a specified twitter account (mentioning another Twitter account in a tweet is
 known as "at-ing/ @-ing" or "tagging"). In the below example, Jon @-ed the Twitter
@@ -133,6 +135,7 @@ twarc2 search "(to:ucsblibrary)"
 ~~~
 {: .language-bash}
 
+### Using Hashtags
 As we have seen before, we may also search tweets that contain hastags. In the example 
 below, notice that the resulting tweet also contains other hashtags that we did not 
 explicitly search for.
@@ -147,9 +150,9 @@ twarc2 search "(#meme)"
 We have seen individual searches of each of these parameters. You may also combine these parameters to narrow down your results.
 
 ~~~
-twarc2 search "grumpy cat #meme)"
+twarc2 search "(grumpy cat #meme)"
 ~~~
-{. :language-bash}
+{: .language-bash}
 
 > ## Challenge: Advanced Twarc Search
 >
