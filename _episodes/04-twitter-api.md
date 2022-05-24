@@ -52,11 +52,15 @@ So the above gives us, at most, 500 tweets from the UCSBLibrary Twitter
 account's timeline. And twarc tells us that it only gave us 15% of what is available.
 
 You can always check to see how much of your quota you have used by visiting your
-[Twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard)
+[Twitter developer dashboard](https://developer.twitter.com/en/portal/dashboard). "Academic access", which is an elevated tier from "Essential Access", comes with 3 projects and 10 million tweets per month.
 
-> ## Academic access
-> Academic access comes with 3 projects and 10 million tweets per month.
->
+> ## twarc and twarc2
+> With Twitter's release of the API v2, twarc2 was built to accommodate the new API.
+> When we installed twarc2, the first release of twarc
+> (which can be thought of as "twarc1"),
+> is also installed.
+> This means, you have access to some of "twarc1" tools
+> when you install twarc2.
 {: .callout}
 
 ## Endpoints
