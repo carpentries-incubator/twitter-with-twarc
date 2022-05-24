@@ -41,10 +41,9 @@ If you want to go back as far in time as the Twitter API allows (6 days typicall
 and NOT eat up too much of your monthly quota, 
 you can simultaneously tighten up your search parameters and keep your `--limit` value low.
 
-(FIXME: wasn't this the challenge from episode 4 asking for 500/5000 cats?)
 
 ~~~
-!twarc2 search --limit 500 "(#catsofinstagram AND #cute)" > hashtag_cats_500.jsonl
+!twarc2 search --limit 500 "(#catsofinstagram  #cute)" > hashtag_cats_500.jsonl
 ~~~
 {. :language-python}
 
@@ -52,7 +51,7 @@ This adjusted search returns 5 out of six days. So asking for 800 Tweets should 
 six days' worth of results.
 
 ~~~
-!twarc2 search --limit 800 "(#catsofinstagram AND #cute)" > hashtag_cats_800.jsonl
+!twarc2 search --limit 800 "(#catsofinstagram #cute)" > hashtag_cats_800.jsonl
 ~~~
 {: .language-python}
 
@@ -70,27 +69,47 @@ page](https://twitter.com/home)
 We will demonstrate some options you may use when searching tweets in both the Twitter 
 search bar and through the Twarc search command. First, you may search tweets for 
 content that contains certain words. In the example image below, we search for tweets 
-that contain both the words "archive" and "data" by separating these words with a 
-capitalized `AND`.
+that contain the words "archive" and "data". 
+
+### AND logic
+
+In the Twitter search bar, using all-caps `AND` will return tweets containing `data` and `archive`. 
 
 ![search tweets that contain the words archive and data](../fig/twitter-search-words.png)
 
+Successive operators with a space between them will result in boolean `AND` logic. Tweets separated by a space
+will return tweets matching both conditions. In the example below, this search will return tweets containing `archive`
+and `data`
+
+
 ~~~
-! twarc2 search "(archive AND data)"
+!twarc2 search "(archive data)"
 ~~~
 {: .language-bash}
 
-To search for tweets that contain either word, and not require both words, the search 
-may use a capitalized `OR` instead.
 
-The Twitter search and Twarc search command also supports looking for tweets that 
-mention a specified twitter account (mentioning another Twitter account in a tweet is 
-known as "at-ing/ @-ing" or "tagging"). In the below example, Jon @-ed the Twitter 
+### OR Logic
+
+To search for tweets that contain either word, and not require both words, the search bar and Twarc will
+use a capitalized `OR` instead. This will return results if either search condition is met.
+In this case, the terms, `archive` or `data`. 
+
+~~~
+!twarc2 search "(archive OR data)"
+~~~
+{: .language-bash}
+
+The Twitter search and Twarc search command also supports looking for tweets that
+mention a specified twitter account (mentioning another Twitter account in a tweet is
+known as "at-ing/ @-ing" or "tagging"). In the below example, Jon @-ed the Twitter
 account @ucsblibrary.
 
 Note that capitalization for the account name does not affect the search.  Also, 
 including the "@" symbol in front of the account name is not necessary, the search 
 explicitly spells out the "to:" instead.
+
+`to:` will match any tweet that is a reply to a partricular user. This can be the username or the numeric user ID. 
+You can only pass a single username/ID per `to:` command. 
 
 ![search tweets that tag the twitter account ucsblibrary](../fig/twitter-search-at.png)
 
