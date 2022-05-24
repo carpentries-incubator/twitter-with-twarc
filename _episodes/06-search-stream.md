@@ -41,10 +41,9 @@ If you want to go back as far in time as the Twitter API allows (6 days typicall
 and NOT eat up too much of your monthly quota, 
 you can simultaneously tighten up your search parameters and keep your `--limit` value low.
 
-(FIXME: wasn't this the challenge from episode 4 asking for 500/5000 cats?)
 
 ~~~
-!twarc2 search --limit 500 "(#catsofinstagram AND #cute)" > hashtag_cats_500.jsonl
+!twarc2 search --limit 500 "(#catsofinstagram  #cute)" > hashtag_cats_500.jsonl
 ~~~
 {. :language-python}
 
@@ -52,7 +51,7 @@ This adjusted search returns 5 out of six days. So asking for 800 Tweets should 
 six days' worth of results.
 
 ~~~
-!twarc2 search --limit 800 "(#catsofinstagram AND #cute)" > hashtag_cats_800.jsonl
+!twarc2 search --limit 800 "(#catsofinstagram #cute)" > hashtag_cats_800.jsonl
 ~~~
 {: .language-python}
 
@@ -70,15 +69,21 @@ page](https://twitter.com/home)
 We will demonstrate some options you may use when searching tweets in both the Twitter 
 search bar and through the Twarc search command. First, you may search tweets for 
 content that contains certain words. In the example image below, we search for tweets 
-that contain both the words "archive" and "data" by separating these words with a 
-capitalized `AND`.
+that contain the words "archive" and "data". 
+
+### AND logic
+
+Successive operators with a space between them will result in boolean `AND` logic. Tweets separated by a space
+will return tweets matching both conditions. In the example below, this search will return tweets containing `archive`
+and `data` 
 
 ![search tweets that contain the words archive and data](../fig/twitter-search-words.png)
 
 ~~~
-! twarc2 search "(archive AND data)"
+!twarc2 search "(archive data)"
 ~~~
 {: .language-bash}
+
 
 To search for tweets that contain either word, and not require both words, the search 
 may use a capitalized `OR` instead.
