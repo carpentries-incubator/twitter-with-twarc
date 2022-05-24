@@ -277,12 +277,20 @@ is still available.
 > {: .solution}
 {: .challenge}
 
+### New Challenge
+That riot file is too big to work with on the fly.
+We need something a bit different. First thought is to 
+give a list of accounts and see who is still online?
 
+Second thought: there's 58135 users in the rehydrated file. But they 
+are mostly retweets. By getting out the users quoted, we can see that there's
+many fewer original authors.
 
-# DocTheNow’s personas
 
 # Social Humans and robots
-We can apply DocTheNow’s SH-A labels to individual Tweets to identify bots,
+Documenting the Now has released a classification scheme to apply
+to Twitter accounts. We can apply these 
+['Social Humans'](https://www.docnow.io/social-humans/)
+labels to individual Tweets and/or accounts to identify bots,
 trolls, and malicious actors.
 
-https://www.docnow.io/social-humans/
