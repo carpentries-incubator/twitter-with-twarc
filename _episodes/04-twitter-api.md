@@ -81,7 +81,7 @@ available for to you as a user of the public Twitter v.2 API.  All these
 endpoints apply to the Tweets and Replies that satisfy a set of parameters you
 have set (e.g. Tweets from a certain account, Tweets containing a certain
 hashtag, etc). These endpoints indicate *how* we may retrieve Twitter data.
-Twarc2 give us easy access to these endpoints as commands.
+twarc2 give us easy access to these endpoints as commands.
 
 | Endpoint            | Description |
 |---------------------|-------------|
@@ -99,16 +99,16 @@ how long to run it.
 
 ### Twarc's Data
 
-The data that is saved using Twarc is just what Twitter reads from a tweet as
+The data that is saved using twarc is just what Twitter reads from a tweet as
 data and provides as data. So, keeping the data authentic for analysis is a
-design of Twarc. Twarc is also traceable, so people can see a log of how and when
+design of twarc. twarc is also traceable, so people can see a log of how and when
 the data was collected.
 
-In the v2 redesign, Twarc was also designed to be easily part of a pipeline of
+In the v2 redesign, twarc was also designed to be easily part of a pipeline of
 commands. Users can connect their data collecting to other pieces of their
-software that expect to get tweets as inputs. When you install Twarc, you will
+software that expect to get tweets as inputs. When you install twarc, you will
 get two clients, twarc & twarc2. Twarc was designed with the v1 Twitter API in
-mind, and Twarc2 was designed as a response to Twitter implementing their v2 API.
+mind, and twarc2 was designed as a response to Twitter implementing their v2 API.
 
 ### Tweet counts endpoint
 After we specify parameters for what tweets we are interested in, we are able to get a count of tweets. This allows us to gain insight on the amount of available data without needing to pull tweets and spend our limited quota.
@@ -415,7 +415,7 @@ most_fol['id']
 > > ~~~
 > > cats_df = pd.read_csv("output-data/catsofinstagram.csv")
 > > ~~~
-> > {: .language-bash}
+> > {: .language-python}
 > >
 > > We are able to see how many tweets we get by getting the dimensions of the dataframe.
 > > The number of rows indicate the number of unique tweets. The dumber of columns indicate
@@ -423,7 +423,7 @@ most_fol['id']
 > > ~~~
 > > cats_df.shape
 > > ~~~
-> > {: .language-bash}
+> > {: .language-python}
 > >  
 > >
 > > 2. Look at the earliest value under the column 'created_at'.
@@ -432,7 +432,7 @@ most_fol['id']
 > > earliest_create = cats_df.sort_values('created_at', ascending = True).head(1)
 > > earliest_create['created_at']
 > > ~~~
-> > {: .language-bash}
+> > {: .language-python}
 > >
 > > 3.
 > > ~~~
