@@ -3,7 +3,7 @@ title: "Twarc Plugins"
 teaching: 15
 exercises: 5
 questions:
-- "How can we look at our tweets more easily"
+- "What other harvests are available?"
 - "Are there more twarc2 plugins?"
 - "How can I separate original content from retweets/replies?"
 
@@ -13,13 +13,48 @@ keypoints:
 - "twarc1 has a folder of python scripts for basic analysis that might still work."
 ---
 
-## When we have thousands of tweets: we need analysis tools
+# Other Harvests
+Twarc2 has commands to retrieve entire conversation threads, as well as the 
+retweets of one or more tweets. Recall that a retweet is when a 
+Twitter account shares the Tweet of a different Twitter account.
 
-twarc2 plug-ins like csv need to be installed separately. 
-In this episode, we will look at twarc-hashtags and twarc-network
+![tiny care bot's tweet that has three retweets](../fig/tcb_tweet.png)
+
+This tweet has three retweets. We can retrieve those:
+
+We will need to get the tweet's numeric identifier. We 
+can see the tweetID by looking at the url of the tweet. In this case, the tweet's ID 
+is 1522543998996414464.
+
+~~~
+!twarc2 retweeted-by 1522543998996414464 > 'raw_data/tinycarebot_rtby.jsonl'
+~~~
+{: .language-bash}
+
+This gives us the profiles of the three twitter accounts . From there
+we can go on to harvest their timelines to see what they are up to.
+
+
+## Followers
+Not only can we see everyone who has retweeted another tweet, we can also
+find all the followers of a given account.
+
+@tinycarebot is very popular, so let's get just a few of their followers:
+~~~
+!twarc2 followers --limit 5 tinycarebot >  'raw_data/tcb_followers.jsonl'
+~~~
+{: .language-bash}
+
+
+### When we have thousands of tweets: we need analysis tools
+So that's one tweet, and one account's followers. But we have harvested thousands of tweets,
+how can we get a grip on them?
 
 A few [more twarc2 plugins](https://twarc-project.readthedocs.io/en/latest/plugins/)
-are available.
+are available to help get this work done.
+
+twarc2 plug-ins, like csv that we did earlier, need to be installed separately. 
+In this episode, we will look at twarc-hashtags and twarc-network
 
 First you need to `pip install` in BASH
 
@@ -53,10 +88,10 @@ cropping up. In case you didn't know it, Internet cats are huge in Japan.
 >
 > > ## Solution
 > >
-> > I looked at the Library's timeline to see how it uses hashtags.
+> > I looked at people who mentioned UCSB Library.
 > >
 > > ~~~
-> > ! twarc2 hashtags xxx.jsonl
+> > ![Image showing top 13 hashtags](../fig/mentions.png)
 > > ~~~
 > > {: .output}
 > >
@@ -92,32 +127,4 @@ see:
 ![portion of a network diagram with a central node kiko11232015 off to the
 side of the main cluster of the account @catsofinstagram](../fig/cat_network.png)
 
-# Retweets
-
-We may get data on the retweets of one or more tweets. Recall that a retweet is when a 
-Twitter account shares the Tweet of a different Twitter account.
-
-![tiny care bot's tweet that has three retweets](../fig/tcb_tweet.png)
-
-This tweet has three retweets. We are able to compile data on the Twitter accounts that 
-have retweeted the above tweet. 
-
-Another way we can gather data on the user accounts of the retweeters is by using a 
-twarc2 command. First, we will need to get the tweet's numeric identifier. One way we 
-can get a tweet's ID is by looking at the url of the tweet. In this case, the tweet's ID 
-is 1522543998996414464.
-
-~~~
-!twarc2 retweeted-by 1522543998996414464 > 'raw_data/tinycarebot_rtby.jsonl'
-~~~
-{: .language-bash}
-
-## Followers
-
-Another form of Twitter data is a follower list. twarc allows
-us to get a follower list:
-~~~
-!twarc2 followers --limit 5 tinycarebot >  'raw_data/tcb_followers.jsonl'
-~~~
-{: .language-bash}
 
