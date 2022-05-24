@@ -557,25 +557,27 @@ Check how many Tweets we got from Bergis by looking at:
 
 > ## Challenge: Compare and prepare two timelines
 >
-> Now we will do the same transformation on tweets from the twitter user `ecodatasci`. 
+> * Now we will do the same transformation on tweets from the twitter user `ecodatasci`. 
 > (or whoever's timeline you downloaded)
-> How many tweets did you get from the timeline that you downloaded? 
+> * How many tweets did you get from the timeline that you downloaded? 
 > 
 > > ## Solution
 > > 
-> > ~~~
-> > Flatten your collected tweets
+> > * Flatten your collected tweets
 > > ~~~
 > > !twarc2 flatten 'raw_data/ecodatasci.jsonl' > 'output_data/ecodatasci_flattened.jsonl'
 > > ~~~
-> > convert to csv format
+> > {: .language-bash}
+> > * Convert to csv format
 > > ~~~ 
 > > !twarc2 csv 'output_data/ecodatasci_flattened.jsonl' > 'output_data/ecodatasci.csv'
 > > ~~~ 
-> > convert to pandas dataframe
+> > {: .language-bash}
+> > * Convert to pandas dataframe
 > > ~~~ 
 > > ecodatasci_df = pd.read_csv('output_data/ecodatasci.csv')
 > > ~~~
+> > {: .language-python}
 > {: .solution}
 {: .challenge} 
 
