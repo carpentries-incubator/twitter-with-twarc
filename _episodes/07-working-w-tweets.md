@@ -97,7 +97,7 @@ cropping up. In case you didn't know it, Internet cats are huge in Japan.
 
 > ## Challenge: Look for surprises
 >
-> Run hashtags on two of your other datasets.
+> Run the hashtags plug-in on the @tinycarebot dataset.
 >
 > Are there tags that surprised you?
 > Look at that individual tweet and figure out if that context helps you
@@ -108,6 +108,7 @@ cropping up. In case you didn't know it, Internet cats are huge in Japan.
 > > I looked at people who mentioned UCSB Library.
 > >
 > > ~~~
+> > !twarc2 hashtags output_data/ #FIXME
 > > ![Image showing top 13 hashtags](../fig/mentions.png)
 > > ~~~
 > > {: .output}
