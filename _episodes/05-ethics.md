@@ -217,7 +217,8 @@ library_blob_stopped_sorted_freq[7:57]
 ~~~
 {: .output
 
-!Top words in library timeline(../fig/top_words.png)
+
+![Top words in library timeline](../fig/top_words.png)
 
 Our results make sense. We can see that the words are associated with library-like
 things. This text is worth some further examination.
