@@ -51,12 +51,12 @@ Check out this article on [Twitter Language or Slang](https://www.lifewire.com/t
 
 # Why Should You Care About Twitter?
 
-Every user, tweet, video, and emoji on Twitter is data that can be collected and analyzed. In recent years Twitter analysis has become increasingly popular and has played a hand in predicting events from natural disasters to Election outcomes.
+Every user, tweet, video, and emoji on Twitter is data that can be collected and analyzed. In recent years Twitter analysis has become increasingly popular and has played a hand in predicting events from natural disasters to election outcomes.
 
 With millions of tweets sent out each day, and the range of content within those tweets means that Twitter is a source for a large amount of data.
 
 > ## Big Data
->  Based on these guidelines, some refer to Twitter data as Big Data. Big Data as been distinguished as so much data that it is unmanageable, and therefore unable
+>  Based on these guidelines, some refer to Twitter data as Big Data. Big Data has been distinguished as so much data that it is unmanageable, and therefore unable
 >  to be analyzed. We won't be handling Big Data during this lesson.
 {: .callout}
 
@@ -66,7 +66,7 @@ In order to analyze Twitter data, we must first retrieve it which we will be doi
 
 API is an abbreviation that stands or Application Programming Interface. It allows computers or applications to communicate with one another without requiring users to code operations from scratch. APIs allow you to use abstraction, because similar to how you don't need to know the engineering behind your shower in order to use it, you don't need to understand the code behind APIs in order to fetch data.
 
-Formally defined, an API is a set of commands, functions, protocols, and objects used by programmers to create software or to interact with external system.
+Formally defined, an API is a set of commands, functions, protocols, and objects used by programmers to create software or to interact with external systems.
 
 ### Common Analogy
 
@@ -82,7 +82,7 @@ Here are the key players in our analogy:
 3. Waiter - the API that delivers your information request to the system, and then your resulting dataset to you
 4. Cook - the external program or webserver that has the information you seek
 
-You can see a visualize of this analogy <a href="https://www.mulesoft.com/resources/api/what-is-an-api">in this video</a>.
+You can visualize this analogy <a href="https://www.mulesoft.com/resources/api/what-is-an-api">by watching this video</a>.
 
 > ## APIs are not Webscraping
 > The biggest difference between APIs and Webscraping is the retrieval method. With **API's** you are using a system preset by the website you are trying to access the data from (Twitter, YouTube, Spotify, etc.).
@@ -104,14 +104,11 @@ practices that support the ethical collection, use, and preservation of publicly
 available content shared on the web and social media.
 
 twarc is a command line tool and Python library that is used to collect
-and archive Tweets through the Twitter API. Twarc is a community built, Free and Open Source Software (FOSS).  To elaborate, twarc
+and archive Tweets through the Twitter API. twarc is a community built, Free and Open Source Software (FOSS).  To elaborate, twarc
 is accessible, free, and can help simplify data harvesting once you
-practice using it. Twarc is also an active open-source project, so
+practice using it. twarc is also an active open-source project, so
 it is open to collaboration and use by anyone.
-It is well-documented on
-[Github](https://twarc-project.readthedocs.io/en/latest/) by an
-organization referred to as [Documenting the
-Now](https://www.docnow.io/).
+The documentation can be viewed on [Github](https://twarc-project.readthedocs.io/en/latest/).
 
 twarc allows you to request specific data based on keywords, hashtags, events, and other 
 areas of interest. Once you have your dataset, twarc has what the developers refer to as 
@@ -120,7 +117,7 @@ and visualize your data.
 
 > ## Issues
 > If you run into any errors, the people who built twarc respond quite quickly (and they're very friendly).
-> Navigate to the ['Issues'](https://github.com/DocNow/twarc/issues) page on their repository and open a new issue. You also view pre-existing issues (open or closed) to see if someone has already answered a question like yours.
+> Navigate to the ['Issues'](https://github.com/DocNow/twarc/issues) page on their repository and open a new issue. You can also view pre-existing issues (open or closed) to see if someone has already answered a question like yours.
 {: .callout}
 
 {% include links.md %}
