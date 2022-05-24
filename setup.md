@@ -4,17 +4,15 @@ title: Setup
 > ## Data
 >
 > The data we will be using in the workshop is to practice working with twitter 
-> data. Please download the data files `taxday.jsonl` and `Capitol Riot 
-> Tweets.txt` and keep it in an accessible place (such as your desktop). We used 
-> twarc to search for all mentions of the hashtag `#taxday` and created this 
-> file (April 15th is the deadline for Americans to file their annual income 
-> report). The Capitol riot tweets is a dataset from Kaggle.
+> data. Please download the data files `hashtag_gasprices.jsonl` and `dehydratedCapitolRiotTweets.txt` and keep it in an accessible place (such as your desktop). We used 
+> twarc to search for all mentions of the hashtag `#gasprices` and created this 
+> . The Capitol Riot tweets is a dataset from Kaggle.
 > - [tweets containing #gasprices data download link](https://drive.google.com/file/d/1hzBuHOuI-ZIfvrT1-rfUj34XaqFfJX9d/view?usp=sharing)
 > - [Capitol Riot Tweets download link](https://drive.google.com/file/d/1S0yYZpBgLGEiKDAUeKepuU5IaZiW2gFA/view?usp=sharing)
 > - [One Tweet download link](https://drive.google.com/file/d/1MNZRzCQPBKjvWCch7GvTywBFKvDstBcN/view?usp=sharing)
 >
 > Google Drive may change the file extensions when you download these.
-> Make sure you that taxday and one_tweet are `.jsonl`, NOT `.jsn`.
+> Make sure you that hashtag_gasprices and one_tweet are `.jsonl`, NOT `.jsn`.
 > capitol_riots.txt really is `.txt`.
 
 > You can force this by right 
