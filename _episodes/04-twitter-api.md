@@ -178,19 +178,39 @@ We can use a little Boolean logic to make sure we cast
 a wide net, ie: that we search a variety of text strings and hashtags.
 
 ~~~
-!twarc2 counts --granularity "day"
-        --text "(#UCSBLibrary OR UCSBLibrary OR
-                 ucsblibrary OR #ucsblibrary OR
-                 davidsonlibrary OR #davidsonlibrary)"
+!twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary OR ucsblibrary OR #ucsblibrary OR davidsonlibrary OR #davidsonlibrary)"
 ~~~
 {: .language-bash}
+
+~~~
+2022-05-17T19:26:34.000Z - 2022-05-18T00:00:00.000Z: 0
+2022-05-18T00:00:00.000Z - 2022-05-19T00:00:00.000Z: 1
+...
+2022-05-23T00:00:00.000Z - 2022-05-24T00:00:00.000Z: 3
+2022-05-24T00:00:00.000Z - 2022-05-24T19:26:34.000Z: 3
+
+Total Tweets: 14
+~~~
+{: .output}
 
 The `OR` is necessary for syntax. Twitter is NOT case sensitive, so we want to specify the counts command to include various capitalizations.
 
 ~~~
-!twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary)"`
+!twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary)"
 ~~~
 {: .language-bash}
+
+~~~
+2022-05-17T19:27:16.000Z - 2022-05-18T00:00:00.000Z: 0
+2022-05-18T00:00:00.000Z - 2022-05-19T00:00:00.000Z: 1
+...
+2022-05-23T00:00:00.000Z - 2022-05-24T00:00:00.000Z: 1
+2022-05-24T00:00:00.000Z - 2022-05-24T19:27:16.000Z: 0
+
+Total Tweets: 6
+~~~
+{: .output}
+
 
 ## Gathering Big Data
 
@@ -264,8 +284,7 @@ jsonl to csv. csv's are always easily convertible into Pandas dataframes.
 Timelines need to run through the `flatten` twarc plug-in.
 We still haven't found another datatype that needs to be flattened. #FIXME ?
 
-So let's flatten the UCSBLibrary timeline, count up our tweets,
-convert to CSV, and create a dataframe
+So let's flatten the UCSBLibrary timeline and convert the flattened data to a csv:
 
 ~~~
 !twarc2 flatten raw_data/ucsblib_timeline.jsonl output_data/ucsblib_timeline_flat.jsonl
@@ -274,47 +293,102 @@ convert to CSV, and create a dataframe
 {: .language-bash}
 
 ~~~
-ucsblib_timeline_df = pandas.read_csv("output_data/ucsblib_timeline.csv")
+100%|████████████████| Processed 282k/282k of input file [00:00<00:00, 27.6MB/s]
+100%|████████████████| Processed 539k/539k of input file [00:00<00:00, 5.50MB/s]
+
+ℹ️
+Parsed 500 tweets objects from 500 lines in the input file.
+Wrote 500 rows and output 74 columns in the CSV.
+~~~
+{: .output}
+
+Now that we have the csv of the data, we can use a python pandas command to get the data in a dataframe.
+
+~~~
+ucsblib_timeline_df = pd.read_csv("output_data/ucsblib_timeline.csv")
+
+#outputs first 5 lines in dataframe
 ucsblib_timeline_df.head()
+~~~
+{: .language-python}
+
+~~~
+#outputs last 5 lines in dataframe
 ucsblib_timeline_df.tail()
 ~~~
 {: .language-python}
 
-Use `wc`: Did we get a reasonable amount?
+Use `wc` to get a count of tweets. Did we get a reasonable amount?
 
 Let's remind ourselves of all the different things that come
 along with a tweet by printing out a list of the dataframe
 headers:
 
 ~~~
-ucsblib_timeline_df.columns
+#outputs first 5 items
+ucsblib_timeline_df.columns[:5]
 ~~~
 {: .language-python}
 
-<<<<<<< HEAD
-and see the column headers here as a list.
-
-#FIXME write the code for below:
-Easy 'analyses' using our dataframe:
-Call each of these elements out of the dataframe by sorting:
-- most retweeted
-- most quoted
-- tweeter with the most number of followers
-
-
 ~~~
 Index(['id', 'conversation_id', 'referenced_tweets.replied_to.id',
-       'referenced_tweets.retweeted.id', 'referenced_tweets.quoted.id',
-       'author_id', 'in_reply_to_user_id', 'retweeted_user_id',
-...
-       '__twarc.retrieved_at', '__twarc.url',
-       '__twarc.version', 'Unnamed: 73'],
+       'referenced_tweets.retweeted.id', 'referenced_tweets.quoted.id'],
       dtype='object')
 ~~~
 {: .output}
 
-We can see the column headers here.
+We can see some of the column headers here. Looking through these column headers, we can see what data information we may look into.
+For example:
 
+The column 'public_metrics.retweet_count' provides a total count of retweets for each tweet.
+
+~~~
+#grab only specified column
+ucsblib_timeline_df['public_metrics.retweet_count']
+~~~
+{: .language-python}
+
+By using the python function `.sort_values()`, we can organize the entire dataframe in order of retweet counts.
+
+~~~
+sort_by_rt = ucsblib_timeline_df.sort_values('public_metrics.retweet_count', ascending=False)
+
+#the first tweet from the sorted dataframe
+most_rt = sort_by_rt.head(1)
+
+#output only the text of the tweet
+most_rt['text']
+~~~
+{: .language-python}
+
+You may also get the tweet id to view the tweet on Twitter:
+https://twitter.com/UCSBLibrary/status/tweet_id
+
+We may also look at the tweet with most quote-tweets by looking at the column "public_metrics.quote_count":
+
+~~~
+sort_by_qc = ucsblib_timeline_df.sort_values("public_metrics.quote_count", ascending=False)
+
+#the first tweet from the sorted dataframe
+most_quoted = sort_by_qc.head(1)
+
+#output only the text of the tweet
+most_quoted['text']
+~~~
+{: .language-python}
+
+The final column we will look at is "author.public_metrics.followers_count". We will get the twitter account with the most followers. This is looking at both @UCSBlibrary and any accounts @UCSBlibrary retweeted from in the timeline we collected.
+
+~~~
+sort_by_fol = ucsblib_timeline_df.sort_values('author.public_metrics.followers_count', ascending=False)
+
+#the first tweet from the sorted dataframe
+most_fol = sort_by_fol.head(1)
+
+#output only the id of the tweet
+most_fol['id']
+~~~
+{: .language-python}
 
 > ## Challenge: Cats of Instagram
 > Let's make a bigger datafile. Harvest 500 tweets that use the hashtag "catsofinstagram"
@@ -322,7 +396,7 @@ We can see the column headers here.
 >
 > 1. Did you get exactly 500?
 > 2. How far back in time did you get?
-> 3. What is the most re-tweeted recent tweet on #catsofinstagram?
+> 3. What is the most re-tweeted tweet from our search?
 > 4. Which person has the most number of followers in your dataset?
 >
 > > ## Solution
@@ -352,33 +426,26 @@ We can see the column headers here.
 > > {: .language-bash}
 > >  
 > >
-> > 2.
+> > 2. Look at the earliest value under the column 'created_at'.
 > >
-> > Print the earliest value under the column 'created_at'.
 > > ~~~
-> > cats_df[cats_df.created_at == cats_df.created_at.min()].loc[:,'created_at']
+> > earliest_create = cats_df.sort_values('created_at', ascending = True).head(1)
+> > earliest_create['created_at']
 > > ~~~
 > > {: .language-bash}
 > >
-> > The earliest time from our dataset is 05/17/2022 at 144:50:26 pm.
-> >
-> > 3. We can do this by finding the max number of retweets in the dataset and then.
+> > 3.
 > > ~~~
-> > most_rt = cats_df[cats_df['public_metrics.retweet_count'] ==
-> > cats_df['public_metrics.retweet_count'].max()].head()
+> > most_rt = cats_df.sort_values('public_metrics.retweet_count', ascending = False).head(1)
 > >
-> > print(most_rt.text)
+> > most_rt['text']
 > > ~~~
 > > {: .language-python}
 > >
+> > 4.
 > > ~~~
-> > '❃❃❃ PURE LOVE ❤💘❤\n#CatsOfTwitter #catsofinstagram #cats https://t.co/kIbFkKFWeT'.
-> > ~~~
-> > {: .output}
-> >
-> > 4. We can calculate the max number of follows in the dataset and then select the tweet that meets that requirement.
-> > ~~~
-> > most_fo = cats_df[cats_df['author.public_metrics.followers_count'] == cats_df['author.public_metrics.followers_count'].max()].head()
+> > most_fol = cats_df.sort_values('author.public_metrics.followers_count', ascending = False).head(1)
+> > most_fol['id']
 > > ~~~
 > > {: .language-python}
 > >
