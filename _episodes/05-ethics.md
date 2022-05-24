@@ -9,8 +9,8 @@ questions:
 - "What are some use cases that might be inappropriate?"
 
 key points:
-- "Discuss the privacy of ethical concerns surrounding tweet harvesting."
 - "'Distance Reading' is analyzing big full-text data without a human consuming the words"
+- "Discuss the privacy of ethical concerns surrounding tweet harvesting."
 - "Robot detection, archives, and deleted accounts"
 ---
 
@@ -29,14 +29,27 @@ Looking at the most commonly used words and phrases in a dataset is a text analy
 This helps us to get a sense of what we are dealing with in our dataset.
 
 In Text Data Mining, a complete list of words and their frequency of appearance
-is is called a 
+can be called a 
 "concordance." We would consider texts of the tweets themseves to be the corpus. 
 Everything else is metadata.
 
-We will use the TextBlob package for our full-text analysis.
+We will use the TextBlob package for our full-text analyses, including getting
+a word count.
+
+Let's remind ourselves what dataframes we have available to work with:
 
 ~~~
-hashtagcats_df.columns
+# %who DataFrame
+~~~
+# output:
+ecodatasci_df	 hashtag_gasprices_df	 hashtagcats_df	 
+kittens_df	 library_timeline_df	 riots_dehydrated_df	 
+ucsb_library_mentions_df
+~~~
+{: .language-python}
+
+~~~
+library_timeline_df.columns
 ~~~
 {: .language-python}
 
@@ -111,28 +124,30 @@ Lastly, we want to cut off the most used, which are http, ucsb, etc.
 ~~~
 {: .language-python}
 
-Can we pass this through another built-in filter?
+Our results make sense. We can see that the words are associated with library-like
+things. This text is worth some further examination.
+
+
+Can we pass this through another built-in filter? #FIXME
 Or pass a paramter to get only words longer than
 2 characters?
 We need TextBlob help #FIXME
 
 
-## Just the Text
-If you don't mind the obscene text, but want to avoid graphic imagery,
-then there is a twarc1's utility to output an html page, and
-to view the tweets in the context of a Twitter wall. This will allow
-a scan of the language without showing any images:
-
-~~~
-!python utils/wall.py 'output_data/hashtagcats_flat.jsonl' > 'output_data/hashtagcats.html'
-~~~
-{: .language-bash}
-
+## Disinformation
 Twitter already protects us by removing content that violates its Terms of
 Use or that it otherwise finds objectionable. Sometimes this means removing
-entire accounts, such as that of the former US President.
+entire accounts, such as that of the former US President and many of his 
+associates.
 
-Speaking of which, let's see if data from January 6th, 2021
+# Misinformation
+Nature disinformation cloud 
+!(https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png)
+
+Something about social media as a tool for people with certain motives. I wonder if theres a Parler Dataset on Kaggle? Or do you think that might violate the Carpentries code of conduct (too risky?)?
+
+
+Speaking of which, let's see how much data from January 6th, 2021
 is still available.
 
 > ## Challenge: January 6 Insurrectionists
@@ -218,10 +233,6 @@ personalized ads, right?
 We can determine often determine a users’ approximate location, what
 they like, their beliefs, etc.
 
-# Misinformation
-Nature disinformation cloud https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png
-
-Something about social media as a tool for people with certain motives. I wonder if theres a Parler Dataset on Kaggle? Or do you think that might violate the Carpentries code of conduct (too risky?)?
 
 # DocTheNow’s personas
 
