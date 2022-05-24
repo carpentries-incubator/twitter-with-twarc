@@ -59,7 +59,7 @@ You can always check to see how much of your quota you have used by visiting you
 > When we installed twarc2, the first release of twarc
 > (which can be thought of as "twarc1"),
 > is also installed.
-> This means, you have access to some of "twarc1" tools
+> This means, you have access to some of ["twarc1" tools](https://ucsb-collaboratory.github.io/twarc/)
 > when you install twarc2.
 {: .callout}
 
