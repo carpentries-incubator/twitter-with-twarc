@@ -75,7 +75,7 @@ about Grumpy Cat.
 
 In the Twitter search bar, using all-caps `AND` will return tweets containing `grumpy` and `cat`. 
 
-![search tweets grumpy and cat](../fig/grumpy_AND.png)
+![search tweets grumpy and cat](../fig/grumpy_AND.PNG)
 
 Successive operators with a space between them will result in boolean `AND` logic. Tweets separated by a space
 will return tweets matching both conditions. In the example below, this search will return tweets containing `grumpy`
@@ -94,7 +94,7 @@ To search for tweets that contain either word, and not require both words, the s
 use a capitalized `OR` instead. This will return results if either search condition is met.
 In this case, the terms, `grumpy` or `cat`. 
 
-![search either grumpy or cat](../fig/grumpy_OR.png)
+![search either grumpy or cat](../fig/grumpy_OR.PNG)
 
 ~~~
 !twarc2 search "(grumpy OR cat)"
