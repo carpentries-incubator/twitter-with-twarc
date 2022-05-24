@@ -245,19 +245,17 @@ Just like we should keep track of how many tweets we download at any given time,
 we should implement a standard workflow when gathering tweets. Generally for the
 rest of this workshop, we will follow this workflow:
 
-1. harvest json
-1. flatten if necessary (when using timeline, etc.)
-1. convert to csv
-1. use wc to make you received as much as you expected
-1. use head and tail to make sure you got the timespan you were expecting
-1. use twarc utilities and twarc2 plug-ins
-1. create a Pandas dataframe
-1. use external utiities for further analysis
+1. Collect Tweets as .jsonl files
+2. Flatten the raw data. This is necessary when you certain commands to collect data (`timeline`, etc.)
+3. Convert the flattened .jsonl file to csv
+4. Use `wc` to make you received as much as you expected
+5. Use `head` and `tail` to make sure you got the timespan you were expecting
+6. Create a Pandas dataframe
 
 We've already discussed that While JSON is common, it's not super
 human-readable, and it can be difficult to convert to a dataframe (which most
 of us will want to do anyway). So twarc2 has an extension to turn our harvested
-jsonl to csv. csv's are always easily convertable into Pandas dataframes.
+jsonl to csv. csv's are always easily convertible into Pandas dataframes.
 
 Timelines need to run through the `flatten` twarc plug-in.
 We still haven't found another datatype that needs to be flattened. #FIXME ?
@@ -265,25 +263,31 @@ We still haven't found another datatype that needs to be flattened. #FIXME ?
 So let's flatten the UCSBLibrary timeline, count up our tweets,
 convert to CSV, and create a dataframe
 
-```
+~~~
 !twarc2 flatten raw_data/ucsblib_timeline.jsonl output_data/ucsblib_timeline_flat.jsonl
 !twarc2 csv output_data/ucsblib_timeline_flat.jsonl output_data/ucsblib_timeline.csv
+~~~
+{: .language-bash}
+
+~~~
 ucsblib_timeline_df = pandas.read_csv("output_data/ucsblib_timeline.csv")
+ucsblib_timeline_df.head()
+ucsblib_timeline_df.tail()
+~~~
+{: .language-python}
 
-```
-
-Use `wc`: Did we get a reasonable amount? The api has a limit of
-3200, and we received 3226. Seems reasonable.
+Use `wc`: Did we get a reasonable amount?
 
 Let's remind ourselves of all the different things that come
 along with a tweet by printing out a list of the dataframe
 headers:
 
 ~~~
-list(ucsblib__timeline_df.columns)
+ucsblib_timeline_df.columns
 ~~~
 {: .language-python}
 
+<<<<<<< HEAD
 and see the column headers here as a list.
 
 #FIXME write the code for below:
@@ -294,7 +298,18 @@ Call each of these elements out of the dataframe by sorting:
 - tweeter with the most number of followers
 
 
+~~~
+Index(['id', 'conversation_id', 'referenced_tweets.replied_to.id',
+       'referenced_tweets.retweeted.id', 'referenced_tweets.quoted.id',
+       'author_id', 'in_reply_to_user_id', 'retweeted_user_id',
+...
+       '__twarc.retrieved_at', '__twarc.url',
+       '__twarc.version', 'Unnamed: 73'],
+      dtype='object')
+~~~
+{: .output}
 
+We can see the column headers here.
 
 
 > ## Challenge: Cats of Instagram
@@ -305,7 +320,6 @@ Call each of these elements out of the dataframe by sorting:
 > 2. How far back in time did you get?
 > 3. What is the most re-tweeted recent tweet on #catsofinstagram?
 > 4. Which person has the most number of followers in your dataset?
-> 5. Is it really a person?
 >
 > > ## Solution
 > > ~~~
@@ -315,33 +329,48 @@ Call each of these elements out of the dataframe by sorting:
 > >
 > > 1. Let's start by converting our dataset to a csv, then run some python
 > > ~~~
-> > # convert from jsonl to csv
 > > !twarc2 csv source-data/catsofinstagram.jsonl output-data/catsofinstagram.csv
-> > # read in csv using pandas (denoted by pd)
-> > cats_df = pd.read_csv("output-data/catsofinstagram.csv")
-> > cats_df.shape
 > > ~~~
 > > {: .language-bash}
 > >
-> > Which, in our case, returned 5093 tweets. It's a little bit over our limit but that's okay.
+> > Read in csv using pandas. Pandas is denoted by pd.
+> > ~~~
+> > cats_df = pd.read_csv("output-data/catsofinstagram.csv")
+> > ~~~
+> > {: .language-bash}
+> >
+> > We are able to see how many tweets we get by getting the dimensions of the dataframe.
+> > The number of rows indicate the number of unique tweets. The dumber of columns indicate
+> > the amount of data that came with each tweet.
+> > ~~~
+> > cats_df.shape
+> > ~~~
+> > {: .language-bash}
+> >  
 > >
 > > 2.
+> >
+> > Print the earliest value under the column 'created_at'.
 > > ~~~
-> > # print the earliest 'created_at' time in dataset
 > > cats_df[cats_df.created_at == cats_df.created_at.min()].loc[:,'created_at']
 > > ~~~
-> > {: .language-code}
+> > {: .language-bash}
 > >
 > > The earliest time from our dataset is 05/17/2022 at 144:50:26 pm.
 > >
 > > 3. We can do this by finding the max number of retweets in the dataset and then.
 > > ~~~
-> > most_rt = cats_df[cats_df['public_metrics.retweet_count'] == cats_df['public_metrics.retweet_count'].max()].head()
+> > most_rt = cats_df[cats_df['public_metrics.retweet_count'] ==
+> > cats_df['public_metrics.retweet_count'].max()].head()
+> >
 > > print(most_rt.text)
 > > ~~~
 > > {: .language-python}
 > >
-> > This returns the tweet text '❃❃❃ PURE LOVE ❤💘❤\n#CatsOfTwitter #catsofinstagram #cats https://t.co/kIbFkKFWeT'.
+> > ~~~
+> > '❃❃❃ PURE LOVE ❤💘❤\n#CatsOfTwitter #catsofinstagram #cats https://t.co/kIbFkKFWeT'.
+> > ~~~
+> > {: .output}
 > >
 > > 4. We can calculate the max number of follows in the dataset and then select the tweet that meets that requirement.
 > > ~~~
@@ -351,13 +380,12 @@ Call each of these elements out of the dataframe by sorting:
 > >
 > > User with author_id 248757990 has the most followers, which is 2086382.
 > >
-> > 5. We can then run
+> > We can then get the information on the user.
 > > ~~~
 > > !twarc2 user id 248757990
 > > ~~~
 > > {: .language-bash}
 > >
-> > To get the information on the user. Thankfully, this is a real person!
 > >
 > {: .solution}
 {: .challenge}
