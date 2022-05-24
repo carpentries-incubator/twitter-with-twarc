@@ -129,7 +129,7 @@ You can only pass a single username/ID per `to:` command.
 ![search tweets that tag the twitter account ucsblibrary](../fig/twitter-search-at.png)
 
 ~~~
-twarc2 search "(to:tinycarebot)" raw_data/tinycarebot_mentions.jsonl 
+twarc2 search "(to:ucsblibrary)"  
 ~~~
 {: .language-bash}
 
@@ -137,17 +137,17 @@ As we have seen before, we may also search tweets that contain hastags. In the e
 below, notice that the resulting tweet also contains other hashtags that we did not 
 explicitly search for.
 
-![search tweets that has the hashtag ecodatasci](../fig/twitter-search-hashtags.png)
+![search tweets that has the hashtag ecodatasci](../fig/twittter_meme_search.png)
 
 ~~~
-twarc2 search "(#ecodatasci)"
+twarc2 search "(#meme)"
 ~~~
 {: .language-bash}
 
 We have seen individual searches of each of these parameters. You may also combine these parameters to narrow down your results.
 
 ~~~
-twarc2 search "(archive AND data) (#ecodatasci) (#ecodatasci)"
+twarc2 search "grumpy cat #meme)"
 ~~~
 {. :language-bash}
 
@@ -155,7 +155,7 @@ twarc2 search "(archive AND data) (#ecodatasci) (#ecodatasci)"
 >
 > What resulting tweet(s) do you get from using the Twarc search command?
 > ~~~
-> twarc2 search "(archive AND data) (#ecodatasci) (#ecodatasci)"
+> twarc2 search "(grumpy cat) (#meme) (#cute)"
 > ~~~
 > {: .language-bash}
 >
