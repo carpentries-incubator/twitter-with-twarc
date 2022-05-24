@@ -215,7 +215,7 @@ library_blob_stopped_sorted_freq[7:57]
  ('art', 127),
  ...
 ~~~
-{: .output
+{: .output}
 
 
 ![Top words in library timeline](../fig/top_words.png)
