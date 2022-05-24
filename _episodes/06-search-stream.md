@@ -147,6 +147,8 @@ twarc2 search "(#meme)"
 ~~~
 {: .language-bash}
 
+
+### Order of Operations (FIXME after Lunch)
 We have seen individual searches of each of these parameters. You may also combine these parameters to narrow down your results.
 
 ~~~
