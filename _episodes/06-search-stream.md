@@ -45,7 +45,7 @@ you can simultaneously tighten up your search parameters and keep your `--limit`
 ~~~
 !twarc2 search --limit 500 "(#catsofinstagram  #cute)" > hashtag_cats_500.jsonl
 ~~~
-{. :language-python}
+
 
 This adjusted search returns 5 out of six days. So asking for 800 Tweets should get me 
 six days' worth of results.
@@ -53,7 +53,6 @@ six days' worth of results.
 ~~~
 !twarc2 search --limit 800 "(#catsofinstagram #cute)" > hashtag_cats_800.jsonl
 ~~~
-{: .language-python}
 
 In this way we can 'sip' at our quota and make sure we can work within the 500,000 tweet 
 limit.
@@ -85,7 +84,7 @@ and `cat`
 ~~~
 !twarc2 search "(grumpy cat)"
 ~~~
-{: .language-bash}
+
 
 
 ### OR Logic
@@ -99,7 +98,6 @@ In this case, the terms, `grumpy` or `cat`.
 ~~~
 !twarc2 search "(grumpy OR cat)"
 ~~~
-{: .language-bash}
 
 
 ### Not Logic 
@@ -112,7 +110,7 @@ This will match tweets containing the terms grumpy or cat, but omit anything abo
 ~~~
 !twarc2 search "(grumpy OR cat -Dojacat)"
 ~~~
-{: .language-bash}
+
 
 ### Searching twitters by users
 
@@ -131,9 +129,9 @@ You can only pass a single username/ID per `to:` command.
 ![search tweets that tag the twitter account ucsblibrary](../fig/twitter-search-at.png)
 
 ~~~
-twarc2 search "(to:ucsblibrary)"  
+!twarc2 search "(to:ucsblibrary)"  
 ~~~
-{: .language-bash}
+
 
 ### Using Hashtags
 As we have seen before, we may also search tweets that contain hastags. In the example 
@@ -143,18 +141,18 @@ explicitly search for.
 ![search tweets that has the hashtag meme](../fig/twitter_meme_search.png)
 
 ~~~
-twarc2 search "(#meme)"
+!twarc2 search "(#meme)"
 ~~~
-{: .language-bash}
+
 
 
 ### Order of Operations (FIXME after Lunch)
 We have seen individual searches of each of these parameters. You may also combine these parameters to narrow down your results.
 
 ~~~
-twarc2 search "(grumpy cat #meme)"
+!twarc2 search "(grumpy cat #meme)"
 ~~~
-{: .language-bash}
+
 
 > ## Challenge: Advanced Twarc Search
 >
@@ -180,7 +178,7 @@ get a good number of results here.
 ~~~
 !twarc2 stream-rules add "#catsofinstagram"
 ~~~
-{: .language-python}
+
 
 ~~~
 🚀  Added rule for "#catsofinstagram"
@@ -190,7 +188,7 @@ get a good number of results here.
 ~~~
 !twarc2 stream-rules add "fluffy"
 ~~~
-{: .language-python}
+
 
 ~~~
 🚀  Added rule for "fluffy"
@@ -202,7 +200,7 @@ To see what your current stream rules are, you may list them:
 ~~~
 !twarc2 stream-rules list
 ~~~
-{: .language-python}
+
 
 ~~~
 ☑  #catsofinstagram
@@ -215,7 +213,7 @@ You may stream tweets that contain words and hashtags like we had done in Twarc 
 ~~~
 !twarc2 stream-rules add "at:_We_Rate_Cats"
 ~~~
-{: .language-python}
+
 
 ~~~
 💣  UnprocessableEntity see: https://api.twitter.com/2/problems/invalid-rules
@@ -227,7 +225,7 @@ When you start collecting tweets with the rules you have set in place, you must 
 ~~~
 !twarc2 stream > "raw_data/streamed_tweets.jsonl"
 ~~~
-{: .language-python}
+
 
 Once this command is run, you will collect tweets that match the rules set in place.
 
@@ -240,7 +238,7 @@ remove the rules you had set in place, you must use delete:
 !twarc2 stream-rules delete ""#catsofinstagram"
 !twarc2 stream-rules delete "fluffy"
 ~~~
-{: .language-python}
+
 
 > ## Discuss: Search vs Stream
 > We had an introductory look at the use of the search command and the stream command.
