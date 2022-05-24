@@ -95,7 +95,7 @@ explicitly spells out the "to:" instead.
 ![search tweets that tag the twitter account ucsblibrary](../fig/twitter-search-at.png)
 
 ~~~
-twarc2 search "(to:ucsblibrary)"
+twarc2 search "(to:tinycarebot)" raw_data/tinycarebot_mentions.jsonl 
 ~~~
 {: .language-bash}
 
