@@ -14,6 +14,66 @@ key points:
 - "Robot detection, archives, and deleted accounts"
 ---
 
+## Let's Get Ethical
+
+There are multiple ethical issues to consider when using Twitter
+data. In this lesson, we will be focusing on #FIXME issues: privacy,
+authorship, and consent. Ultimately, all thre concern personhood.
+
+## Authorship, the GDPR, and the Right to be Forgotten
+
+Twitter users maintain ownership of their
+tweets. As the author, users have both copyrights and
+moral rights.
+
+Copyrights prevent your tweets from being compiled together into a
+publication for monetary profit. That said, some authors do not
+have any copyrights. For example, POTUS is an American government employee,
+therefore the property is in the Public Domain.
+
+Laws vary greatly by country, so don't get American librarians started on
+the Queen's copyrights over Canadian government data. (FIXME: expand on this)
+
+Moral rights are more complicated. Laws vary greatly by country--even moreso than
+copyright. In the European Union, authorship includes the right to un-publish,
+in other words, the right to be forgotten. Twitter, very cleverly, preserves this
+right by letting us delete our tweets.
+
+GDPR defines Personal data as:
+
+> ...Personal data are any information which are related to an identified or identifiable 
+> natural person.
+>
+> The data subjects are identifiable if they can be directly or indirectly identified, 
+> especially by reference to an identifier such as a name, an identification number, location 
+> data, an online identifier or one of several special characteristics, which expresses the 
+> physical, physiological, genetic, mental, commercial, cultural or social identity of these 
+> natural persons...
+
+> ## Discussion: Personal Data
+>
+> Do you think that Twitter data should be treated as personal data?
+> What did you consider when making this judgment?
+> Are robots people?
+> Do the blue checkmark people deserve privacy?
+> > ## Solution
+> > We get a lot of personal information when we gather tweets.
+> > We can determine often determine a users’ approximate location, what they like, their beliefs, etc.
+> >
+{: .discussion}
+
+Format as a pushpin #FIXME
+## Personally identifiable information
+The first two minutes of this standup comedy routine
+shows the hazards of sharing too much personal information on social
+media:
+https://www.youtube.com/watch?v=1qqo6z_aBzU
+
+We get a lot of personal information when we gather tweets. Enough to create
+personalized ads, right?
+
+We can determine often determine a users’ approximate location, what
+they like, their beliefs, etc.
 
 ## Twitter Content
 
@@ -176,62 +236,6 @@ is still available.
 > {: .solution}
 {: .challenge}
 
-## Let's Get Ethical
-
-There are multiple ethical issues to consider when using Twitter
-data. In this lesson, we will be focusing on two issues: consent
-and core legal practices.
-
-## Authorship, the GDPR, and the Right to be Forgotten
-
-Twitter users maintain ownership of their
-tweets. As the author, users have both copyrights and
-moral rights.
-
-Copyrights prevent your tweets from being compiled together into a
-publication for monetary profit. That said, some authors do not
-have any copyrights. For example, POTUS is an American government employee,
-therefore the property is in the Public Domain.
-
-Laws vary greatly by country, so don't get American librarians started on
-the Queen's copyrights over Canadian government data. (FIXME: expand on this)
-
-Moral rights are more complicated. Laws vary greatly by country--even moreso than
-copyright. In the European Union, authorship includes the right to un-publish,
-in other words, the right to be forgotten. Twitter, very cleverly, preserves this
-right by letting us delete our tweets.
-
-GDPR defines Personal data as:
-
-> ...Personal data are any information which are related to an identified or identifiable natural person.
->
-> The data subjects are identifiable if they can be directly or indirectly identified, especially by reference to an identifier such as a name, an
-> identification number, location data, an online identifier or one of several special characteristics, which expresses the physical, physiological,
-> genetic, mental, commercial, cultural or social identity of these natural persons...
-
-> ## Discussion: Personal Data
->
-> Do you think that Twitter data should be treated as personal data?
-> What did you consider when making this judgment?
-> Are robots people?
-> Do the blue checkmark people deserve privacy?
-> > ## Solution
-> > We get a lot of personal information when we gather tweets.
-> > We can determine often determine a users’ approximate location, what they like, their beliefs, etc.
-> >
-{: .discussion}
-
-## Personally identifiable information
-The first two minutes of this standup comedy routine
-shows the hazards of sharing too much personal information on social
-media:
-https://www.youtube.com/watch?v=1qqo6z_aBzU
-
-We get a lot of personal information when we gather tweets. Enough to create
-personalized ads, right?
-
-We can determine often determine a users’ approximate location, what
-they like, their beliefs, etc.
 
 
 # DocTheNow’s personas
