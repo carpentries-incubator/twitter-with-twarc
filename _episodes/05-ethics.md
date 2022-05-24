@@ -17,8 +17,8 @@ key points:
 ## Let's Get Ethical
 
 There are multiple ethical issues to consider when using Twitter
-data. In this lesson, we will be focusing on #FIXME issues: privacy,
-authorship, and consent. Ultimately, all thre concern personhood.
+data. In this lesson, we will be focusing on #FIXME issues: authorship, 
+privacy, and consent. Ultimately, all thre concern personhood.
 
 ## Authorship, the GDPR, and the Right to be Forgotten
 
@@ -32,14 +32,22 @@ have any copyrights. For example, POTUS is an American government employee,
 therefore the property is in the Public Domain.
 
 Laws vary greatly by country, so don't get American librarians started on
-the Queen's copyrights over Canadian government data. (FIXME: expand on this)
+the Queen's copyrights over Canadian government data, which is complicated.
 
 Moral rights are more complicated. Laws vary greatly by country--even moreso than
 copyright. In the European Union, authorship includes the right to un-publish,
 in other words, the right to be forgotten. Twitter, very cleverly, preserves this
 right by letting us delete our tweets.
 
-GDPR defines Personal data as:
+
+## Personally Identifiable Data
+It's very easy to match up data to a human being. Conversely, it is very difficult
+to remove something from the Internet once it is there. The European Union has created
+the General Data Protection Regulation to protect people's identities as well as
+to respect the privacy rights of "natural persons" (as distinct from public figures and
+corporations).
+
+The GDPR defines Personal data as:
 
 > ...Personal data are any information which are related to an identified or identifiable 
 > natural person.
@@ -63,20 +71,20 @@ GDPR defines Personal data as:
 {: .discussion}
 
 Format as a pushpin #FIXME
+
 ## Personally identifiable information
-The first two minutes of this standup comedy routine
+The first few minutes of [this standup comedy routine
 shows the hazards of sharing too much personal information on social
-media:
-https://www.youtube.com/watch?v=1qqo6z_aBzU
+media](https://www.youtube.com/watch?v=1qqo6z_aBzU)
 
-We get a lot of personal information when we gather tweets. Enough to create
-personalized ads, right?
+We get a lot of personal information when we gather tweets. We can determine often determine 
+a users’ approximate location, what they like, their religious beliefs. People share an 
+incredible amount of personal information on Twitter, and as scholars, we have an obligation
+to treat that information carefuly.
 
-We can determine often determine a users’ approximate location, what
-they like, their beliefs, etc.
+# Protecting yourself
 
-## Twitter Content
-
+## Distance Reading
 Researching tweets on Twitter may expose you to hate speech, and possibly disturbing imagery. 
 Fortunately, when we work with thousands of tweets at a time, we do so at a distance,
 so we can avoid consuming disturbing content directly.
@@ -194,7 +202,7 @@ Or pass a paramter to get only words longer than
 We need TextBlob help #FIXME
 
 
-## Disinformation
+# Disinformation
 Twitter already protects us by removing content that violates its Terms of
 Use or that it otherwise finds objectionable. Sometimes this means removing
 entire accounts, such as that of the former US President and many of his 
@@ -202,9 +210,8 @@ associates.
 
 # Misinformation
 Nature disinformation cloud 
-!(https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png)
 
-Something about social media as a tool for people with certain motives. I wonder if theres a Parler Dataset on Kaggle? Or do you think that might violate the Carpentries code of conduct (too risky?)?
+![https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png]
 
 
 Speaking of which, let's see how much data from January 6th, 2021
@@ -223,7 +230,8 @@ is still available.
 > Terms-of-Service to ask whether or not any of this is in the
 > public good or an acceptable topic of research.
 >
-> Using the file [dehydrated_Capitol_Rioters.txt](../data/dehydratedCapitolRiotTweets.txt), determine how many
+> Using the file [dehydrated_Capitol_Rioters.txt](../data/dehydratedCapitolRiotTweets.txt), 
+> determine how many
 > Tweets were in the archive, and how many remain on Mr. Musk's new
 > acquisition.
 > {: .source}
