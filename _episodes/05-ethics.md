@@ -244,7 +244,7 @@ as that of the former US President and many of his associates.
 # Misinformation
 Nature disinformation cloud 
 
-![https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png]
+![An image of tweets](https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png)
 
 
 Speaking of which, let's see how much data from January 6th, 2021
@@ -267,13 +267,13 @@ is still available.
 > determine how many
 > Tweets were in the archive, and how many remain on Mr. Musk's new
 > acquisition.
-> {: .source}
 >
 > > ## Solution
-> > On first run through, only 10 of the first 999 tweets remain.
-> > This indicates that a huge proportion of this dataset has
-> > been deleted or restricted by Twitter.
-> > {: .output}
+> > When we first ran this, only a tiny fraction of the 
+> > tweets remained. But more recently, we noticed that about 
+> > 80% gets rehydrated. We suspect that Twitter has restored some
+> > of this content.
+> > 
 > {: .solution}
 {: .challenge}
 
