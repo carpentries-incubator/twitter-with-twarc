@@ -46,6 +46,23 @@ find all the followers of a given account.
 {: .language-bash}
 
 
+> ## Challenge: Do robots follow robots?
+> Take a look at the five user profiles we just downloaded.
+> Do you think that they themselves might be robots?
+>
+> >
+> > ~~~
+> > !twarc2 csv raw_data/tcb_followers.jsonl > output_data/tcb_followers.csv
+> > ~~~ 
+> > 
+> > Convert the 5 profile files into a csv and read them
+> > You might also need to copy-and-paste the user-id
+> > into the Twitter web interface and take a look at the media
+> > that comes along.
+{: .solution}
+{: .challenge}
+
+
 ### When we have thousands of tweets: we need analysis tools
 So that's one tweet, and one account's followers. But we have harvested thousands of tweets,
 how can we get a grip on them?
