@@ -294,3 +294,11 @@ to Twitter accounts. We can apply these
 labels to individual Tweets and/or accounts to identify bots,
 trolls, and malicious actors.
 
+Adding a column to our dataframe and classifying tweets according to what sort of 
+entity we think posted them can be a very layer of analysis
+
+~~~
+code to add a column to riots_df
+~~~
+
+!(Social Human A icons)[../fig/tweeters.png]
