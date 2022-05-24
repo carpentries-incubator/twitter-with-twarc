@@ -137,7 +137,7 @@ As we have seen before, we may also search tweets that contain hastags. In the e
 below, notice that the resulting tweet also contains other hashtags that we did not 
 explicitly search for.
 
-![search tweets that has the hashtag ecodatasci](../fig/twitter_meme_search.png)
+![search tweets that has the hashtag meme](../fig/twitter_meme_search.png)
 
 ~~~
 twarc2 search "(#meme)"
