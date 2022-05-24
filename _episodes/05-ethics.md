@@ -72,15 +72,14 @@ The GDPR defines Personal data as:
 
 Format as a pushpin #FIXME
 
-## Personally identifiable information
-The first few minutes of [this standup comedy routine
-shows the hazards of sharing too much personal information on social
-media](https://www.youtube.com/watch?v=1qqo6z_aBzU)
-
 We get a lot of personal information when we gather tweets. We can determine often determine 
 a users’ approximate location, what they like, their religious beliefs. People share an 
 incredible amount of personal information on Twitter, and as scholars, we have an obligation
 to treat that information carefuly.
+
+The first few minutes of [this standup comedy routine
+shows the hazards of sharing too much personal information on social
+media](https://www.youtube.com/watch?v=1qqo6z_aBzU)
 
 # Protecting yourself
 
@@ -91,7 +90,7 @@ so we can avoid consuming disturbing content directly.
 
 First of all we need to get at the language.
 
-## Text Analysis with Textblob
+### Text Analysis with Textblob
 
 Looking at the most commonly used words and phrases in a dataset is a text analysis practice.
 This helps us to get a sense of what we are dealing with in our dataset.
@@ -109,12 +108,14 @@ Let's remind ourselves what dataframes we have available to work with:
 ~~~
 # %who DataFrame
 ~~~
-# output:
+{: .language-python}
+~~~
 ecodatasci_df	 hashtag_gasprices_df	 hashtagcats_df	 
 kittens_df	 library_timeline_df	 riots_dehydrated_df	 
 ucsb_library_mentions_df
 ~~~
-{: .language-python}
+{: .output}
+
 
 ~~~
 library_timeline_df.columns
@@ -122,27 +123,26 @@ library_timeline_df.columns
 {: .language-python}
 
 ~~~
-# tweet content is found under the column "text"
-hashtagcats_df['text'].head()
-=======
-# we' see that the tweet is found under the column "text"
+# recall that the tweet content is found under the column "text"
 hashtagcats_df['text'].head()
 ~~~
 {: .language-python}
 
-First we pull the values from the `text` column into a python list.
+So that's the column to pull data into a python list:
 
 ~~~
 list_tweets = hashtagcats_df['text'].tolist()
 ~~~
 {: .language-python}
 
-Next, we will use the python `join` function to make this list into a string of text.
+Next, we use the python `join` function to insert spaces between words and 
+make this list into one long string of text.
 
 ~~~
 string_tweets = ' '.join(list_tweets)
 ~~~
 {: .language-python}
+
 
 TextBlob has its own data format, so we need an object of that type. The function `TextBlob` 
 converts the string of tweets to a textblob.
@@ -189,8 +189,11 @@ library_blob_stopped_sorted_freq[1:50]
 
 Lastly, we want to cut off the most used, which are http, ucsb, etc.
 ~~~
+library_blob_stopped_sorted_freq[7:57]
 ~~~
 {: .language-python}
+
+screen shot #FIXME
 
 Our results make sense. We can see that the words are associated with library-like
 things. This text is worth some further examination.
