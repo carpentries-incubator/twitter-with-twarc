@@ -192,24 +192,53 @@ Lastly, we want to cut off the most used, which are http, ucsb, etc.
 library_blob_stopped_sorted_freq[7:57]
 ~~~
 {: .language-python}
+~~~
+[('new', 288),
+ ('today', 250),
+ ('us', 232),
+ ('’', 228),
+ ('book', 218),
+ ('research', 212),
+ ('here', 210),
+ ('students', 195),
+ ('reads', 189),
+ ('open', 187),
+ ('we', 178),
+ ('check', 177),
+ ('join', 164),
+ ('week', 161),
+ ('floor', 145),
+ ('day', 143),
+ ('free', 139),
+ ('collections', 138),
+ ('access', 136),
+ ('art', 127),
+ ...
+~~~
+{: .output
 
-screen shot #FIXME
+!Top words in library timeline(../fig/top_words.png)
 
 Our results make sense. We can see that the words are associated with library-like
 things. This text is worth some further examination.
 
+If we were expecting hate speech, this is where we would start
+to see it. 
 
-Can we pass this through another built-in filter? #FIXME
-Or pass a paramter to get only words longer than
-2 characters?
-We need TextBlob help #FIXME
+A more sophisticated text analysis would include passing this through 
+another filter to remove the one and two letter words and the URL's
+are excluded from our text analysis. There are also functions to pull phrases
+out of text corpuses.
 
+If some of the top words are inflammatory, we can bet that the content of the 
+whole datset will make some squeamish.
 
 # Disinformation
-Twitter already protects us by removing content that violates its Terms of
-Use or that it otherwise finds objectionable. Sometimes this means removing
-entire accounts, such as that of the former US President and many of his 
-associates.
+Twitter already removes a lot of violent and obscene content, but it does pride itself on 
+being a free speech platform. Mainly, Twitter removes content that violates its Terms of Use. 
+In some countries some content might be downright illegal and Twitter would be obliged to delete it
+or otherwise restrict access to it. Sometimes this means removing entire accounts, such 
+as that of the former US President and many of his associates.
 
 # Misinformation
 Nature disinformation cloud 
