@@ -127,4 +127,22 @@ see:
 ![portion of a network diagram with a central node kiko11232015 off to the
 side of the main cluster of the account @catsofinstagram](../fig/cat_network.png)
 
-
+> ## Challenge: Examining a network diagram
+>
+> Create a network diagram of the ecodatascience
+>
+> ~~~
+> it may include some code
+> ~~~
+> {: .source}
+>
+> > ## Solution
+> >
+> > This is the body of the solution.
+> >
+> > ~~~
+> > it may also include some code
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
