@@ -69,21 +69,21 @@ page](https://twitter.com/home)
 We will demonstrate some options you may use when searching tweets in both the Twitter 
 search bar and through the Twarc search command. First, you may search tweets for 
 content that contains certain words. In the example image below, we search for tweets 
-that contain the words "archive" and "data". 
+about Grumpy Cat. 
 
 ### AND logic
 
-In the Twitter search bar, using all-caps `AND` will return tweets containing `data` and `archive`. 
+In the Twitter search bar, using all-caps `AND` will return tweets containing `grumpy` and `cat`. 
 
-![search tweets that contain the words archive and data](../fig/twitter-search-words.png)
+![search tweets grumpy and cat](../fig/grumpy_AND.png)
 
 Successive operators with a space between them will result in boolean `AND` logic. Tweets separated by a space
-will return tweets matching both conditions. In the example below, this search will return tweets containing `archive`
-and `data`
+will return tweets matching both conditions. In the example below, this search will return tweets containing `grumpy`
+and `cat`
 
 
 ~~~
-!twarc2 search "(archive data)"
+!twarc2 search "(grumpy cat)"
 ~~~
 {: .language-bash}
 
@@ -92,10 +92,25 @@ and `data`
 
 To search for tweets that contain either word, and not require both words, the search bar and Twarc will
 use a capitalized `OR` instead. This will return results if either search condition is met.
-In this case, the terms, `archive` or `data`. 
+In this case, the terms, `grumpy` or `cat`. 
+
+![search either grumpy or cat](../fig/grumpy_OR.png)
 
 ~~~
-!twarc2 search "(archive OR data)"
+!twarc2 search "(grumpy OR cat)"
+~~~
+{: .language-bash}
+
+
+### Not Logic 
+
+add a dash(-) to a keyword or operator to negate it (NOT). This works in both the twitter search bar and in twarc. 
+This will match tweets containing the terms grumpy or cat, but omit anything about Doja Cat.  
+
+![seach for grumpy cats but not Doja](../fig/not_doja.PNG)
+
+~~~
+!twarc2 search "(grumpy OR cat -Dojacat)"
 ~~~
 {: .language-bash}
 
