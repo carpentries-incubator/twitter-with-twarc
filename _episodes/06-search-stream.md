@@ -73,11 +73,14 @@ that contain the words "archive" and "data".
 
 ### AND logic
 
-Successive operators with a space between them will result in boolean `AND` logic. Tweets separated by a space
-will return tweets matching both conditions. In the example below, this search will return tweets containing `archive`
-and `data` 
+In the Twitter search bar, using all-caps `AND` will return tweets containing `data` and `archive`. 
 
 ![search tweets that contain the words archive and data](../fig/twitter-search-words.png)
+
+Successive operators with a space between them will result in boolean `AND` logic. Tweets separated by a space
+will return tweets matching both conditions. In the example below, this search will return tweets containing `archive`
+and `data`
+
 
 ~~~
 !twarc2 search "(archive data)"
@@ -85,17 +88,28 @@ and `data`
 {: .language-bash}
 
 
-To search for tweets that contain either word, and not require both words, the search 
-may use a capitalized `OR` instead.
+### OR Logic
 
-The Twitter search and Twarc search command also supports looking for tweets that 
-mention a specified twitter account (mentioning another Twitter account in a tweet is 
-known as "at-ing/ @-ing" or "tagging"). In the below example, Jon @-ed the Twitter 
+To search for tweets that contain either word, and not require both words, the search bar and Twarc will
+use a capitalized `OR` instead. This will return results if either search condition is met.
+In this case, the terms, `archive` or `data`. 
+
+~~~
+!twarc2 search "(archive OR data)"
+~~~
+{: .language-bash}
+
+The Twitter search and Twarc search command also supports looking for tweets that
+mention a specified twitter account (mentioning another Twitter account in a tweet is
+known as "at-ing/ @-ing" or "tagging"). In the below example, Jon @-ed the Twitter
 account @ucsblibrary.
 
 Note that capitalization for the account name does not affect the search.  Also, 
 including the "@" symbol in front of the account name is not necessary, the search 
 explicitly spells out the "to:" instead.
+
+`to:` will match any tweet that is a reply to a partricular user. This can be the username or the numeric user ID. 
+You can only pass a single username/ID per `to:` command. 
 
 ![search tweets that tag the twitter account ucsblibrary](../fig/twitter-search-at.png)
 
