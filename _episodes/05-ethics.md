@@ -301,4 +301,4 @@ entity we think posted them can be a very layer of analysis
 code to add a column to riots_df
 ~~~
 
-!(Social Human A icons)[../fig/tweeters.png]
+![Social Human A icons](../fig/tweeters.png)
