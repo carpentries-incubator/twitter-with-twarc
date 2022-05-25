@@ -1,22 +1,25 @@
 ---
-title: "Python Text Analysis"
-teaching: 15
-exercises: 20
+title: "TextBlob Sentiment Analysis"
+teaching: 10
+exercises: 10
 questions:
-- "What else can we do with our tweets?"
 - "How can I analyze my tweets beyond what twarc offers?"
 - "Is it possible to tell if tweets are expressing positive or negative feelings?"
 
 objectives:
-- "We use Python and the power of Pandas with our Jupyter notebook"
 - "Sentiment analysis measures the 'positivity' or 'negativity' of language"
+
+keypoints:
+- "TextBlob has a bunch of functions that we should learn"
 
 ---
 
 ## Where We've Been: twarc Built-ins
-We have already looked at the hashtags in a dataset, and the
-proportions of tweets to retweets. But what about content
-of the tweets? For that we need some textual analysis.
+We have looked at the hashtags in a dataset, the
+proportions of tweets to retweets, and the networks of users created
+by a tweet-stream. But what about content
+of the tweets? For that we need some textual analysis, and so far all
+we've done is count words.
 
 # Sentiment Analysis with TextBlob
 TextBlob is a Python library that does all sorts of text processing, 
@@ -47,16 +50,19 @@ the linguistic datasets that TextBlob uses in its analyses:
 {: python}
 
 We need to feed TextBlob something like plain text. Therefore, 
-we need to create a text object from our dataframe. 
+we need to create a text object from our dataframe.
+ 
 That column is named `text`, we pull that 
 out of our dataframe and convert it to a list. Then we can 
 convert the list into one long string. 
 
-We can do this all in one cell.
+TextBlob wants to get fed a string, so we will give it a string and convert that 
+string into a blob. Then we send the blob through TextBlob's sentiment method.
 
-TextBlob requires its own special datatype, so we convert our 
-string into a blob. Then we send the blob through TextBlob's
-sentiment method.
+
+We can do this all in one cell, or one cell at a time to make
+sure we don't have any mistakes.
+
 
 ~~~
 # break tweets text column into a list, 
@@ -74,12 +80,12 @@ Sentiment(polarity=0.2378257657037288,
 {: .python}
 
 
-The overall sentiment of the language of cat twiter is rather 
+The overall sentiment of the language of Cat Twitter is rather 
 positive. And the tweets tend to be subjective.
 
-#FIXME 
-Describe the algorhythm and a little bit about what else it does,
-like remove stop words and url's, determines language, etc.
+There's a ton of other analyses and chunking functions in 
+textblob. [Read the docs](https://textblob.readthedocs.io/en/dev/quickstart.html.
+
 
 > ## Challenge: Anticipating Sentiment
 > Write Python code that outputs three sets of 
@@ -117,11 +123,10 @@ like remove stop words and url's, determines language, etc.
 
 
 
-
 ## Can we do anything with the emojis?
 examined Emojis as a proxy measurement of qualitative emotional 
 content. ie: you can visually see sentiment in emojis.
 
-They are emotional icons.
+They are emotional icons. #FIXME
 
 
