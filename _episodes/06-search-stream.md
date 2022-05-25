@@ -146,8 +146,25 @@ explicitly search for.
 
 
 
-### Order of Operations (FIXME after Lunch)
+### Order of Operations
 We have seen individual searches of each of these parameters. You may also combine these parameters to narrow down your results.
+When combining boolean functions the following order of operations will dictate how your query is evaluated. 
+
+1. Operators connected by `AND` logic are combined first
+2. Operators connected by `OR` logic are combined after
+
+For Example, internet cats Cole and Marmalade:
+
+![cole and marmalade](../fig/cole_marm.png)
+ 
+`cats OR cole marmalade` would be evaluated as `cats OR (cole marmalade)` 
+`cats cole OR marmalade` would be evaluated as `(cats cole) OR marmalade` 
+
+To eliminate uncertainty, you can use parentheses to group terms together where appropriate. 
+With Cole and Marmalade 
+
+`(cats or cole) marmalade` which would probably throw out cats, some guy named Cole, and orange preservatives
+`cats (cole marmalade)` which would be closer to our internet cats
 
 ~~~
 !twarc2 search "(grumpy cat #meme)"
