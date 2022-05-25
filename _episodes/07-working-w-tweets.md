@@ -50,9 +50,10 @@ limiter here is counted in thousands, so we are getting 1000 of
 
 
 > ## Challenge: Do robots follow robots?
-> Take a look at the five user profiles we just downloaded.
-> Do you think that they themselves might be robots?
->
+> Take a look at the first bunch of user profiles we just downloaded.
+> Do you think that any of them might be robots?
+> You should flatten the file. And we can't make a csv of this one
+> because csv only works on tweets, not users.
 > >
 > > ~~~
 > > !twarc2 csv raw_data/tcb_followers.jsonl > output_data/tcb_followers.csv
