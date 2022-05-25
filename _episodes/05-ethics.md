@@ -59,8 +59,9 @@ The GDPR defines Personal Data as:
 > data, an online identifier or one of several special characteristics, which expresses the
 > physical, physiological, genetic, mental, commercial, cultural or social identity of these
 > natural persons...
-
-Citation: "EUR-Lex – 32016R0679 – EN – EUR-Lex". [eur-lex.europa.eu](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679&qid=1653515192148).
+>
+> Citation: "EUR-Lex – 32016R0679 – EN – EUR-Lex". [eur-lex.europa.eu](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679&qid=1653515192148).
+{: .discussion}
 
 > ## Discussion: Personal Data
 >
