@@ -37,17 +37,17 @@ We can use the visual indicator to confirm the limit of our second search. We ma
 open the file and see if we have something less than 2,000 tweets or 6 days worth. For 
 this hashtag, you will probably hit your limit.
 
-If you want to go back as far in time as the Twitter API allows (6 days typically),
-and NOT eat up too much of your monthly quota, 
-you can simultaneously tighten up your search parameters and keep your `--limit` value low.
+If you want to go back as far in time as the Twitter API allows (6 days 
+typically), and NOT eat up too much of your monthly quota, you can simultaneously 
+tighten up your search parameters and keep your `--limit` value low.
 
 
 ~~~
 !twarc2 search --limit 500 "(#catsofinstagram  #cute)" > hashtag_cats_500.jsonl
 ~~~
 
-
-This adjusted search returns 5 out of six days. So asking for 800 Tweets should get me 
+This adjusted search for tweets with BOTH of these hashtags, 
+returns 5 out of six days. So asking for 800 Tweets should get me 
 six days' worth of results.
 
 ~~~
@@ -72,13 +72,14 @@ about Grumpy Cat.
 
 ### AND logic
 
-In the Twitter search bar, using all-caps `AND` will return tweets containing `grumpy` and `cat`. 
+In the Twitter search bar, using all-caps `AND` will return tweets containing 
+`grumpy` and `cat`.
 
 ![search tweets grumpy and cat](../fig/grumpy_AND.PNG)
 
-Successive operators with a space between them will result in boolean `AND` logic. Tweets separated by a space
-will return tweets matching both conditions. In the example below, this search will return tweets containing `grumpy`
-and `cat`
+Successive operators with a space between them will also result in boolean `AND` logic. 
+Words separated by a space will return tweets matching both conditions. In the 
+example below, this search will return tweets containing `grumpy` and `cat`
 
 
 ~~~
@@ -95,6 +96,7 @@ In this case, the terms, `grumpy` or `cat`.
 
 ![search either grumpy or cat](../fig/grumpy_OR.PNG)
 
+That same syntax holds for twarc2:
 ~~~
 !twarc2 search "(grumpy OR cat)"
 ~~~
@@ -102,8 +104,9 @@ In this case, the terms, `grumpy` or `cat`.
 
 ### Not Logic 
 
-add a dash(-) to a keyword or operator to negate it (NOT). This works in both the twitter search bar and in twarc. 
-This will match tweets containing the terms grumpy or cat, but omit anything about Doja Cat.  
+add a dash(-) to a keyword or operator to negate it (NOT). This works in both the 
+twitter search bar and in twarc. This will match tweets containing the terms 
+grumpy ORor cat, AND omit anything about Doja Cat.
 
 ![seach for grumpy cats but not Doja](../fig/not_doja.PNG)
 
@@ -112,7 +115,7 @@ This will match tweets containing the terms grumpy or cat, but omit anything abo
 ~~~
 
 
-### Searching twitters by users
+### Searching for Mentions of Users (@'ing)
 
 The Twitter search and Twarc search command also supports looking for tweets that
 mention a specified twitter account (mentioning another Twitter account in a tweet is
@@ -120,11 +123,12 @@ known as "at-ing/ @-ing" or "tagging"). In the below example, Jon @-ed the Twitt
 account @ucsblibrary.
 
 Note that capitalization for the account name does not affect the search.  Also, 
-including the "@" symbol in front of the account name is not necessary, the search 
+including the "@" symbol in front of the account name does not work, the search 
 explicitly spells out the "to:" instead.
 
-`to:` will match any tweet that is a reply to a partricular user. This can be the username or the numeric user ID. 
- You can only pass a single username/ID per `to:` command. 
+`to:` will match any tweet that is a reply to a partricular user. This can be the 
+ username or the numeric user ID. You can only pass a single username/ID per `to:` 
+ command.
 
 ~~~
 !twarc2 search "(to:realgrumpycat)"  
@@ -195,7 +199,7 @@ Grouping by using () to group terms and operators together in this way.
 ## Twarc Stream Command
 
 You may also collect tweets as they are posted, and establish rules to what tweets will 
-be collected (as you did for setting search parameters). To start with a stream, let's 
+be collected (as you did for setting search parameters). To start with a stream, you 
 set some tweet parameters or rules:
 
 You may want to see 'what's trending' on Twitter to make sure you 
@@ -234,7 +238,9 @@ To see what your current stream rules are, you may list them:
 ~~~
 {: .output}
 
-You may stream tweets that contain words and hashtags like we had done in Twarc search. We cannot use a username to stream tweets that mention another Twitter account:
+You may stream tweets that contain words and hashtags like we had done in Twarc 
+search. We cannot use a username to stream tweets that mention another Twitter 
+account:
 
 ~~~
 !twarc2 stream-rules add "at:_We_Rate_Cats"
@@ -257,11 +263,13 @@ Once this command is run, you will collect tweets that match the rules set in pl
 
 This collection will be ongoing unless you explicitly shut down the stream by 
 interrupting the kernel (in Jupyter) or by typing a `ctrl + c` (from the console). While 
-this stops the stream collection, it does not remove the stream-rules. In order to 
-remove the rules you had set in place, you must use delete:
+this stops the stream collection, it does not remove the stream-rules. 
+
+Before running a new stream, don't foreget to  
+remove the rules you had set in place. Use `stream-rules delete`:
 
 ~~~
-!twarc2 stream-rules delete ""#catsofinstagram"
+!twarc2 stream-rules delete "#catsofinstagram"
 !twarc2 stream-rules delete "fluffy"
 ~~~
 
@@ -272,10 +280,7 @@ remove the rules you had set in place, you must use delete:
 > When might you choose stream over search? How can you use them together?
 {: .discussion}
 
-Here is more [clarification](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics).
+Here is more [information about using Twitter search syntax](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics).
 
-Functions and utilities: refer to our guide and readthedocs.docnow. There will be more detail in episode 6.
-Functions / extensions: can be pip installed --and these installs stick in our Labs environment (because we
-have permission to install things on top of twarc)
-
-Our twitter guide gives advice about how to follow a real-time event, like pending #scotus decisions.
+Our twitter guide gives advice about how to follow a real-time event, like pending 
+#scotus decisions.
