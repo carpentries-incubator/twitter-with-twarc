@@ -226,22 +226,24 @@ Our results make sense. We can see that the words are associated with library-li
 things. This text is worth some further examination.
 
 If we were expecting hate speech, this is where we would start
-to see it. 
-
-A more sophisticated text analysis would include passing this through 
-another filter to remove the one and two letter words and the URL's
-are excluded from our text analysis. There are also functions to pull phrases
-out of text corpuses.
-
-If some of the top words are inflammatory, we can bet that the content of the 
+to see it. If some of the top words are inflammatory, we can bet that the content of the 
 whole datset will make some squeamish.
 
+
+A more sophisticated text analysis would include passing this through 
+another filter to remove the one and two letter words and the URL's. 
+
+There are also functions to pull phrases
+out of text corpuses, which is one form of what is called tokenization. 
+
+
 # Disinformation
-Twitter already removes a lot of violent and obscene content, but it does pride itself on 
-being a free speech platform. Mainly, Twitter removes content that violates its Terms of Use. 
-In some countries some content might be downright illegal and Twitter would be obliged to delete it
-or otherwise restrict access to it. Sometimes this means removing entire accounts, such 
-as that of the former US President and many of his associates.
+Twitter already removes a lot of violent and obscene content, but it does pride 
+itself on being a free speech platform. Mainly, Twitter removes content that 
+violates its Terms of Use. In some countries some content might be downright 
+illegal and Twitter would be obliged to delete it or otherwise restrict access to 
+it. Sometimes this means removing entire accounts, such as that of the former US 
+President and many of his associates.
 
 # Misinformation
 Nature disinformation cloud 
@@ -279,14 +281,24 @@ is still available.
 > {: .solution}
 {: .challenge}
 
-### New Challenge
+### New Challenge???
 That riot file is too big to work with on the fly.
 We need something a bit different. First thought is to 
 give a list of accounts and see who is still online?
 
 Second thought: there's 58135 users in the rehydrated file. But they 
 are mostly retweets. By getting out the users quoted, we can see that there's
-many fewer original authors.
+many fewer original authors. How few? #FIXME
+
+Chop the dataset to be the first 10,000 lines:
+
+~~~
+! head -n 10000 output_data/riots_flat.jsonl > output_data/riots10k.jsonl
+! twarc2 csv output_data/riots10k.jsonl > output_data/riots10k.csv
+~~~
+
+Sort our 10,000 by account created date. New accounts can have a SH-A tag
+applied to them.
 
 
 # Social Humans and robots
@@ -297,10 +309,10 @@ labels to individual Tweets and/or accounts to identify bots,
 trolls, and malicious actors.
 
 Adding a column to our dataframe and classifying tweets according to what sort of 
-entity we think posted them can be a very layer of analysis
+entity we think posted them is a very useful flavor of analysis
 
 ~~~
-code to add a column to riots_df
+code to add a column to the list of authors we pulled above?
 ~~~
 
 ![Social Human A icons](../fig/tweeters.png)
