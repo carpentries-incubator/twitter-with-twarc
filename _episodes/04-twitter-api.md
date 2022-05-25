@@ -18,7 +18,11 @@ keypoints:
 
 ## The Twitter v.2 API
 
-The Twitter API is what allows us to collect tweets. Twitter also keeps track of who is getting this data, and which is why there is an application tied to their API access.
+The Twitter API is what allows us to collect tweets. twarc takes care of the interactions
+between our Jupyter notebook and the API. Twitter also keeps track of 
+who is getting this data. That's why there is that lengthy application 
+process tied to their 
+API access.
 
 One of the ways to utilize the API access is to collect tweets and request only the information we need.
 
@@ -27,7 +31,8 @@ Recall that API is an acronym for Application Programming Interface. APIs allow 
 Compared to
 v1, the most recent version of the Twitter API (v2) includes additional levels of
 access, more features, and faster onboarding for developers and academic
-researchers.
+researchers. It also forced twarc to update its code, so that's why we are now
+using twarc2. 
 
 The Twitter API comes along with all sorts of rules and regulations: how to
 submit requests, how many requests you can make in an hour, how many Tweets you
@@ -142,11 +147,11 @@ Total Tweets: 1,997
 > > ## Solution
 > > The `--granularity` flag for the counts command sets the time interval for aggregate counts.
 > > ~~~
-> > !twarc2 counts --granularity "day" --text "(Poker OR poker OR #Poker OR #poker)"
-> > !twarc2 counts --granularity "day" --text "(Golf OR golf OR #Golf OR #golf)"
-> > !twarc2 counts --granularity "day" --text "(Basketball OR basketball OR #Basketball OR #basketball)"
-> > !twarc2 counts --granularity "day" --text "(Baseball OR baseball OR #Baseball OR #baseball)"
-> > !twarc2 counts --granularity "day" --text "(Football OR football OR #Football OR #football)"
+> > !twarc2 counts --granularity "day" --text "(poker OR #Poker)"
+> > !twarc2 counts --granularity "day" --text "(Golf OR #Golf)"
+> > !twarc2 counts --granularity "day" --text "(Basketball #Basketball)"
+> > !twarc2 counts --granularity "day" --text "(Baseball #baseball)"
+> > !twarc2 counts --granularity "day" --text "(Football #Football)"
 > > ~~~
 > > {: .language-bash}
 > >
