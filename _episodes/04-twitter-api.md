@@ -196,8 +196,8 @@ Twitter is NOT case sensitive, so these counts include various capitalizations o
 
 > ## Challenge: Counting Hashtags Again
 > Challenge Try using the counts command on other topics by comparing the counts from the words
-> "poker" and "football". Aggregate the counts together by day. Do you think we use these results to
-> imagine what sports are most popular on Twitter? Discuss.
+> "poker" and "football". Aggregate the counts together by day. Do you think we can use these results to
+> get insight on what sports are most popular on Twitter?
 >
 > > ## Solution
 > > The `--granularity` flag for the counts command sets the time interval for aggregate counts.
