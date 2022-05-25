@@ -157,13 +157,15 @@ We call network the same way we called hashtags
 
 The built-in web viewer ain't so hot, so download that html file to view the 
 network on your own computer. Chrome works fine, and it's best to make the diagram 
-fullscreen. We can see: - the largest central cluster around the account 
+fullscreen. It mseems to work better on a 
+PC than a mac. We can see: - the largest central cluster around the account 
 @catsofinstagram
 
-- a corporate entity (litter box company in the upper right) shows up, and that a big 
-  sub-network exists
+- a corporate entity (a litter box company?) shows up, 
 
-- neighborhoods of users, such as those around kiko1123215 in the
+- some users of the hashtag are separate from the account's network.
+
+- neighborhoods of users exist, such as those around kiko1123215 in the
   image below. Kiko is nearby, but separate from, the 
   @catsofinstagram twitter account.
 
