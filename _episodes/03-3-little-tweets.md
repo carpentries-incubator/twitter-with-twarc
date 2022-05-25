@@ -48,7 +48,7 @@ Just to show you the the contents of a single tweet, look to the output below. T
 output is an edit of the data with only white-space characters. These edits have been 
 made to explore and separate the tweet's content from the metadata.
 
-We can see that it is the 4th piece of data in the tweet is "text", and is
+We can see that the 4th piece of data in the tweet is "text", and is
 after the author's ID, the language, and time stamp. The fifth
 element, "referenced tweet", tells us that this tweet is in reply to another tweet.
 
