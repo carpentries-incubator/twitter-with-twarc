@@ -545,7 +545,7 @@ Another common transformation we will make, since we are working in Jupyter and 
 be using Python to analyze our tweets, is to create a Pandas dataframe of our tweets:
 
 ~~~
-bjules = pandas.read_csv("output_data/bjules.csv")
+bjules = pd.read_csv("output_data/bjules.csv")
 ~~~
 {: .language-python}
 
