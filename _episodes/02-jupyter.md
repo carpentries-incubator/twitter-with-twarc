@@ -493,8 +493,7 @@ point.
 ## Flattening Twitter Data
 
 Twitter Timelines, and other files we harvest using twarc, need to be
-'flattened' before we use them. This will ensure that each line of jsonl
-is one tweet.
+'flattened' before we use them.   
 
 Flatten will ensure that each line of the file is 1 tweet, allowing us to immediately
 know how many tweets we have after we create the flattened file.
