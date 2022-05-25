@@ -474,7 +474,7 @@ cell at the top of your notebook:
 {: .language-bash}
 
 Let's load the Python libraries
-we will be using today, and then load our Tax Day data into a Pandas dataframe. You may need to run the import lines in individual cells.
+we will be using today, and then load our Bergis Jules data into a Pandas dataframe. You may need to run the import lines in individual cells.
 
 ~~~
 import pandas as pd
