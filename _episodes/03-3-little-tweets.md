@@ -134,7 +134,7 @@ list(ecodatasci_df.columns)
 This gives you a sense of just how much data comes along with a tweet.
 
 ## First and last tweets
-Let's look at our `gasprices_flat.jsonl` file again.
+Let's look at our `bjules_flat.jsonl` file again.
 
 Remember our JSONL files are line-oriented, ie: one tweet per line. Let's use the
 `head` and `tail` command to create files with two tweets each. Better yet, one
