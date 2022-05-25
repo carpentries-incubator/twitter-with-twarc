@@ -1,6 +1,6 @@
 ---
 title: "Twarc Plugins"
-teaching: 15
+teaching: 20
 exercises: 5
 questions:
 - "What other harvests are available?"
@@ -39,9 +39,12 @@ we can go on to harvest their timelines to see what they are up to.
 Not only can we see everyone who has retweeted another tweet, we can also
 find all the followers of a given account.
 
-@tinycarebot is very popular, so let's get just a few of their followers:
+@tinycarebot is very popular, so let's get just a few of their followers. The
+limiter here is counted in thousands, so we are getting 1000 of
+@tinycarebot's followers:
+
 ~~~
-!twarc2 followers --limit 5 tinycarebot >  'raw_data/tcb_followers.jsonl'
+!twarc2 followers --limit 1 tinycarebot >  'raw_data/tcb_followers.jsonl'
 ~~~
 {: .language-bash}
 
