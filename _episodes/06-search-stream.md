@@ -124,13 +124,19 @@ including the "@" symbol in front of the account name is not necessary, the sear
 explicitly spells out the "to:" instead.
 
 `to:` will match any tweet that is a reply to a partricular user. This can be the username or the numeric user ID. 
-You can only pass a single username/ID per `to:` command. 
-
-![search tweets that tag the twitter account ucsblibrary](../fig/twitter-search-at.png)
+ You can only pass a single username/ID per `to:` command. 
 
 ~~~
-!twarc2 search "(to:ucsblibrary)"  
+!twarc2 search "(to:realgrumpycat)"  
 ~~~
+
+`from:` will match any tweet from a specific user. Like `to:`, this can be a username or numeric user ID. 
+~~~
+!twarc2 search "(from:realgrumpycat)"
+~~~
+
+![searching for tweets from grumpy](../fig/maythefourth.png)
+
 
 
 ### Using Hashtags
@@ -157,19 +163,27 @@ For Example, internet cats Cole and Marmalade:
 
 ![cole and marmalade](../fig/cole_marm.png)
  
-`cats OR cole marmalade` would be evaluated as `cats OR (cole marmalade)` 
-`cats cole OR marmalade` would be evaluated as `(cats cole) OR marmalade` 
+- `cats OR cole marmalade` would be evaluated as `cats OR (cole marmalade)` 
+- `cats cole OR marmalade` would be evaluated as `(cats cole) OR marmalade` 
 
 To eliminate uncertainty, you can use parentheses to group terms together where appropriate. 
 With Cole and Marmalade 
 
-`(cats or cole) marmalade` which would probably throw out cats, some guy named Cole, and orange preservatives
-`cats (cole marmalade)` which would be closer to our internet cats
+- `(cats or cole) marmalade` which would probably throw out cats, some guy named Cole, and orange preservatives
+- `cats (cole marmalade)` which would be closer to our internet cats
 
+Grouping by using () to group terms and operators together in this way. 
+
+Other examples of combining and building queries: 
 ~~~
 !twarc2 search "(grumpy cat #meme)"
-~~~
+~~~ 
+You can use hashtags in queries. This will return grumpy cat memes.
 
+~~~
+!twarc2 search "(grumpy cat) OR (#meme has:images)
+~~~
+This will return tweets containing the term grumpy and cat, or tweets with images with the hashtag #meme. 
 
 > ## Challenge: Advanced Twarc Search
 >
