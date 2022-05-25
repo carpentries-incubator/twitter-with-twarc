@@ -1,15 +1,16 @@
 ---
-title: "Python Text Analysis"
+title: "TextBlob Sentiment Analysis"
 teaching: 15
 exercises: 20
 questions:
-- "What else can we do with our tweets?"
 - "How can I analyze my tweets beyond what twarc offers?"
 - "Is it possible to tell if tweets are expressing positive or negative feelings?"
 
 objectives:
-- "We use Python and the power of Pandas with our Jupyter notebook"
 - "Sentiment analysis measures the 'positivity' or 'negativity' of language"
+
+keypoints:
+- "TextBlob has a bunch of functions that we should learn"
 
 ---
 
