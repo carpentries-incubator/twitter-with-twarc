@@ -49,7 +49,9 @@ corporations).
 
 The GDPR defines Personal Data as:
 
-> ...Personal data are any information which are related to an identified or identifiable 
+
+> ## What is Personal Data? 
+> Personal data are any information which are related to an identified or identifiable 
 > natural person.
 >
 > The data subjects are identifiable if they can be directly or indirectly identified, 
@@ -57,19 +59,26 @@ The GDPR defines Personal Data as:
 > data, an online identifier or one of several special characteristics, which expresses the 
 > physical, physiological, genetic, mental, commercial, cultural or social identity of these 
 > natural persons...
+{: .callout}
 
-### Discussion: Personal Data
+> ## Discussion: Personal Data
 >
-> Do you think that Twitter data should be treated as personal data?
-> What did you consider when making this judgment?
-> Are robots people?
-> Do the blue checkmark people deserve privacy?
+> * Do you think that Twitter data should be treated as personal data?
+> * What did you consider when making this judgment?
+> * Are robots people?
+> * Do the blue checkmark people deserve privacy?
+> {: .source}
+>
+> > ## Considerations
+> >
 > > We get a lot of personal information when we gather tweets. We can 
 > > often determine a user's approximate location, what they like, their beliefs, 
 > > etc.
-> >
+> > 
 > > Even though some people treat Twitter like a diary, even though it is a public
 > > space, researchers still need to respect their personhood.
+> > {: .output}
+> {: .solution}
 {: .discussion}
 
 As scholars, we also have an obligation to treat this information carefuly. Both
