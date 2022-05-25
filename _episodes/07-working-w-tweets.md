@@ -34,6 +34,27 @@ is 1522543998996414464.
 This gives us the profiles of the three twitter accounts . From there
 we can go on to harvest their timelines to see what they are up to.
 
+## How much original content?
+You might be surprised by how much of your dataset consists purely of retweets--
+people pushing that one button and not doing anything else.
+
+We can use a little bit of python to calculate the proportion:
+
+~~~
+retweet_count = hashtagcats_df["referenced_tweets.retweeted.id"].value_counts()
+sum(retweet_count)
+
+(sum(retweet_count) / len(hashtagcats_df))
+~~~
+{: .python}
+
+This is such a useful measure that we often calculate this value as part
+of our initial workflow.
+
+### Challenge
+How much of Bergis Jules timeline is original content?
+How about the UCSB Library's timeline?
+
 
 ## Followers
 Not only can we see everyone who has retweeted another tweet, we can also
@@ -67,12 +88,12 @@ limiter here is counted in thousands, so we are getting 1000 of
 {: .challenge}
 
 
-### When we have thousands of tweets: we need analysis tools
-So that's one tweet, and one account's followers. But we have harvested thousands of tweets,
-how can we get a grip on them?
-
-A few [more twarc2 plugins](https://twarc-project.readthedocs.io/en/latest/plugins/)
-are available to help get this work done.
+### twarc2 Plus-ins
+When we have thousands 
+of tweets, there's some obvious tasks that we can do to get a grip on them. 
+Anticipating those tasks, Doc the Now has 
+created [twarc2 plugins](https://twarc-project.readthedocs.io/en/latest/plugins/)
+to help get this work done.
 
 twarc2 plug-ins, like csv that we did earlier, need to be installed separately. 
 In this episode, we will look at twarc-hashtags and twarc-network
@@ -125,7 +146,7 @@ cropping up. In case you didn't know it, Internet cats are huge in Japan.
 {: .challenge}
 
 
-## Interpreting the network results
+## Network Graphs
 
 We call network the same way we called hashtags
 
@@ -134,10 +155,10 @@ We call network the same way we called hashtags
 ~~~
 {: .language-bash}
 
-The built-in web viewer ain't so hot, so download that html file to view the network on 
-your own computer. Chrome works fine, and it's best to make the diagram fullscreen. We can 
-see: 
-- the largest central cluster around the account @catsofinstagram 
+The built-in web viewer ain't so hot, so download that html file to view the 
+network on your own computer. Chrome works fine, and it's best to make the diagram 
+fullscreen. We can see: - the largest central cluster around the account 
+@catsofinstagram
 
 - a corporate entity (litter box company in the upper right) shows up, and that a big 
   sub-network exists
