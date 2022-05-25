@@ -151,7 +151,6 @@ explicitly search for.
 ~~~
 
 
-
 ### Order of Operations
 We have seen individual searches of each of these parameters. You may also combine these parameters to narrow down your results.
 When combining boolean functions the following order of operations will dictate how your query is evaluated. 
@@ -174,22 +173,18 @@ With Cole and Marmalade
 
 Grouping by using () to group terms and operators together in this way. 
 
-Other examples of combining and building queries: 
-~~~
-!twarc2 search "(grumpy cat #meme)"
-~~~ 
-You can use hashtags in queries. This will return grumpy cat memes.
-
-~~~
-!twarc2 search "(grumpy cat) OR (#meme has:images)
-~~~
-This will return tweets containing the term grumpy and cat, or tweets with images with the hashtag #meme. 
 
 > ## Challenge: Advanced Twarc Search
 >
-> What resulting tweet(s) do you get from using the Twarc search command?
+> What resulting tweet(s) do you get from the following Twarc searches?
 > ~~~
-> twarc2 search "(grumpy cat) (#meme) (#cute)"
+> !twarc2 search "(grumpy cat #meme)"
+>  
+> !twarc2 search "(grumpy cat) OR (#meme has:images)"
+> 
+> !twarc2 search "(cats OR puppies) has:media"
+>
+> !twarc2 search "(to:_We_Rate_Cats) lang:en"
 > ~~~
 > {: .language-bash}
 >
