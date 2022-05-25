@@ -17,7 +17,7 @@ key points:
 ## Let's Get Ethical
 
 There are multiple ethical issues to consider when using Twitter
-data. In this lesson, we will be focusing on #FIXME issues: authorship, 
+data. In this lesson, we will be focusing on #FIXME issues: authorship,
 privacy, and consent. Ultimately, all three concern personhood.
 
 ## Authorship, the GDPR, and the Right to be Forgotten
@@ -50,16 +50,17 @@ corporations).
 The GDPR defines Personal Data as:
 
 
-> ## What is Personal Data? 
-> Personal data are any information which are related to an identified or identifiable 
+> ## What is Personal Data?
+> Personal data are any information which are related to an identified or identifiable
 > natural person.
 >
-> The data subjects are identifiable if they can be directly or indirectly identified, 
-> especially by reference to an identifier such as a name, an identification number, location 
-> data, an online identifier or one of several special characteristics, which expresses the 
-> physical, physiological, genetic, mental, commercial, cultural or social identity of these 
+> The data subjects are identifiable if they can be directly or indirectly identified,
+> especially by reference to an identifier such as a name, an identification number, location
+> data, an online identifier or one of several special characteristics, which expresses the
+> physical, physiological, genetic, mental, commercial, cultural or social identity of these
 > natural persons...
-{: .callout}
+
+Citation: "EUR-Lex – 32016R0679 – EN – EUR-Lex". [eur-lex.europa.eu](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679&qid=1653515192148).
 
 > ## Discussion: Personal Data
 >
@@ -71,10 +72,10 @@ The GDPR defines Personal Data as:
 >
 > > ## Considerations
 > >
-> > We get a lot of personal information when we gather tweets. We can 
-> > often determine a user's approximate location, what they like, their beliefs, 
+> > We get a lot of personal information when we gather tweets. We can
+> > often determine a user's approximate location, what they like, their beliefs,
 > > etc.
-> > 
+> >
 > > Even though some people treat Twitter like a diary, even though it is a public
 > > space, researchers still need to respect their personhood.
 > > {: .output}
@@ -91,7 +92,7 @@ media](https://www.youtube.com/watch?v=1qqo6z_aBzU)
 # Protecting yourself
 
 ## Distance Reading
-Researching tweets on Twitter may expose you to hate speech, and possibly disturbing imagery. 
+Researching tweets on Twitter may expose you to hate speech, and possibly disturbing imagery.
 Fortunately, when we work with thousands of tweets at a time, we do so at a distance,
 so we can avoid consuming disturbing content directly.
 
@@ -99,13 +100,13 @@ The first step in distance reading is to get at the language--the actual tweets.
 
 ### Wordcounts with Textblob
 
-Looking at the most commonly used words and phrases in a dataset is a text 
-analysis practice. This helps us to get a sense of what we are dealing with in our 
+Looking at the most commonly used words and phrases in a dataset is a text
+analysis practice. This helps us to get a sense of what we are dealing with in our
 dataset.
 
 In Text Data Mining, a complete list of words and their frequency of appearance
-can be called a 
-"concordance." We would consider texts of the tweets themseves to be the corpus. 
+can be called a
+"concordance." We would consider texts of the tweets themseves to be the corpus.
 Everything else is metadata.
 
 We will use the TextBlob package for our full-text analyses, including getting
@@ -144,7 +145,7 @@ list_tweets = hashtagcats_df['text'].tolist()
 ~~~
 {: .language-python}
 
-Next, we use the python `join` function to insert spaces between words and 
+Next, we use the python `join` function to insert spaces between words and
 make this list into one long string of text.
 
 ~~~
@@ -153,8 +154,8 @@ string_tweets = ' '.join(list_tweets)
 {: .language-python}
 
 
-All this was to get our tweets into a string because TextBlob has its own data 
-format, so we needed a string to pass to textblob. The function `TextBlob` converts the 
+All this was to get our tweets into a string because TextBlob has its own data
+format, so we needed a string to pass to textblob. The function `TextBlob` converts the
 string of tweets to a textblob.
 
 ~~~
@@ -162,7 +163,7 @@ library_blob = TextBlob(string_tweets)
 ~~~
 {: .language-python}
 
-Now that we have our TextBlob, we can count and sort it. We do this using the 
+Now that we have our TextBlob, we can count and sort it. We do this using the
 python function `word_counts` and `sorted`.
 
 ~~~
@@ -235,27 +236,27 @@ Our results make sense. We can see that the words are associated with library-li
 things. This text is worth some further examination.
 
 If we were expecting hate speech, this is where we would start
-to see it. If some of the top words are inflammatory, we can bet that the content of the 
+to see it. If some of the top words are inflammatory, we can bet that the content of the
 whole datset will make some squeamish.
 
 
-A more sophisticated text analysis would include passing this through 
-another filter to remove the one and two letter words and the URL's. 
+A more sophisticated text analysis would include passing this through
+another filter to remove the one and two letter words and the URL's.
 
 There are also functions to pull phrases
-out of text corpuses, which is one form of what is called tokenization. 
+out of text corpuses, which is one form of what is called tokenization.
 
 
 # Disinformation
-Twitter already removes a lot of violent and obscene content, but it does pride 
-itself on being a free speech platform. Mainly, Twitter removes content that 
-violates its Terms of Use. In some countries some content might be downright 
-illegal and Twitter would be obliged to delete it or otherwise restrict access to 
-it. Sometimes this means removing entire accounts, such as that of the former US 
+Twitter already removes a lot of violent and obscene content, but it does pride
+itself on being a free speech platform. Mainly, Twitter removes content that
+violates its Terms of Use. In some countries some content might be downright
+illegal and Twitter would be obliged to delete it or otherwise restrict access to
+it. Sometimes this means removing entire accounts, such as that of the former US
 President and many of his associates.
 
 # Misinformation
-Nature disinformation cloud 
+Nature disinformation cloud
 
 ![An image of tweets](https://media.nature.com/lw800/magazine-assets/d41586-021-00257-y/d41586-021-00257-y_18832182.png)
 
@@ -276,26 +277,26 @@ is still available.
 > Terms-of-Service to ask whether or not any of this is in the
 > public good or an acceptable topic of research.
 >
-> Using the file [dehydrated_Capitol_Rioters.txt](../data/dehydratedCapitolRiotTweets.txt), 
+> Using the file [dehydrated_Capitol_Rioters.txt](../data/dehydratedCapitolRiotTweets.txt),
 > determine how many
 > Tweets were in the archive, and how many remain on Mr. Musk's new
 > acquisition.
 >
 > > ## Solution
-> > When we first ran this, only a tiny fraction of the 
-> > tweets remained. But more recently, we noticed that about 
+> > When we first ran this, only a tiny fraction of the
+> > tweets remained. But more recently, we noticed that about
 > > 80% gets rehydrated. We suspect that Twitter has restored some
 > > of this content.
-> > 
+> >
 > {: .solution}
 {: .challenge}
 
 ### New Challenge???
 That riot file is too big to work with on the fly.
-We need something a bit different. First thought is to 
+We need something a bit different. First thought is to
 give a list of accounts and see who is still online?
 
-Second thought: there's 58135 users in the rehydrated file. But they 
+Second thought: there's 58135 users in the rehydrated file. But they
 are mostly retweets. By getting out the users quoted, we can see that there's
 many fewer original authors. How few? #FIXME
 
@@ -312,12 +313,12 @@ applied to them.
 
 # Social Humans and robots
 Documenting the Now has released a classification scheme to apply
-to Twitter accounts. We can apply these 
+to Twitter accounts. We can apply these
 ['Social Humans'](https://www.docnow.io/social-humans/)
 labels to individual Tweets and/or accounts to identify bots,
 trolls, and malicious actors.
 
-Adding a column to our dataframe and classifying tweets according to what sort of 
+Adding a column to our dataframe and classifying tweets according to what sort of
 entity we think posted them is a very useful flavor of analysis
 
 ~~~

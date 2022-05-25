@@ -48,7 +48,7 @@ Just to show you the the contents of a single tweet, look to the output below. T
 output is an edit of the data with only white-space characters. These edits have been 
 made to explore and separate the tweet's content from the metadata.
 
-We can see that it is the 4th piece of data in the tweet is "text", and is
+We can see that the 4th piece of data in the tweet is "text", and is
 after the author's ID, the language, and time stamp. The fifth
 element, "referenced tweet", tells us that this tweet is in reply to another tweet.
 
@@ -134,7 +134,7 @@ list(ecodatasci_df.columns)
 This gives you a sense of just how much data comes along with a tweet.
 
 ## First and last tweets
-Let's look at our `gasprices_flat.jsonl` file again.
+Let's look at our `bjules_flat.jsonl` file again.
 
 Remember our JSONL files are line-oriented, ie: one tweet per line. Let's use the
 `head` and `tail` command to create files with two tweets each. Better yet, one

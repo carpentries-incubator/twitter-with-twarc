@@ -91,7 +91,7 @@ instructions. Once the data files are uploaded, navigate back to our project
 directory `twarc_run`. Once you are done, your file organization should look like the
 below image.
 
-![file organization for jupyterlab](../fig/data-dir.png)
+![file organization for jupyterlab](../fig/jupyter_files.png)
 
 ## Using the Terminal and Nano Editor in Jupyterlab
 
@@ -474,7 +474,7 @@ cell at the top of your notebook:
 {: .language-bash}
 
 Let's load the Python libraries
-we will be using today, and then load our Tax Day data into a Pandas dataframe. You may need to run the import lines in individual cells.
+we will be using today, and then load our Bergis Jules data into a Pandas dataframe. You may need to run the import lines in individual cells.
 
 ~~~
 import pandas as pd
@@ -493,8 +493,7 @@ point.
 ## Flattening Twitter Data
 
 Twitter Timelines, and other files we harvest using twarc, need to be
-'flattened' before we use them. This will ensure that each line of jsonl
-is one tweet.
+'flattened' before we use them.   
 
 Flatten will ensure that each line of the file is 1 tweet, allowing us to immediately
 know how many tweets we have after we create the flattened file.
@@ -546,7 +545,7 @@ Another common transformation we will make, since we are working in Jupyter and 
 be using Python to analyze our tweets, is to create a Pandas dataframe of our tweets:
 
 ~~~
-bjules = pandas.read_csv("output_data/bjules.csv")
+bjules = pd.read_csv("output_data/bjules.csv")
 ~~~
 {: .language-python}
 
