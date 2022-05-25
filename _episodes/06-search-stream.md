@@ -114,6 +114,11 @@ grumpy ORor cat, AND omit anything about Doja Cat.
 !twarc2 search "(grumpy OR cat -Dojacat)"
 ~~~
 
+Note that this searches for all tweets that contain the string `cat`
+but NOT those containing `DojaCat`, PLUS all the tweets that contain
+the word grumpy.
+
+So you should get all the grumpy cats except for DojaCat.
 
 ### Searching for Mentions of Users (@'ing)
 
