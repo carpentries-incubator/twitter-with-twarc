@@ -18,18 +18,18 @@ key points:
 
 There are multiple ethical issues to consider when using Twitter
 data. In this lesson, we will be focusing on #FIXME issues: authorship, 
-privacy, and consent. Ultimately, all thre concern personhood.
+privacy, and consent. Ultimately, all three concern personhood.
 
 ## Authorship, the GDPR, and the Right to be Forgotten
 
 Twitter users maintain ownership of their
 tweets. As the author, users have both copyrights and
-moral rights.
+moral rights. (Only the former is defined in the United States.)
 
 Copyrights prevent your tweets from being compiled together into a
-publication for monetary profit. That said, some authors do not
+publication for profit. That said, some authors do not
 have any copyrights. For example, POTUS is an American government employee,
-therefore the property is in the Public Domain.
+therefore that 'property' is in the Public Domain.
 
 Laws vary greatly by country, so don't get American librarians started on
 the Queen's copyrights over Canadian government data, which is complicated.
@@ -47,7 +47,7 @@ the General Data Protection Regulation to protect people's identities as well as
 to respect the privacy rights of "natural persons" (as distinct from public figures and
 corporations).
 
-The GDPR defines Personal data as:
+The GDPR defines Personal Data as:
 
 > ...Personal data are any information which are related to an identified or identifiable 
 > natural person.
@@ -58,24 +58,22 @@ The GDPR defines Personal data as:
 > physical, physiological, genetic, mental, commercial, cultural or social identity of these 
 > natural persons...
 
-> ## Discussion: Personal Data
+### Discussion: Personal Data
 >
 > Do you think that Twitter data should be treated as personal data?
 > What did you consider when making this judgment?
 > Are robots people?
 > Do the blue checkmark people deserve privacy?
-> > ## Solution
-> > We get a lot of personal information when we gather tweets.
-> > We can determine often determine a users’ approximate location, what they like, their beliefs, etc.
+> > We get a lot of personal information when we gather tweets. We can 
+> > often determine a user's approximate location, what they like, their beliefs, 
+> > etc.
 > >
+> > Even though some people treat Twitter like a diary, even though it is a public
+> > space, researchers still need to respect their personhood.
 {: .discussion}
 
-Format as a pushpin #FIXME
-
-We get a lot of personal information when we gather tweets. We can determine often determine 
-a users’ approximate location, what they like, their religious beliefs. People share an 
-incredible amount of personal information on Twitter, and as scholars, we have an obligation
-to treat that information carefuly.
+As scholars, we also have an obligation to treat this information carefuly. Both
+at the granular, individual level, and at the dataset level.
 
 The first few minutes of [this standup comedy routine
 shows the hazards of sharing too much personal information on social
@@ -88,12 +86,13 @@ Researching tweets on Twitter may expose you to hate speech, and possibly distur
 Fortunately, when we work with thousands of tweets at a time, we do so at a distance,
 so we can avoid consuming disturbing content directly.
 
-First of all we need to get at the language.
+The first step in distance reading is to get at the language--the actual tweets.
 
-### Text Analysis with Textblob
+### Wordcounts with Textblob
 
-Looking at the most commonly used words and phrases in a dataset is a text analysis practice.
-This helps us to get a sense of what we are dealing with in our dataset.
+Looking at the most commonly used words and phrases in a dataset is a text 
+analysis practice. This helps us to get a sense of what we are dealing with in our 
+dataset.
 
 In Text Data Mining, a complete list of words and their frequency of appearance
 can be called a 
@@ -101,7 +100,9 @@ can be called a
 Everything else is metadata.
 
 We will use the TextBlob package for our full-text analyses, including getting
-a word count.
+a word count. The most used words in your dataset can be used to judge the tone
+of the overall content without needing to wade through thousands
+of tweets.
 
 Let's remind ourselves what dataframes we have available to work with:
 
@@ -116,14 +117,13 @@ ucsb_library_mentions_df
 ~~~
 {: .output}
 
-
+And let's remind ourselves which column we need
 ~~~
 library_timeline_df.columns
 ~~~
 {: .language-python}
 
 ~~~
-# recall that the tweet content is found under the column "text"
 hashtagcats_df['text'].head()
 ~~~
 {: .language-python}
@@ -144,16 +144,17 @@ string_tweets = ' '.join(list_tweets)
 {: .language-python}
 
 
-TextBlob has its own data format, so we need an object of that type. The function `TextBlob` 
-converts the string of tweets to a textblob.
+All this was to get our tweets into a string because TextBlob has its own data 
+format, so we needed a string to pass to textblob. The function `TextBlob` converts the 
+string of tweets to a textblob.
 
 ~~~
 library_blob = TextBlob(string_tweets)
 ~~~
 {: .language-python}
 
-Now that we have our TextBlob, we can count and sort it. We do this using the python function 
-`word_counts` and `sorted`.
+Now that we have our TextBlob, we can count and sort it. We do this using the 
+python function `word_counts` and `sorted`.
 
 ~~~
 library_freq = library_blob.word_counts
@@ -164,7 +165,8 @@ print(library_sorted_freq)
 {: .language-python}
 
 This shows a lot of text with no meaning though. To help with this, we can get rid of
-English stop words, like all the a's, and's, and the's.
+English stop words, like all the a's, and's, and the's. `nltk`, which got installed
+along with textblob, has its own corpus of stopwords we can use:
 
 ~~~
 # load the stopwords to use:
