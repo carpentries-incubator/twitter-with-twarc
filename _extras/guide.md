@@ -13,5 +13,8 @@ title: "Instructor Notes"
 * In the Jupyter Notebook that we have shared, calls that use quota to the 
   Twitter v2 api are commented out.
 
+* [This notebook will](../code/TwarcWorkshop_with_harvests.ipynb) run 
+  the workshop from start to finish, assuming
+  you have downloaded the appropriate data from the setup page.
 
 {% include links.md %}
