@@ -174,7 +174,7 @@ side of the main cluster of the account @catsofinstagram](../fig/cat_network.png
 
 > ## Challenge: Examining a network diagram
 >
-> Create a network diagram of the ecodatascience
+> Create a network diagram of the ecodatascience timeline
 >
 > ~~~
 > it may include some code
@@ -183,10 +183,11 @@ side of the main cluster of the account @catsofinstagram](../fig/cat_network.png
 >
 > > ## Solution
 > >
-> > This is the body of the solution.
+> > Because this is a timeline, the network is completely one-dimensional.
+> > We think any timeline would look like this.
 > >
 > > ~~~
-> > it may also include some code
+> > !twarc2 network raw_data/ecodatasci.jsonl output_data/ecodatasci_network.html
 > > ~~~
 > > {: .output}
 > {: .solution}
