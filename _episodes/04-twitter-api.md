@@ -18,10 +18,10 @@ keypoints:
 
 ## The Twitter v.2 API
 
-The Twitter API is what allows us to collect tweets. twarc takes care of the interactions
-between our Jupyter notebook and the API. Twitter also keeps track of 
-who is getting this data. That's why there is that lengthy application 
-process tied to their 
+The Twitter API is what allows us to collect tweets. Twarc takes care of the interactions
+between our Jupyter notebook and the API. Twitter also keeps track of
+who is getting this data. That's why there is that lengthy application
+process tied to their
 API access.
 
 One of the ways to utilize the API access is to collect tweets and request only the information we need.
@@ -32,7 +32,7 @@ Compared to
 v1, the most recent version of the Twitter API (v2) includes additional levels of
 access, more features, and faster onboarding for developers and academic
 researchers. It also forced twarc to update its code, so that's why we are now
-using twarc2. 
+using twarc2.
 
 The Twitter API comes along with all sorts of rules and regulations: how to
 submit requests, how many requests you can make in an hour, how many Tweets you
@@ -139,34 +139,82 @@ Total Tweets: 1,997
 ~~~
 {: output}
 
-> ## Challenge: Sports on Twitter
-> Challenge Try using the counts command on other topics by comparing the counts from the words "poker", "golf",
-> "basketball", "baseball", and "football". Aggregate the counts together by day. Can we use these results to
-> imagine what sports are most popular on Sports Twitter? Discuss.
+Twitter is NOT case sensitive, so these counts include various capitalizations of the key word, such as "ucsb",  "Ucsb", "UcSb", etc.
+
+> ## Challenge: Counting Hashtags
+>
+> Run the following commands:
+> ~~~
+> !twarc2 counts --text "basketball"
+> ~~~
+> {: .language-bash}
+>
+> ~~~
+> !twarc2 counts --text "(basketball #basketball)"
+> ~~~
+> {: .language-bash}
+>
+> What do you notice regarding the total tweets you receive?
+> Do the same for baseball to confirm, using the terms "baseball" and "#baseball".
+>
+> > ## Solution
+> > The output of the command `twarc2 counts --text "basketball"`:
+> > ~~~
+> > 2022-05-18T21:23:38.000Z - 2022-05-18T22:00:00.000Z: 1,432
+> > 2022-05-18T22:00:00.000Z - 2022-05-18T23:00:00.000Z: 2,507
+> > ...
+> > 2022-05-25T19:00:00.000Z - 2022-05-25T20:00:00.000Z: 625
+> > 2022-05-25T21:00:00.000Z - 2022-05-25T21:23:38.000Z: 905
+> >
+> > Total Tweets: 437,140
+> > ~~~
+> > {: .output}
+> >
+> > When we do a search of some text,
+> > the count will include tweets which contain the hashtag of the text.
+> > In this example, the resulting count for "poker" included tweets which contain "#poker".
+> >
+> > The output of the command `twarc2 counts --text "(basketball #basketball)"`:
+> > ~~~
+> > 2022-05-18T21:25:08.000Z - 2022-05-18T22:00:00.000Z: 69
+> > 2022-05-18T22:00:00.000Z - 2022-05-18T23:00:00.000Z: 67
+> > ...
+> > 2022-05-25T20:00:00.000Z - 2022-05-25T21:00:00.000Z: 110
+> > 2022-05-25T21:00:00.000Z - 2022-05-25T21:25:08.000Z: 60
+> >
+> > Total Tweets: 17,308
+> > ~~~
+> > {: .output}
+> >
+> > This command did a count on tweets that contained the text "basketball" and "#basketball".
+> > The resulting number of 17,308 is smaller than the count from the first count command.
+> > This is expected because these tweets contain both "basketball" and "#basketball", and are included in the
+> > 437,140 from the first count command.
+> >
+> {: .solution}
+{: .challenge}
+
+> ## Challenge: Counting Hashtags Again
+> Challenge Try using the counts command on other topics by comparing the counts from the words
+> "poker" and "football". Aggregate the counts together by day. Do you think we use these results to
+> imagine what sports are most popular on Twitter? Discuss.
 >
 > > ## Solution
 > > The `--granularity` flag for the counts command sets the time interval for aggregate counts.
 > > ~~~
-> > !twarc2 counts --granularity "day" --text "(poker OR #Poker)"
-> > !twarc2 counts --granularity "day" --text "(Golf OR #Golf)"
-> > !twarc2 counts --granularity "day" --text "(Basketball #Basketball)"
-> > !twarc2 counts --granularity "day" --text "(Baseball #baseball)"
-> > !twarc2 counts --granularity "day" --text "(Football #Football)"
+> > !twarc2 counts --granularity "day" --text "poker"
+> > !twarc2 counts --granularity "day" --text "football"
 > > ~~~
 > > {: .language-bash}
 > >
 > > And their respective outputs:
 > >
 > > ~~~
-> > Total Tweets: 108,021  
-> > Total Tweets: 344,462  
-> > Total Tweets: 471,942  
-> > Total Tweets: 720,510  
-> > Total Tweets: 1,789,262  
+> > Total Tweets: 112,077
+> > Total Tweets: 1,921,740
 > > ~~~
 > > {: .output}
 > >
-> > From our output, football appears to be the most popular sport on Twitter currently, followed by baseball.
 > >
 > {: .solution}
 {: .challenge}
@@ -183,39 +231,22 @@ We can use a little Boolean logic to make sure we cast
 a wide net, ie: that we search a variety of text strings and hashtags.
 
 ~~~
-!twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary OR ucsblibrary OR #ucsblibrary OR davidsonlibrary OR #davidsonlibrary)"
+!twarc2 counts --granularity "day" --text "(ucsblibrary OR frisbee)"
 ~~~
 {: .language-bash}
 
 ~~~
-2022-05-17T19:26:34.000Z - 2022-05-18T00:00:00.000Z: 0
-2022-05-18T00:00:00.000Z - 2022-05-19T00:00:00.000Z: 1
+2022-05-18T21:32:43.000Z - 2022-05-19T00:00:00.000Z: 83
+2022-05-19T00:00:00.000Z - 2022-05-20T00:00:00.000Z: 868
 ...
-2022-05-23T00:00:00.000Z - 2022-05-24T00:00:00.000Z: 3
-2022-05-24T00:00:00.000Z - 2022-05-24T19:26:34.000Z: 3
+2022-05-24T00:00:00.000Z - 2022-05-25T00:00:00.000Z: 1,000
+2022-05-25T00:00:00.000Z - 2022-05-25T21:32:43.000Z: 784
 
-Total Tweets: 14
+Total Tweets: 6,518
 ~~~
 {: .output}
 
-The `OR` is necessary for syntax. Twitter is NOT case sensitive, so we want to specify the counts command to include various capitalizations.
-
-~~~
-!twarc2 counts --granularity "day" --text "(#UCSBLibrary OR UCSBLibrary)"
-~~~
-{: .language-bash}
-
-~~~
-2022-05-17T19:27:16.000Z - 2022-05-18T00:00:00.000Z: 0
-2022-05-18T00:00:00.000Z - 2022-05-19T00:00:00.000Z: 1
-...
-2022-05-23T00:00:00.000Z - 2022-05-24T00:00:00.000Z: 1
-2022-05-24T00:00:00.000Z - 2022-05-24T19:27:16.000Z: 0
-
-Total Tweets: 6
-~~~
-{: .output}
-
+The `OR` is necessary for syntax. In this case, we have asked to get a count of tweets that either have the text "ucsblibrary", "#ucsblibrary", "frisbee", or "#frisbee".
 
 ## Gathering Big Data
 
