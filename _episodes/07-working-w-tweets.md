@@ -79,7 +79,7 @@ limiter here is counted in thousands, so we are getting 1000 of
 >
 > > ## Solution
 > > ~~~
-> > !twarc2 csv raw_data/tcb_followers.jsonl > output_data/tcb_followers.csv
+> > !twarc2 csv 'raw_data/tcb_followers.jsonl' > 'output_data/tcb_followers.csv'
 > > ~~~
 > >
 > > Convert the 5 profile files into a csv and read them
@@ -115,9 +115,9 @@ cropping up. In case you didn't know it, Internet cats are huge in Japan.
 
 #### Top hashtags
 ~~~
-!twarc2 hashtags raw_data/hashtagcats.jsonl output_data/hashtagcats_hashtags.csv
+!twarc2 hashtags 'raw_data/hashtagcats.jsonl' > 'output_data/hashtagcats_hashtags.csv'
 ~~~
-{: .bash}
+{: .language-bash}
 
 ![screenshot showing top 20 hashtags](../fig/cat_hashtags.png)
 
