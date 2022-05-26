@@ -54,6 +54,14 @@ the [Developer Portal](https://developer.twitter.com/en){:target="_blank" rel="n
 
 Fill out the application questions as listed here:
 
+> ## Essential Access 
+>
+> Make sure this page is titled 'Just a few questions to get you Essential Access'.
+> <br/>
+> We are not applying for elevated or academic researcher access. 
+>
+{: .keypoints}
+
 <img src="fig/setting-up-dev.PNG" width="500">
 
   
