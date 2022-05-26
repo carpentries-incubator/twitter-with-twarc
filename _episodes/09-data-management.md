@@ -21,7 +21,9 @@ You have determined the relative sentiment of several different
 Twitter datasets, examined the top hashtags, the most frequently
 used words, and the proportion of tweets to retweets. 
 
-You made a network diagram!
+You made network diagrams!
+
+Now it's time to wrap up your data for long-term storage. But how?
 
 ## Twitter's TOS and the EU's GDPR
 Twitter the corporation allows users to delete (but currently not
@@ -31,7 +33,8 @@ to be forgotten.'
 
 And so, to respect Twitter's Terms of Service as well as what is widely
 considered to be a human right, the best practice is to dispose of your
-full-data tweets and leave only the tweetID's.
+full-data tweets and leave only the tweetID's and the end results
+of your analyses.
 
 We explored the opposite of this idea earlier in (Ethics
 and Twitter)[05-ethics] when we hydrated tweets that had 
@@ -52,17 +55,22 @@ our immediate research team.
 
 
 
-## discussion challenge
-Was making you log-in to get full-text gas-price tweets a good enough
-protection for our taxday dataset?
-
-Which of our datasets would you feel comfortable creating an 
-official, UCSB-sponsored archive?
-	Bergis Jules' timeline? 
-	Library mentions? 
-	Library timeline? 
-	hashtag catsofinstagram?
-	#FIXME
+> # Challenge: hydrated or de-hydrated?
+> 
+> Was making you log-in to get full-text gas-price tweets a good enough
+> protection for our #gasprices dataset?
+> 
+> Which of our datasets would you feel comfortable creating an 
+> official, UCSB-sponsored archive?
+> -	Bergis Jules' timeline? 
+> -	Library mentions? 
+> -	Library timeline? 
+> -	full text Capitol riots tweets?
+> -	#catsofinstagram?
+> > ## Solution
+> > you decide!
+> >
+{: .challenge}
 
 ## DocNow's new tool for consent. 
 
