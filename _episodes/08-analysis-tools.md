@@ -88,11 +88,14 @@ textblob. [Read the docs](https://textblob.readthedocs.io/en/dev/quickstart.html
 
 
 > ## Challenge: Anticipating Sentiment
-> Write Python code that outputs three sets of 
-> sentiment values:  gasprices, catsofinsta, capitolriotsrehydrated
-
+> Write Python code that outputs 
+> sentiment values for three of your 
+> dataframes. 
 > When you output the three values, arrange them in what you guess
 > will be the least positive to most positive sentiment.
+>
+> Please label your output. The syntax to pass output 
+> into the results cell is `print("String in here ")`.
 >
 > Remember, you need to pass TextBlob a string. A list will work:
 > ~~~
@@ -107,15 +110,19 @@ textblob. [Read the docs](https://textblob.readthedocs.io/en/dev/quickstart.html
 > > be pretty subjective. Except for maybe ecodatascience.
 > > 
 > > My anticipated sentiment order:
-> > - capitol
+> > - capitol riots
 > > - gas prices
-> > - library timeline
-> > - ecodatascience
-> > - catsofinstagram
-> > - fluffl catsofinstagram
+> > - the UCSB Library timeline
+> > - ecodatascience timeline
+> > - #catsofinstagram search
+> > - fluffy #catsofinstagram search
 > > 
 > > ~~~
-> > it may also include some code
+> > This is one possible code block for our #catsofinstagram dataset:
+> > hashtagcats_list = ' '.join(hashtagcats_df['text'].tolist())
+> > hashtagcats_blob = textblob.TextBlob(hashtagcats_list)
+> > print("Hashtag Cats of Instagram: ") 
+> > hashtagcats_blob.sentiment
 > > ~~~
 > > {: .output}
 > {: .solution}
@@ -123,9 +130,11 @@ textblob. [Read the docs](https://textblob.readthedocs.io/en/dev/quickstart.html
 
 
 
-## Can we do anything with the emojis?
-examined Emojis as a proxy measurement of qualitative emotional 
+### Can we do anything with the emojis?
+Examine Emojis as a proxy measurement of qualitative emotional 
 content. ie: you can visually see sentiment in emojis.
+
+We still need code to isolate emojis #FIXME
 
 They are emotional icons. #FIXME
 
