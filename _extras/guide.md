@@ -10,11 +10,12 @@ title: "Instructor Notes"
   so if you do that as an instructor, subsequent code should run as is.
 
 # Code
-* In the Jupyter Notebook that we have shared, calls that use quota to the 
-  Twitter v2 api are commented out.
+* [Thi Jupyter Notebook](../code/TwarcWorkshop.ipynb) has 
+  most lines that use quota or take a long time to run  
+  are commented out.
 
 * [This notebook will](../code/TwarcWorkshop_with_harvests.ipynb) run 
-  the workshop from start to finish, assuming
+  the workshop from start to finish AND consume quota, assuming
   you have downloaded the appropriate data from the setup page.
 
 {% include links.md %}
