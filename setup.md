@@ -14,10 +14,10 @@ title: Setup
 > Google Drive may change the file extensions when you download these.
 > Make sure you that hashtag_gasprices and one_tweet are `.jsonl`, NOT `.jsn`.
 > capitol_riots.txt really is `.txt`.
-
+> <br/>
 > You can force this by right 
 > clicking on the page link, choose `save as`, then choose "all file types" 
-> and remove the ".txt" ending and keep the ".jsonl" choose the approopriate
+> and remove the ".txt" ending and keep the ".jsonl" choose the appropriate
 > filename extension.
 >
 {: .prereq}
