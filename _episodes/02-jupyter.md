@@ -492,20 +492,18 @@ allowing us to immediately know how many tweets we have after we create the flat
 file.
 
 Before flattening:
-`! wc raw_data/bjules.jsonl`
+`! wc raw/bjules.jsonl`
 
 We might think there are 32 tweets in Jules' timeline.
 
 ~~~
-!twarc2 flatten 'raw_data/bjules.jsonl' > 'output_data/bjules_flat.jsonl'
+!twarc2 flatten 'raw/bjules.jsonl' > 'output/bjules_flat.jsonl'
 ~~~
 {: .language-bash}
 
 
 After flattening:
 `! wc output_data/bjules_flat`
-
-It is clear that 
 
 ## Converting between file types: jsonl to csv to dataframe
 csv's are convenient for reading, and are useful as a data format later on for 
@@ -515,7 +513,7 @@ useful as a data format later on for analyzing tweets outside of twarc.
 We will almost always convert our files to .csv format.
 
 ~~~
-!twarc2 csv 'raw_data/bjules.jsonl' > 'output_data/bjules.csv'
+!twarc2 csv 'raw/bjules.jsonl' > 'output/bjules.csv'
 ~~~
 {: .language-bash}
 
@@ -536,7 +534,7 @@ many tweets we harvested from Jules's timeline using `wc` in the terminal.
 We don't have to remember what twarc told us.
 
 ~~~
-!wc 'output_data/bjules.csv'
+!wc 'output/bjules.csv'
 ~~~
 {: .language-bash}
 
