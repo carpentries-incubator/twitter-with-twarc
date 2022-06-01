@@ -12,7 +12,7 @@ objectives:
 - "Set up directory and data folder"
 - "Set up twarc with your keys and tokens"
 keypoints:
-- "Navigating a virtual Python environment / JupyterLab"
+- "Navigating Python in a JupyterLab environment"
 - "Configuring an application to work with an API"
 - "Arranging a directory structure and loading libraries"
 ---
@@ -24,17 +24,22 @@ this workshop, we will be using a hosted instance of JupyterLab pre-configured w
 all of the Python tools you will need to follow along with the lesson.
 
 JupyterLab is an
-integrated development environment (IDE) that enables us to write and run programs.
+Integrated Development Dnvironment (IDE) that enables us to write and run programs.
 JupyterLab runs in one tab on your browser. In this episode, we will learn to
 upload and download files from your computer to your storage space on JupyterLab,
 create and navigate the directory structure, and use the built-in BASH terminal.
 
-> ## Thank you LSIT
+> ## Thank you UCSB Letters & Science IT
 >
-> For this workshop, we will be using JupyterLab with twarc already loaded in. The reason
-> we are able to use JupyterLab without needing to download any software is because our
-> JupyterLab server is hosted by UCSB Letters & Sciences IT. Thank you to Letters &
-> Sciences IT for setting up our JupyterLab server :)
+> This workshop, is written for a JupyterLab environment with twarc preinstalled. 
+> At our first workshop with this environment, we had many fewer installation and
+> path issues than in other workshops. 
+>
+> Examples should all work with locally installed Jutpyter / Python 3+ environments.
+> 
+> Thanks to [UCSB Letters & 
+> Sciences IT](https://www.lsit.ucsb.edu/) for 
+> setting up our JupyterLab server :)
 {: .callout}
 
 If you have a fully configured version of Python, you can also install and run twarc on
@@ -53,10 +58,10 @@ Select 'Carpentry Workshop' under the server options. It will take a few minutes
 
 ## Navigating the JuptyerLab interface
 
-When you first open JupyterLab, you will find a file browser tab on the far left side of
-the screen. This is where we can manage our files and navigate in-and-out of directories. The window that
-is labeled "Launcher" contains options for what to start up. For this workshop, we will
-be using Python 3 Notebook and Terminal.
+When you first open JupyterLab, you will find a file browser tab on the far left side 
+of the screen. This is where we can manage our files and navigate in-and-out of 
+directories. The window that is labeled "Launcher" contains options for what to start 
+up. For this workshop, we will be using Python 3 Notebook and Terminal.
 
 Next, note the toolbar found at the top on the screen.
 There, you will find options that are needed
@@ -64,26 +69,28 @@ to run and save programs you write.
 
 <img src ="../fig/jupyter-launch.PNG" width="800">
 
-To start off, we need to create some directories that we will be working in. Open the file
-browser and create a folder to store all of your workshop files in (e.g. python notebooks, data folders, etc). To create a folder, select
-the icon that is highlighted in the above image. We have chosen to name the folder
-`twarc_run`. <strong>We will organize all of our work in this folder, and this folder will be our home directory.</strong>
+To start off, we need to create some directories that we will be working in. Open the 
+file browser and create a folder to store all of your workshop files in (e.g. python 
+notebooks, data folders, etc). To create a folder, select the icon that is highlighted 
+in the above image. We have chosen to name the folder `twarc_run`. <strong>We will 
+organize all of our files in this folder, and this folder will be our working 
+directory.</strong>
 
 Inside of `twarc_run`, let's make three more folders. Please create one folder that is
-named `raw_data`, and create a second folder named `output_data`. Raw_data is
-where we will store twitter data we collect during the workshop. The output_data folder
-for is where we will store twitter data we process. `output_data` should not be inside
-of `raw_data`, and vice versa. Instead, both folders should be inside of `twarc_run`.
+named `raw`, and create a second folder named `output`. `raw` is
+where we will store our original data. The `output` folder
+is where we will store Twitter data tah we process. `output` should not be inside
+of `raw`, and vice versa. Instead, both folders should be inside of `twarc_run`.
 
-Since `raw_data` is where we will store our original data files, please open this data folder
+Since `raw` is where we will store our original data files, please open this data folder
 and upload all of the datafiles:
 
-- `hashtag_gasprices.jsonl` tweets that use #gasprices collected May 22, 2022.
+- `hashtag_gas.jsonl` tweets that use #gasprices collected May 22, 2022.
 - `one_tweet.jsonl` a single tweet
-- `dehydratedCapitolRiotTweets.txt` TweetIDs from the January 6 insurrection.
+- `riot_weets.txt` TweetIDs from the January 6, 2021 insurrection.
 
 
-In total you should now have two folders within twarc_run: `raw_data` and `output_data`.
+In total you should now have two folders within twarc_run: `raw` and `output`.
 
 If you have not downloaded the data, please
 do so now from the [Setup Page](https://ucsbcarpentry.github.io/twitter-with-twarc/setup.html)
