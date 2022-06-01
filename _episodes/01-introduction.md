@@ -11,17 +11,24 @@ objectives:
 - "How to access the twitter API"
 - "How twarc works with the API"
 keypoints:
-- "Twitter is a microblogging platform where 'tweets' (text, image, and/or video postings) are created and shared."
-- "Twarc is a command line tool and Python library that allows users to programmatically collect and archive Tweets."
+- "Twitter is a microblogging platform that allows data collection from its API."
+- "Twarc is a Python application an dlibrary that allows users to programmatically collect and archive Tweets."
 ---
 
 # Learning to Speak Twitter
 
-Twitter is a social media platform where users post short messages, pictures, news stories, and other content to be viewed by others. These postings are referred to as "tweets". Twitter users curate their social media by subscribing to (or following) other twitter accounts. It allows people from all over the world to interact with each other almost instantaneously.
+Twitter is a social media platform where users post short (140 or 280 characters) 
+messages, pictures, news stories, and other content to be viewed by others. These 
+posts are referred to as "tweets". Twitter users curate their social personas by 
+subscribing to (or following) other twitter accounts. It allows people from all over 
+the world to interact with each other almost instantaneously.
 
 <img src="../fig/twitter.png" alt="Twitter Explore Page" width = "1001" height = "900"/>
 
-If you've never used Twitter before, the terms used there can be cryptic (and not safe for work). Beyond "@ing people" and "hashtags", the users themselves have created Twitter-wide standards. Twitter is also filled with subcommunities who use their own lingo.
+If you've never used Twitter before, the terms used there can be cryptic (and not safe 
+for work). Beyond "@ing people" and "hashtags", the users themselves have created 
+Twitter-wide standards. Twitter is also filled with subcommunities who use their own 
+lingo.
 
 Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide/twitter-101/speak-the-language-of-twitter-twitter-help">getting started guide,</a> but here are a few terms you will hear throughout the workshop and might see as fields in your data.  
 
@@ -40,7 +47,7 @@ Twitter has its own <a href="https://help.twitter.com/en/resources/twitter-guide
 
 This is an example of what a tweet looks like on the brower.
 
-<img src="../fig/obscure-tweet.png" alt="Obscure tweet from an obscure twitter account" width = "700" height = "400"/>
+<img src="../fig/obscure-tweet.png" alt="Obscure tweet from an obscure twitter account" width = "350" height = "200"/>
 
 > ## Your Twitter Experience
 > If you are a twitter user, what terms have you encountered in your use?
@@ -94,28 +101,30 @@ You can visualize this analogy <a href="https://www.mulesoft.com/resources/api/w
 
 # Twarcing
 
-You may be asking, "What is twarc?" or, "Why do all things involving
-Twitter have to start with a 'tw'?".
+You may be asking, "What is twarc?"
 
-twarc was created by a group of people now known as Documenting the Now.
+twarc is the software that is going to interact with the Twitter API on our 
+behalf. It was created by a group of people now known as Documenting the Now.
 
-[Documenting the Now](docnow.io) develops open source tools and community centered 
-practices that support the ethical collection, use, and preservation of publicly 
-available content shared on the web and social media.
+[Doc the Now](docnow.io) develops open source tools and community centered 
+practices that supports the ethical archiving of 
+web and social media content.
+This workshop will teach you about the 
+collection, use, and preservation of twitter data from this point of view.
 
-twarc is a command line tool and Python library that is used to collect
-and archive Tweets through the Twitter API. twarc is a community built, Free and Open Source Software (FOSS).  To elaborate, twarc
-is accessible, free, and can help simplify data harvesting once you
-practice using it. twarc is also an active open-source project, so
-it is open to collaboration and use by anyone.
-The documentation can be viewed on [Github](https://twarc-project.readthedocs.io/en/latest/).
+twarc is a command line tool and Python library that is used to collect and archive 
+Tweets through the Twitter API. twarc is a community built, Free and Open Source 
+Software (FOSS).  To elaborate, twarc is accessible, free, and can help simplify data 
+harvesting once you practice using it. twarc is also an active open-source project, so 
+it is open to collaboration and use by anyone. The documentation can be viewed on 
+[Github](https://twarc-project.readthedocs.io/en/latest/).
 
 twarc allows you to request specific data based on keywords, hashtags, events, and other 
 areas of interest. Once you have your dataset, twarc has what the developers refer to as 
 'utilities'. These are python programs that can be run on the command line to explore 
 and visualize your data.
 
-> ## Issues
+> ## Open Source = Open Community
 > If you run into any errors, the people who built twarc respond quite quickly (and they're very friendly).
 > Navigate to the ['Issues'](https://github.com/DocNow/twarc/issues) page on their repository and open a new issue. You can also view pre-existing issues (open or closed) to see if someone has already answered a question like yours.
 {: .callout}
