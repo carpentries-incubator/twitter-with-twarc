@@ -26,6 +26,13 @@ Let's look at one individual tweet file, in the Jupyter viewer.
 
 ![single jsonl tweet opened in jupyterlab](../fig/hot-mess-tweet.png)
 
+#### 1: cat Not so readable
+
+#### 2: nano: you can read the first line.
+
+#### 3: jupyter: you can hand format
+
+
 The Jupyter viewer has numbering, so we can see that this whole screen
 is one line. Looking at the beginning of the file, is it obvious that JSON is a
 whole bunch of named-value pairs? ie:

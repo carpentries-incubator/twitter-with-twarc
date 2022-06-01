@@ -120,8 +120,11 @@ file system commands:
 | `ls`| list contents of a directory |
 | `mkdir`| make new directory, a folder |
 
-In our Jupyterhub environment, we have pre-installed the nano editor. Nano is a text editor and can only work with plain character data. We are using nano in this workshop
-because it is one of the least complex text editors. There are many editors such as Notepad++ or VIM, which you can configure to use on your own devices in the command-line.
+In our JupyterHub environment, we have the standard Juputer built-in text and csv 
+viewer/editors. We have also pre-configured the `nano` text 
+editor to work from the terminal. We are using nano in this workshop 
+because it is one of the least complex text editors. There are many other editors such as 
+Notepad++ or VIM, which you can configure to use on your own device. 
 
 Let's move around our directories in the Terminal to get comfortable.
 
@@ -130,26 +133,6 @@ directory `twarc_run`. If you are not in the proper directory, please
 change directories using `cd` to move into `twarc_run`. Your current working
 directory in BASH is separate from the current working directory of you
 Jupyter notebook.
-
-While we are in BASH, let's look an individual Tweet. We can use the command `cat` to
-print it to the screen:
-
-~~~
-cat raw_data/one_tweet.jsonl
-~~~
-{: .language-bash}
-
-Using this method, the content may be hard to read. Let's open it in nano for a better 
-view of this data.
-
-~~~
-nano raw_data/one_tweet.jsonl
-~~~
-{: .language-bash}
-
-In nano, options for data editing are listed a the bottom. For instance, you may use 
-`ctrl + j` (windows/linux) or `cmd + j` (mac) to wrap the text. We will examine this 
-file in detail later. To exit nano, use `ctrl + x` or `cmd + x`.
 
 
 > ## Remember:
@@ -177,8 +160,8 @@ instructions. Take a moment to gather the following keys and tokens:
 {: .checklist}
 
 
-Let's start
-configuring twarc by sending typing in the command `twarc2 configure`. You should get the output below:
+Let's start configuring twarc by sending typing in the command `twarc2 configure`. You 
+should get the output below:
 
 ~~~
 twarc2 configure
@@ -435,43 +418,49 @@ Commands:
 These are all of the commands that you can send via twarc2. You can also view all the
 help for twarc 1.0!
 
-> ## Challenge: 2 timelines
+> ## Challenge 1: Timelines
 >
 > * Can you find the file called "bjules.jsonl"?
 > * Download a timeline for one of the twitter accounts from this list:
->   NCEAS "@ucsb_nceas", EcoDataScience "@ecodatasci", R-Ladies Santa Barbara "@RLadiesSB",
->   spatial@ucsb "@spatialUCSB", UCSB Collaboratory "@libratorybot"
+>   * NCEAS "@ucsb_nceas"
+>   * EcoDataScience "@ecodatasci"
+>   * R-Ladies Santa Barbara "@RLadiesSB"
+>   * spatial@ucsb "@spatialUCSB"
+>   * UCSB Collaboratory "@libratorybot"
 >
 > * What do you notice about the file that was created from using the timeline command?
 >
 > > ## Solution
-> > * Remember, we ran the following code a little earlier in the episode:
+> >
+> > Remember, we ran the following code a little earlier in the episode:
 > > ~~~
 > > !twarc2 timeline BergisJules > 'raw_data/bjules.jsonl'
 > > ~~~
-> > Our output tag `raw_data/bjules.jsonl` indicates that our file `bjules.jsonl` is located in the folder `raw_data`.
+> > Our output tag `raw/bjules.jsonl` indicates that our file `bjules.jsonl` is located 
+> > in the folder `raw`.
 > > 
-> > * To download the timelines for the twitter accounts from the list:
+> > To put that generically:
 > > ~~~
-> > !twarc2 timeline ucsb_nceas ucsb_nceas_tweets.jsonl
-> > !twarc2 timeline ecodatasci ecodatasci_tweets.jsonl
-> > !twarc2 timeline RLadiesSB RLadiesSB_tweets.jsonl
-> > !twarc2 timeline spatialUCSB spatialUCSB_tweets.jsonl
-> > !twarc2 timeline libratorybot libratorybot_tweets.jsonl
+> > !twarc2 timeline twitter_handle path/to/filename.jsonl
 > > ~~~
 > > Note: if you included the @ sign, you probably got an error
 > >
-> > * Some observations on the files we created: they're all jsonl. Most of them are fairly small (around 300 tweets), apart from `ucsb_nceas_tweets` which reached the API timeline limit of 3200 tweets. 
+> > Some observations on the files we created: 
+> >
+> > * they're all jsonl. 
+> > * Most of them are fairly small (around 300 tweets), apart from 
+> >   `ucsb_nceas_tweets` which reached the API timeline limit of 3200 tweets. 
 > {: .solution}
 {: .challenge}
 
-# Sending BASH Commands from your Notebook
-So far we have sent BASH commands and typed Markdown in our Notebooks. But the
+# Working from Your Notebook
+The
 main reason to use Jupyter Notebooks is to write code and leave ourselves notes
-in Markdown.
+in Markdown. This includes BASH commands that we designate with a `!` 
+(often prounoucned 'bang)
 
 Because the tool twarc_csv is a plugin, we need to install it each time
-our JupyterLab server restarts. So go ahead and put that in a
+our JupyterLab server restarts. We also need emojis.py, so go ahead and put that in a
 cell at the top of your notebook:
 
 ~~~
@@ -480,8 +469,10 @@ cell at the top of your notebook:
 ~~~
 {: .language-bash}
 
-Let's load the Python libraries
-we will be using today, and then load our Bergis Jules data into a Pandas dataframe. You may need to run the import lines in individual cells.
+Next we load the Python libraries we will be using today, and then load our Bergis Jules 
+data into a Pandas dataframe. You may need to run the import lines in individual cells.
+
+No bangs, because this is Python code:
 
 ~~~
 import pandas as pd
@@ -493,17 +484,12 @@ import os
 {: .language-python}
 
 
-Because these are python commands, you do not need to add the exclamation
-point.
-
-
 ## Flattening Twitter Data
 
-Twitter Timelines, and other files we harvest using twarc, need to be
-'flattened' before we use them.   
-
-Flatten will ensure that each line of the file is 1 tweet, allowing us to immediately
-know how many tweets we have after we create the flattened file.
+Twitter Timelines, and other files we harvest using twarc, need to be 'flattened' 
+before we use them.  Flatten will ensure that each line of the file is 1 tweet, 
+allowing us to immediately know how many tweets we have after we create the flattened 
+file.
 
 Before flattening:
 `! wc raw_data/bjules.jsonl`
@@ -519,10 +505,12 @@ We might think there are 32 tweets in Jules' timeline.
 After flattening:
 `! wc output_data/bjules_flat`
 
+It is clear that 
+
 ## Converting between file types: jsonl to csv to dataframe
-csv's are convenient for reading, and are useful as a data format
-later on for analyzing tweets outside of twarc. csv's are even conventient for reading, and are useful as a data format
-later on for analyzing tweets outside of twarc.
+csv's are convenient for reading, and are useful as a data format later on for 
+analyzing tweets outside of twarc. csv's are even conventient for reading, and are 
+useful as a data format later on for analyzing tweets outside of twarc.
 
 We will almost always convert our files to .csv format.
 
@@ -531,8 +519,11 @@ We will almost always convert our files to .csv format.
 ~~~
 {: .language-bash}
 
+And Pandas dataframes are the most useful structures for later analysis,
+so you may as well make one of those too:
+
 ~~~
-bjules_df = pd.read_csv('output_data/bjules.csv')
+bjules_df = pd.read_csv('output/bjules.csv')
 ~~~
 {: .language-python}
 
@@ -542,23 +533,17 @@ are a convenient format for manipulating data in Pandas.
 
 Now that we have flattened our data and made a csv, we can see how
 many tweets we harvested from Jules's timeline using `wc` in the terminal.
+We don't have to remember what twarc told us.
 
 ~~~
 !wc 'output_data/bjules.csv'
 ~~~
 {: .language-bash}
 
-Another common transformation we will make, since we are working in Jupyter and will
-be using Python to analyze our tweets, is to create a Pandas dataframe of our tweets:
-
-~~~
-bjules = pd.read_csv("output_data/bjules.csv")
-~~~
-{: .language-python}
 
 Check how many Tweets we got from Bergis by looking at:
-- the length of the dataframe
 - word count
+- the length of the dataframe
 - looking at the csv in jupyter
 
 > ## Challenge: Compare and prepare two timelines
@@ -571,17 +556,17 @@ Check how many Tweets we got from Bergis by looking at:
 > > 
 > > * Flatten your collected tweets
 > > ~~~
-> > !twarc2 flatten 'raw_data/ecodatasci.jsonl' > 'output_data/ecodatasci_flattened.jsonl'
+> > !twarc2 flatten 'raw/ecodatasci.jsonl' > 'output/ecodatasci_flat.jsonl'
 > > ~~~
 > > {: .language-bash}
 > > * Convert to csv format
 > > ~~~ 
-> > !twarc2 csv 'output_data/ecodatasci_flattened.jsonl' > 'output_data/ecodatasci.csv'
+> > !twarc2 csv 'output/ecodatasci_flat.jsonl' > 'output/ecodatasci.csv'
 > > ~~~ 
 > > {: .language-bash}
 > > * Convert to pandas dataframe
 > > ~~~ 
-> > ecodatasci_df = pd.read_csv('output_data/ecodatasci.csv')
+> > ecodatasci_df = pd.read_csv('output/ecodatasci.csv')
 > > ~~~
 > > {: .language-python}
 > {: .solution}
