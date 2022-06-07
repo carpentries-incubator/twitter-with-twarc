@@ -2,8 +2,7 @@
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
-**This lesson is headed towards The Carpentries Incubator!**
-Initial runs of this lesson will happen at UCSB in May 2022.
+An initial run of this lesson was taught at UCSB in May 2022.
 
 A member of the [Carpentries Curriculum Team](https://carpentries.org/team/)
 will work with you to get your lesson listed on the
