@@ -2,6 +2,9 @@
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
+A Data Carpentry style 5 hour workshop on harvesting and analyzing Twitter data using the public API and Documenting the Now's Twarc package. 
+
+
 An initial run of this lesson was taught at UCSB in May 2022.
 
 A member of the [Carpentries Curriculum Team](https://carpentries.org/team/)
@@ -43,7 +46,7 @@ Current maintainers of this lesson are
 
 * Jon Jablonski (not officially a Carpentry Maintainter)
 * Amanda Ho
-* FIXME
+* Kristi Liu
 
 
 ## Authors
