@@ -157,6 +157,9 @@ Twitter is NOT case sensitive, so these counts include various capitalizations o
 > What do you notice regarding the total tweets you receive?
 > Do the same for baseball to confirm, using the terms "baseball" and "#baseball".
 >
+> Will a search for a word also return that word used as a hashtag?
+> Does the Twitter API use a boolean `AND` or a boolean `OR` by default?
+> 
 > > ## Solution
 > > The output of the command `twarc2 counts --text "basketball"`:
 > > ~~~
@@ -186,10 +189,12 @@ Twitter is NOT case sensitive, so these counts include various capitalizations o
 > > ~~~
 > > {: .output}
 > >
+> > Searching for the word "basketball" also returns uses of "#basketball". Both are included in the
+> > 437,140 from the first count command (a Boolean `OR`).
+> >
 > > This command did a count on tweets that contained the text "basketball" and "#basketball".
-> > The resulting number of 17,308 is smaller than the count from the first count command.
-> > This is expected because these tweets contain both "basketball" and "#basketball", and are included in the
-> > 437,140 from the first count command.
+> > The resulting number of 17,308 is smaller than the count from the first count command, that tells
+> > us the Twitter uses a boolean AND by default. 
 > >
 > {: .solution}
 {: .challenge}
@@ -219,34 +224,7 @@ Twitter is NOT case sensitive, so these counts include various capitalizations o
 > {: .solution}
 {: .challenge}
 
-## Recent Search
 
-This endpoint gathers the most recent 6 days of a search string that
-you pass to the API via twarc. Let's gather all the recent mentions of
-the UCSB Library.
-
-Both filter and search use
-<a href="https://twitter.com/search-advanced?lang=en" target="new">Twitter's advanced search syntax</a>
-We can use a little Boolean logic to make sure we cast
-a wide net, ie: that we search a variety of text strings and hashtags.
-
-~~~
-!twarc2 counts --granularity "day" --text "(ucsblibrary OR frisbee)"
-~~~
-{: .language-bash}
-
-~~~
-2022-05-18T21:32:43.000Z - 2022-05-19T00:00:00.000Z: 83
-2022-05-19T00:00:00.000Z - 2022-05-20T00:00:00.000Z: 868
-...
-2022-05-24T00:00:00.000Z - 2022-05-25T00:00:00.000Z: 1,000
-2022-05-25T00:00:00.000Z - 2022-05-25T21:32:43.000Z: 784
-
-Total Tweets: 6,518
-~~~
-{: .output}
-
-The `OR` is necessary for syntax. In this case, we have asked to get a count of tweets that either have the text "ucsblibrary", "#ucsblibrary", "frisbee", or "#frisbee".
 
 ## Gathering Big Data
 
@@ -317,14 +295,11 @@ human-readable, and it can be difficult to convert to a dataframe (which most
 of us will want to do anyway). So twarc2 has an extension to turn our harvested
 jsonl to csv. csv's are always easily convertible into Pandas dataframes.
 
-Timelines need to run through the `flatten` twarc plug-in.
-We still haven't found another datatype that needs to be flattened. #FIXME ?
-
 So let's flatten the UCSBLibrary timeline and convert the flattened data to a csv:
 
 ~~~
-!twarc2 flatten raw_data/ucsblib_timeline.jsonl output_data/ucsblib_timeline_flat.jsonl
-!twarc2 csv output_data/ucsblib_timeline_flat.jsonl output_data/ucsblib_timeline.csv
+!twarc2 flatten raw/ucsblib_timeline.jsonl output/ucsblib_timeline_flat.jsonl
+!twarc2 csv output/ucsblib_timeline_flat.jsonl output_data/ucsblib_timeline.csv
 ~~~
 {: .language-bash}
 
@@ -338,10 +313,10 @@ Wrote 500 rows and output 74 columns in the CSV.
 ~~~
 {: .output}
 
-Now that we have the csv of the data, we can use a python pandas command to get the data in a dataframe.
+Now that we have the csv of the data, we can use a python pandas command to get the data into a dataframe.
 
 ~~~
-ucsblib_timeline_df = pd.read_csv("output_data/ucsblib_timeline.csv")
+ucsblib_timeline_df = pd.read_csv("output/ucsblib_timeline.csv")
 
 #outputs first 5 lines in dataframe
 ucsblib_timeline_df.head()
@@ -356,12 +331,12 @@ ucsblib_timeline_df.tail()
 
 Use `wc` to get a count of tweets. Did we get a reasonable amount?
 
-Let's remind ourselves of all the different things that come
+Let's remind ourselves of some of the different things that come
 along with a tweet by printing out a list of the dataframe
 headers:
 
 ~~~
-#outputs first 5 items
+#outputs first 5 columns
 ucsblib_timeline_df.columns[:5]
 ~~~
 {: .language-python}
@@ -384,7 +359,9 @@ ucsblib_timeline_df['public_metrics.retweet_count']
 ~~~
 {: .language-python}
 
-By using the python function `.sort_values()`, we can organize the entire dataframe in order of retweet counts.
+By using the Python function `.sort_values()`, we can sort the dataframe 
+in order of Retweet counts. That's a measure of how much impact that tweet
+had online.
 
 ~~~
 sort_by_rt = ucsblib_timeline_df.sort_values('public_metrics.retweet_count', ascending=False)
@@ -400,7 +377,9 @@ most_rt['text']
 You may also get the tweet id to view the tweet on Twitter:
 https://twitter.com/UCSBLibrary/status/tweet_id
 
-We may also look at the tweet with most quote-tweets by looking at the column "public_metrics.quote_count":
+
+Another metric is how many times a tweet has been 'retweeted with quote',
+by looking at the column "public_metrics.quote_count":
 
 ~~~
 sort_by_qc = ucsblib_timeline_df.sort_values("public_metrics.quote_count", ascending=False)
@@ -413,7 +392,11 @@ most_quoted['text']
 ~~~
 {: .language-python}
 
-The final column we will look at is "author.public_metrics.followers_count". We will get the twitter account with the most followers. This is looking at both @UCSBlibrary and any accounts @UCSBlibrary retweeted from in the timeline we collected.
+It takes a bit more effort to retweet-with-quote rather than just pushing the
+Retweet button, so these can be considered more impactful.
+
+Finally, you can see who the most impactful author is in your dataset by 
+looking at "author.public_metrics.followers_count". For timelines, this will look at both @UCSBlibrary and any accounts @UCSBlibrary retweeted from in the timeline we collected.
 
 ~~~
 sort_by_fol = ucsblib_timeline_df.sort_values('author.public_metrics.followers_count', ascending=False)
