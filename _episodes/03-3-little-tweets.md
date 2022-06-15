@@ -3,7 +3,7 @@ title: "Anatomy of a tweet: structure of a tweet as JSONL"
 teaching: 20
 exercises: 10
 questions:
-- What does Twitter data look like?
+- What does raw Twitter data look like?
 - What are some ways of looking at Twitter JSONL data?
 - Which pieces of a tweet should I pay attention to?
 
@@ -94,7 +94,7 @@ most of them.
 Some key pieces of a Tweet are:
 - created_at: the exact day and time (in GMT) the tweet was posted
 - id: a unique tweet ID number
-- entities: strings pulled out of a tweet that line up with something
+- entities: strings pulled out of a tweet that line up with Twitter's ontology
   - any hashtags that are used
   - any users who are @'ed
   - personal names
@@ -138,24 +138,25 @@ list(ecodatasci_df.columns)
 ~~~
 {: .output}
 
-This gives you a sense of just how much data comes along with a tweet.
+This gives you a sense of just how much data comes along with a tweet. The final three 
+entries are added by the Twitter API to let you know how the tweet was retrieved.
 
 ## First and last tweets
 Let's look at our `bjules_flat.jsonl` file again.
 
 Remember our JSONL files are line-oriented, ie: one tweet per line. Let's use the
-`head` and `tail` command to create files with two tweets each. Better yet, one
-file with all 4.
+`head` and `tail` command to create files with the first two and last two lines of
+our data file.
 
 The double-greater-than `>>` appends rather than creates. 
 
 ~~~
-!head -n 2 'output_data/bjules_flat.jsonl' > 'output_data/4_tweets.jsonl'
+!head -n 2 'output/bjules_flat.jsonl' > 'output/4_tweets.jsonl'
 ~~~
 {: .language-bash}
 
 ~~~
-!tail -n 2 'output_data/bjules_flat.jsonl' >> 'output_data/4_tweets.jsonl'
+!tail -n 2 'output/bjules_flat.jsonl' >> 'output/4_tweets.jsonl'
 ~~~
 {: .language-bash}
 
@@ -172,17 +173,21 @@ mess. Let's open the Jupyter graphical file viewer instead.
 > However, sometimes it's going to be advantageous to
 > look at a file in nano, because the JSONL files open with lines
 > unwrapped.
-> our 4-tweets file, for example
+> Our 4-tweets file, for example
 > {: .source}
 {: .callout}
 
 Using either method, it's still difficult to tell what's going on. Can
 we even tell where one tweet ends, and the second begins? Jupyter
 does have line numbers, so at least we can see 
-it's 4 lines.
+it's 2 lines.
 
-In nano, it's very easy to see what order the tweets come in, and therefore, what
-the date range of our tweets are:
+With the lines unwrapped, you can advance across the line to see
+the posted date of the action on the timeline, as well as what type of
+action it was. 
+
+With the first and last tweets, that gives us the 
+the date and time range of Mr. Jules' timeline:
 
 ![4 tweets in nano](../fig/4_tweets_nano.PNG)
 
@@ -194,11 +199,11 @@ directly. When we harvest tweets, it is a very good idea to do a little explorat
 analysis to make sure you got what you expected. As we did in the previous
 episode, let's look at 
 the bash command `wc` (word count) to see how many lines of JSONL are in
-our gas prices file. We will need to flatten it!
+our gas prices file. Don't forget to flatten it!
 
 ~~~
-! twarc2 flatten raw_data/hashtag_gasprices.jsonl output_data/hashtag_gasprices_flat.jsonl
-! wc output_data/hashtag_gasprices_flat.jsonl
+! twarc2 flatten raw/hashtag_gasprices.jsonl output/hashtag_gasprices_flat.jsonl
+! wc output/hashtag_gasprices_flat.jsonl
 ~~~
 {: .language-python}
 
@@ -219,8 +224,8 @@ get the first line and last line of the file:
 Lets save this output into a file named "gasprice_date_range.jsonl":
 
 ~~~
-!head -n 1 'raw_data/hashtag_gasprices.jsonl' > 'output_data/gasprice_range.jsonl'
-!tail -n 1 'raw_data/hashtag_gasprices.jsonl' >> 'output_data/gasprice_range.jsonl'
+!head -n 1 'output/hashtag_gasprices_flat.jsonl' > 'output/gasprice_range.jsonl'
+!tail -n 1 'raw/hashtag_gasprices_flat.jsonl' >> 'output/gasprice_range.jsonl'
 ~~~
 {: .bash}
 
@@ -230,10 +235,14 @@ Let’s do this basic analysis for our two other files of raw data: bjules.jsonl
 > ## Challenge: Getting Date Ranges
 > Please create the files `bjules_range.jsonl` and `ecodatasci_range.jsonl` that
 > contains the first and last tweets of bjules.jsonl and ecodatasci.jsonl.  Use
-> one cell per file.
+> one notebook cell per file.
 >
 > Remember to specify where to store your output files.
 >
+> 1. What are the oldest and newest items on Bergis' timeline.
+> 1. How many items are on Bergis' timeline?
+> 2. Same questions for the timeline you downloaded in episode 2.
+> 
 > > ## Solution
 > > ~~~
 > > !head -n 1 'raw_data/bjules.jsonl' > 'output_data/bjules_range.jsonl'
@@ -256,10 +265,15 @@ Let’s do this basic analysis for our two other files of raw data: bjules.jsonl
 Other things we can do: sentiment analysis (FORESHADOWING). See when he joined
 Twitter (hint: way before 2018)
 
-How are the flattened and unflattened versions different? I’m thinking
+## How are the flattened and unflattened versions different? 
+Timeline doesn’t really give a
+line-oriented set of tweets. << this is why we need flatten or csv
+There are also other actions that show up in your timeline.
+
+I’m thinking
 timeline jsonl looks a tiny bit different from searched/filtered tweets
-as jsonl. I can’t confirm yet. Timeline doesn’t really give a
-line-oriented set of tweets. <<< this is why we need flatten or csv
+as jsonl. I can’t confirm yet. 
+
 
 ![concept map that describes twitter data](../fig/tweet-breakdown.svg)
 
@@ -281,8 +295,8 @@ line-oriented set of tweets. <<< this is why we need flatten or csv
 > 3. Can you think of a more rigorous way to check?
 >
 > ~~~
-> !head -n 10 'raw_data/hashtag_gasprices.jsonl' >  'output_data/20tweets.jsonl'
-> !tail -n 10 'raw_data/hashtag_gasprices.jsonl' >> 'output_data/20tweets.jsonl'
+> !head -n 10 'output/hashtag_gasprices_flat.jsonl' >  'output_data/20tweets.jsonl'
+> !tail -n 10 'output/hashtag_gasprices_flat.jsonl' >> 'output_data/20tweets.jsonl'
 > ~~~
 > {: .language-python}
 >
