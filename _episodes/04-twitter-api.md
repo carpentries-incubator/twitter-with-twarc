@@ -409,34 +409,37 @@ most_fol['id']
 ~~~
 {: .language-python}
 
-> ## Challenge: Cats of Instagram
-> Let's make a bigger datafile. Harvest 500 tweets that use the hashtag "catsofinstagram"
-> and put the dataset through the pipeline to answer the following questions:
+> ## Challenge: Hashtag Cats of Instagram
+> Let's get a reasonably sized dataset to use for the remainder of
+> the workshop. Harvest 500 tweets that use the hashtag "catsofinstagram"
+> and put the dataset through our pipeline (harvest > flatten > csv > 
+> dataframe) to answer the following questions:
 >
-> 1. Did you get exactly 500?
+> 1. Did you get exactly 500 tweets?
 > 2. How far back in time did you get?
 > 3. What is the most re-tweeted tweet from our search?
 > 4. Which person has the most number of followers in your dataset?
 >
 > > ## Solution
 > > ~~~
-> > !twarc2 search --limit 500 "#catsofinstagram" source-data/catsofinstagram.jsonl
+> > !twarc2 search --limit 500 "#catsofinstagram" raw/catsofinstagram.jsonl
 > > ~~~
 > > {: .language-bash}
 > >
 > > 1. Let's start by converting our dataset to a csv, then run some python
 > > ~~~
-> > !twarc2 csv source-data/catsofinstagram.jsonl output-data/catsofinstagram.csv
+> > !twarc2 csv raw/catsofinstagram.jsonl output/catsofinstagram.csv
 > > ~~~
 > > {: .language-bash}
 > >
 > > Read in csv using pandas. Pandas is denoted by pd.
 > > ~~~
-> > cats_df = pd.read_csv("output-data/catsofinstagram.csv")
+> > cats_df = pd.read_csv("output/catsofinstagram.csv")
 > > ~~~
 > > {: .language-python}
 > >
-> > We are able to see how many tweets we get by getting the dimensions of the dataframe.
+> > We are able to see how many tweets we get by getting the dimensions of the dataframe
+> > or with `wc`.
 > > The number of rows indicate the number of unique tweets. The dumber of columns indicate
 > > the amount of data that came with each tweet.
 > > ~~~
@@ -446,7 +449,7 @@ most_fol['id']
 > >  
 > >
 > > 2. Look at the earliest value under the column 'created_at'.
-> >
+> > Technically, you don't have to sort this, since tweets arrive chronologically.
 > > ~~~
 > > earliest_create = cats_df.sort_values('created_at', ascending = True).head(1)
 > > earliest_create['created_at']
