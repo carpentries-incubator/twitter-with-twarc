@@ -5,29 +5,16 @@
 A Data Carpentry style 5 hour workshop on harvesting and analyzing Twitter data using the public API and Documenting the Now's Twarc package. 
 
 
-An initial run of this lesson was taught at UCSB in May 2022.
-
-A member of the [Carpentries Curriculum Team](https://carpentries.org/team/)
-will work with you to get your lesson listed on the
-[Community Developed Lessons page][community-lessons]
-and make sure you have everything you need to begin developing your new lesson.
 
 ## What to do next
 
-- ** UCSB team: ** Continue to flesh out [this gDoc outline](https://docs.google.com/document/d/1Xz6qFmgZOjjzqWy_YsWvxRfuKxbd3V2aLElS4m1ZIcU/edit?usp=sharing)
-- Claim an episode Jira ticket if you feel a lesson is ready to be moved over and 
-outlined directly in this repo.
+- ** UCSB team: ** Complete the post-workshop run-through shortening the folder names and fixing obvious mistakes.
+- ** anyone: ** Have at it. Make issues. Give feedback. Teach the lesson. Submit pull requests.
 
 There's still a little Carpentry advice:
 * [ ] [Add relevant topic tags to your lesson repository][cdh-topic-tags].
-* [ ] Fill in the fields marked `FIXME` in:
-  * this README
-  * [`_config.yml`](_config.yml)
 * [*] Consult the [Lesson Example][lesson-example] website to find out more about
   working with the lesson template
-* [ ] Update this README with relevant information about your lesson
-  and delete this section
-
 
 ## Contributing
 
@@ -62,3 +49,4 @@ To cite this lesson, please consult with [CITATION](CITATION)
 [change-default-branch]: https://docs.github.com/en/github/administering-a-repository/changing-the-default-branch
 [community-lessons]: https://carpentries.org/community-lessons
 [lesson-example]: https://carpentries.github.io/lesson-example
+[UCSB Library Carpentries]: https://ucsbcarpentry.github.io
