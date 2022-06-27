@@ -2,9 +2,12 @@
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
-A Data Carpentry style 5 hour workshop on harvesting and analyzing Twitter data using the public API and Documenting the Now's Twarc package. 
+A Data Carpentry style 5 hour workshop on harvesting and analyzing Twitter data using the public API and Documenting the Now's Twarc package. The lesson 
+makes a very natural add-on and reinforcement to BASH and Intro to Python.
 
-
+## Black Lives Matter
+twarc is a tool created by (Documenting the Now)[https://docnow.io], born of the 
+civil unrest following the murder of Michael Brown by police in 2014.
 
 ## What to do next
 
