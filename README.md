@@ -6,7 +6,7 @@ A Data Carpentry style 5 hour workshop on harvesting and analyzing Twitter data 
 makes a very natural add-on and reinforcement to BASH and Intro to Python.
 
 ## Black Lives Matter
-twarc is a tool created by (Documenting the Now)[https://docnow.io], born of the 
+twarc is a tool created by [Documenting the Now](https://docnow.io), born of the 
 civil unrest following the murder of Michael Brown by police in 2014.
 
 ## What to do next
