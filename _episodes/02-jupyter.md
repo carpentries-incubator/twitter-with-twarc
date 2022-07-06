@@ -320,7 +320,7 @@ scholar working in digital humanities. He is the Community Lead for [Documenting
 Jules' recent tweets, please run the following command in a Python Notebook:
 
 ~~~
-!twarc2 timeline BergisJules > 'raw_data/bjules.jsonl'
+!twarc2 timeline BergisJules > 'raw/bjules.jsonl'
 ~~~
 {: .language-bash}
 
@@ -333,7 +333,7 @@ If the twarc configuration was successful, you will see a loading bar at the
 bottom of the cell.
 
 After the cell has completed running the line, there
-will be a file called "bjules.jsonl" inside of `raw_data` on your file browser. This file
+will be a file called "bjules.jsonl" inside of `raw` on your file browser. This file
 contains the data of tweets under the username "@BergisJules".
 
 
@@ -434,7 +434,7 @@ help for twarc 1.0!
 > >
 > > Remember, we ran the following code a little earlier in the episode:
 > > ~~~
-> > !twarc2 timeline BergisJules > 'raw_data/bjules.jsonl'
+> > !twarc2 timeline BergisJules > 'raw/bjules.jsonl'
 > > ~~~
 > > Our output tag `raw/bjules.jsonl` indicates that our file `bjules.jsonl` is located 
 > > in the folder `raw`.

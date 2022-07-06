@@ -260,7 +260,7 @@ account:
 When you start collecting tweets with the rules you have set in place, you must create the file that the data will be stored in:
 
 ~~~
-!twarc2 stream > "raw_data/streamed_tweets.jsonl"
+!twarc2 stream > "raw/streamed_tweets.jsonl"
 ~~~
 
 

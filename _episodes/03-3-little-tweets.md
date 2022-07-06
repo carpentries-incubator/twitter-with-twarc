@@ -256,7 +256,7 @@ Let’s go back and do this basic analysis for our two other files of raw data: 
 > > ~~~
 > > !head -n 1 'raw/bjules.jsonl' > 'output/bjules_range.jsonl'
 > > !tail -n 1 'raw/bjules.jsonl' >> 'output/bjules_range.jsonl'
-> > !wc 'raw_data/bjules.jsonl'
+> > !wc 'raw/bjules.jsonl'
 > > ~~~
 > > {: .language-python}
 > > We can see that we retrieved Bergis' texts back to 2018.
@@ -264,7 +264,7 @@ Let’s go back and do this basic analysis for our two other files of raw data: 
 > > ~~~
 > > !head -n 1 'raw/ecodatasci.jsonl' > 'output/ecodatasci_range.jsonl'
 > > !tail -n 1 'raw/ecodatasci.jsonl' >> 'output/ecodatasci_range.jsonl'
-> > !wc 'raw_data/ecodatasci.jsonl'
+> > !wc 'raw/ecodatasci.jsonl'
 > > ~~~
 > > {: .language-python}
 > >
