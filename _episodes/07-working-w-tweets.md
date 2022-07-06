@@ -1,5 +1,5 @@
 ---
-title: "Twarc Plugins"
+title: "Plugins and Searches"
 teaching: 20
 exercises: 5
 questions:
@@ -10,20 +10,20 @@ questions:
 keypoints:
 - "twarc2 has plug-ins that need separate installation"
 - "The network plug-in shows us how tweeters are related to each other"
-- "twarc1 has a folder of python scripts for basic analysis that might still work."
 ---
 
 # Other Harvests
+## Retweets
+
 Twarc2 has commands to retrieve entire conversation threads, as well as the
 retweets of one or more tweets. Recall that a retweet is when a
 Twitter account shares the Tweet of a different Twitter account.
 
 ![tiny care bot's tweet that has three retweets](../fig/tcb_tweet.png)
 
-This tweet has three retweets. We can retrieve those:
-
-We will need to get the tweet's numeric identifier. We
-can see the tweetID by looking at the url of the tweet. In this case, the tweet's ID
+This tweet has three retweets. We can harvest them using the tweetID, 
+which you 
+can see in the url of the tweet. In this case, the tweet's ID
 is 1522543998996414464.
 
 ~~~
@@ -31,30 +31,10 @@ is 1522543998996414464.
 ~~~
 {: .language-bash}
 
-This gives us the profiles of the three twitter accounts . From there
+This gives us the profiles of the three twitter accounts. 
+#FIXME: what does a profile look like? 
+From there
 we can go on to harvest their timelines to see what they are up to.
-
-## How much original content?
-You might be surprised by how much of your dataset consists purely of retweets--
-people pushing that one button and not doing anything else.
-
-We can use a little bit of python to calculate the proportion:
-
-~~~
-retweet_count = hashtagcats_df["referenced_tweets.retweeted.id"].value_counts()
-sum(retweet_count)
-
-(sum(retweet_count) / len(hashtagcats_df))
-~~~
-{: .python}
-
-This is such a useful measure that we often calculate this value as part
-of our initial workflow.
-
-> ## Challenge
-> How much of Bergis Jules timeline is original content?
-> How about the UCSB Library's timeline?
-{: .challenge}
 
 
 ## Followers
@@ -85,12 +65,35 @@ limiter here is counted in thousands, so we are getting 1000 of
 > > Convert the 5 profile files into a csv and read them
 > > You might also need to copy-and-paste the user-id
 > > into the Twitter web interface and take a look at the media
-> > that comes along.
+> > that comes along. #FIXME more detail for this solution
 > {: .solution}
 {: .challenge}
 
+## How much original content?
+You might be surprised by how much of your dataset consists purely of retweets--
+people pushing that one button and not doing anything else.
 
-### twarc2 Plus-ins
+We can use a little bit of python to calculate the proportion:
+
+~~~
+retweet_count = hashtagcats_df["referenced_tweets.retweeted.id"].value_counts()
+sum(retweet_count)
+
+(sum(retweet_count) / len(hashtagcats_df))
+~~~
+{: .python}
+
+This is such a useful measure that we often calculate this value as part
+of our initial workflow.
+
+> ## Challenge
+> How much of Bergis Jules timeline is original content?
+> How about the UCSB Library's timeline?
+{: .challenge}
+
+
+
+### twarc2 Plug-ins
 When we have thousands
 of tweets, there's some obvious tasks that we can do to get a grip on them.
 Anticipating those tasks, Doc the Now has
@@ -109,13 +112,15 @@ First you need to `pip install` in BASH
 {: .language-bash}
 
 ### Most seen hashtags
-When we run hashtags on our `hashtagcats` dataset, we should see the hashtag
-we search for first. Our other results make sense as well. We see a lot of dogs and Japanese
-cropping up. In case you didn't know it, Internet cats are huge in Japan.
+The hashtag plugin takes a twitter dataset and pulls out all of the
+hashtags that were used. As a reality check, when we run hashtags on our `hashtagcats.jsonl` 
+dataset, we should see the hashtag
+we searched for first. Our other results make sense as well. We see a lot of dogs and Japanese
+cropping up. (In case you didn't know it, Internet cats are huge in Japan.)
 
 #### Top hashtags
 ~~~
-!twarc2 hashtags 'raw_data/hashtagcats.jsonl' > 'output_data/hashtagcats_hashtags.csv'
+!twarc2 hashtags 'raw_data/hashtagcats.jsonl' > 'output_data/hashtagcats_hashtag_counts.csv'
 ~~~
 {: .language-bash}
 
@@ -160,11 +165,10 @@ We call network the same way we called hashtags
 The built-in web viewer ain't so hot, so download that html file to view the
 network on your own computer. Chrome works fine, and it's best to make the diagram
 fullscreen. It mseems to work better on a
-PC than a mac. We can see: - the largest central cluster around the account
+PC than a mac. We can see: 
+- the largest central cluster around the account
 @catsofinstagram
-
 - a corporate entity (a litter box company?) shows up,
-
 - some users of the hashtag are separate from the account's network.
 
 - neighborhoods of users exist, such as those around kiko1123215 in the
@@ -174,22 +178,21 @@ PC than a mac. We can see: - the largest central cluster around the account
 ![portion of a network diagram with a central node kiko11232015 off to the
 side of the main cluster of the account @catsofinstagram](../fig/cat_network.png)
 
-> ## Challenge: Examining a network diagram
+> ## Challenge: Can you make a network from a timeline?
 >
-> Create a network diagram of the ecodatascience timeline
+> Create a network diagram of Bergis Jules's timeline. How
+> is this different than the #catsofinstagram dataset? How
+> does this affect the look of the graph?
 >
-> ~~~
-> it may include some code
-> ~~~
-> {: .source}
 >
 > > ## Solution
 > >
 > > Because this is a timeline, the network is completely one-dimensional.
-> > We think any timeline would look like this.
+> > We think any timeline would look like this. Try another timeline to
+> > prove us wrong.
 > >
 > > ~~~
-> > !twarc2 network 'raw_data/ecodatasci.jsonl' > 'output_data/ecodatasci_network.html'
+> > !twarc2 network 'raw/bjules_timeline.jsonl' > 'output/bjules_network.html'
 > > ~~~
 > > {: .language-bash}
 > {: .solution}

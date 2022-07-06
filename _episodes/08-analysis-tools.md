@@ -25,7 +25,8 @@ we've done is count words.
 TextBlob is a Python library that does all sorts of text processing, 
 including sentiment analysis. 
 
-Sentiment analysis can be used to estimate the overall 
+One type of sentiment analysis is to calculate 
+the overall 
 positivity or negativity of a text corpus. There are a variety 
 of algorythms and scales. TextBlob's default `.sentiment` 
 function rates an input text as negative or positive on a 
@@ -50,7 +51,7 @@ the linguistic datasets that TextBlob uses in its analyses:
 {: python}
 
 We need to feed TextBlob something like plain text. Therefore, 
-we need to create a text object from our dataframe.
+we need to create a text object from the tweets in our dataframe.
  
 That column is named `text`, we pull that 
 out of our dataframe and convert it to a list. Then we can 
@@ -72,9 +73,10 @@ hashtagcats_list = ' '.join(hashtagcats_df['text'].tolist())
 hashtagcats_blob = textblob.TextBlob(hashtagcats_list)
 # get the sentiment
 hashtagcats_blob.sentiment
+
 ~~~ 
-Sentiment(polarity=0.2378257657037288, 
-          subjectivity=0.6328352645350159)
+    Sentiment(polarity=0.2378257657037288, 
+    subjectivity=0.6328352645350159)
 ~~~ 
 {: .output}
 {: .python}
@@ -84,10 +86,11 @@ The overall sentiment of the language of Cat Twitter is rather
 positive. And the tweets tend to be subjective.
 
 There's a ton of other analyses and chunking functions in 
-textblob. [Read the docs](https://textblob.readthedocs.io/en/dev/quickstart.html.
+textblob. (Read the docs)[https://textblob.readthedocs.io/en/dev/quickstart.html].
 
 
 > ## Challenge: Anticipating Sentiment
+>
 > Write Python code that outputs 
 > sentiment values for three of your 
 > dataframes. 
@@ -103,7 +106,7 @@ textblob. [Read the docs](https://textblob.readthedocs.io/en/dev/quickstart.html
 > your_data_blob = textblob.TextBlob(your_data_list)
 > ~~~
 > {: .source}
->
+> >
 > > ## Solution
 > >
 > > I'm going to guess that all my datasets are going to 
