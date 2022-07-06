@@ -49,7 +49,7 @@ long-term archiving, or before we share data with people outside of
 our immediate research team.
 
 ~~~
-! twarc2 dehydrate raw/hashtagcats.jsonl output_data/dehydrated_cats.txt
+! twarc2 dehydrate raw/hashtagcats.jsonl output/dehydrated_cats.txt
 ~~~
 {:.bash}
 

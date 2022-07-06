@@ -59,7 +59,7 @@ limiter here is counted in thousands, so we are getting 1000 of
 >
 > > ## Solution
 > > ~~~
-> > !twarc2 csv 'raw/tcb_followers.jsonl' > 'output_data/tcb_followers.csv'
+> > !twarc2 csv 'raw/tcb_followers.jsonl' > 'output/tcb_followers.csv'
 > > ~~~
 > >
 > > Convert the 5 profile files into a csv and read them
@@ -120,7 +120,7 @@ cropping up. (In case you didn't know it, Internet cats are huge in Japan.)
 
 #### Top hashtags
 ~~~
-!twarc2 hashtags 'raw/hashtagcats.jsonl' > 'output_data/hashtagcats_hashtag_counts.csv'
+!twarc2 hashtags 'raw/hashtagcats.jsonl' > 'output/hashtagcats_hashtag_counts.csv'
 ~~~
 {: .language-bash}
 
@@ -140,7 +140,7 @@ cropping up. (In case you didn't know it, Internet cats are huge in Japan.)
 > > I looked at people who mentioned UCSB Library.
 > >
 > > ~~~
-> > !twarc2 hashtags output_data/ #FIXME
+> > !twarc2 hashtags output/ #FIXME
 > > ![Image showing top 13 hashtags](../fig/mentions.png)
 > > ~~~
 > > {: .output}
@@ -158,7 +158,7 @@ cropping up. (In case you didn't know it, Internet cats are huge in Japan.)
 We call network the same way we called hashtags
 
 ~~~
-!twarc2 network 'raw/hashtagcats.jsonl' > 'output_data/hashtagcats_network.html'
+!twarc2 network 'raw/hashtagcats.jsonl' > 'output/hashtagcats_network.html'
 ~~~
 {: .language-bash}
 

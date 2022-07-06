@@ -304,8 +304,8 @@ many fewer original authors. How few? #FIXME
 Chop the dataset to be the first 10,000 lines:
 
 ~~~
-! head -n 10000 output_data/riots_flat.jsonl > output_data/riots10k.jsonl
-! twarc2 csv output_data/riots10k.jsonl > output_data/riots10k.csv
+! head -n 10000 output/riots_flat.jsonl > output/riots10k.jsonl
+! twarc2 csv output/riots10k.jsonl > output/riots10k.csv
 ~~~
 
 Sort our 10,000 by account created date. New accounts can have a SH-A tag

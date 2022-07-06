@@ -503,7 +503,7 @@ We might think there are 32 tweets in Jules' timeline.
 
 
 After flattening:
-`! wc output_data/bjules_flat`
+`! wc output/bjules_flat`
 
 ## Converting between file types: jsonl to csv to dataframe
 csv's are convenient for reading, and are useful as a data format later on for 

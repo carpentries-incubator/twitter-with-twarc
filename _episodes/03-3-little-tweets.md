@@ -218,8 +218,8 @@ We can then look at the timestamps of the first and last tweets to determine
 the date range of our tweets by using the `head` and `tail` commands to
 get the first line and last line of the file:
 ~~~
-!head -n 1 'output_data/hashtag_gas_flat.jsonl'
-!tail -n 1 'output_data/hashtag_gas_flat.jsonl'
+!head -n 1 'output/hashtag_gas_flat.jsonl'
+!tail -n 1 'output/hashtag_gas_flat.jsonl'
 ~~~
 {: .bash}
 

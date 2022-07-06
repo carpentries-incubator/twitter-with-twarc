@@ -299,7 +299,7 @@ So let's flatten the UCSBLibrary timeline and convert the flattened data to a cs
 
 ~~~
 !twarc2 flatten raw/ucsblib_timeline.jsonl output/ucsblib_timeline_flat.jsonl
-!twarc2 csv output/ucsblib_timeline_flat.jsonl output_data/ucsblib_timeline.csv
+!twarc2 csv output/ucsblib_timeline_flat.jsonl output/ucsblib_timeline.csv
 ~~~
 {: .language-bash}
 
