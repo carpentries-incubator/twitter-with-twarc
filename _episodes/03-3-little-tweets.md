@@ -4,11 +4,12 @@ teaching: 20
 exercises: 10
 questions:
 - What does raw Twitter data look like?
-- What are some ways of looking at Twitter JSONL data?
+- What are some built-in ways of looking at Twitter JSONL data with Jupyter?
 - Which pieces of a tweet should I pay attention to?
 
 objectives:
-- Getting acquainted with a dataset
+- Getting acquainted with how JSONL looks
+- Accessing Twitter data in a human-readable way
 
 keypoints:
 - Tweets arrive as JSONL, a super common format.
@@ -16,7 +17,7 @@ keypoints:
 - Tweets come with a TON of associated data
 ---
 
-# Examining a twarc JSON file
+# Examining a twarc JSONL file
 
 JSONL, Line-oriented JavaScript Object Notation, is frequently used as a
 data interchange format. It has become super common in the data science
@@ -26,15 +27,14 @@ Let's look at one individual tweet file, in the Jupyter viewer.
 
 ![single jsonl tweet opened in jupyterlab](../fig/hot-mess-tweet.png)
 
-#### 1: cat Not so readable
+There are several other ways to look at any text file in the Jupyter environment:
+1 Run the `cat` Bash command. That's not so readable
+1 Open the file with the nano editor: nano opens files unwrapped, so you can see the lines.
+1 Jupyter text viewer/editor
 
-#### 2: nano: you can read the first line.
-
-#### 3: jupyter: you can hand format
-
-
-The Jupyter viewer has numbering, so we can see that this whole screen
-is one line. Looking at the beginning of the file, is it obvious that JSON is a
+The Jupyter viewer/editor has numbering, so we can see that this whole screen
+is one line. Looking at the beginning of the file, if you insert some returns and
+some tables, it will help you to see that JSON is a
 whole bunch of named-value pairs? ie:
 
 ~~~
@@ -117,7 +117,7 @@ method on any dataframe we have made from Twitter data. For example,
  ecodatasci_df, the dataframe created from the ecodatasci timeline:
 
 ~~~
-list(ecodatasci_df.columns)
+list(bjules_df.columns)
 ~~~
 {: .language-python}
 
@@ -145,22 +145,22 @@ entries are added by the Twitter API to let you know how the tweet was retrieved
 Let's look at our `bjules_flat.jsonl` file again.
 
 Remember our JSONL files are line-oriented, ie: one tweet per line. Let's use the
-`head` and `tail` command to create files with the first two and last two lines of
+`head` and `tail` command to create files with the first and last lines of
 our data file.
 
 The double-greater-than `>>` appends rather than creates. 
 
 ~~~
-!head -n 2 'output/bjules_flat.jsonl' > 'output/4_tweets.jsonl'
+!head -n 2 'output/bjules_flat.jsonl' > 'output/2_tweets.jsonl'
 ~~~
 {: .language-bash}
 
 ~~~
-!tail -n 2 'output/bjules_flat.jsonl' >> 'output/4_tweets.jsonl'
+!tail -n 2 'output/bjules_flat.jsonl' >> 'output/2_tweets.jsonl'
 ~~~
 {: .language-bash}
 
-If we use `!cat` to output one of these files, we see a real
+If we use `! cat` to output the files, we see a real
 mess. Let's open the Jupyter graphical file viewer instead.
 
 > ## Why not use nano?
@@ -173,7 +173,7 @@ mess. Let's open the Jupyter graphical file viewer instead.
 > However, sometimes it's going to be advantageous to
 > look at a file in nano, because the JSONL files open with lines
 > unwrapped.
-> Our 4-tweets file, for example
+> Our 2-tweets file, for example
 > {: .source}
 {: .callout}
 
@@ -187,28 +187,30 @@ the posted date of the action on the timeline, as well as what type of
 action it was. 
 
 With the first and last tweets, that gives us the 
-the date and time range of Mr. Jules' timeline:
+the date and time range of what we retrieved from Mr. Jules' timeline:
 
-![4 tweets in nano](../fig/4_tweets_nano.PNG)
+#FIXME you need a new 2-tweet version
+![2 tweets in nano](../fig/4_tweets_nano.PNG)
 
 
 # A Very Basic Analysis
 
-We can do a few things without even looking at the JSONL
-directly. When we harvest tweets, it is a very good idea to do a little exploratory
-analysis to make sure you got what you expected. As we did in the previous
+One goal for us is to look at our data without looking at the JSONL 
+directly. When we harvest tweets, it is a very good idea to do a little exploratory,
+reality-checking, analysis to make sure you got what you expected. As we did in the previous
 episode, let's look at 
-the bash command `wc` (word count) to see how many lines of JSONL are in
-our gas prices file. Don't forget to flatten it!
+the bash command `wc` (word count) to see how many lines of JSONL,
+therefore how many tweets, are in
+our gas prices file. Don't forget to flatten it first!
 
 ~~~
-! twarc2 flatten raw/hashtag_gasprices.jsonl output/hashtag_gasprices_flat.jsonl
-! wc output/hashtag_gasprices_flat.jsonl
+! twarc2 flatten raw/hashtag_gas.jsonl output/hashtag_gas_flat.jsonl
+! wc output/hashtag_gas_flat.jsonl
 ~~~
 {: .language-python}
 
 ~~~
-15698   7653538 100048736 hashtag_gasprices.jsonl
+15698   7653538 100048736 hashtag_gas_flat.jsonl
 ~~~
 {: .output}
 
@@ -216,12 +218,12 @@ We can then look at the timestamps of the first and last tweets to determine
 the date range of our tweets by using the `head` and `tail` commands to
 get the first line and last line of the file:
 ~~~
-!head -n 1 'output_data/hashtag_gasprices_flat.jsonl'
-!tail -n 1 'output_data/hashtag_gasprices_flat.jsonl'
+!head -n 1 'output_data/hashtag_gas_flat.jsonl'
+!tail -n 1 'output_data/hashtag_gas_flat.jsonl'
 ~~~
 {: .bash}
 
-Lets save this output into a file named "gasprice_date_range.jsonl":
+Lets save this output into a file named "gas_date_range.jsonl":
 
 ~~~
 !head -n 1 'output/hashtag_gasprices_flat.jsonl' > 'output/gasprice_range.jsonl'
@@ -229,8 +231,11 @@ Lets save this output into a file named "gasprice_date_range.jsonl":
 ~~~
 {: .bash}
 
-Let’s do this basic analysis for our two other files of raw data: bjules.jsonl and
- ecodatasci.jsonl (or whatever timeline you downloaded).
+#FIXME : let's make objects or files for these that have the date
+ranges pulled out.
+
+Let’s go back and do this basic analysis for our two other files of raw data: bjules.jsonl and
+ ecodatasci.jsonl (or whatever timeline you downloaded in the episode 2 challenge).
 
 > ## Challenge: Getting Date Ranges
 > Please create the files `bjules_range.jsonl` and `ecodatasci_range.jsonl` that
@@ -239,22 +244,26 @@ Let’s do this basic analysis for our two other files of raw data: bjules.jsonl
 >
 > Remember to specify where to store your output files.
 >
+> Output your answers in your notebook by creating objects and outputting
+> them to an output cell using #FIXME ... 
 > 1. What are the oldest and newest items on Bergis' timeline.
 > 1. How many items are on Bergis' timeline?
 > 2. Same questions for the timeline you downloaded in episode 2.
 > 
 > > ## Solution
+> > #FIXME this solution is not correct. the input file is wrong.
+> >
 > > ~~~
-> > !head -n 1 'raw_data/bjules.jsonl' > 'output_data/bjules_range.jsonl'
-> > !tail -n 1 'raw_data/bjules.jsonl' >> 'output_data/bjules_range.jsonl'
+> > !head -n 1 'raw/bjules.jsonl' > 'output/bjules_range.jsonl'
+> > !tail -n 1 'raw/bjules.jsonl' >> 'output/bjules_range.jsonl'
 > > !wc 'raw_data/bjules.jsonl'
 > > ~~~
 > > {: .language-python}
 > > We can see that we retrieved Bergis' texts back to 2018.
 > >
 > > ~~~
-> > !head -n 1 'raw_data/ecodatasci.jsonl' > 'output_data/ecodatasci_range.jsonl'
-> > !tail -n 1 'raw_data/ecodatasci.jsonl' >> 'output_data/ecodatasci_range.jsonl'
+> > !head -n 1 'raw/ecodatasci.jsonl' > 'output/ecodatasci_range.jsonl'
+> > !tail -n 1 'raw/ecodatasci.jsonl' >> 'output/ecodatasci_range.jsonl'
 > > !wc 'raw_data/ecodatasci.jsonl'
 > > ~~~
 > > {: .language-python}
@@ -267,36 +276,29 @@ Twitter (hint: way before 2018)
 
 ## How are the flattened and unflattened versions different? 
 Timeline doesn’t really give a
-line-oriented set of tweets. << this is why we need flatten or csv
-There are also other actions that show up in your timeline.
+line-oriented set of tweets, this is why we need flatten or csv.
+This is partially because there are items other than
+Tweets in your timeline.
 
-I’m thinking
-timeline jsonl looks a tiny bit different from searched/filtered tweets
-as jsonl. I can’t confirm yet. 
+
 
 
 ![concept map that describes twitter data](../fig/tweet-breakdown.svg)
-
-
->## Challenge: Getting a count
-> Use the commands `wc`,  `head`, and `tail` to figure out how many Tweets you received from
-> the account you harvested last episode.
->
-{: .challenge}
 
 
 > ## Challenge: First and last Tweets
 >
 > Using the terminal or Jupyter, use the commands `head` and `tail` to
 > save more than just the first 2 and last 2 tweets in `hashtag_gasprices.jsonl`.
-> View the file and determine:
+> let's say the first and last 10.
+> View the file to determine:
 > 1. How long is the time difference between the first and the last tweets?
 > 2. Judging by these 20 tweets, do they arrive in chronological order?
-> 3. Can you think of a more rigorous way to check?
+> 3. Create a dataframe of these 20 tweets to look at the times in a more friendly way.
 >
 > ~~~
-> !head -n 10 'output/hashtag_gasprices_flat.jsonl' >  'output_data/20tweets.jsonl'
-> !tail -n 10 'output/hashtag_gasprices_flat.jsonl' >> 'output_data/20tweets.jsonl'
+> !head -n 10 'output/hashtag_gas_flat.jsonl' >  'output/20tweets.jsonl'
+> !tail -n 10 'output/hashtag_gas_flat.jsonl' >> 'output/20tweets.jsonl'
 > ~~~
 > {: .language-python}
 >
