@@ -44,7 +44,7 @@ collect Tweets during this workshop, let's get in the habit of limiting ourselve
 to 500 Tweets. This is a ballpark so don't be surprised if there are more or less.
 
 ~~~
-!twarc2 timeline --limit 500 UCSBLibrary > 'raw_data/ucsblib_timeline.jsonl'
+!twarc2 timeline --limit 500 UCSBLibrary > 'raw/ucsblib_timeline.jsonl'
 ~~~
 {: .language-python}
 
@@ -299,7 +299,7 @@ So let's flatten the UCSBLibrary timeline and convert the flattened data to a cs
 
 ~~~
 !twarc2 flatten raw/ucsblib_timeline.jsonl output/ucsblib_timeline_flat.jsonl
-!twarc2 csv output/ucsblib_timeline_flat.jsonl output_data/ucsblib_timeline.csv
+!twarc2 csv output/ucsblib_timeline_flat.jsonl output/ucsblib_timeline.csv
 ~~~
 {: .language-bash}
 
