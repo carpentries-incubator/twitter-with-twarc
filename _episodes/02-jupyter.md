@@ -57,6 +57,7 @@ this workshop, follow along in the provided environment.
 > laptop, make sure to move the data files
 > someplace under your local control. Do NOT
 > use a DropBox or Google Drive.
+> 
 {: .datamoment}
 
 
