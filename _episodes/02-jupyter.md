@@ -58,6 +58,11 @@ this workshop, follow along in the provided environment.
 > someplace under your local control. Do NOT
 > use a DropBox or Google Drive.
 > 
+> If your data files are 'in the cloud,' when the 
+> files attempt to syncronize, you might encounter 
+> unanticipated issues in your R environment. 
+> 
+> 
 {: .datamoment}
 
 
