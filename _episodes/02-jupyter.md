@@ -47,6 +47,19 @@ your own computer. The documentation for installing twarc is found at [this
 repository](https://scholarslab.github.io/learn-twarc/06-twarc-command-basics.html). For
 this workshop, follow along in the provided environment.
 
+> ## Data Moment: Where are your files?
+>
+> If you are using an online Jupyter environment you will
+> need to put copies of your data files into that 
+> environment.
+>
+> If you are running your own Jupypter on your
+> laptop, make sure to move the data files
+> someplace under your local control. Do NOT
+> use a DropBox or Google Drive.
+{: .datamoment}
+
+
 
 ## Starting up JupyterLab
 Open our [LSIT JupyterLab](http://carpentryworkshop.lsit.ucsb.edu/){:target="_blank" rel="noopener"} in a fresh web browser window.
