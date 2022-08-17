@@ -2,8 +2,6 @@
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
-We've moved this over to the Incubator!
-
 A Data Carpentry style 5 hour workshop on harvesting and analyzing Twitter data using the public API and Documenting the Now's Twarc package. The lesson 
 makes a very natural add-on and reinforcement to BASH and Intro to Python.
 
@@ -13,7 +11,6 @@ civil unrest following the murder of Michael Brown by police in 2014.
 
 ## What to do next
 
-- ** UCSB team: ** Complete the post-workshop run-through shortening the folder names and fixing obvious mistakes.
 - ** anyone: ** Have at it. Make issues. Give feedback. Teach the lesson. Submit pull requests.
 
 There's still a little Carpentry advice:
