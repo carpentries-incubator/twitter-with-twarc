@@ -19,10 +19,11 @@ Document the Now develops open source tools and community centered practices tha
 of publicly available content shared on the web and social media. 
 
 
-### This lesson is being prepared for UCSB Carpentries
-After an initial run-through, we will submit this lesson to the
-Carpentries Incubator. We Carpentry practice what we Carpentry
+### This lesson was prepared for [UCSB Carpentries](https://ucsbcarpentry.github.io)
+We Carpentry practice what we Carpentry
 preach. Feel free to jump in.
+
+This workshop was first presented in June of 2022 online and in-person at UCSB.
 
 <!-- this is an html comment -->
 
@@ -32,7 +33,7 @@ preach. Feel free to jump in.
 >
 > This lesson assumes you have access to a working verion of Python
 > on a JupyterLab instance. It should work for those with a standalone
-> Jupyter- install. For our workshop, we are using jupyterhub hosted
+> Jupyter- install. For our workshop, we used jupyterhub hosted
 > by UCSB's LSIT.
 {: .prereq}
 
