@@ -1,7 +1,7 @@
 ---
 title: "Don't Map Twitter"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 5
 questions:
 - "What can I do with the geographic information in tweets?"
 - "How does Twitter represent places?"
@@ -16,8 +16,21 @@ keypoints:
 
 # Why we shouldn't map Twitter
 
+Let's put a map or a graph here that shows how very few tweets we expect to have a geotag
+
+
+
+## very few have geotags
 Only a tiny little fraction of tweets have meaningful
 and useful geographic information. And even those that have
 Twitter's geolocations embedded in them are pretty useless.
 
-Some day we will sit down and tell you why.
+### Count the geotagged tweets in one of our sets
+
+## Even fewer have a specific intentional location
+### Count the POINT geotagged tweets in one of our sets
+
+
+
+
+The exercise here will be to show GitHub's ability to map a twitter dataset.
