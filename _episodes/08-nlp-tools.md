@@ -1,7 +1,7 @@
 ---
 title: "TextBlob Sentiment Analysis"
-teaching: 10
-exercises: 10
+teaching: 30
+exercises: 20
 questions:
 - "How can I analyze my tweets beyond what twarc offers?"
 - "Is it possible to tell if tweets are expressing positive or negative feelings?"
