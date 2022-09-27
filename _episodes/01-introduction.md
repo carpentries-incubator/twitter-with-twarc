@@ -23,7 +23,7 @@ posts are referred to as "tweets". Twitter users curate their social personas by
 subscribing to (or following) other twitter accounts. It allows people from all over 
 the world to interact with each other almost instantaneously.
 
-<img src="../fig/twitter.png" alt="Twitter Explore Page" width = "1001" height = "900"/>
+<img src="../fig/twitter.png" alt="Twitter Explore Page" width = "50%" height = "50%"/>
 
 If you've never used Twitter before, the terms used there can be cryptic (and not safe 
 for work). Beyond "@ing people" and "hashtags", the users themselves have created 
