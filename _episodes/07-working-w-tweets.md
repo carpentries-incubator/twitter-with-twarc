@@ -1,7 +1,7 @@
 ---
 title: "Plugins and Searches"
 teaching: 20
-exercises: 5
+exercises: 10
 questions:
 - "What other harvests are available?"
 - "Are there more twarc2 plugins?"
