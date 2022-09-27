@@ -50,14 +50,13 @@ the @twitter account itself. It describes a 2022 change in the way
 retweets and retweets with quotes are displayed in the interface. It was kind of a significant moment
 for the twittiverse, and a convenient moment to remind the readers about Public Health.
 
-
-<img src="../fig/obscure-tweet.png" alt="Obscure tweet from an obscure twitter account" width = "350" height = "200"/>
-
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Three things—<br><br>1. &quot;Retweets with comments&quot; is changing to &quot;Quote Tweets&quot;<br><br>2. Quote Tweets will appear right next to Retweets<br><br>3. The mask goes over your nose <a href="https://t.co/x00YTZSAFs">pic.twitter.com/x00YTZSAFs</a></p>&mdash; Twitter (@Twitter) <a href="https://twitter.com/Twitter/status/1300554631618220032?ref_src=twsrc%5Etfw">August 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 > ## Your Twitter Experience
 > If you are a twitter user, what terms have you encountered in your use?
 > Alternatively, what do you know from Twitter as a non-twitter user?
+> What might this tweet mean? Is that account a real person or
+> a bot? Who made it?
 {: .challenge}
 
 Check out this article on [Twitter Language or Slang](https://www.lifewire.com/twitter-slang-and-key-terms-explained-2655399).
