@@ -1,7 +1,7 @@
 ---
 title: "Search and Stream"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 10
 questions:
 - "How can we specify what Tweets to collect?"
 - "How can we collect Tweets as they are posted?"
