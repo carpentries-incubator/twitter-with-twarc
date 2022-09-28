@@ -2,12 +2,19 @@
 title: "Instructor Notes"
 ---
 
+# Ep. 1 Introduction to Twitter
+* 
+
 # Ep. 2 Getting familiar with JupyterLab
 
+* We harvest the bjules timeline in order to test the installation
+* We do first and last with bjules and hashtag gas.
+* Generally, this is too long. This isn't a Jupyter lesson (or could it be?)
 * After configuring twarc in jupyterlab, helpers can help struggling learners on the twarc2 
   configuration while the instructor may go over the remaining episode content.
 * We've written the lesson using @ecodatascience as the  solution to the '2 Timelines' 
-  so if you do that as an instructor, subsequent code should run as is.
+  so if you do that as an instructor, subsequent code should run as is. We plan to
+  replace @ecodatascience with @bergisjules in subsequent episodes in order to simplify things.
 
 # Ep. 3: Anatomy of a Tweet
 
@@ -18,10 +25,15 @@ title: "Instructor Notes"
 
 # Ep. 4: Twitter Public API
 
+* @bjules vs #catsofinstagram. What's the difference difference between a 
+  timeline and a sample/search capture?
+* @ucsblibrary is going to be edited out
 * The final challenge in episode 4 is to live harvest a dataset
   using a 'cute' hashtag. You may wish to pre-harvest
   a dataset. Beware of improvising: you may get results that you
   don't want on your screen.
+  
+# Ep. 5: Ethics
 
 # Code
 * [This Jupyter Notebook](../code/TwarcWorkshop.ipynb) has 
