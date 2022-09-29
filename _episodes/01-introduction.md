@@ -74,19 +74,18 @@ With millions of tweets sent out each day, and the range of content within those
 
 In order to analyze Twitter data, we must first retrieve it which we will be doing using a tool called an API.
 
-# API: A Complicated Topic and a (mostly) Easy Tool
+# APIs: Application Programming Interfaces
 
-API is an abbreviation that stands or Application Programming Interface. It allows computers or applications to communicate with one another without requiring users to code operations from scratch. APIs allow you to use abstraction, because similar to how you don't need to know the engineering behind your shower in order to use it, you don't need to understand the code behind APIs in order to fetch data.
-
-Formally defined, an API is a set of commands, functions, protocols, and objects used by programmers to create software or to interact with external systems.
+API is an acronym for [Application Programming Interface](https://en.wikipedia.org/wiki/API). APIs facilitate direct interaction between computer programs. An API is a set of instructions or abstractions that a program provides for *other programs* to exchange information or interact with it. Just as your shower provides an “interface” for operation (for example, knobs for controlling how hot the water is), interoperability between software systems is possible because programmers define APIs for other programs to use.
 
 ### Common Analogy
+
+APIs are often explained through an analogy to ordering a meal. Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you may choose from a set list of items on the menu. The waiter then takes your order to the cook who puts together different meals and drinks for your table. The waiter then takes your order to your table.
 
 <p><a href="https://www.uplevel.work/blog/feature-how-we-created-an-events-aggregator-using-python">
 <img src="../fig/api-analogy.png" alt="API Analogy" width = "800" height = "500"/>
 </a></p>
 
-Imagine yourself sitting at a table in a restaurant. The waiter comes to your table and you may choose from a set list of items on the menu. The waiter then takes your order to the cook who puts together different meals and drinks for your table. The waiter then takes your order to your table.
 
 Here are the key players in our analogy:
 1. Customer - you as the user
