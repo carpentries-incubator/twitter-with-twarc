@@ -30,7 +30,7 @@ kind: "lesson"
 repository: <USERNAME>/<PROJECT>
 
 # Email address, no mailto:
-email: "collaboratory@library.ucsb.edu"
+email: "dreamlab@library.ucsb.edu"
 
 # Sites.
 amy_site: "https://amy.carpentries.org/"

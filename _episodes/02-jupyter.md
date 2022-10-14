@@ -506,8 +506,8 @@ import os
 ## Flattening Twitter Data
 
 Twitter Timelines, and other files we harvest using twarc, need to be 'flattened' 
-before we use them.  Flatten will ensure that each line of the file is 1 tweet, 
-allowing us to immediately know how many tweets we have after we create the flattened 
+before we use them.  Flatten will ensure that each line of the file is 1 tweet. 
+We can use `! wc` to see how many tweets we have after we create the flattened 
 file.
 
 Before flattening:
@@ -525,9 +525,8 @@ After flattening:
 `! wc output/bjules_flat`
 
 ## Converting between file types: jsonl to csv to dataframe
-csv's are convenient for reading, and are useful as a data format later on for 
-analyzing tweets outside of twarc. csv's are even conventient for reading, and are 
-useful as a data format later on for analyzing tweets outside of twarc.
+csv's are convenient for reading and better for analyzing tweets outside of twarc because of it's data format. 
+csv's are better in comparison to jsonl, because it organizes our collected tweets' attributes (e.g. "id", "text", and "lang") into easy to read columns.
 
 We will almost always convert our files to .csv format.
 
@@ -536,7 +535,7 @@ We will almost always convert our files to .csv format.
 ~~~
 {: .language-bash}
 
-And Pandas dataframes are the most useful structures for later analysis,
+And Pandas dataframes are useful structures for later analysis,
 so you may as well make one of those too:
 
 ~~~

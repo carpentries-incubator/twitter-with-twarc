@@ -20,7 +20,7 @@ keypoints:
 # Examining a twarc JSONL file
 
 JSONL, Line-oriented JavaScript Object Notation, is frequently used as a
-data interchange format. It has become super common in the data science
+data exchange format. It has become super common in the data science
 field, and you will encounter it frequently. 
 
 Let's look at one individual tweet file, in the Jupyter viewer.
@@ -50,6 +50,14 @@ colon, then the value. If the value is text, that's going to be in quotes too.
 
 Both nano and the Jupyter editor allows us to format the text with
 returns and indents, so that the individual named-value pairs are easier to identify.
+
+> ## JSONL vs. JSON
+> * JSON and JSONLs are both data structure formats based on JavaScript syntax. 
+> * JSONLs consist of separate JSON *objects* in each line. A JSON *object* refers to an individual set or `unit` of data in the JSON format. 
+> * JSONLs are more efficient to read than JSON file and are better at containing 'objects of data'.
+>
+> In our case, a single tweet acts as a single JSON *object* and the JSONL acts as the file that stores all of them. JSONLs better for collecting twitter data, since JSON's are not as effective at storing multiple units of data in comparison. 
+{: .callout}
 
 Just to show you the the contents of a single tweet, look to the output below. The 
 output is an edit of the data with only white-space characters. These edits have been 
@@ -274,12 +282,30 @@ Let’s go back and do this basic analysis for our two other files of raw data: 
 Other things we can do: sentiment analysis (FORESHADOWING). See when he joined
 Twitter (hint: way before 2018)
 
-## How are the flattened and unflattened versions different? 
-Timeline doesn’t really give a
-line-oriented set of tweets, this is why we need flatten or csv.
-This is partially because there are items other than
-Tweets in your timeline.
+## Why we flatten our twarc JSONL file
+In our case, a raw or unflattened JSONL will consist of lines of API requests containing multiple tweets. Therefore, we want to flatten our JSONL file in order to isolate these tweets and ensure that each line in our JSONL file consists of a single tweet instead of a single API request. 
 
+> ## How are the flattened and unflattened versions different? 
+> The property "Flat" refers to the structure of JSON or JSONL files. A JSON is not flat when it has a nested structure. A nested structure occurs when data consists of an attribute or attributes that contain other attributes. Flattening isolates our desired attributes so that the data can be read linearly and separately. 
+> \
+Here's a rough illustration of the differences between flattend and unflattend twitter data: 
+> > Unflattened twitter data: 
+> > ~~~
+> > {"data": [{"author_id": "1", "public_metrics": {"retweet_count": 0, "reply_count": 0, "like_count": 0, "quote_count": 0}
+> >       ... {"author_id": "2", "public_metrics": {"retweet_count": 18, "reply_count": 1, "like_count": 10, "quote_count": 2}
+> >       ... {"author_id": "3", "public_metrics": ... ]}
+> > ~~~
+> > Flattened twitter data: 
+> > ~~~
+> > 1 {"author_id": "1", "public_metrics": {"retweet_count": 0, "reply_count": 0, "like_count": 0, "quote_count": 0} ... }
+> > 2 {"author_id": "2", "public_metrics": {"retweet_count": 18,"reply_count": 1, "like_count": 1, "quote_count": 2} ... }
+> > 3 {"author_id": "3", "public_metrics": ... }
+> > ... 
+> > ~~~
+> {: .output}
+{: .callout}
+
+Because twarc timeline outputs API requests instead of individual tweets we need flatten or csv.
 
 
 
