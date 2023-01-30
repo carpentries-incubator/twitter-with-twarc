@@ -122,7 +122,7 @@ and open it up with [an online JSONL viewer](https://codebeautify.org/jsonviewer
 
 We can also see just the name of each field by using the columns
 method on any dataframe we have made from Twitter data. For example,
- ecodatasci_df, the dataframe created from the ecodatasci timeline:
+ bjules_df, the dataframe created from Bergis Jules' timeline:
 
 ~~~
 list(bjules_df.columns)
