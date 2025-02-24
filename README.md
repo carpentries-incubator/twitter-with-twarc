@@ -1,3 +1,5 @@
+# NOTICE: This lesson is no longer being maintained and is slated to be archived 
+
 # Twitter with Twarc
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
