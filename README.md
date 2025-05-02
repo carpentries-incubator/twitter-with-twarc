@@ -13,7 +13,7 @@ civil unrest following the murder of Michael Brown by police in 2014.
 
 ## What to do next
 
-- ** anyone: ** Have at it. Make issues. Give feedback. Teach the lesson. Submit pull requests.
+- The ability for the public to harvest Twitter / X data has largely collapsed, therefore this lesson is being archived.
 
 There's still a little Carpentry advice:
 * [ ] [Add relevant topic tags to your lesson repository][cdh-topic-tags].
